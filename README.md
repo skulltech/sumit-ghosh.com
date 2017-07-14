@@ -1,37 +1,59 @@
-## Welcome to GitHub Pages
+# resume-template
 
-You can use the [editor on GitHub](https://github.com/SkullTech/skulltech.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+*A simple Jekyll + GitHub Pages powered resume template.*
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![img](images/screenshot.png)
 
-### Markdown
+## Docs
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Running locally
 
-```markdown
-Syntax highlighted code block
+To test locally, run the following in your terminal:
 
-# Header 1
-## Header 2
-### Header 3
+1. Clone repo locally
+1. `bundle install`
+2. `bundle exec jekyll serve`
+3. Open your browser to `localhost:4000`
 
-- Bulleted
-- List
+### Customizing
 
-1. Numbered
-2. List
+First you'll want to fork the repo to your own account. Then clone it locally and customize, or use the GitHub web editor to customize.
 
-**Bold** and _Italic_ and `Code` text
+#### Options/configuration
 
-[Link](url) and ![Image](src)
-```
+Most of the basic customization will take place in the `/_config.yml` file. Here is a list of customizations available via `/_config.yml`:
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+[...write these out...]
 
-### Jekyll Themes
+#### Editing content
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/SkullTech/skulltech.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Most of the content configuration will take place in the `/_layouts/resume.html` file. Simply edit the markup there accordingly
 
-### Support or Contact
+### Publishing to GitHub Pages for free
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[GitHub Pages](https://pages.github.com/) will host this for free with your GitHub account. Just make sure you're using a `gh-pages` branch, and the site will automatically be available at `yourusername.github.io/resume-template` (you can rename the repo to resume for your own use if you want it to be available at `yourusername.github.io/resume`). You can also add a CNAME if you want it to be available at a custom domain...
+
+### Configuring with your own domain name
+
+To setup your GH Pages site with a custom domain, [follow the instructions](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/) on the GitHub Help site for that topic.
+
+### Themes
+
+Right now resume-template only has one theme. More are coming :soon: though. :heart:
+
+## Roadmap
+
+A feature roadmap is [available here](https://github.com/jglovier/resume-template/projects/1). If you features suggestions, please [open a new issue](https://github.com/jglovier/resume-template/issues/new).
+
+## Contributing
+
+If you spot a bug, or want to improve the code, or even make the dummy content better, you can do the following:
+
+1. [Open an issue](https://github.com/jglovier/resume-template/issues/new) describing the bug or feature idea
+2. Fork the project, make changes, and submit a pull request
+
+## License
+
+The code and styles are licensed under the MIT license. [See project license.](LICENSE) Obviously you should not use the content of this demo repo in your own resume. :wink:
+
+Disclaimer: Use of Homer J. Simpson image and name used under [Fair Use](https://en.wikipedia.org/wiki/Fair_use) for educational purposes. Project license does not apply to use of this material.
