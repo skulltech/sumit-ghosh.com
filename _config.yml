@@ -10,8 +10,8 @@ sass:
 
 # Resume settings
 resume_avatar:                  "true"
-resume_name:                    "Sumit Ghosh ( @SkullTech )"
-resume_title:                   "Computer Science Undergrad with a Knack for Learning"
+resume_name:                    "Sumit Ghosh @SkullTech"
+resume_title:                   "Computer Science Undergrad"
 resume_contact_email:
   "homerjsimpson@youremailaddress.com"
 resume_header_contact_info: "Satpura Hostel, IIT Delhi, New Delhi, India | homerjsimpson@youremailaddress.com"
