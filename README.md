@@ -1,4 +1,4 @@
-# skulltech.github.io | sumit.ghosh.com
+# skulltech.github.io | sumit-ghosh.com
 
 *Personal site of Sumit Ghosh*
 
