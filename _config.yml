@@ -8,6 +8,9 @@ sass:
   sass_dir: _sass
   style: compressed
 
+plugins:
+  - jekyll-sitemap
+
 # Resume settings
 resume_avatar:                  "true"
 resume_name:                    "Sumit Ghosh @SkullTech"
