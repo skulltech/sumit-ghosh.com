@@ -5,7 +5,9 @@ script: "./script/cibuild"
 branches:
   only:
   - master
-sudo: false
+install:
+- bundle install
+script: bundle exec rake site:deploy --quiet
 env:
   global:
     secure: oPSE9+3+9y0j/vjnSAO6AfYL0ewfqW7YGMGZfHXJuqHH2yLbNK/EsLEDI16l5Xx/onMSl+l8oCZwVtbUJVTFRMLnYc5cD1LUNgsh0ba+Noson8EaBzshBERWwkx3cfVi8Xg1KrGPFlfQ+HxoqrEwB3OegAeqdvsUYpRdaA8c9q5a0JnmHqhGSg6/4CJaGjb8Orwfi37RTqyCS2ATE9SfjUrioj4P/kkXfXtZIsgakEn+k1pDRJXiP8roCp4BRGXq9U+pCB0dyLxU0NFZCM9nAbCwLhh+5x/OY1EOMH1jO+3+Xv5oKFY00tUwnxF0Ke+E9eqLmgcLVIbbZoyOVnFuX0bqxP8j2H4MhFJW7g1oM+Dqa/VzuTNZBeZ8YDpC0KFcF0E+6xCzkbt2Nj/UDoyefZADHvxwq2x0hGRqThNFWjMQkx+EUByalMIwRCBBx/qtTtvsBftPDvX5IGkXrTCLbDVjvpmWjYYn28fXqNrwrBhIR7extdheYUzBmfYslyuE3/5W7kyygetuhR+0eo6wUnFcbQSyXwR6ObWiZjMefrxb1tlfkTqEDmCn1dIUm0bqUD4BwRRJLXRW0TCEUQccCemQKEJDgNsH5zaWeypbBoEZXT6qhNUDUDCHD8BKVcb2vfcfiC5K6tadoyryG32+Dr6zeK1hmT9s88v/4+OCIOg=
