@@ -8,6 +8,15 @@
 theme                    : minimal-mistakes-jekyll
 minimal_mistakes_skin    : "default" # "air", "contrast", "dark", "dirt", "mint", "sunrise"
 
+# GitHub
+username:             Stanko
+repo:                 Stanko.github.io
+branch:               source
+
+# Jekyll source / destination
+source:               .
+destination:          _site
+
 # Site Settings
 locale                   : "en"
 title                    : "Site Title"
