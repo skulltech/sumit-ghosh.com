@@ -9,9 +9,9 @@ theme                    : minimal-mistakes-jekyll
 minimal_mistakes_skin    : "default" # "air", "contrast", "dark", "dirt", "mint", "sunrise"
 
 # GitHub
-username:             Stanko
-repo:                 Stanko.github.io
-branch:               source
+username:             SkullTech
+repo:                 skulltech.github.io
+branch:               master
 
 # Jekyll source / destination
 source:               .
