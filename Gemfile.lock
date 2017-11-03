@@ -94,7 +94,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  jekyll (~> 3.6.2)
+  jekyll-feed (~> 0.6)
   minimal-mistakes-jekyll
+  tzinfo-data
 
 BUNDLED WITH
    1.16.0

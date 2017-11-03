@@ -252,3 +252,6 @@ defaults:
       comments: # true
       share: true
       related: true
+
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
