@@ -10,7 +10,7 @@ minimal_mistakes_skin    : "default" # "air", "contrast", "dark", "dirt", "mint"
 # Site Settings
 locale                   : "en"
 title                    : "Sumit Ghosh @SkullTech"
-title_separator          : "-"
+title_separator          : "|"
 name                     : "Sumit Ghosh"
 description              : "Everything me and mine."
 url                      : "https://sumit-ghosh.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
