@@ -1,9 +1,6 @@
 ---
-author: SkullTech
 comments: true
 date: 2017-06-23 15:40:42+00:00
-layout: post
-link: https://techkernel.org/2017/06/23/fixed-hacked-wordpress-blog-restoring-content/
 slug: fixed-hacked-wordpress-blog-restoring-content
 title: 'How I fixed My Hacked WordPress Blog: Restoring the Content'
 wordpress_id: 976

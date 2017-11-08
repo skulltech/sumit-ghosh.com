@@ -1,9 +1,6 @@
 ---
-author: SkullTech
 comments: true
 date: 2016-12-31 15:33:12+00:00
-layout: post
-link: https://techkernel.org/2016/12/31/ethical-hacking-and-the-hacker-culture/
 slug: ethical-hacking-and-the-hacker-culture
 title: Ethical Hacking and The Hacker Culture
 wordpress_id: 583

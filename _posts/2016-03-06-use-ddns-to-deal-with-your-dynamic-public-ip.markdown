@@ -1,9 +1,6 @@
 ---
-author: SkullTech
 comments: true
 date: 2016-03-06 08:28:02+00:00
-layout: post
-link: https://techkernel.org/2016/03/06/use-ddns-to-deal-with-your-dynamic-public-ip/
 slug: use-ddns-to-deal-with-your-dynamic-public-ip
 title: Use DDNS to Deal with Your Dynamic Public IP
 wordpress_id: 256

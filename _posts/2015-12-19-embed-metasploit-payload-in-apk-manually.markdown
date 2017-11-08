@@ -1,9 +1,6 @@
 ---
-author: SkullTech
 comments: true
 date: 2015-12-19 15:15:25+00:00
-layout: post
-link: https://techkernel.org/2015/12/19/embed-metasploit-payload-in-apk-manually/
 slug: embed-metasploit-payload-in-apk-manually
 title: Embed a Metasploit Payload in an original .apk File | Part 2 - Do it manually
 wordpress_id: 194

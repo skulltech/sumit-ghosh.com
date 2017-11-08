@@ -5,7 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-minimal_mistakes_skin    : "default" # "air", "contrast", "dark", "dirt", "mint", "sunrise"
+minimal_mistakes_skin    : "aqua" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 
 # Site Settings
 locale                   : "en"
@@ -93,13 +93,13 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : "sanju.ghosh"
+  facebook         :
   foursquare       :
   github           : "SkullTech"
   gitlab           :
   google_plus      :
   keybase          :
-  instagram        : "summit.ghosh"
+  instagram        :
   lastfm           :
   linkedin         : "sumit-ghosh-skulltech" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :

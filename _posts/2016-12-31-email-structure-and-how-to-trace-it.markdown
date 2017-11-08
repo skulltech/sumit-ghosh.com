@@ -1,9 +1,6 @@
 ---
-author: SkullTech
 comments: true
 date: 2016-12-31 15:26:50+00:00
-layout: post
-link: https://techkernel.org/2016/12/31/email-structure-and-how-to-trace-it/
 slug: email-structure-and-how-to-trace-it
 title: Email | Structure and How to Trace it
 wordpress_id: 589
