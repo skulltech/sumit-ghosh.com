@@ -1,17 +1,19 @@
 ---
+layout: post
 comments: true
-date: 2016-12-31 15:26:50+00:00
+date: 'Sat Dec 31 2016 20:56:50 GMT+0530 (India Standard Time)'
 slug: email-structure-and-how-to-trace-it
 title: Email | Structure and How to Trace it
 wordpress_id: 589
 categories:
-- Email
-- Hacking
-- Networking
+  - Email
+  - Hacking
+  - Networking
 tags:
-- Email
-- Headers
-- Tracing
+  - Email
+  - Headers
+  - Tracing
+published: true
 ---
 
 We all have received fake spam mail telling us that we’ve won million dollars at some point in our life. Maybe one day you receive a threatening email or a simple phishing mail, and you want to find out who did it so that you can hack him in return. To do that you need to know the IP address of the mail server sending the email. In this article I’m gonna show you how to do that, after introducing you to the basics of the structure of an _Internet Message_ or simply, _Email_.
@@ -19,9 +21,7 @@ We all have received fake spam mail telling us that we’ve won million dollars 
 Email is one of oldest mode of communication through a computer network (usually the Internet) which is still popular today. The Email which we are familiar with was standardized and came into popular usage in the early 1970s, and it has been a core foundation of the Internet since then. Nowadays we all use a fancy web interface or mobile app to send and view received emails, so we don’t have to worry about how is it working. But that isn’t enough for a hacker, is it? If we don’t know the detailed intricacies of its mechanism, how can we exploit it or do something advanced with it? So, keep reading!
 
 
-
 ## The Internet Message Format
-
 
 
 The current Email format is defined in [RFC 5322](https://tools.ietf.org/html/rfc5322). Multimedia Email attachments’ format is defined in [RFC 2045](https://tools.ietf.org/html/rfc2045) through [RFC 2049](https://tools.ietf.org/html/rfc2049), and this format is called Multimedia Internet Mail Extensions or simply MIME. You can read those RFC articles to get a fully detailed formal documentation of the structure and format of email, but it’s not necessary as I will discuss it in short here. Nevertheless, if you are interested to learn more, you can check them out after reading this post of mine.
@@ -184,9 +184,7 @@ Where ‘Delivered-To’ is the field name and ‘john.doe@gmail.com’ is the f
 The header section can contain any number of information in this format, there is no restriction. So there can be different header fields in various emails. But there are certain fields that are mandatory, and those contain the information we need to trace the mail. You can read about various email header fields [here on Wikipedia](https://en.wikipedia.org/wiki/Email#Header_fields).
 
 
-
 ## Tracing an Email
-
 
 
 Now that we know the basics of the _[Internet Message Format](https://tools.ietf.org/html/rfc5322)_, it’s time we dive into the fun stuff, tracing the email. For that, we need to concentrate on the _Trace fields_, so to speak. They contain the information needed to trace it, obviously. The trace fields are:
@@ -199,17 +197,11 @@ Now that we know the basics of the _[Internet Message Format](https://tools.iet
 - _VBR-Info_
 
 
-
 Among these, the _Received_ field is the most important and most reliable. When an SMTP server receives a message it inserts this header at the top of the message. And as most emails go through several SMTP servers in the journey from the sender to receiver, it contains several Received fields, each one inserted by different SMTP servers. In the example email the Received fields are:
 
-
+```
 Received: by 10.200.55.226 with SMTP id e31csp1128773qtc;
         Tue, 18 Oct 2016 09:50:19 -0700 (PDT)
-
-
-
-
-```
 X-Received: by 10.107.131.213 with SMTP id n82mr2118112ioi.125.1476809419401;
         Tue, 18 Oct 2016 09:50:19 -0700 (PDT)
 Received: from o6.em.email.accounts.autodesk.com (o6.em.email.accounts.autodesk.com. [167.89.4.107])
