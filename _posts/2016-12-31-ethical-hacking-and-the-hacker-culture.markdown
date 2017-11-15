@@ -1,29 +1,28 @@
 ---
+layout: post
 comments: true
-date: 2016-12-31 15:33:12+00:00
+date: 'Sat Dec 31 2016 21:03:12 GMT+0530 (India Standard Time)'
 slug: ethical-hacking-and-the-hacker-culture
 title: Ethical Hacking and The Hacker Culture
 wordpress_id: 583
 categories:
-- Ethical Hacking
-- Hacker Culture
-- Hacking
+  - Ethical Hacking
+  - Hacker Culture
+  - Hacking
 tags:
-- Ethical Hacking
-- Hacker Culture
+  - Ethical Hacking
+  - Hacker Culture
+published: true
 ---
 
 Nowadays most of us have heard the term Ethical Hacker due to ‘hacktivist’ groups like Anonymous gaining popularity in the media. But what exactly is Ethical Hacking? We have a general idea that it means hacking without any malicious intent, or more simply the kind of hacking the ‘good guys’ do. But if we delve deeper, it means more than that, it represents a philosophy and morality popular among the hacker and hacktivist communities.
 
-
 ## Definition
-
 
 Formally Ethical Hacking may be defined as the practice of systematically attempting to break into or penetrate for the purpose of locating weaknesses and vulnerabilities of the computer system by duplicating the actions of malicious black-hat hackers. Actually, what I just said defines Penetration Testing, to be precise ‘Ethical Hacking’ is a term coined by IBM meant to imply a broader category than just penetration testing. Ethical hackers do this ‘penetration testing’ on the request of or by being employed by the owner of the computer system so that he can fix these weaknesses and make the system more secure.
 
 
 ## Philosophy
-
 
 Ethical hackers generally follow a set of moral values and philosophy. They promote sharing of knowledge, they believe that all information should be free. They also believe bureaucracies such as corporates are flawed systems, they promote decentralization so that may lead to freedom of information exchange. They say that hackers shouldn’t be judged by their age, race, or qualifications, they should only by judged by their hacking skill. A common value of community and collaboration is also present among the hackers.
 
