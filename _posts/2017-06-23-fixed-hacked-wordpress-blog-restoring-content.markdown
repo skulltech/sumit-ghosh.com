@@ -1,40 +1,39 @@
 ---
+layout: post
 comments: true
-date: 2017-06-23 15:40:42+00:00
+date: 'Fri Jun 23 2017 21:10:42 GMT+0530 (India Standard Time)'
 slug: fixed-hacked-wordpress-blog-restoring-content
 title: 'How I fixed My Hacked WordPress Blog: Restoring the Content'
 wordpress_id: 976
+published: true
 ---
 
-I made my blog [Techkernel](https://techkernel.org) quite some time back, but I never took it seriously. I made a very few number of posts, and never bothered to maintain the blog properly. I just moderated the comments, never bothering to reply them (I know, I'm a terrible person). I also did not updated the plugins, neither WordPress itself. But I realised my mistake when my blog got hacked and the most popular post of it got replaced by some crappy advertisement.
+I made my blog [Techkernel](https://techkernel.org) quite some time back, but I never took it seriously. I made a very small number of posts, and never bothered to maintain the blog properly. I just moderated the comments, never bothering to reply them (I know, I'm a terrible person). I also did not updated the plugins, neither WordPress itself. But I realised my mistake when my blog got hacked and the most popular post of it got replaced by some crappy advertisement.
 
-![hacked-post.png](https://techkernel.org/wp-content/uploads/2017/06/hacked-post.png)
+![hacked-post.png](/img/hacked-post.png)
 
 Here I will document what I did to get it fixed to as it was before.
 
 
 ## Restoring the Original Post
 
-
 Firstly, I needed to restore the post. WordPress keeps a revisions list of posts, so I looked there. But not so surprisingly, the original revision was removed. The oldest revision I could get was, sadly, the advertisement, not my original post. So this approach was not going to work.
 
-![revisions.png](https://techkernel.org/wp-content/uploads/2017/06/revisions.png)
+![revisions.png](/img/revisions.png)
 
 Second step was to look for any backups I made. I did not set up any solid backup system, so the only backup I could've made was as an export file (for your reference, WordPress lets you export all your contents as an `.xml` file). I searched for any file whose name contains `techkernel` in my PC, and voila, there was one. I was lucky. Had I not made such a backup (which I did for the keks, not anticipating a situation such as this), I would have to restore it from a backup image of my server at Digital Ocean, which would be much more painful to do.
 
 So I opened up the export file `techkernel.wordpress.2016-04-22.xml`, looked for my post in there, and copy pasted it back to my blog.
 
-![post-xml.png](https://techkernel.org/wp-content/uploads/2017/06/post-xml.png)
+![post-xml.png](/img/post-xml.png)
 
 
 ## Updating the WordPress Site
-
 
 I use [WP-CLI](https://wp-cli.org/) in my WordPress installation, and it's fantastic. You should also start using it right away if you are not already not doing that.
 
 
 ### Updating WordPress, its plugins and themes
-
 
 The first thing I did was update WordPress, all installed plugins and themes to the latest version. I did this using WP-CLI.
 
@@ -112,12 +111,9 @@ Success: Updated 2 of 2 themes.
 
 ### Resetting Passwords
 
-
-
 After that what I did was resetting all the passwords: password of the Wordpress installation, password of the user accounts of the DigitalOcean Droplet and so on.
 
 
 ## The Next Steps
-
 
 The next steps were obviously, removing any backdoor the hackers may have left and securing the site. I will write a post on that shortly, so stay tuned!
