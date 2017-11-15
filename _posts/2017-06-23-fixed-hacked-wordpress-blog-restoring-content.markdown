@@ -4,7 +4,6 @@ comments: true
 date: 'Fri Jun 23 2017 21:10:42 GMT+0530 (India Standard Time)'
 slug: fixed-hacked-wordpress-blog-restoring-content
 title: 'How I fixed My Hacked WordPress Blog: Restoring the Content'
-wordpress_id: 976
 published: true
 ---
 
@@ -39,7 +38,7 @@ The first thing I did was update WordPress, all installed plugins and themes to 
 
 Updating WordPress core.
 
-```    
+```console
 skulltech@debian-512mb-blr1-01:/var/www/techkernel.org/public$ wp core update
 Updating to version 4.8 (en_US)...
 Downloading update from https://downloads.wordpress.org/release/wordpress-4.8-no-content.zip...
@@ -53,7 +52,7 @@ skulltech@debian-512mb-blr1-01:/var/www/techkernel.org/public$
 
 Updating all WordPress plugins.
 
-```
+```console
 skulltech@debian-512mb-blr1-01:/var/www/techkernel.org/public$ wp plugin update --all
 Enabling Maintenance mode...
 Downloading update from https://downloads.wordpress.org/plugin/akismet.3.3.2.zip...
@@ -85,7 +84,7 @@ Success: Updated 3 of 3 plugins.
 
 Updating all Wordpress themes.
 
-```    
+```console
 skulltech@debian-512mb-blr1-01:/var/www/techkernel.org/public$ wp theme update --all
 Enabling Maintenance mode...
 Downloading update from https://downloads.wordpress.org/theme/twentyfifteen.1.8.zip...
