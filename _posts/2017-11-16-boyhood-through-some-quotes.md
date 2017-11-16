@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Boyhood. Through Some Quotes.
 subtitle: 'Rather, how it touched me'
 date: '2017-11-16'
