@@ -11,6 +11,7 @@ tags:
 date: '2017-11-16'
 bigimg: '/img/posts/boyhood-feature.jpg'
 image: /img/posts/boyhood-teaser-poster.jpg
+share-img: 'http://sumit-ghosh.com/img/posts//boyhood-teaser-poster.jpg'
 
 ---
 
