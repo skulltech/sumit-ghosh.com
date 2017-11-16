@@ -1,7 +1,7 @@
 ---
 layout: post
 published: false
-title: Boyhood and it's Genius
+title: Boyhood and its Genius. Through Some Quotes.
 subtitle: 'Rather, how it touched me'
 date: '2017-11-16'
 ---
@@ -10,14 +10,12 @@ After watching Boyhood for the second time a few days ago, I realized, again, ho
 
 The beautiful thing about this movie is, it doesn't have a theme, per se. It doesn't try to get across any idea and embed it into the viewer forcefully, it just tells a story. Consequently, from a basic teaser of the movie, like the ones they show as a short description on IMDb, the story seems plain. The IMDb description of this movie reads, "The life of Mason, from early childhood to his arrival at College", which screams lack of depth. Just from this, the movie doesn't seem so interesting, especially for fans of psychological thrillers like me. But the marvel of this movie lies in the simplicity of the story itself, the movie tries to make the story as real and intimate as possible, so that every viewer can relate to it in different ways, making the movie a different experience for everyone, similar only in the aspect that it warms up your insides in a really nice way.
 
-
 The first time I saw the movie, I didn't pick up the finer philosophies woven into the dialogues, rather I just felt that nice feeling. That itself made me fall in love with this movie. But the second time I watched it, I could relate to it at a whole different level. So much, it's almost freaky, I thought, how can this movie speak the exact same thoughts that I have been thinking the past few days? The immediate explanation I could think of was, the first time I watched the film, the ideas got embedded in the back of my head, and then it manifested slowly later on. When I was discussing this freak occurrence with a friend, she told me, "We all see things differently depending on our stance in life at that point of time". I liked that explanation more, and I think that's the way it works, art in general. You interpret it and relate to it according to you, your personality, your stance in life at that point and so on, and so the experience is different for everyone.
 
 There's two characters in this movie that really touched me. One is, obviously, Mason (junior). I think he's an INTP, but the way he's portrayed in the movie resembles an INFP too, so I'd say He's an INXP. Actaully, his philosophies and ideals scream INTP, but he's artsy interests makes him unlike a typical INTP but more like a typical INFP. But I'd say he's more INTP than INFP, as I'm focusing on his ideals and thoughts only.
 
-The other one is, Oscar winning role of Mason's mom. She's touched me, as she is not the person I want to be.
+From childhood only, Mason knew he's different as he's into movies and books more than he's friend. He's character really gets depth after he grows up into yound-adulthood, and he's thoughts and philosophies are expressed through his conversations with his girlfriend Sheena. I will copy-paste one of them [from IMDb here](http://www.imdb.com/title/tt1065073/quotes).
 
-From childhood only, Mason knew he's different as he's into movies and books more than he's friend. He's character really gets depth after he grows up kind of, at about 1:45 mark of the movie.
 
     Mason: I just feel like there are so many things that I could be doing and probably want to be doing that I'm just not.
     Sheena: Why aren't you?
@@ -28,5 +26,15 @@ From childhood only, Mason knew he's different as he's into movies and books mor
     Mason: Everything. I mean, I just wanna be able to do anything I want, because it makes me feel alive. As opposed to giving me the appearance of normality.
     Sheena: Whatever that means.
     Mason: I don't think it means much.
+    
+Then, the next quote by Mason, where he is _talking about college_, but this can be extended to all our life.
 
-This dialogue got me.
+    Mason: But it's like a preordained slot that's already got your name and number on it. I don't think it's the key to my future. 'Cause, I mean, look at my mom. She got her degree and got a pretty good job. She can pay her bills. I like your mom. I like my mom, too. I just mean... Basically she's still just as fuckin' confused as I am.
+
+
+This statement of Mason is confirmed by her mom herself later in the film, when Mason is leaving for College. After going with the herd, running with the rat-race, or however you want to call it, when she sends off Mason to college, she breaks down with a crisis that we should all try to avoid.
+
+    Mom: You know what I'm realising? My life is just going to go. Like that. This series of milestones. Getting married. Having kids. Getting divorced. The time that we thought you were dyslexic. When I taught you how to ride a bike. Getting divorced... again. Getting my masters degree. Finally getting the job I wanted. Sending Samantha off to college. Sending you off to college. You know what's next? Huh? It's my fucking funeral! Just go, and leave my picture!
+    Mason: Aren't you jumping ahead by, like, 40 years or something?
+    Mom: I just thought there would be more.
+
