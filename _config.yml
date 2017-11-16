@@ -24,10 +24,10 @@ description: Personal website of Sumit Ghosh. Also comes with a blog! How awesom
 # List of links in the navigation bar
 navbar-links:
   Blog: "https://sumit-ghosh.com"
-  About Me: "/about"
-  Projects: "/projects"
+  About Me: "https://sumit-ghosh.com/about"
+  Projects: "https://sumit-ghosh.com/projects"
   Resume: "https://resume.sumit-ghosh.com"
-  Contact Me: "/contact-me"
+  Contact Me: "https://sumit-ghosh.com/contact-me"
   # Resources:
   #   - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
   #   - Learn markdown: "http://www.markdowntutorial.com/"
@@ -163,6 +163,8 @@ defaults:
 # Use tags pages (not recommended if you are deploying via GitHub pages, only set to true if deploying locally with ruby)
 link-tags: false
 
+include:
+  - _pages
 # Exclude these files from production site
 exclude:
   - CHANGELOG.md
