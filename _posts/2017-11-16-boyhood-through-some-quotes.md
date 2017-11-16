@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Boyhood. Through Some Quotes.
-subtitle: 'Rather, how it touched me'
+subtitle: 'Or rather, how it touched me'
 tags:
   - Movies
   - Review
