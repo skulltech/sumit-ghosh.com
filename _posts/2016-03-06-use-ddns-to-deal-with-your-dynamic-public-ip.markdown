@@ -4,17 +4,10 @@ comments: true
 date: 'Sun Mar 06 2016 13:58:02 GMT+0530 (India Standard Time)'
 slug: use-ddns-to-deal-with-your-dynamic-public-ip
 title: Use DDNS to Deal with Your Dynamic Public IP
-wordpress_id: 256
-categories:
-  - Hacking
-  - Networking
 tags:
+  - Hacking
   - DDNS
-  - DNS
-  - Dynamic IP
   - Metasploit
-  - MSFVenom
-  - No-IP
 published: true
 ---
 

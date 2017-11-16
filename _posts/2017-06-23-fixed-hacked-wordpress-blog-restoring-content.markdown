@@ -5,6 +5,9 @@ date: 'Fri Jun 23 2017 21:10:42 GMT+0530 (India Standard Time)'
 slug: fixed-hacked-wordpress-blog-restoring-content
 title: 'How I fixed My Hacked WordPress Blog: Restoring the Content'
 published: true
+tags:
+  - WordPress
+  - SysAdmin
 ---
 
 I made my blog [Techkernel](https://techkernel.org) quite some time back, but I never took it seriously. I made a very small number of posts, and never bothered to maintain the blog properly. I just moderated the comments, never bothering to reply them (I know, I'm a terrible person). I also did not updated the plugins, neither WordPress itself. But I realised my mistake when my blog got hacked and the most popular post of it got replaced by some crappy advertisement.

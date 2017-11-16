@@ -3,10 +3,10 @@ comments: true
 date: 2016-03-06 15:55:52+00:00
 slug: python-selenium-webdriver-with-custom-user-agent-and-profile
 title: Python - Starting Up Selenium Webdriver, with Custom User-Agent and Profile
-wordpress_id: 545
-categories:
+tags:
 - Programming
 - Python
+- Automated QA Testing
 - Selenium Webdriver
 ---
 

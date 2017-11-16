@@ -3,17 +3,11 @@ layout: post
 date: 'Sat Dec 12 2015 02:30:19 GMT+0530 (India Standard Time)'
 slug: embed-metasploit-payload-in-apk-easily
 title: Embed a Metasploit Payload in an Original .apk File | Part 1 - The Easy Way
-wordpress_id: 13
-categories:
-  - Android
-  - Hacking
-  - Metasploit
 tags:
   - Android
   - Hacking
-  - Kali
   - Metasploit
-  - Meterpreter
+  - Kali Linux
 published: true
 ---
 

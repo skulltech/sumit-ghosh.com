@@ -4,14 +4,9 @@ comments: true
 date: 'Sat Dec 31 2016 21:03:12 GMT+0530 (India Standard Time)'
 slug: ethical-hacking-and-the-hacker-culture
 title: Ethical Hacking and The Hacker Culture
-wordpress_id: 583
-categories:
-  - Ethical Hacking
-  - Hacker Culture
-  - Hacking
 tags:
-  - Ethical Hacking
-  - Hacker Culture
+  - Hacking
+  - Culture
 published: true
 ---
 

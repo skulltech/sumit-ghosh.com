@@ -4,15 +4,9 @@ comments: true
 date: 'Sat Dec 31 2016 20:56:50 GMT+0530 (India Standard Time)'
 slug: email-structure-and-how-to-trace-it
 title: Email | Structure and How to Trace it
-wordpress_id: 589
-categories:
-  - Email
-  - Hacking
-  - Networking
 tags:
   - Email
-  - Headers
-  - Tracing
+  - Internet
 published: true
 ---
 
