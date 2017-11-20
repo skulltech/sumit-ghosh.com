@@ -1,0 +1,10 @@
+---
+title: All about Proxy Settings
+tags:
+- Linux
+- Windows
+---
+
+Those of you who have worked with Internet behind some proxy server, maybe in your university or office, you most likely know what a pain proxy settings can be. For normal browsing it's okay, in most cases you just have to go to the browser setting and configure the proxy. But the real problem begins when you try to use command-line tools or like behind proxy. Most of them seem to be not aware of the system proxy settings at all! They want to be special and require you to configure their settings seperately. You may say, that's not that much of a problem, I will just configure the settings for the apps I use, then I'm done. What's the big deal with that? Well, you're right, but it will become a deal when you have to switch between a proxied and a non-proxied internet often. And that is the case for most. As I mentioned, usually the internet in the workplaces and schools are proxied, mainly to monitor internet usages (Incognito tab can't save you here!), and the connection in the homes are generally proxy-free. So, you'll have to change all of your proxy settings at least twice a day, most probably many more times! Usually this process involves some Google searches too, so it can become frustrating. So in this post, I will try to cover all the different scenarios of proxy configuration we generally confront. To be honest, part of why I'm writing this post is having a note for myself, as I am too a victim of this proxy-trouble.
+
+After I get into the nitty-gritty details of it, I would share a secret open-source tool I use to ease all these pain (it's not really a secret xD). It's called [ProxyMan](https://github.com/himanshub16/ProxyMan). It's for Linux systems, and supports configuring proxy for a lot of commonly used tools. [It's on Github here](https://github.com/himanshub16/ProxyMan), go check it out! Maybe make some pull-requests too, as it could really use some right now. 
