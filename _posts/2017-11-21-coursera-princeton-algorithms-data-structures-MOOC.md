@@ -1,6 +1,8 @@
 ---
 title: The Best (arguably!) Introductory Algorithms and Data Structure Course
 subtitle: Algorithms Part 1 and 2 by Princeton University on Coursera 
+date: 'Sat Nov 21 2017 00:10:25 GMT+0530 (India Standard Time)'
+published: true
 tags:
 - Algorithms
 - Data-structures
