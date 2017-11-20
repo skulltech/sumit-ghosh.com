@@ -1,13 +1,14 @@
 ---
+layout: post
 title: The Best (arguably!) Introductory Algorithms and Data Structure Course
-subtitle: Algorithms Part 1 and 2 by Princeton University on Coursera 
+subtitle: Algorithms Part 1 and 2 by Princeton University on Coursera
 date: 'Sat Nov 21 2017 00:10:25 GMT+0530 (India Standard Time)'
 published: true
 tags:
-- Algorithms
-- Data-structures
-- MOOC
-- Coursera 
+  - Algorithms
+  - Data-structures
+  - MOOC
+  - Coursera
 ---
 
 The title suspiciously sounds like an advertisement or paid promotion, doesn't it? I know it does, but still, believe me or not, it's not. I just completed the introductory Algorithms and Data Structures course [Algorithms Part 1](https://www.coursera.org/learn/algorithms-part1), and I can say confidently that it is one of the, if not the best course of it's kind available out there on the interwebs. This course is offered by [Princeton University](https://www.princeton.edu/) on [Coursera](https://www.coursera.org/), taught by Robert Sedgewick.
@@ -25,7 +26,7 @@ A tip about the assignment, you can resubmit those as many times as possible, so
 
 The course content is really well thought-out and planned too. The lecture is concise, and if you watched it like I did, in 1.25x speed, it will be even more concise! (Sorry for the attempted joke.) The lecturer Robert Sedgewick is an extremely renowned computer scientist, author of several books and he discovered the data structure "`Red-black Tree`"! If you don't know, it's one of the most used data-structure, the default implementation of Tree in Java, C++ and Linux kernel!
 
-Something I liked about the course very much is how Prof. Sedgewick shows pieces of code as he explains the data structures. Although it's not required, I'd suggest that you implement the data-structures he's teaching parallelly as you're going through the course, like pausing the video once-a-while and then coding the algo to that part. This makes going through the course a bit slower, but it's worth it. That way the concepts along with their implementation will be engraved in your mind. Even if you don't do that, the assignments by themselves would give enough chance to exercise those fingers of yours. To be honest, I didn't implement all the data-structures in the later part of the course myself, I only did the assignments.
+Something I liked about the course very much is how Prof. Sedgewick shows pieces of code as he explains the data structures. Although it's not required, I'd suggest that you implement the data-structures he's teaching parallelly as you're going through the course, like pausing the video once-a-while and then coding the algo to that part. This makes going through the course a bit slower, but it's worth it. That way the concepts along with their implementation will be engraved in your mind. Even if you don't do that, the assignments by themselves would give enough chance to exercise those fingers of yours. To be honest, I didn't implement all the data-structures in the later part of the course myself, I only did the assignments. Also, you don't need to take notes while you're going through the course, as there are lecture slides available.
 
 Another thing worth mentioning, if you're looking for lots of time-complexity analysis and another theoretical concepts, you won't find that here. Prof. Sedgewick only covers the basics of the theoretical concepts of Computer Science, and for a more mathematical and rigorous introduction to Computer Science, you should consider some other courses. This course is mainly intended for beginners in Computer Science, covering mostly practical aspects of it. The next part of this course, Algorithms Part 2, delves deeper into more complex data structures and related algorithms, such as graph and string manipulation.
 
@@ -41,4 +42,4 @@ This course is completely free, so that's nice. There's one caveat though, the u
 
 ## My code for this course
 
-[Here's the code](https://github.com/SkullTech/algorithms-princeton) I wrote while taking the course. It contains the solutions to the assignments too, so I'd suggest you not to check the folder 'Assignments' unless you're done with it. 
+[Here's the code](https://github.com/SkullTech/algorithms-princeton) I wrote while taking the course. It contains the solutions to the assignments too, so I'd suggest you not to check the folder 'Assignments' unless you're done with it.
