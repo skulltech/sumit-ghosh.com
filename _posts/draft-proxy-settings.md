@@ -21,10 +21,14 @@ After I get into the nitty-gritty details of it, I would share a secret open-sou
 - `AUTO_PROXY`, `auto_proxy`
 - `NO_PROXY`, `no_proxy`
 
+You may be wondering why have I written the same name twice, once in small letters and the second time in caps. The reason for this is, sometimes some programs only read the environment variable with a specific case, and so it's crucial that we 
+
 Set them with set command. And with unset command.
 ```bash
 export HTTP_PROXY="http://username:password@proxyserver.com:port"
 ```
+
+This only sets the environment variable for this shell and the processes that spawn from it, i.e it's subprocesses. Actually, the `set` command doesn't set environemtn variables at all, it sets bash variables. to get a detailed analysis of how do these work, check out [this article on DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps), which goes on length about the difference between shell variables and environement variables and the differnert ways enviornemnt variables get loaded into the system. I will provide a short and concise gist below for quick reference.
 
 /etc/bash.bashrc
 .bashrc
@@ -37,3 +41,19 @@ export HTTP_PROXY="http://username:password@proxyserver.com:port"
 ### Yum
 
 `/etc/yum.conf` -> `proxy=http://:`
+
+### Git
+
+To set proxy
+```console
+git config --global http.proxy http://proxyuser:proxypwd@proxy.server.com:8080
+```
+To remove proxy settings
+```console
+git config --global --unset http.proxy
+```
+To check current proxy configuration
+```console
+git config --global --get http.proxy
+```
+
