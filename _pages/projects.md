@@ -4,18 +4,23 @@ layout: page
 title: Projects
 subtitle: My excuses for avoiding social interactions
 comments: true
-published: false
+published: true
 
 ---
 
 This is a collection of projects that I worked/working on. I will try to keep this updated to my best effort, but the most recent record of my activities would of be [my Github](https://github.com/SkullTech), of course.
+
+## Websites
+
+- [__sumit-ghosh.com__]: My personal website. Comes with a blog too, how cool is that!
+
 
 ## Currently working on
 
 - [__Kumbu Functional Test Suite__](https://www.getkumbu.com/): Currently I'm writing an extensive test-suite for the digital memories platform [Kumbu](https://www.getkumbu.com/), using `py.test` and `Selenium` as the technology stack.
 
 
-## Script cum CLI tool cum small libraries
+## Scripts | CLI tools | Small libraries
 
 I built most of these for small freelancing gigs that I did through [Upwork](https://www.upwork.com/o/profiles/users/_~01a22be6196dbef5c6/). The story of these projects goes like this - it started as a script, maybe a task that a client or I myself wanted to be automated. Later on, sometime when I was feeling bored, I cleaned it up, added CLI functionalites, and in some cases, made a `pip`-installable library! There are a quite a number of them, and it's very easy to lose track of it. So I thought I should maintain a list of such small-but-useful projects in a clean way.
 
