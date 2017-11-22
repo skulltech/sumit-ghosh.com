@@ -11,9 +11,9 @@ After I get into the nitty-gritty details of it, I would share a secret open-sou
 
 # Linux
 
-## System-wide settings
+## System-wide Settings - Environment Variables
 
-### Environment variables
+As you probably know, environment variables are some "key-value" pairs that are used by the linux OS and various applications as configurations. The system-wide proxy setting in Linux is also configured using environment variables, in particular you'll have to configure the following environment variables - 
 
 - `HTTP_PROXY`, `http_proxy`
 - `HTTPS_PROXY` `https_proxy`
@@ -21,12 +21,17 @@ After I get into the nitty-gritty details of it, I would share a secret open-sou
 - `AUTO_PROXY`, `auto_proxy`
 - `NO_PROXY`, `no_proxy`
 
-You may be wondering why have I written the same name twice, once in small letters and the second time in caps. The reason for this is, sometimes some programs only read the environment variable with a specific case, and so it's crucial that we 
+You may be wondering why have I written the same name twice, once in small letters and the second time in caps. The reason for this is, sometimes some programs only read the environment variable with a specific case, and so it's crucial that we configure both to ensure robustness.
 
 Set them with set command. And with unset command.
 ```bash
 export HTTP_PROXY="http://username:password@proxyserver.com:port"
 ```
+
+You can set proxy temporarily for a single shell session only using the `set` command, as shown below
+```console
+set HTTP_PROXY="http://username:password@proxyserver.com:port"
+``` 
 
 This only sets the environment variable for this shell and the processes that spawn from it, i.e it's subprocesses. Actually, the `set` command doesn't set environemtn variables at all, it sets bash variables. to get a detailed analysis of how do these work, check out [this article on DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps), which goes on length about the difference between shell variables and environement variables and the differnert ways enviornemnt variables get loaded into the system. I will provide a short and concise gist below for quick reference.
 
