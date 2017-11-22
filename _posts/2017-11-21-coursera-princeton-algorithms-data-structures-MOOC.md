@@ -9,8 +9,6 @@ tags:
   - Data-structures
   - MOOC
   - Coursera
-image: /img/posts/coursera.png
-share-img: 'http://sumit-ghosh.com/img/posts/coursera.png'
 ---
 
 The title suspiciously sounds like an advertisement or paid promotion, doesn't it? I know it does, but still, believe me or not, it's not. I just completed the introductory Algorithms and Data Structures course [Algorithms Part 1](https://www.coursera.org/learn/algorithms-part1), and I can say confidently that it is one of the, if not the best course of it's kind available out there on the interwebs. This course is offered by [Princeton University](https://www.princeton.edu/) on [Coursera](https://www.coursera.org/), taught by Robert Sedgewick.
