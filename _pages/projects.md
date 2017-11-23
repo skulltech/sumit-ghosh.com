@@ -19,6 +19,15 @@ This is a collection of projects that I worked/working on. I will try to keep th
 
 - [__Kumbu Functional Test Suite__](https://www.getkumbu.com/): Currently I'm writing an extensive test-suite for the digital memories platform [Kumbu](https://www.getkumbu.com/), using `py.test` and `Selenium` as the technology stack.
 
+- [__musically-bot__](https://github.com/SkullTech/musically-bot): A script that automates some task on the app _Musical.ly_. It uses `Appium` through `ADB` to control the app running on an _Android_ device, connected to the machine running the code through USB.
+
+## Personal Projects to-do | Contributions are welcome
+
+These are some personal projects that I'm working on, but as these lack any monetary incentive, development on these may be slow or halted, sadly. It'd be great if any of these generate enough interest in you, leading you to contribute to it!
+
+- [__Django-RedditAuth__](https://github.com/SkullTech/django-redditauth): A `Django` app for Reddit authentication using `OAuth2`. It's similar to [`django-allauth`](https://www.intenct.nl/projects/django-allauth/), only that it only deals with _Reddit_'s auth, instead of _all_, so a lot cleaner and light.
+
+- [__Plan-Reddit__](https://github.com/SkullTech/plan-reddit): A webapp for automatic posting to sub-reddits according to a pre-defined schedule. It can be used for effectively reaching out to redditers, as sub-reddits get most active in a specific time of the day/week only. 
 
 ## Scripts | CLI tools | Small libraries
 
@@ -35,3 +44,8 @@ I built most of these for small freelancing gigs that I did through [Upwork](htt
 - [__PyGmail__](https://github.com/SkullTech/py-gmail): It lets you send an email quickly and easily through the GMail API.
 
 - [__Webdriver-Start__](https://sumit-ghosh.com/articles/python-selenium-webdriver-with-custom-user-agent-and-profile/): If you've made some stuff using Selenium Webdriver, you must know how annoying starting a webdriver with a specific `user-agent` or profile can be, because the procedure varies from driver to driver. So I decided to write this nice little module, which takes the headache away from you, letting you use the same and simple syntax for starting-up different webdrivers with various configurations. And what's more, it also comes as a `PyPI` package, letting you install it simply by running `pip install webdriver-start`!
+
+- [__Friend-Scraper__](https://github.com/SkullTech/friends-scraper): This script scrapes the list of friends of a given Facebook account. It uses `Selenium` to automatically open a browser and execute the task.
+
+- [__Google-PlusOne-Bot__](https://github.com/SkullTech/google-plusone-bot): Given a list of URLs as input, this script +1s (The Google+ thingy) them automatically using some `Selenium` magic.
+
