@@ -27,7 +27,9 @@ These are some personal projects that I'm working on, but as these lack any mone
 
 - [__Django-RedditAuth__](https://github.com/SkullTech/django-redditauth): A `Django` app for Reddit authentication using `OAuth2`. It's similar to [`django-allauth`](https://www.intenct.nl/projects/django-allauth/), only that it only deals with _Reddit_'s auth, instead of _all_, so a lot cleaner and light.
 
-- [__Plan-Reddit__](https://github.com/SkullTech/plan-reddit): A webapp for automatic posting to sub-reddits according to a pre-defined schedule. It can be used for effectively reaching out to redditers, as sub-reddits get most active in a specific time of the day/week only. 
+- [__Plan-Reddit__](https://github.com/SkullTech/plan-reddit): A webapp for automatic posting to sub-reddits according to a pre-defined schedule. It can be used for effectively reaching out to redditers, as sub-reddits get most active in a specific time of the day/week only. Going to use _Django-RedditAuth_ for authenticating with Reddit.
+
+- [__Proliflicks__](https://github.com/SkullTech/proliflicks): App that makes your movie night smoother. It scans your entire computer for movies, grabs subtitle and info for those, and displays them in a nice and clean GUI.
 
 ## Scripts | CLI tools | Small libraries
 
@@ -49,3 +51,16 @@ I built most of these for small freelancing gigs that I did through [Upwork](htt
 
 - [__Google-PlusOne-Bot__](https://github.com/SkullTech/google-plusone-bot): Given a list of URLs as input, this script +1s (The Google+ thingy) them automatically using some `Selenium` magic.
 
+- [__Merge-Music__](https://github.com/SkullTech/merge-music): A script that combines two `mp3` or `wav` files into one. [Ankit Solanki](https://techcentaur.github.io) wrote most of the script though, so credit goes to him.
+ 
+- [__Upwork Hunt__](https://github.com/SkullTech/upwork-hunt): Script that crawls [_Upwork_](https://upwork.com) job feed regulary, mailing the user about any jobs that match a predefined criteria.
+
+- Some other projects like these
+  - [whois-scraper](https://github.com/SkullTech/whois-scraper)
+  - [selenium-testcases](https://github.com/SkullTech/selenium-testcases)
+  - [supportablity-macro](https://github.com/SkullTech/supportablity-macro)
+  - [cdnetworks-dns-bot](https://github.com/SkullTech/cdnetworks-dns-bot)
+  - [portfolio-devclub](https://github.com/SkullTech/portfolio-devclub)
+  - [domain-park](https://github.com/SkullTech/domain-park)
+  - [email-scraper](https://github.com/SkullTech/email-scraper)
+  - [24online-client](https://github.com/SkullTech/24online-client)
