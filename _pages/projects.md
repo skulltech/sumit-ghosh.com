@@ -12,7 +12,7 @@ This is a collection of projects that I worked/working on. I will try to keep th
 
 ## Websites
 
-- __sumit-ghosh.com__: My personal website. Comes with a blog too, how cool is that!
+- [__sumit-ghosh.com__](https://sumit-ghosh.com): My personal website. Comes with a blog too, how cool is that!
 
 
 ## Currently working on
