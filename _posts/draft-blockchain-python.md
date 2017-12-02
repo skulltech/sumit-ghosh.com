@@ -10,4 +10,3 @@ From the name itself, we can guess that Blockchain is, a chain of 'Blocks'. In t
 
 
 ### Implementing 'Blocks'
-
