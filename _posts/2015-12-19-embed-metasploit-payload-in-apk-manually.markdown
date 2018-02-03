@@ -72,7 +72,7 @@ Replace [IP_Address] by the IP address to which the payload is going to connect 
 ```console
 ifconfig
 ```
-![Screenshot from 2015-12-18 13:56:49](/img/posts/screenshot-from-2015-12-18-135649.png)
+![Screenshot from 2015-12-18 13:56:49](/images/posts/screenshot-from-2015-12-18-135649.png)
 
 
 If you are going to perform this attack over the Internet, you have to use your public IP address, and configure your router properly (set up port forwarding) so that your system is accessible from the Internet. To know your public IP, just google "My IP" and Google will help you out.
@@ -82,7 +82,7 @@ Replace [Incoming_Port] with the port no. which you want to be used by the paylo
 
 So run the command using replacing the keywords with appropriate values and MSFVenom will generate a payload "meterpreter.apk" in the root directory. Note that we specified the output file name using the "-o meterpreter.apk" argument in the command, so if you like, you can name it anything else also.
 
-![Screenshot from 2015-12-18 14:23:14](/img/posts/screenshot-from-2015-12-18-142314.png)
+![Screenshot from 2015-12-18 14:23:14](/images/posts/screenshot-from-2015-12-18-142314.png)
 
 
 ### Step 2: Decomplile the APKs
@@ -94,7 +94,7 @@ apktool d -f -o original /root/[Original_APK_Name]
 ```   
 It will decompile the payload to "/root/payload" and the original apk to "/root/original" directory.
 
-![Screenshot from 2015-12-19 01:30:26](/img/posts/screenshot-from-2015-12-19-013026.png)
+![Screenshot from 2015-12-19 01:30:26](/images/posts/screenshot-from-2015-12-19-013026.png)
 
 
 ### Step 3: Copy the Payload Files
@@ -117,7 +117,7 @@ So open up the AndroidManifest.xml file located inside the "/root/original" fold
 
 On a side note, you can use CTRL+F to search within the document in any GUI text editor. When you locate that activity, note its "android:name" attribute's value. In my case, as you can see from the screenshot below, it is "com.piriform.ccleaner.ui.activity.MainActivity".
 
-![Screenshot from 2015-12-19 13:21:32](/img/posts/screenshot-from-2015-12-19-132132.png)
+![Screenshot from 2015-12-19 13:21:32](/images/posts/screenshot-from-2015-12-19-132132.png)
 
 Those two lines we searched for signifies that this is the activity which is going to start when we launch the app from the launcher icon, and also this is a MAIN activity (similar to the 'main' function in traditional programming).
 
@@ -128,7 +128,7 @@ gedit /root/original/smali/[Activity_Path]
 
 Replace the [Activity_Path] with the activity's "android:name", but instead of the dots, type slash. Actually the smali codes are stored in folders named in the format the "android:name" is in, so we can easily get the location of the .smali code in the way we did. Check the screenshot below and you will get an idea of what I'm trying to say.
 
-![Screenshot from 2015-12-19 19:06:17](/img/posts/screenshot-from-2015-12-19-190617.png)
+![Screenshot from 2015-12-19 19:06:17](/images/posts/screenshot-from-2015-12-19-190617.png)
 
 Now search for the following line in the smali code (using CTRL+F) -
 ```
@@ -155,10 +155,10 @@ If we do not mention all the additional permissions that our payload is going to
 These permissions are also listed in the previously encountered AndroidManifest file. So let's open the AndroidManifest.xml of both the original app and the payload from the respective folders. The permissions are mentioned inside <uses-permission> tag as an attribute 'android:name'. Copy the additional permission lines from the Payload's AndroidManifest to the original app's one. But be careful that there should not be any duplicate.
 
 Here's my original app's AndroidManifest before editing -
-![Screenshot from 2015-12-19 19:37:12](/img/posts/screenshot-from-2015-12-19-193712.png)
+![Screenshot from 2015-12-19 19:37:12](/images/posts/screenshot-from-2015-12-19-193712.png)
 
 After adding the additional ones from the Payload's AndroidManifest, my /root/original/AndroidManifest.xml looks like this - 
-![Screenshot from 2015-12-19 19:42:48](/img/posts/screenshot-from-2015-12-19-194248.png)
+![Screenshot from 2015-12-19 19:42:48](/images/posts/screenshot-from-2015-12-19-194248.png)
 
 
 ### Step 6: Recompile The Original APK
@@ -169,7 +169,7 @@ Now the hard parts are all done! We just have to recompile the backdoored app in
 apktool b /root/original
 ```
 
-![Screenshot from 2015-12-19 20:14:31](/img/posts/screenshot-from-2015-12-19-201431.png)
+![Screenshot from 2015-12-19 20:14:31](/images/posts/screenshot-from-2015-12-19-201431.png)
 
 You will now have the compiled apk inside the "/root/original/dist" directory. But, we're still not done yet.
 
@@ -189,11 +189,11 @@ jarsigner -verbose -keystore ~/.android/debug.keystore -storepass android -keypa
 
 Be sure to replace the [apk_path] in the above command with the path to your backdoored apk file.
 
-![Screenshot from 2015-12-19 20:28:31](/img/posts/screenshot-from-2015-12-19-202831.png)
+![Screenshot from 2015-12-19 20:28:31](/images/posts/screenshot-from-2015-12-19-202831.png)
 
 
 ### PROFIT?!
 
 Now if you can get the victim to install and run this very legit-looking app in his phone, you can get a working meterpreter session on his phone!
 
-![Screenshot from 2015-12-19 20:44:01](/img/posts/screenshot-from-2015-12-19-204401.png)
+![Screenshot from 2015-12-19 20:44:01](/images/posts/screenshot-from-2015-12-19-204401.png)

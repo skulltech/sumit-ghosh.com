@@ -64,8 +64,8 @@ At the prompt of the Ruby script, enter the number corresponding to the Activity
 
 This is the hardest step of all, so I’m posting some screenshots to make your life easier.
 
-![Screenshot from 2015-12-12 01-44-01](/img/posts/screenshot-from-2015-12-12-01-44-01.png)
-![Screenshot from 2015-12-12 01-43-27](/img/posts/screenshot-from-2015-12-12-01-43-27.png)
+![Screenshot from 2015-12-12 01-44-01](/images/posts/screenshot-from-2015-12-12-01-44-01.png)
+![Screenshot from 2015-12-12 01-43-27](/images/posts/screenshot-from-2015-12-12-01-43-27.png)
 
 
 ### PROFIT?!
@@ -85,7 +85,7 @@ exploit
 
 Now wait for the victim to run the app, when he does it, you will get a Meterpreter prompt in the terminal!
 
-![Screenshot from 2015-12-18 14:32:55](/img/posts/screenshot-from-2015-12-18-143255.png)
+![Screenshot from 2015-12-18 14:32:55](/images/posts/screenshot-from-2015-12-18-143255.png)
 
 
 ### Note:
