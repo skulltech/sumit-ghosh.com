@@ -2,21 +2,13 @@ title:  Musings of Sumit Ghosh
 author: Sumit Ghosh @SkullTech
 email: sumit@sumit-ghosh.com
 description: >  # this means to ignore newlines until another option
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Musings of a technologist. 
+  My blog, double-serving as personal website.
 # social links
 twitter_username: SkullTech101
 github_username:  SkullTech
 rss: rss
-#dribbble_username: jekyll
-#facebook_username: jekyll
-#flickr_username: jekyll
-#instagram_username: jekyll
 linkedin_username: sumit-ghosh-skulltech
-#pinterest_username: jekyll
-#youtube_username: jekyll
-#googleplus_username: +jekyll
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
@@ -36,3 +28,17 @@ theme: minima
 exclude:
   - Gemfile
   - Gemfile.lock
+
+# Jekyll settings
+include:
+  - _pages
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+
+permalink: /articles/:title/
+paginate: 5
