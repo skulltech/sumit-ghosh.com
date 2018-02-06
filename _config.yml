@@ -42,3 +42,6 @@ exclude:
 
 permalink: /articles/:title/
 paginate: 5
+
+plugins:
+  - jekyll-feed
