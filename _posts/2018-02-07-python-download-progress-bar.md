@@ -7,7 +7,7 @@ tags:
   - Python
   - Coding
 published: true
------
+----
 
 Below is a Python function I recently wrote which downloads a file from a remote URL, and shows a progress bar while doing it. Here's the [code](https://gist.github.com/SkullTech/4510a5613c9aae89105fd1b6c424d0a0)
 
