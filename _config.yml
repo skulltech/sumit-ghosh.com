@@ -1,10 +1,10 @@
 title:  Musings of Sumit Ghosh
 author: Sumit Ghosh @SkullTech
 email: sumit@sumit-ghosh.com
-description: >  # this means to ignore newlines until another option
+description: >
   Musings of a technologist. 
   My blog, double-serving as personal website.
-# social links
+
 twitter_username: SkullTech101
 github_username:  SkullTech
 rss: rss
@@ -25,9 +25,6 @@ minima:
 # Build settings
 markdown: kramdown
 theme: minima
-exclude:
-  - Gemfile
-  - Gemfile.lock
 
 # Jekyll settings
 include:
@@ -46,3 +43,9 @@ paginate: 5
 plugins:
   - jekyll-feed
   - jekyll-gist
+
+twitter:
+  username: SkullTech101
+
+disqus:
+    shortname: sumit-ghosh-com

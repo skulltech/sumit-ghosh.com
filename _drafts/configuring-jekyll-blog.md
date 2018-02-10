@@ -14,3 +14,7 @@ Auto Atom feed generation can be done using the `jekyll-feed` plugin. It is alre
 plugins:
   - jekyll-feed
 ```
+
+I also made sure that I configured all the additional options as mentioned [here](https://github.com/jekyll/jekyll-feed) in the docs of the plugin.
+
+### SEO Tags
