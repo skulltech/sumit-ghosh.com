@@ -16,6 +16,35 @@ I wanted to read some books about founding startups, but had no idea which books
 
 # Books Startup Founders Should Read
 
+## Books coming up more than once
+
+- __!!!!!!__ [The Hard Thing About Hard Things by Ben Horowitz](https://www.goodreads.com/book/show/18176747-the-hard-thing-about-hard-things)
+- __!!!!__ [The Innovators Dilemma by Clayton M. Chistensen](https://www.goodreads.com/book/show/2615.The_Innovator_s_Dilemma)
+- __!!!__ [Zero to One by Peter Thiel](https://www.goodreads.com/book/show/18050143-zero-to-one)
+- __!!!__ The Lean Startup by Eric Ries
+- __!!!__ Hooked by Nir Eyal
+- __!!__ [High Output Management by Andrew Grove](https://www.goodreads.com/book/show/324750.High_Output_Management)
+- __!!__ The Checklist Manifesto by Atul Gawande
+- __!!__ Rework by Jason Fried and David Hansson
+- __!__ [Contagious by Jonah Berger](https://www.goodreads.com/book/show/15801967-contagious)
+- __!__ Only the Paranoid Survive by Andrew Grove
+- __!__ Good To Great by James C. Collins
+- __!__ Creativity Inc. by Ed Catmull
+- __!__ The Four Steps to the Epiphany by Steve Blank
+- __!__ The $100 Startup by Chris Guillebeau
+- __!__ Venture Deals by Brad Feld
+- __!__ The Sprint book by Jake Knapp
+- __!__ Startupland by Mikkel Svane
+- __!__ Conscious Capitalism by John Mackey
+- __!__ The Effective Executive by Peter Drucker
+- __!__ Zen and the Art of Motorcycle Maintenance by Robert Pirsig
+- __!__ Influence by Robert B. Cialdini
+- __!__ How to Win Friends and Influence People by Dale Carnegie
+- __!__ Traction by Gabriel Weinberg
+
+
+## All the books
+
 - [Change by Design by Tim Brown](https://www.goodreads.com/book/show/6671664-change-by-design)
 - __!!!!!!__ [The Hard Thing About Hard Things by Ben Horowitz](https://www.goodreads.com/book/show/18176747-the-hard-thing-about-hard-things)
 - [Crossing the Chasm by Geoffrey Moore](https://www.goodreads.com/book/show/61329.Crossing_the_Chasm)
@@ -70,7 +99,7 @@ I wanted to read some books about founding startups, but had no idea which books
 - Good Strategy, Bad Strategy by Richard Rumelt
 - __!__ The Effective Executive by Peter Drucker
 - Founders at Work by Jessica Livingston
-- ^ Zen and the Art of Motorcycle Maintenance by Robert Pirsig
+- __!__ Zen and the Art of Motorcycle Maintenance by Robert Pirsig
 - Poor Charlie's Almanack by Charlie Munger
 - The Score Takes Care of Itself by Bill Walsh
 - The Fountainhead by Ayn Rand
