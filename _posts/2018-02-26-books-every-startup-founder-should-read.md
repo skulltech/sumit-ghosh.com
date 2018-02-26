@@ -11,7 +11,7 @@ tags:
 published: true
 ---
 
-I wanted to read some books about founding startups, but had no idea which books should they be. Natuarally Google came to help. Upon compiling books from the first page of Google search results of the query __"Books Startup Founders Should Read"__, what I got is the list below. Number of stars against a book indicates the number of times that book came up repeating, so the more the better.
+I wanted to read some books about founding startups, but had no idea which books should they be. Natuarally Google came to help. Upon compiling books from the first page of Google search results of the query _"Books Startup Founders Should Read"_, what I got is the list below. Number of stars against a book indicates the number of times that book came up repeating, so the more the better.
 
 
 # Books Startup Founders Should Read
@@ -20,14 +20,14 @@ I wanted to read some books about founding startups, but had no idea which books
 - ****** [The Hard Thing About Hard Things by Ben Horowitz](https://www.goodreads.com/book/show/18176747-the-hard-thing-about-hard-things)
 - [Crossing the Chasm by Geoffrey Moore](https://www.goodreads.com/book/show/61329.Crossing_the_Chasm)
 - [The Alliance by Reid Hoffman](https://www.goodreads.com/book/show/20763746-the-alliance)
-- *** Zero to One by Peter Thiel
-- **** The Innovators Dilemma by Clayton M. Chistensen
-- Steve Jobs by Walter Issacson
-- Finding My Virginity by Richard Branson
-- Product Leadership by Martin Eriksson
-- The Startup Way by Eric Ries
-- * Contagious by Jonah Berger
-- High Output Management by Andrew Grove
+- *** [Zero to One by Peter Thiel](https://www.goodreads.com/book/show/18050143-zero-to-one)
+- **** [The Innovators Dilemma by Clayton M. Chistensen](https://www.goodreads.com/book/show/2615.The_Innovator_s_Dilemma)
+- [Steve Jobs by Walter Issacson](https://www.goodreads.com/book/show/11084145-steve-jobs)
+- [Finding My Virginity by Richard Branson](https://www.goodreads.com/book/show/34626372-finding-my-virginity)
+- [Product Leadership by Martin Eriksson](https://www.goodreads.com/book/show/30014114-product-leadership)
+- [The Startup Way by Eric Ries](https://www.goodreads.com/book/show/34267304-the-startup-way)
+- * [Contagious by Jonah Berger](https://www.goodreads.com/book/show/15801967-contagious)
+- ** [High Output Management by Andrew Grove](https://www.goodreads.com/book/show/324750.High_Output_Management)
 - * Only the Paranoid Survive by Andrew Grove
 - * Good To Great by James C. Collins
 - * Creativity Inc. by Ed Catmull
@@ -68,7 +68,6 @@ I wanted to read some books about founding startups, but had no idea which books
 - * Conscious Capitalism by John Mackey
 - Playing to Win by A.G. Lafley
 - Good Strategy, Bad Strategy by Richard Rumelt
-- * High Output Manangement by Andy Grove
 - * The Effective Executive by Peter Drucker
 - Founders at Work by Jessica Livingston
 - * Zen and the Art of Motorcycle Maintenance by Robert Pirsig
@@ -106,14 +105,14 @@ I wanted to read some books about founding startups, but had no idea which books
 - Scientific Advertising By Claude Hopkins
 - Revenue Disruption by Phil Fernandez
 - The Tipping Point by Malcolm Gladwell
-- The Twenty Two Immutable Laws of Marketing by Al Ries and Jack Trout
-- The Fish That Ate the Whale by Rich Cohen
-- The Black Swan by Nassim Nicholas Taleb
-- The Art of War by Sun Tzu
-- Never Split the Difference by Chris Voss
-- Who by Geoff Smart and Randy Street
-- The 4-hour Work Week by Tim Ferriss
-- The Art of Happiness by Dalai Lama and Howard C. Cutler
+- [The Twenty Two Immutable Laws of Marketing by Al Ries and Jack Trout](https://www.goodreads.com/book/show/33449.The_22_Immutable_Laws_of_Marketing)
+- [The Fish That Ate the Whale by Rich Cohen](https://www.goodreads.com/book/show/13166586-the-fish-that-ate-the-whale)
+- [The Black Swan by Nassim Nicholas Taleb](https://www.goodreads.com/book/show/242472.The_Black_Swan)
+- [The Art of War by Sun Tzu](https://www.goodreads.com/book/show/10534.The_Art_of_War)
+- [Never Split the Difference by Chris Voss](https://www.goodreads.com/book/show/26156469-never-split-the-difference)
+- [Who by Geoff Smart and Randy Street](https://www.goodreads.com/book/show/4989687-who)
+- [The 4-hour Work Week by Tim Ferriss](https://www.goodreads.com/book/show/368593.The_4_Hour_Workweek)
+- [The Art of Happiness by Dalai Lama and Howard C. Cutler](https://www.goodreads.com/book/show/38210.The_Art_of_Happiness)
 - [Entrepreneur Revolution by Daniel Priestley](https://www.goodreads.com/book/show/16286419-entrepreneur-revolution)
 - [Oversubscribed by Daniel Priestley](https://www.goodreads.com/book/show/25305548-oversubscribed)
 - [Bargaining for advantage by G. Richard Shell](https://www.goodreads.com/book/show/23801.Bargaining_for_Advantage)
