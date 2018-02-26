@@ -11,7 +11,7 @@ tags:
 published: true
 ---
 
-I wanted to read some books about founding startups, but had no idea which books should they be. Natuarally Google came to help. Upon compiling books from the first page of Google search results of the query _"Books Startup Founders Should Read"_, what I got is the list below. Number of ^s against a book indicates the number of times that book came up repeating, so the more the better.
+I wanted to read some books about founding startups, but had no idea which books should they be. Natuarally Google came to help. Upon compiling books from the first page of Google search results of the query _"Books Startup Founders Should Read"_, what I got is the list below. Number of !s against a book indicates the number of times that book came up repeating, so the more the better.
 
 
 # Books Startup Founders Should Read
@@ -20,29 +20,29 @@ I wanted to read some books about founding startups, but had no idea which books
 - __!!!!!!__ [The Hard Thing About Hard Things by Ben Horowitz](https://www.goodreads.com/book/show/18176747-the-hard-thing-about-hard-things)
 - [Crossing the Chasm by Geoffrey Moore](https://www.goodreads.com/book/show/61329.Crossing_the_Chasm)
 - [The Alliance by Reid Hoffman](https://www.goodreads.com/book/show/20763746-the-alliance)
-- !!! [Zero to One by Peter Thiel](https://www.goodreads.com/book/show/18050143-zero-to-one)
-- __^^^^__ [The Innovators Dilemma by Clayton M. Chistensen](https://www.goodreads.com/book/show/2615.The_Innovator_s_Dilemma)
+- __!!!__ [Zero to One by Peter Thiel](https://www.goodreads.com/book/show/18050143-zero-to-one)
+- __!!!!__ [The Innovators Dilemma by Clayton M. Chistensen](https://www.goodreads.com/book/show/2615.The_Innovator_s_Dilemma)
 - [Steve Jobs by Walter Issacson](https://www.goodreads.com/book/show/11084145-steve-jobs)
 - [Finding My Virginity by Richard Branson](https://www.goodreads.com/book/show/34626372-finding-my-virginity)
 - [Product Leadership by Martin Eriksson](https://www.goodreads.com/book/show/30014114-product-leadership)
 - [The Startup Way by Eric Ries](https://www.goodreads.com/book/show/34267304-the-startup-way)
-- ^ [Contagious by Jonah Berger](https://www.goodreads.com/book/show/15801967-contagious)
-- ^^ [High Output Management by Andrew Grove](https://www.goodreads.com/book/show/324750.High_Output_Management)
-- ^ Only the Paranoid Survive by Andrew Grove
-- ^ Good To Great by James C. Collins
-- ^ Creativity Inc. by Ed Catmull
-- ^^^ The Lean Startup by Eric Ries
-- ^^ The Checklist Manifesto by Atul Gawande
-- ^^^ Hooked by Nir Eyal
-- ^ The Four Steps to the Epiphany by Steve Blank
+- __!__ [Contagious by Jonah Berger](https://www.goodreads.com/book/show/15801967-contagious)
+- __!!__ [High Output Management by Andrew Grove](https://www.goodreads.com/book/show/324750.High_Output_Management)
+- __!__ Only the Paranoid Survive by Andrew Grove
+- __!__ Good To Great by James C. Collins
+- __!__ Creativity Inc. by Ed Catmull
+- __!!!__ The Lean Startup by Eric Ries
+- __!!__ The Checklist Manifesto by Atul Gawande
+- __!!!__ Hooked by Nir Eyal
+- __!__ The Four Steps to the Epiphany by Steve Blank
 - The E-Myth Revisited by Michael E. Gerber
-- ^ The $100 Startup by Chris Guillebeau
+- __!__ The $100 Startup by Chris Guillebeau
 - Will it Fly? by Pat Flynn
-- ^ Venture Deals by Brad Feld
+- __!__ Venture Deals by Brad Feld
 - An Awesome Book! by Dallas Clayton
 - Radical Candor by Kim Scott
 - Setting the Table by Danny Meyer
-- ^ The Sprint book by Jake Knapp
+- __!__ The Sprint book by Jake Knapp
 - Business Model Generation by Alexander Osterwalder
 - The Startup Owner's Manual by Steve Blank
 - Start with Why by Simon Sinek
@@ -52,9 +52,9 @@ I wanted to read some books about founding startups, but had no idea which books
 - Pretotype it by Alberto Savoia
 - Start me up! by Ebong Eka
 - The 10x Rule by Grant Cardone
-- ^^ Rework by Jason Fried and David Hansson
+- __!!__ Rework by Jason Fried and David Hansson
 - The Power of Habit by Charles Duhigg
-- ^ Startupland by Mikkel Svane
+- __!__ Startupland by Mikkel Svane
 - Four Thousand Days by Duane Jackson
 - The Unbearable Lightness of Being by Milan Kundera
 - Your One Word by Evan Carmichael
@@ -65,10 +65,10 @@ I wanted to read some books about founding startups, but had no idea which books
 - Be Obsessed or Be Average by Grant Cardone
 - The Happiness Track by Emma Seppala
 - The Inevitable by Kevin Kelly
-- ^ Conscious Capitalism by John Mackey
+- __!__ Conscious Capitalism by John Mackey
 - Playing to Win by A.G. Lafley
 - Good Strategy, Bad Strategy by Richard Rumelt
-- ^ The Effective Executive by Peter Drucker
+- __!__ The Effective Executive by Peter Drucker
 - Founders at Work by Jessica Livingston
 - ^ Zen and the Art of Motorcycle Maintenance by Robert Pirsig
 - Poor Charlie's Almanack by Charlie Munger
@@ -88,18 +88,18 @@ I wanted to read some books about founding startups, but had no idea which books
 - Switch by Chip Heath and Dan Heath
 - Out of the Crisis by W. Edwards Deming
 - Peak by Chip Conley
-- ^ Influence by Robert B. Cialdini
+- __!__ Influence by Robert B. Cialdini
 - Lucky or Smart? by Bo Peabody
 - Extreme Programming Explained by Kent Beck
 - Boyd by Robert Coram
 - Purple Cow by Seth Godin
 - The 7 Habits of Highly Effective People by Stephen R. Covey
-- ^ How to Win Friends and Influence People by Dale Carnegie
+- __!__ How to Win Friends and Influence People by Dale Carnegie
 - Outliers by Malcolm Gladwell
 - The Start-up playbook by David S. Kidder
 - Competing Against Time by George Stalk
 - Built to Last by Jim Collins
-- ^ Traction by Gabriel Weinberg
+- __!__ Traction by Gabriel Weinberg
 - Crucial Conversations by Kerry Patterson, Joseph Grenny, Ron McMillan, and Al Switzler
 - Critical Chain by Elyahu Goldratt
 - Scientific Advertising By Claude Hopkins
