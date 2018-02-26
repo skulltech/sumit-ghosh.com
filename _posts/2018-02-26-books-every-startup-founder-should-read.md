@@ -14,9 +14,7 @@ published: true
 I wanted to read some books about founding startups, but had no idea which books should they be. Natuarally Google came to help. Upon compiling books from the first page of Google search results of the query _"Books Startup Founders Should Read"_, what I got is the list below. Number of !s against a book indicates the number of times that book came up repeating, so the more the better.
 
 
-# Books Startup Founders Should Read
-
-## Books coming up more than once
+# Books coming up more than once
 
 - __!!!!!!__ [The Hard Thing About Hard Things by Ben Horowitz](https://www.goodreads.com/book/show/18176747-the-hard-thing-about-hard-things)
 - __!!!!__ [The Innovators Dilemma by Clayton M. Chistensen](https://www.goodreads.com/book/show/2615.The_Innovator_s_Dilemma)
@@ -43,7 +41,7 @@ I wanted to read some books about founding startups, but had no idea which books
 - __!__ Traction by Gabriel Weinberg
 
 
-## All the books
+# All the books
 
 - [Change by Design by Tim Brown](https://www.goodreads.com/book/show/6671664-change-by-design)
 - __!!!!!!__ [The Hard Thing About Hard Things by Ben Horowitz](https://www.goodreads.com/book/show/18176747-the-hard-thing-about-hard-things)
