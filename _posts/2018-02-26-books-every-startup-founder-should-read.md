@@ -17,10 +17,10 @@ I wanted to read some books about founding startups, but had no idea which books
 # Books Startup Founders Should Read
 
 - [Change by Design by Tim Brown](https://www.goodreads.com/book/show/6671664-change-by-design)
-- __^^^^^^__ [The Hard Thing About Hard Things by Ben Horowitz](https://www.goodreads.com/book/show/18176747-the-hard-thing-about-hard-things)
+- __!!!!!!__ [The Hard Thing About Hard Things by Ben Horowitz](https://www.goodreads.com/book/show/18176747-the-hard-thing-about-hard-things)
 - [Crossing the Chasm by Geoffrey Moore](https://www.goodreads.com/book/show/61329.Crossing_the_Chasm)
 - [The Alliance by Reid Hoffman](https://www.goodreads.com/book/show/20763746-the-alliance)
-- __^^^__ [Zero to One by Peter Thiel](https://www.goodreads.com/book/show/18050143-zero-to-one)
+- !!! [Zero to One by Peter Thiel](https://www.goodreads.com/book/show/18050143-zero-to-one)
 - __^^^^__ [The Innovators Dilemma by Clayton M. Chistensen](https://www.goodreads.com/book/show/2615.The_Innovator_s_Dilemma)
 - [Steve Jobs by Walter Issacson](https://www.goodreads.com/book/show/11084145-steve-jobs)
 - [Finding My Virginity by Richard Branson](https://www.goodreads.com/book/show/34626372-finding-my-virginity)
