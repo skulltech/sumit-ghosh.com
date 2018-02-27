@@ -19,42 +19,42 @@ I wanted to read some books about founding startups, but had no idea which books
 - __!!!!!!__ [The Hard Thing About Hard Things by Ben Horowitz](https://www.goodreads.com/book/show/18176747-the-hard-thing-about-hard-things)
 - __!!!!__ [The Innovators Dilemma by Clayton M. Chistensen](https://www.goodreads.com/book/show/2615.The_Innovator_s_Dilemma)
 - __!!!__ [Zero to One by Peter Thiel](https://www.goodreads.com/book/show/18050143-zero-to-one)
-- __!!!__ The Lean Startup by Eric Ries
-- __!!!__ Hooked by Nir Eyal
+- __!!!__ [The Lean Startup by Eric Ries](https://www.goodreads.com/book/show/10127019-the-lean-startup)
+- __!!!__ [Hooked by Nir Eyal](https://www.goodreads.com/book/show/22668729-hooked)
 - __!!__ [High Output Management by Andrew Grove](https://www.goodreads.com/book/show/324750.High_Output_Management)
-- __!!__ The Checklist Manifesto by Atul Gawande
-- __!!__ Rework by Jason Fried and David Hansson
+- __!!__ [The Checklist Manifesto by Atul Gawande](https://www.goodreads.com/book/show/6667514-the-checklist-manifesto)
+- __!!__ [Rework by Jason Fried and David Hansson](https://www.goodreads.com/book/show/6732019-rework)
 - __!__ [Contagious by Jonah Berger](https://www.goodreads.com/book/show/15801967-contagious)
-- __!__ Only the Paranoid Survive by Andrew Grove
-- __!__ Good To Great by James C. Collins
-- __!__ Creativity Inc. by Ed Catmull
-- __!__ The Four Steps to the Epiphany by Steve Blank
-- __!__ The $100 Startup by Chris Guillebeau
-- __!__ Venture Deals by Brad Feld
-- __!__ The Sprint book by Jake Knapp
-- __!__ Startupland by Mikkel Svane
-- __!__ Conscious Capitalism by John Mackey
-- __!__ The Effective Executive by Peter Drucker
-- __!__ Zen and the Art of Motorcycle Maintenance by Robert Pirsig
-- __!__ Influence by Robert B. Cialdini
-- __!__ How to Win Friends and Influence People by Dale Carnegie
-- __!__ Traction by Gabriel Weinberg
+- __!__ [Only the Paranoid Survive by Andrew Grove](https://www.goodreads.com/book/show/66863.Only_the_Paranoid_Survive)
+- __!__ [Good To Great by James C. Collins](https://www.goodreads.com/book/show/76865.Good_to_Great)
+- __!__ [Creativity Inc. by Ed Catmull](https://www.goodreads.com/book/show/18077903-creativity-inc)
+- __!__ [The Four Steps to the Epiphany by Steve Blank](https://www.goodreads.com/book/show/762542.The_Four_Steps_to_the_Epiphany)
+- __!__ [The $100 Startup by Chris Guillebeau](https://www.goodreads.com/book/show/12605157-the-100-startup)
+- __!__ [Venture Deals by Brad Feld](https://www.goodreads.com/book/show/11865558-venture-deals)
+- __!__ [Sprint by Jake Knapp](https://www.goodreads.com/book/show/25814544-sprint)
+- __!__ [Startupland by Mikkel Svane](https://www.goodreads.com/book/show/22264030-startupland)
+- __!__ [Conscious Capitalism by John Mackey](https://www.goodreads.com/book/show/13586929-conscious-capitalism)
+- __!__ [The Effective Executive by Peter Drucker](https://www.goodreads.com/book/show/48019.The_Effective_Executive)
+- __!__ [Zen and the Art of Motorcycle Maintenance by Robert Pirsig](https://www.goodreads.com/book/show/629.Zen_and_the_Art_of_Motorcycle_Maintenance)
+- __!__ [Influence by Robert B. Cialdini](https://www.goodreads.com/book/show/28815.Influence)
+- __!__ [How to Win Friends and Influence People by Dale Carnegie](https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People)
+- __!__ [Traction by Gabriel Weinberg](https://www.goodreads.com/book/show/22091581-traction)
 
 
 # All the books
 
-- [Change by Design by Tim Brown](https://www.goodreads.com/book/show/6671664-change-by-design)
-- __!!!!!!__ [The Hard Thing About Hard Things by Ben Horowitz](https://www.goodreads.com/book/show/18176747-the-hard-thing-about-hard-things)
-- [Crossing the Chasm by Geoffrey Moore](https://www.goodreads.com/book/show/61329.Crossing_the_Chasm)
-- [The Alliance by Reid Hoffman](https://www.goodreads.com/book/show/20763746-the-alliance)
-- __!!!__ [Zero to One by Peter Thiel](https://www.goodreads.com/book/show/18050143-zero-to-one)
-- __!!!!__ [The Innovators Dilemma by Clayton M. Chistensen](https://www.goodreads.com/book/show/2615.The_Innovator_s_Dilemma)
-- [Steve Jobs by Walter Issacson](https://www.goodreads.com/book/show/11084145-steve-jobs)
-- [Finding My Virginity by Richard Branson](https://www.goodreads.com/book/show/34626372-finding-my-virginity)
-- [Product Leadership by Martin Eriksson](https://www.goodreads.com/book/show/30014114-product-leadership)
-- [The Startup Way by Eric Ries](https://www.goodreads.com/book/show/34267304-the-startup-way)
-- __!__ [Contagious by Jonah Berger](https://www.goodreads.com/book/show/15801967-contagious)
-- __!!__ [High Output Management by Andrew Grove](https://www.goodreads.com/book/show/324750.High_Output_Management)
+- Change by Design by Tim Brown
+- __!!!!!!__ The Hard Thing About Hard Things by Ben Horowitz
+- Crossing the Chasm by Geoffrey Moore]
+- The Alliance by Reid Hoffman
+- __!!!__ Zero to One by Peter Thiel
+- __!!!!__ The Innovators Dilemma by Clayton M. Chistensen
+- Steve Jobs by Walter Issacson
+- Finding My Virginity by Richard Branson
+- Product Leadership by Martin Eriksson
+- The Startup Way by Eric Ries
+- __!__ Contagious by Jonah Berger
+- __!!__ High Output Management by Andrew Grove
 - __!__ Only the Paranoid Survive by Andrew Grove
 - __!__ Good To Great by James C. Collins
 - __!__ Creativity Inc. by Ed Catmull
@@ -132,19 +132,19 @@ I wanted to read some books about founding startups, but had no idea which books
 - Scientific Advertising By Claude Hopkins
 - Revenue Disruption by Phil Fernandez
 - The Tipping Point by Malcolm Gladwell
-- [The Twenty Two Immutable Laws of Marketing by Al Ries and Jack Trout](https://www.goodreads.com/book/show/33449.The_22_Immutable_Laws_of_Marketing)
-- [The Fish That Ate the Whale by Rich Cohen](https://www.goodreads.com/book/show/13166586-the-fish-that-ate-the-whale)
-- [The Black Swan by Nassim Nicholas Taleb](https://www.goodreads.com/book/show/242472.The_Black_Swan)
-- [The Art of War by Sun Tzu](https://www.goodreads.com/book/show/10534.The_Art_of_War)
-- [Never Split the Difference by Chris Voss](https://www.goodreads.com/book/show/26156469-never-split-the-difference)
-- [Who by Geoff Smart and Randy Street](https://www.goodreads.com/book/show/4989687-who)
-- [The 4-hour Work Week by Tim Ferriss](https://www.goodreads.com/book/show/368593.The_4_Hour_Workweek)
-- [The Art of Happiness by Dalai Lama and Howard C. Cutler](https://www.goodreads.com/book/show/38210.The_Art_of_Happiness)
-- [Entrepreneur Revolution by Daniel Priestley](https://www.goodreads.com/book/show/16286419-entrepreneur-revolution)
-- [Oversubscribed by Daniel Priestley](https://www.goodreads.com/book/show/25305548-oversubscribed)
-- [Bargaining for advantage by G. Richard Shell](https://www.goodreads.com/book/show/23801.Bargaining_for_Advantage)
-- [Mastering the VC game by Jeffrey Bussgang](https://www.goodreads.com/book/show/7904927-mastering-the-vc-game)
-- [The 48 laws of power by Robert Greene](https://www.goodreads.com/book/show/1303.The_48_Laws_of_Power)
+- The Twenty Two Immutable Laws of Marketing by Al Ries and Jack Trout
+- The Fish That Ate the Whale by Rich Cohen
+- The Black Swan by Nassim Nicholas Taleb
+- The Art of War by Sun Tzu
+- Never Split the Difference by Chris Voss
+- Who by Geoff Smart and Randy Street
+- The 4-hour Work Week by Tim Ferriss
+- The Art of Happiness by Dalai Lama and Howard C. Cutler
+- Entrepreneur Revolution by Daniel Priestley
+- Oversubscribed by Daniel Priestley
+- Bargaining for advantage by G. Richard Shell
+- Mastering the VC game by Jeffrey Bussgang
+- The 48 laws of power by Robert Greene
 
 
 ### Sources
