@@ -8,7 +8,7 @@ tags:
 
 I made my blog [Techkernel](https://techkernel.org) quite some time back, but I never took it seriously. I made a very small number of posts, and never bothered to maintain the blog properly. I just moderated the comments, never bothering to reply them (I know, I'm a terrible person). I also did not updated the plugins, neither WordPress itself. But I realised my mistake when my blog got hacked and the most popular post of it got replaced by some crappy advertisement.
 
-![hacked-post.png](/images/posts/hacked-post.png)
+![Hacked Post](/images/posts/hacked-post.png)
 
 Here I will document what I did to get it fixed to as it was before.
 
@@ -17,13 +17,13 @@ Here I will document what I did to get it fixed to as it was before.
 
 Firstly, I needed to restore the post. WordPress keeps a revisions list of posts, so I looked there. But not so surprisingly, the original revision was removed. The oldest revision I could get was, sadly, the advertisement, not my original post. So this approach was not going to work.
 
-![revisions.png](/images/posts/revisions.png)
+![Revisions](/images/posts/revisions.png)
 
 Second step was to look for any backups I made. I did not set up any solid backup system, so the only backup I could've made was as an export file (for your reference, WordPress lets you export all your contents as an `.xml` file). I searched for any file whose name contains `techkernel` in my PC, and voila, there was one. I was lucky. Had I not made such a backup (which I did for the keks, not anticipating a situation such as this), I would have to restore it from a backup image of my server at Digital Ocean, which would be much more painful to do.
 
 So I opened up the export file `techkernel.wordpress.2016-04-22.xml`, looked for my post in there, and copy pasted it back to my blog.
 
-![post-xml.png](/images/posts/post-xml.png)
+![Posts](/images/posts/post-xml.png)
 
 
 ## Updating the WordPress Site
