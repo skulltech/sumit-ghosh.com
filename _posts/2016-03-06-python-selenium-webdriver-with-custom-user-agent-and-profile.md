@@ -13,7 +13,7 @@ tags:
 
 I've been playing around with Selenium Webdriver in Python, and one of the most annoying thing I had to do again and again is looking up how to start a specific Webdriver with a custom user-agent or with a custom profile. So I decided to make this module which will take care of all the little inner workings involved while starting up a Webdriver.
 
-[The code is here](https://github.com/SkullTech/webdriver-start) - https://github.com/SkullTech/webdriver-start
+The code is [here](https://github.com/SkullTech/webdriver-start).
 
 You'll just have to use the `start_webdriver` function, and it will do all the magic and return the required Webdriver.
 
@@ -22,6 +22,7 @@ You'll just have to use the `start_webdriver` function, and it will do all the m
 
 ```python
 import wdstart
+
 driver = wdstart.start_webdriver(driver_name='Chrome', user_agent='Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19(KHTML, like Gecko) Chrome/18.0.1025.133 Mobile Safari/535.19', profile_path='C:\Users\SkullTech\AppData\Local\Google\Chrome\User Data')
 ```
 

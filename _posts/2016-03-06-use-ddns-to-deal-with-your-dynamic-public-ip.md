@@ -22,8 +22,7 @@ Having a dynamic IP address is a hindrance to hacking using reverse connection p
 
 ## Dynamic DNS aka DDNS to the Rescue
 
-
-We all know what DNS or Domain Naming System is, it's the system which binds an IP to a domain name. When you try to connect to a domain name, for example opening www.google.com on a  browser, the request first goes to a DNS server, which resolves the domain name into an IP, and then the browser gets the Google homepage from that IP. Similarly you can get a domain name for your machine and put that domain name in the place of HOST IP address in your payload. But the problem of your IP being dynamic still remains.
+We all know what DNS or Domain Naming System is, it's the system which binds an IP to a domain name. When you try to connect to a domain name, for example opening www.google.com on a browser, the request first goes to a DNS server, which resolves the domain name into an IP, and then the browser gets the Google homepage from that IP. Similarly you can get a domain name for your machine and put that domain name in the place of HOST IP address in your payload. But the problem of your IP being dynamic still remains.
 
 Here DDNS comes to the rescue. DDNS servers update the DNS record of your machine continuously, so that even for dynamic IP machines the domain name resolves to the correct IP, always.
 
