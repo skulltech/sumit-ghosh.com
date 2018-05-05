@@ -1,13 +1,9 @@
 ---
-layout: post
-comments: true
 date: 'Sat Dec 31 2016 20:56:50 GMT+0530 (India Standard Time)'
-slug: email-structure-and-how-to-trace-it
 title: Email | Structure and How to Trace it
 tags:
   - Email
   - Internet
-published: true
 ---
 
 We all have received fake spam mail telling us that we’ve won million dollars at some point in our life. Maybe one day you receive a threatening email or a simple phishing mail, and you want to find out who did it so that you can hack him in return. To do that you need to know the IP address of the mail server sending the email. In this article I’m gonna show you how to do that, after introducing you to the basics of the structure of an _Internet Message_ or simply, _Email_.
@@ -211,7 +207,7 @@ Received: from ECPRID2AWEB004 (ec2-52-4-196-162.compute-1.amazonaws.com [52.4.19
 
 As SMTP servers insert the Received field at the top of the email when they receive it, if we read them from top to bottom we can trace the path through the email has travelled. The field value of the Received header field generally contains the host name or IP address of itself and the host name or IP of the server from which it received the mail.
 
-Another thing to note here, I’ve also listed the_ X-Received_ header field. Any field starting with_ X_ is a non-standard header and it cannot be trusted. It’s used by mail servers for their own benefit, generally a servers won’t trust X headers inserted by any other server. Anyway, I’ve still included this because it may give us some additional information, keeping in mind that it is not very reliable. So from the _Received_ (and _X-Received_) fields of the example mail, we can trace the route of the mail, and it would look like this
+Another thing to note here, I’ve also listed the _X-Received_ header field. Any field starting with _X_ is a non-standard header and it cannot be trusted. It’s used by mail servers for their own benefit, generally a servers won’t trust X headers inserted by any other server. Anyway, I’ve still included this because it may give us some additional information, keeping in mind that it is not very reliable. So from the _Received_ (and _X-Received_) fields of the example mail, we can trace the route of the mail, and it would look like this
 
 
 - `ec2-52-4-196-162.compute-1.amazonaws.com [52.4.196.162]`

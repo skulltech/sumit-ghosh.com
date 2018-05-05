@@ -1,6 +1,4 @@
 ---
-layout: post
-published: true
 title: Handling File Upload Through Selenium Python
 subtitle: 'A necessary rite of passage for Selenium programmers'
 tags:

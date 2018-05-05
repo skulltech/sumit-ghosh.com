@@ -1,10 +1,6 @@
 ---
-layout: post
-comments: true
 date: 'Fri Jun 23 2017 21:10:42 GMT+0530 (India Standard Time)'
-slug: fixed-hacked-wordpress-blog-restoring-content
 title: 'How I fixed My Hacked WordPress Blog: Restoring the Content'
-published: true
 tags:
   - WordPress
   - SysAdmin

@@ -1,13 +1,9 @@
 ---
-layout: post
-comments: true
 date: 'Sat Dec 31 2016 21:03:12 GMT+0530 (India Standard Time)'
-slug: ethical-hacking-and-the-hacker-culture
 title: Ethical Hacking and The Hacker Culture
 tags:
   - Hacking
   - Culture
-published: true
 ---
 
 Nowadays most of us have heard the term Ethical Hacker due to ‘hacktivist’ groups like Anonymous gaining popularity in the media. But what exactly is Ethical Hacking? We have a general idea that it means hacking without any malicious intent, or more simply the kind of hacking the ‘good guys’ do. But if we delve deeper, it means more than that, it represents a philosophy and morality popular among the hacker and hacktivist communities.

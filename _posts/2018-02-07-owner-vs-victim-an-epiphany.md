@@ -1,6 +1,4 @@
 ---
-layout: post
-comments: true
 date: 'Wed Feb 07 2018 01:25:00 GMT+0530 (India Standard Time)'
 title: Owner vs Victim - An Epiphany (Sort of)
 tags:
@@ -8,7 +6,6 @@ tags:
   - Owner vs Victim
   - Epiphany
   - Personal
-published: true
 ---
 
 

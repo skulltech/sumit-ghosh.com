@@ -1,6 +1,4 @@
 ---
-layout: post
-published: true
 title: Boyhood. Through Some Quotes.
 subtitle: 'Or rather, how it touched me'
 tags:
@@ -12,7 +10,6 @@ date: '2017-11-16'
 bigimg: '/img/posts/boyhood-feature.jpg'
 image: /img/posts/boyhood-teaser-poster.jpg
 share-img: 'http://sumit-ghosh.com/img/posts//boyhood-teaser-poster.jpg'
-
 ---
 
 After watching _Boyhood_ for the second time some days ago, I realized, again, how awesome this film is. I won't go about in length how this film is a marvellous achievement in storytelling, shooting with the same actors over a period of 12 years, but rather I'll write about how it touched me.

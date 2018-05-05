@@ -1,6 +1,4 @@
 ---
-layout: post
-comments: true
 date: 'Mon Feb 26 2018 12:10:00 GMT+0530 (India Standard Time)'
 title: Books Every Startup Founder Should Read
 tags:
@@ -8,7 +6,6 @@ tags:
   - Startup
   - Compilation
   - Lists
-published: true
 ---
 
 I wanted to read some books about founding startups, but had no idea which books should they be. Natuarally Google came to help. Upon compiling books from the first page of Google search results of the query _"Books Startup Founders Should Read"_, what I got is the list below. Number of !s against a book indicates the number of times that book came up repeating, so the more the better.
