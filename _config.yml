@@ -15,7 +15,7 @@ minima:
   date_format: '%b %-d, %Y'
 
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-time-machine
 
 include:
   - _pages
