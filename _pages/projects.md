@@ -4,7 +4,7 @@ layout: page
 title: Projects
 subtitle: My excuses for avoiding social interactions
 comments: true
-published: true
+published: false
 
 ---
 
