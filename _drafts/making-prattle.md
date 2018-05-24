@@ -9,8 +9,8 @@ We will need to figure out and build the following components.
     - Playing audio received through the network.
 
 - __Networking__
-    - Sending audio and video data over sockets live as they're being recorded.
-    - Receiving audio and video data from the network, and playing them.
+    - Sending audio and video data over sockets live, as they're being recorded.
+    - Receiving live audio and video data from the network, and playing them.
 
 
 Let's start by building the Video components. We will be using OpenCV for this, the most popular open-source image and video processing library.
