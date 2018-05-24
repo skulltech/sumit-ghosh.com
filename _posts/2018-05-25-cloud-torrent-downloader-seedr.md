@@ -1,6 +1,6 @@
 ---
 date: 'Fri May 25 2018 00:48:20 GMT+0530 (India Standard Time)'
-title: Seedr | The Cloud Torrent Downloader
+title: Seedr - The Cloud Torrent Downloader
 tags:
   - Cloud
   - BitTorrent
