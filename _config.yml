@@ -32,6 +32,7 @@ paginate: 5
 plugins:
   - jekyll-feed
   - jekyll-gist
+  - jekyll-paginate
 
 twitter:
   username: SkullTech101
