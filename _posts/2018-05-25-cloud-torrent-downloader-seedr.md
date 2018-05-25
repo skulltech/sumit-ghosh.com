@@ -17,4 +17,4 @@ I've tried a few cloud torrent downloader in the last 2 years after coming to co
 
 If you are need of a such a cloud torrent downloader, I'd suggest that you go with Seedr :) [Here](https://www.seedr.cc/?r=856262) is my referral link through which you can register, which will grant you 500MB extra space ;)
 
-* All links to Seedr in this article are referral links, which will give you an additional 500MB space for free!
+* All links to Seedr in this article are referral links, which will give you an additional 500MB space for free! [Here's](https://www.seedr.cc/) a link without referral :)
