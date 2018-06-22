@@ -1,3 +1,10 @@
+---
+date: 'Sat Jun 23 2018 01:10:20 GMT+0530 (India Standard Time)'
+title: An Interpretation of Anamnesis
+tags:
+  - Philosophy
+---
+
 Plato argues in his dialogue _Meno_ that the human soul possesses all knowledge from eternity, and _learning_ just consists of us _remembering_ those knowledge within us. This Platonic concept of knowledge is known as _Anamnesis_.
 
 Now, this all may sound some bunch of hogwash, but I'm going to offer an interpretation of this concept which may turn out to be insightful for you—the readers, hopefully.
