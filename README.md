@@ -1,3 +1,3 @@
 # skulltech.github.io
 
-My blog.
+My blog. Live at — https://sumit-ghosh.com.

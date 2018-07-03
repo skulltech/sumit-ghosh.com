@@ -1,6 +1,7 @@
 ---
 date: 'Sat Jun 23 2018 01:10:20 GMT+0530 (India Standard Time)'
 title: An Interpretation of Anamnesis
+showcase: true
 tags:
   - Philosophy
 ---
@@ -31,9 +32,9 @@ Now applying the interpretation I provided to this part of the dialogue, it beco
 
 I will conclude this vignette with a comparison of my interpretation of Amnesia to another similar theory of the human mind and linguistics, the hypothetical _Language Acquisition Device_, put forth by Noam Chomsky. From Wikipedia,
 
-> ... the LAD concept is an instinctive mental capacity which enables an infant to acquire and produce language. This theory asserts that humans are born with the instinct or "innate facility" for acquiring language. The main argument in favor of the LAD is the argument from the poverty of the stimulus, which argues that unless children have significant innate knowledge of grammar they would be unable to learn language as quickly as they do ...
+> ... the LAD concept is an instinctive mental capacity which enables an infant to acquire and produce language. This theory asserts that humans are born with the instinct or _innate facility_ for acquiring language. The main argument in favor of the LAD is the argument from the poverty of the stimulus, which argues that unless children have significant innate knowledge of grammar they would be unable to learn language as quickly as they do ...
 
-Similar to LAD, my interpretation of Amnesia also points towards an innate ability of the human mind, which explains a paradoxical situation. In the case of Meno, it is "The Learner's Paradox", also known as "Meno's Paradox" or "The Paradox of Inquiry". Similarly in the case of LAD, it aims to solve the paradox of "Poverty of the Stimulus". 
+Similar to LAD, my interpretation of Amnesia also points towards an innate ability of the human mind, which explains a paradoxical situation. In the case of Meno, it is _The Learner's Paradox_, also known as _Meno's Paradox_ or _The Paradox of Inquiry_. Similarly in the case of LAD, it aims to solve the paradox of _Poverty of the Stimulus_. 
 
 
 Check out the following links, insightful as they are regarding this topic.

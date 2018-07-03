@@ -1,16 +1,39 @@
 ---
 date: 'Wed Feb 07 2018 22:25:00 GMT+0530 (India Standard Time)'
-title: Downloading file with progress bar in Python
+title: Downloading File With Progress Bar in Python
 tags:
   - Python
   - Coding
 ---
 
-Below is a Python function I recently wrote which downloads a file from a remote URL, and shows a progress bar while doing it. Here's the [code](https://gist.github.com/SkullTech/4510a5613c9aae89105fd1b6c424d0a0)
+Below is a Python function I recently wrote which downloads a file from a remote URL, and shows a progress bar while doing it. Here's the [code](https://gist.github.com/SkullTech/4510a5613c9aae89105fd1b6c424d0a0) —
 
-{% gist 4510a5613c9aae89105fd1b6c424d0a0 %}
+```python
+import sys
+import requests
 
-Here's a little demo of it in action.
+
+def download(url, filename):
+    with open(filename, 'wb') as f:
+        response = requests.get(url, stream=True)
+        total = response.headers.get('content-length')
+
+        if total is None:
+            f.write(response.content)
+        else:
+            downloaded = 0
+            total = int(total)
+            for data in response.iter_content(chunk_size=max(int(total/1000), 1024*1024)):
+                downloaded += len(data)
+                f.write(data)
+                done = int(50*downloaded/total)
+                sys.stdout.write('\r[{}{}]'.format('█' * done, '.' * (50-done)))
+                sys.stdout.flush()
+    sys.stdout.write('\n')
+    
+```
+
+Here's a little demo of it in action —
 
 ```console
 $ python3 demo.py
@@ -18,7 +41,7 @@ $ python3 demo.py
 [█████.............................................]
 ```
 
-The contents of `demo.py` file being
+The contents of `demo.py` file being —
 
 ```python
 from dl import download
@@ -30,3 +53,4 @@ print('[*] Done!')
 ```
 
 Pretty neat right? Hope this comes in useful for you. Till next time.
+

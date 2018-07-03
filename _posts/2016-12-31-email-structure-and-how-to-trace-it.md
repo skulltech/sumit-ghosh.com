@@ -8,7 +8,7 @@ tags:
 
 We all have received fake spam mail telling us that we’ve won million dollars at some point in our life. Maybe one day you receive a threatening email or a simple phishing mail, and you want to find out who did it so that you can hack him in return. To do that you need to know the IP address of the mail server sending the email. In this article I’m gonna show you how to do that, after introducing you to the basics of the structure of an _Internet Message_ or simply, _Email_.
 
-Email is one of oldest mode of communication through a computer network (usually the Internet) which is still popular today. The Email which we are familiar with was standardized and came into popular usage in the early 1970s, and it has been a core foundation of the Internet since then. Nowadays we all use a fancy web interface or mobile app to send and view received emails, so we don’t have to worry about how is it working. But that isn’t enough for a hacker, is it? If we don’t know the detailed intricacies of its mechanism, how can we exploit it or do something advanced with it? So, keep reading!
+Email is one of oldest mode of communication through a computer network—usually the Internet—which is still popular today. The Email which we are familiar with was standardized and came into popular usage in the early 1970s, and it has been a core foundation of the Internet since then. Nowadays we all use a fancy web interface or mobile app to send and view received emails, so we don’t have to worry about how is it working. But that isn’t enough for a hacker, is it? If we don’t know the detailed intricacies of its mechanism, how can we exploit it or do something advanced with it? So, keep reading!
 
 
 ## The Internet Message Format
@@ -163,7 +163,7 @@ IDwvYm9keT4NCjwvaHRtbD4=
 
 The part before the first empty line is the header of this email, and after that the rest is body. Here you can see that the body part looks like some incomprehensible garbage, that’s because it is a MIME message, and the garbage part is actually HTML data encoded by Base64 encoding. You can decode it using any of the Base64 decoder found online and get the HTML data. Anyway, we are going to focus on the header part, because all other critical information resides in there, the body part contains just the message.
 
-We can see the header part consists of header fields, each header field consisting of a field name and field value separated by a colon ‘:’.  for example a header field of this email is
+We can see the header part consists of header fields, each header field consisting of a field name and field value separated by a colon ‘:’.  for example a header field of this email is —
 
 ```
 Delivered-To: john.doe@gmail.com
@@ -171,13 +171,13 @@ Delivered-To: john.doe@gmail.com
 
 Where ‘Delivered-To’ is the field name and ‘john.doe@gmail.com’ is the field value. Just to be clear, I replaced my original email ID with ‘john.doe@gmail.com’ here.
 
-The header section can contain any number of information in this format, there is no restriction. So there can be different header fields in various emails. But there are certain fields that are mandatory, and those contain the information we need to trace the mail. You can read about various email header fields [here on Wikipedia](https://en.wikipedia.org/wiki/Email#Header_fields).
+The header section can contain any number of information in this format, there is no restriction. So there can be different header fields in various emails. But there are certain fields that are mandatory, and those contain the information we need to trace the mail. You can read about various email header fields [here](https://en.wikipedia.org/wiki/Email#Header_fields) on Wikipedia.
 
 
 ## Tracing an Email
 
 
-Now that we know the basics of the _[Internet Message Format](https://tools.ietf.org/html/rfc5322)_, it’s time we dive into the fun stuff, tracing the email. For that, we need to concentrate on the _Trace fields_, so to speak. They contain the information needed to trace it, obviously. The trace fields are:
+Now that we know the basics of the _[Internet Message Format](https://tools.ietf.org/html/rfc5322)_, it’s time we dive into the fun stuff, tracing the email. For that, we need to concentrate on the _Trace fields_, so to speak. They contain the information needed to trace it, obviously. The trace fields are —
 
 - _Received_
 - _Return-Path_
@@ -222,7 +222,7 @@ Another thing to note here, I’ve also listed the _X-Received_ header field. A
 The email went through these servers in this order. So the mail server that actually sent the email is the first one, and if you were after that one for reasons, you can focus on that.
 
 
-## Automating the Tracing of an Email
+## Automated Tracing
 
 
-Although it’s good or maybe essential for a hacker to know how to manually trace an email, you don’t have to do it every time. There are many tools in the Internet that automate this process. You just have to paste the email header in those tools and they will trace the route of it. Just search email header analyser in Google and you’ll get a lot of tools like this. There’s [one made by Google](https://toolbox.googleapps.com/apps/messageheader/) itself, you can get it [here](https://toolbox.googleapps.com/apps/messageheader/). Happy hacking!
+Although it’s good or maybe essential for a hacker to know how to manually trace an email, you don’t have to do it every time. There are many tools in the Internet that automate this process. You just have to paste the email header in those tools and they will trace the route of it. Just search email header analyser in Google and you’ll get a lot of tools like this. There’s one made by Google itself, you can get it [here](https://toolbox.googleapps.com/apps/messageheader/). Happy hacking!

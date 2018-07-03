@@ -8,7 +8,9 @@ tags:
   - Lists
 ---
 
-I wanted to read some books about founding startups, but had no idea which books should they be. Natuarally Google came to help. Upon compiling books from the first page of Google search results of the query _"Books Startup Founders Should Read"_, what I got is the list below. Number of !s against a book indicates the number of times that book came up repeating, so the more the better.
+I wanted to read some books about founding startups, but had no idea which books should they be. Naturally, Google came to help. Upon compiling books from the first page of Google search results of the query _Books Startup Founders Should Read_, what I got is the list below. 
+
+- __Important__ — Number of !s against a book indicates the number of times that book came up repeating, so the more the better.
 
 
 # Books coming up more than once
@@ -146,7 +148,7 @@ I wanted to read some books about founding startups, but had no idea which books
 
 ### Sources
 
-The first page of Google Search results of the query _"Books Startup Founders Should Read"_ as of 26.02.2018.
+The first page of Google Search results of the query _Books Startup Founders Should Read_ as of 26.02.2018.
 
 - https://medium.com/swlh/the-18-best-startup-business-books-i-have-read-this-year-cbbab1b6c53e
 - https://www.wisestamp.com/corporate/resources/wisestamp-knowledge-base/startups/the-9-best-books-every-startup-founder-should-read/

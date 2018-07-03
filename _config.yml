@@ -6,8 +6,8 @@ description: >
 
 twitter_username: SkullTech101
 github_username:  SkullTech
-rss: rss
 linkedin_username: sumit-ghosh101
+instagram_username: summit.ghosh
 
 show_excerpts: false
 minima:
@@ -31,11 +31,7 @@ paginate: 5
 
 plugins:
   - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
 
-twitter:
-  username: SkullTech101
 disqus:
     shortname: sumit-ghosh-com
 google_analytics: UA-107859389-1

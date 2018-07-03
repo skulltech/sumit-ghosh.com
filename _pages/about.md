@@ -6,21 +6,25 @@ subtitle: Why you'd want to go on a date with me
 
 ---
 
-My name is Sumit Ghosh, also known as SkullTech in various corners of the interwebs. Also, I am an INTP, if you are familiar with MBTI. I like:
-
-- Movies
-- Philosophy
-- Coding
-- Exploring and learning new stuff!
-
-I am a Computer Science major studying at IIT Delhi, and as a part-time gig I do freelance consulting. Check out my resume [here](https://sumit-ghosh.com/resume-vocational). If you want to discuss some potential project with me, want to get to know me better, or maybe ask me out on a date, just drop me a mail at sumit@sumit-ghosh.com.
+## Profile
 
 
-## About My Blog
 
-As sir Isaac Newton said:
+- I am a cosmopolitan currently living in _New Delhi_, India. 
+- I like to think of myself as an intellectual—however pretentious it may sound.
+- I like to read books, a lot. Especially non–fiction. You can find my _Goodreads_ profile [here](https://www.goodreads.com/user/show/63000435-sumit-ghosh). 
+- Psychometrics — 
+  - MBTI — INTP.
+  - Big Five — High Openness. Low Conscientiousness, Extraversion, Agreeableness and Neuroticism.
+- I am highly intrigued by philosophy. Analytic philosophy—especially metaphysics—keeps my brain cells active, whereas absurdism shelters me from the consistent existential angst.
+- I am a typical cinephile, leaning towards films with neo–noir, postmodernist, experimental or humanist themes — in general [_mindfucks_](https://en.wiktionary.org/wiki/mindfuck).
+
+### About My Blog
+
+As Sir Isaac Newton said —
     
-> I was like a boy playing on the sea-shore, and diverting myself now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me.
+> I was like a boy playing ‘on’ the sea-shore, and diverting myself now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me.
 
 
-While I'm on this journey of finding pebble and shell (pun intended), I try to share any interesting piece of information I come accross, here. I also ramble sometime on random topics I'm passionate about, so bear with me.
+While I’m on this journey of finding pebble and shell—pun intended—I try to share my thoughts and knowledge with the readers, here. It may come across as rambling sometimes, so bear with me.
+
