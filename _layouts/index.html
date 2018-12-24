@@ -9,11 +9,13 @@ layout: default
 
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+  {%- assign showcased_posts = site.posts | where: 'showcase', true -%}
+
+  {%- if showcased_posts.size > 0 -%}
+    <h2>{{ page.list_title | default: "Posts" }}</h2>
     <p>{{ page.list_intro }}</p>
       <ul class="post-list">
-        {%- for post in site.posts -%}
+        {%- for post in showcased_posts -%}
           {%- if post.showcase -%}
           <li>
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}

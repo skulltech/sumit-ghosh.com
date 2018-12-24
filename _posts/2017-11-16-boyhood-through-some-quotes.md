@@ -8,8 +8,8 @@ tags:
   - Boyhood
 date: '2017-11-16'
 bigimg: '/img/posts/boyhood-feature.jpg'
-image: /img/posts/boyhood-teaser-poster.jpg
-share-img: 'http://sumit-ghosh.com/img/posts//boyhood-teaser-poster.jpg'
+image: /images/posts/boyhood-quotes-teaser-poster.jpg
+share-img: 'http://sumit-ghosh.com/images/posts/boyhood-quotes-teaser-poster.jpg'
 ---
 
 After watching _Boyhood_ for the second time some days ago, I realized, again, how awesome this film is. I won’t go about in length how this film is a marvelous achievement in storytelling, shooting with the same actors over a period of 12 years, but rather I’ll write about how it touched me.
@@ -20,7 +20,7 @@ The first time I saw the movie, I didn't pick up the finer philosophies woven in
 
 There are two characters in this movie that really touched me, making me think about life more and more. One is, obviously, Mason (junior). And another is Mason’s mom. Trying to analyze Mason’s personality from an _MBTI_ standpoint, I think he’s an INTP. But the way he’s portrayed in the movie kind of resembles an INFP in some aspects, so taking that into account I’d say he’s an INXP. Actually, his philosophies and ideals scream INTP, but his artsy interests makes him unlike a typical INTP, rather like a typical INFP. But as I’m focusing on his ideals and thoughts only, I’ll go with the INTP part of him.
 
-From childhood only, Mason knew he’s different as he’s more into movies and books than any of his friends. His character especially gets depth after he grows up into young–adulthood, his thoughts and philosophies being expressed mostly through his conversations with his girlfriend Sheena. I will copy–paste one of them from IMDb [here](http://www.imdb.com/title/tt1065073/quotes) —
+From childhood only, Mason knew he’s different as he’s more into movies and books than any of his friends. His character especially gets depth after he grows up into young-adulthood, his thoughts and philosophies being expressed mostly through his conversations with his girlfriend Sheena. I will copy-paste one of them from IMDb [here](http://www.imdb.com/title/tt1065073/quotes) —
 
 
 > __Mason__: I just feel like there are so many things that I could be doing and probably want to be doing that I’m just not.  
@@ -44,5 +44,5 @@ This statement of Mason is confirmed by her mom herself later in the film, when 
 > __Mason__: Aren’t you jumping ahead by, like, 40 years or something?  
 > __Mom__: I just thought there would be more.
 
-Breaking out of the _rat race_ and going perpendicular to the direction of the herd takes a lot of inner strength, self–confidence, and capability of thinking _freely_, in the truest sense of the word. Following the herd is easier, as it makes you think that you’re normal. The society also treats you that way, even rewards you temporarily, for being normal. But at the end of our life, we all would feel like Mason’s Mom did, “_I just thought there would be more_”. The hard truth is, there won’t be more unless you actively strive for what you really want to do, what really would make you not have this thought when you’re old. Deciding what it is, is not an easy task, sooner we do it, the lesser we’ll have to suffer in life.
+Breaking out of the _rat race_ and going perpendicular to the direction of the herd takes a lot of inner strength, self-confidence, and capability of thinking _freely_, in the truest sense of the word. Following the herd is easier, as it makes you think that you’re normal. The society also treats you that way, even rewards you temporarily, for being normal. But at the end of our life, we all would feel like Mason’s Mom did, “_I just thought there would be more_”. The hard truth is, there won’t be more unless you actively strive for what you really want to do, what really would make you not have this thought when you’re old. Deciding what it is, is not an easy task, sooner we do it, the lesser we’ll have to suffer in life.
 

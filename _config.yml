@@ -8,6 +8,8 @@ twitter_username: SkullTech101
 github_username:  SkullTech
 linkedin_username: sumit-ghosh101
 instagram_username: summit.ghosh
+flickr_username: sumit-ghosh
+
 
 show_excerpts: false
 minima:
@@ -20,6 +22,7 @@ include:
   - _pages
 
 exclude:
+
   - CNAME
   - Gemfile
   - Gemfile.lock

@@ -37,10 +37,10 @@ Head to https://www.noip.com and create a free account there.
 
 ### Step 2: Adding a Hostname in No-IP
 
-When you get to the dashboard, go to Dynamic DNS → Hostnames and add a hostname of your choice from there. You can also choose a domain name from a list there. The address you will get is `host_name.domain_name`. For example, I chose the default domain name—ddns.com—and the hostname I entered is _skulltech_. So the address I got is “skulltech.ddns.com”. Refer to the screenshots below for reference.
+When you get to the dashboard, go to Dynamic DNS → Hostnames and add a hostname of your choice from there. You can also choose a domain name from a list there. The address you will get is `hostname.domain`. For example, I chose the default domain name—ddns.com—and the hostname I entered is _skulltech_. So the address I got is “skulltech.ddns.com”. Refer to the screenshots below for reference.
 
-![step-1](/images/posts/step-11.png)
-![step-2](/images/posts/step-21.png)
+![step-1](/images/posts/ddns-dynamic-ip-step-11.png)
+![step-2](/images/images/ddns-dynamic-ip-step-21.png)
 
 
 ### Step 3: Install the Dynamic DNS Update Client
@@ -51,7 +51,7 @@ Now you’ll need to install a program on your computer and set it up. So that i
 $ tar -xzvf noip-duc-linux.tar.gz
 ```
 
-![screenshot-from-2016-12-18-14-24-36](/images/posts/screenshot-from-2016-12-18-14-24-36.png)
+![screenshot-from-2016-12-18-14-24-36](/images/posts/ddns-dynamic-ip-screenshot-from-2016-12-18-14-24-36.png)
 
 
 After that change working directory to the newly extracted folder and run the following command to install the No-IP client.
@@ -60,7 +60,7 @@ After that change working directory to the newly extracted folder and run the fo
 $ make install
 ```
 
-![screenshot-from-2016-12-18-14-38-06](/images/posts/screenshot-from-2016-12-18-14-38-06.png)
+![screenshot-from-2016-12-18-14-38-06](/images/posts/ddns-dynamic-ip-screenshot-from-2016-12-18-14-38-06.png)
 
 
 After that the program will ask for your No-IP username and password.
@@ -81,7 +81,7 @@ When you are done with the configuration, just run `noip2` in the terminal to st
 $ noip2
 ```
 
-![screenshot-from-2016-12-18-14-49-56](/images/posts/screenshot-from-2016-12-18-14-49-56.png)
+![screenshot-from-2016-12-18-14-49-56](/images/posts/ddns-dynamic-ip-screenshot-from-2016-12-18-14-49-56.png)
 
 
 ## Using DDNS Hostname in Payloads

