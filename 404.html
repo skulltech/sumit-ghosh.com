@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
+
+<div class="container">
+  <h1>404</h1>
+
+  <p><strong>Page not found :(</strong></p>
+  <p>The requested page could not be found.</p>
+</div>
+
+<script type="text/javascript">
+  var allposts = [];  
+  function redirectToCorrectPage() {
+    console.log("Unable to find page. Trying other URL cases.");
+    {% for post in site.pages %}  
+      allposts.push("{{ post.url }}");  
+    {% endfor %}  
+    var url = window.location.pathname;
+    // strip trailing /
+    if (url.slice(-1) === "/") {  
+       url = url.slice(0, -1);  
+    }
+    var allpostsUpperCase = allposts.map(function(value) {  
+        // strip trailing /
+        if (value.slice(-1) === "/") {  
+        value = value.slice(0, -1);  
+        }
+      return value.toUpperCase();  
+    });  
+    console.log("Looking for "+url.toUpperCase() + " in "+allpostsUpperCase);
+    var i = allpostsUpperCase.indexOf(url.toUpperCase());  
+    if (i != -1) {  
+      console.log(allposts[i]);  
+      window.location = allposts[i];  
+    }  
+  }  
+  window.onload = redirectToCorrectPage;
+</script>
