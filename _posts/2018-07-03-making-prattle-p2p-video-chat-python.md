@@ -9,6 +9,7 @@ tags:
   - Networking
   - Sockets
   - Multimedia
+redirect_from: '/articles/making-prattle-P2P-video-chat-python'
 ---
 
 
