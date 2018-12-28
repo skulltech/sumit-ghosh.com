@@ -3,7 +3,7 @@ layout: default
 permalink: /404.html
 ---
 
-<style type="text/css" media="screen">
+<style type='text/css' media='screen'>
   .container {
     margin: 10px auto;
     max-width: 600px;
@@ -17,23 +17,23 @@ permalink: /404.html
   }
 </style>
 
-<div class="container">
+<div class='container'>
   <h1>404</h1>
 
   <p><strong>Page not found :(</strong></p>
   <p>The requested page could not be found.</p>
 </div>
 
-<script type="text/javascript">
+<script type='text/javascript'>
   var allposts = [];  
   function redirectToCorrectPage() {
-    console.log("Unable to find page. Trying other URL cases.");
+    console.log('Unable to find page. Trying other URL cases.');
     {% for post in site.pages %}  
-      allposts.push("{{ post.url }}");  
+      allposts.push('{{ post.url }}');  
     {% endfor %}  
     var url = window.location.pathname;
     // strip trailing /
-    if (url.slice(-1) === "/") {  
+    if (url.slice(-1)==='/') {  
        url = url.slice(0, -1);  
     }
     var allpostsUpperCase = allposts.map(function(value) {  
@@ -43,7 +43,7 @@ permalink: /404.html
         }
       return value.toUpperCase();  
     });  
-    console.log("Looking for "+url.toUpperCase() + " in "+allpostsUpperCase);
+    console.log('Looking for '+url.toUpperCase() + ' in '+allpostsUpperCase);
     var i = allpostsUpperCase.indexOf(url.toUpperCase());  
     if (i != -1) {  
       console.log(allposts[i]);  
