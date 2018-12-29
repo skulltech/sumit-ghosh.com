@@ -32,7 +32,7 @@ Naturally, Google came to help. Upon compiling books from the first two pages of
 - ★★★ Epiphone SG Special
 - ★★★ Ibanez GRX20Z
 - ★★★ Dean Vendetta XM // XMT
-- ★★★ Scheter C1 SGR
+- ★★★ Schecter C1 SGR
 - ★★★ Squier Affinity Telecaster
 - ★★ Ibanez GRX70QA 
 - ★ Epiphone Les Paul SL
@@ -45,7 +45,7 @@ Naturally, Google came to help. Upon compiling books from the first two pages of
 - ★ Dean MLX
 - ★ Squier Bullet Mustang HH
 - ★ Gretsch G2622 Streamliner
-- ★ Scheter C6 Plus
+- ★ Schecster C6 Plus
 - ★ Ibanez Artcore AS53
 
 FYI — I ended up buying Yamaha Pacifica PAC012, in case you wanted to know.
@@ -69,7 +69,7 @@ FYI — I ended up buying Yamaha Pacifica PAC012, in case you wanted to know.
 - Ibanez GRG170
 - ★★★★★★★★ Squier Affinity Stratocaster
 - ★★★★★ Yamaha Pacifica PAC012
-- ★★★ Scheter C1 SGR
+- ★★★ Schecter C1 SGR
 - ★★★★★★ Jackson JS22 Dinky
 - ★★★ Squier Affinity Telecaster
 - ★ Oscar Schimdt OE20
@@ -93,7 +93,7 @@ FYI — I ended up buying Yamaha Pacifica PAC012, in case you wanted to know.
 - ★★★★ Squire Bullet Stratocaster
 - ★★★★★★ Squire Affinity Telecaster
 - Eastcoast GL20
-- ★ Scheter C6 Plus
+- ★ Schecter C6 Plus
 - ★ Ibanez Artcore AS53
 - Ibanez Artcore AF55
 - G&L Tribute Fallout
