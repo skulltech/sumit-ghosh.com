@@ -1,7 +1,6 @@
 ---
 date: 'Fri Dec 28 2018 22:50:00 GMT+0530 (India Standard Time)'
 title: Best Beginner Budget Guitar Amps in 2019, According to the Internet 
-showcase: true
 tags:
   - Music
   - Guitar
