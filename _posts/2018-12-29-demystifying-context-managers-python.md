@@ -33,18 +33,18 @@ opened_file.close()
 
 Here we are opening a file named `readme.txt`, reading the file and saving its contents in a string `text`, and then when we're done with it, closing the file by calling the `.close()` method of the file object. Now at first glance this might seem okay, but actually, it's not robust at all. If _anything_ unexpected happens between opening the file and closing the file and the program fails to execute the line containing the `close` statement, there would be a resource leak. These _unexpected events_ are what we call `exceptions`, a common one would be when someone forcefully closes the program while it's executing. 
 
-Now, the proper way to handle this would be using _Exception handling_, using  `try...else` blocks. Look at the following example, 
+Now, the proper way to handle this would be using _Exception handling_, using  `try...finally` blocks. Look at the following example, 
 
 ```python
 try:
     opened_file = open('readme.txt')
     text = opened_file.read()
     ...
-else:
+finally:
     opened_file.close()
 ```
 
-Python always makes sure the code in the `else` block is executed, regardless of anything that might happen. This is the way programmers in other languages would handle resource management, but Python programmers get a special mechanism that lets them implement the same functionality without all the boilerplate. Here's where context managers come in.
+Python always makes sure the code in the `finally` block is executed, regardless of anything that might happen. This is the way programmers in other languages would handle resource management, but Python programmers get a special mechanism that lets them implement the same functionality without all the boilerplate. Here's where context managers come in.
 
 ### Implementing context managers
 
@@ -73,7 +73,7 @@ with FileManager('readme.txt') as file:
 
 Let’s break it down part-by-part. Firstly, an instance of the `FileManager` class is created when we instantiate it, passing the filename “readme.txt” to the constructor. Then, the `with` statement starts working on it — it calls the `__enter__` method of that `FileManager` object and assigns the returned value to the `file` variable mentioned in the `as` clause. Then, inside the `with` block, we can do whatever we want to do with the opened resource.
 
-The other important part of the puzzle is the `__exit__` method. The `__exit__` method contains clean-up code which must be executed after we’re done with the resource, no matter what. The instructions in this method will be similar to the ones in the `else` block we discussed before while discussing exception handling. To reiterate, the `__exit__` method contains instructions to properly close the resource handler, so that the resource is freed for further use by other programs // the OS. Now let’s take a look at how we might write this method —
+The other important part of the puzzle is the `__exit__` method. The `__exit__` method contains clean-up code which must be executed after we’re done with the resource, no matter what. The instructions in this method will be similar to the ones in the `finally` block we discussed before while discussing exception handling. To reiterate, the `__exit__` method contains instructions to properly close the resource handler, so that the resource is freed for further use by other programs // the OS. Now let’s take a look at how we might write this method —
 
 ```python
 class FileManager:
