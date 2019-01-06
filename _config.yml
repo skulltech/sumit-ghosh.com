@@ -22,7 +22,6 @@ include:
   - _pages
 
 exclude:
-
   - CNAME
   - Gemfile
   - Gemfile.lock
