@@ -1,6 +1,6 @@
 ---
 date: 'Thu Jan 03 2019 22:28:00 GMT+0530 (India Standard Time)'
-title: Demystifing Context Managers in Python
+title: Demystifying Context Managers in Python
 showcase: true
 tags:
   - Context Managers
