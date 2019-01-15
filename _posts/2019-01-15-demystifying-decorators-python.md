@@ -141,7 +141,7 @@ def decorator_function(func):
   return wrapper
 ```
 
-Here, `decorator_function` is a decorator function (duh!). As you can see, it’s a higher-order function, because it takes a function as its argument, and it also returns a function. Inside this `print_name` function, we’ve defined another function, a _wrapper_ function so to speak, which _wraps_ the argument function, and subsequently modifies its behavior. The decorator function returns this wrapper function. Now let’s see this decorator in action —
+Here, `decorator_function` is a decorator function (duh!). As you can see, it’s a higher-order function, because it takes a function as its argument, and it also returns one. Inside `print_name`, we’ve defined another function, a _wrapper_ one so to speak, which _wraps_ the argument function, and subsequently modifies its behavior. The decorator returns this wrapper function. Now let’s see this decorator in action —
 
 ```
 >>> @decorator_function
