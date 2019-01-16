@@ -320,6 +320,26 @@ def get_not_so_random_number_with_max(max_value):
 
 I hope this post helped you understand the power of decorators, and also the “magic” behind it. If you have any questions, post it in the comments down below and I’ll try my best to get back to you.  
 
+## P.S.
 
+Some things I want to say here that are important but I left out in the article or didn’t make it clear enough. These may seem to go against what I said in the entire article, but actually they don't. I just didn't mention them at the start so that the reader doesn't get overwhelmed.
+
+- Decorators need not be functions, it can be any _callable_.  
+- Decorators need not return functions, they can return anything. But usually we want decorators to return the objects of the same type as of the decorated object. Thanks to /u/zardeh and /u/mafrasi2 at Reddit for pointing this out.        
+```python
+>>> def decorator(func):
+...     return 'sumit'
+...
+>>> @decorator
+... def hello_world():
+...     print('hello world')
+...
+>>> hello_world
+'sumit'
+```
+- Decorators also need not take only functions as input. Thanks to /u/hchasestevens at Reddit for pointing this out, check [this article](https://github.com/hchasestevens/hchasestevens.github.io/blob/master/notebooks/the-decorators-they-wont-tell-you-about.ipynb) out to learn more about it. 
+- I've found that the need for decorators only becomes clear when you write a library. So if decorators still seem kind of useless to you, think of it from the POV of a library developer. A good example would be the view decorator in Flask.
+- When I said that decorators don't modify functions permanently, what I meant is that it can be easily removed and added with just one line.
+ 
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
