@@ -141,7 +141,7 @@ def decorator_function(func):
   return wrapper
 ```
 
-Here, `decorator_function` is a decorator function (duh!). As you can see, it’s a higher-order function, because it takes a function as its argument, and it also returns one. Inside `print_name`, we’ve defined another function, a _wrapper_ one so to speak, which _wraps_ the argument function, and subsequently modifies its behavior. The decorator returns this wrapper function. Now let’s see this decorator in action —
+Here, `decorator_function` is a decorator function (duh!). As you can see, it’s a higher-order function, because it takes a function as its argument, and it also returns one. Inside `decorator_function`, we’ve defined another function, a _wrapper_ one so to speak, which _wraps_ the argument function, and subsequently modifies its behavior. The decorator returns this wrapper function. Now let’s see this decorator in action —
 
 ```
 >>> @decorator_function
@@ -212,12 +212,12 @@ def benchmark(func):
     return wrapper
 
 @benchmark
-def fetch_webpage():
+def fetch_webpage(url):
     import requests
-    webpage = requests.get('https://google.com')
+    webpage = requests.get(url)
     return webpage.text
 
-webpage = fetch_webpage()
+webpage = fetch_webpage('https://google.com')
 print(webpage)
 ```
 
@@ -254,12 +254,12 @@ def benchmark(iters):
 
 
 @benchmark(iters=10)
-def fetch_webpage():
+def fetch_webpage(url):
     import requests
-    webpage = requests.get('https://google.com')
+    webpage = requests.get(url)
     return webpage.text
 
-webpage = fetch_webpage()
+webpage = fetch_webpage('https://google.com')
 print(webpage)
 ```
 
