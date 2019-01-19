@@ -316,6 +316,8 @@ def get_not_so_random_number_with_max(max_value):
     return random.random() * max_value
 ```
 
+This example is mostly for demonstration purposes though, in a real application you should use [`functools.lru_cache`](https://docs.python.org/3.7/library/functools.html#functools.lru_cache) to implement caching functionality like this.
+
 ## Conclusion
 
 I hope this post helped you understand the power of decorators, and also the “magic” behind it. If you have any questions, post it in the comments down below and I’ll try my best to get back to you.  
@@ -340,6 +342,7 @@ Some things I want to say here that are important but I left out in the article 
 - Decorators also need not take only functions as input. Thanks to /u/hchasestevens at Reddit for pointing this out, check [this article](https://github.com/hchasestevens/hchasestevens.github.io/blob/master/notebooks/the-decorators-they-wont-tell-you-about.ipynb) out to learn more about it. 
 - I've found that the need for decorators only becomes clear when you write a library. So if decorators still seem kind of useless to you, think of it from the POV of a library developer. A good example would be the view decorator in Flask.
 - When I said that decorators don't modify functions permanently, what I meant is that it can be easily removed and added with just one line.
- 
+- You should look into [`functools.wraps`](https://docs.python.org/3.7/library/functools.html#functools.wraps) — it’s a helper function that helps you make a decorated function _look_ like the original function, doing things such as keeping the docstring of the original function. Thanks to /u/primordial_pouch and /u/Overload175 over at Reddit for pointing this out.
+
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
