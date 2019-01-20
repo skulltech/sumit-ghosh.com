@@ -1,6 +1,6 @@
 ---
 permalink: /archive/
-layout: home
+layout: archive
 title: Archive
 redirect_from: '/articles'
 

@@ -43,7 +43,7 @@ You should realize that everything being objects opens up a world of endless pos
 
 And that’s where functional programming comes into play, and consequently, decorators.
 
-### Functional programming  // Higher-order functions
+### Functional programming :: Higher-order functions
 
 Python incorporates some techniques from functional programming languages, such as Haskell and OCaml. Without getting into the formal definition of what functional programming is, let me list two characteristics of it that are there in Python as well.
 

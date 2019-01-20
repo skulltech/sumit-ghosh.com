@@ -1,10 +1,9 @@
 ---
 ---
 
-$base-font-family: 'Rubik', sans-serif, "Lora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-
+$base-font-family: 'Zilla Slab', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-size: 18px !default;
 
 @import "minima";
-@import url('https://fonts.googleapis.com/css?family=Lora');
-@import url('https://fonts.googleapis.com/css?family=Rubik');
+@import url('https://fonts.googleapis.com/css?family=Rubik|Lora|Vollkorn|Zilla+Slab');
 @import url("https://use.typekit.net/jgn0wbv.css");
