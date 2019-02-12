@@ -10,7 +10,6 @@ linkedin_username: sumit-ghosh101
 instagram_username: summit.ghosh
 flickr_username: sumit-ghosh
 
-
 show_excerpts: false
 minima:
   date_format: '%b %-d, %Y'
@@ -20,6 +19,14 @@ theme: minima
 
 include:
   - _pages
+  
+header_pages:
+  - title: About
+    url: '/about/'
+  - title: Archive
+    url: '/archive/'
+  - title: Résumé
+    url: '/resume.pdf'  
 
 exclude:
   - CNAME
@@ -29,12 +36,18 @@ exclude:
   - README.md
 
 permalink: /articles/:title/
-paginate: 5
 
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-sitemap
+  - jekyll-archives
+
+jekyll-archives:
+  enabled: ['tags']
+  layout: archivist
+  permalinks:
+    tag: '/archive/tag/:name/'
 
 disqus:
     shortname: sumit-ghosh-com

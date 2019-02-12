@@ -3,7 +3,7 @@ date: 'Sun Mar 06 2016 13:58:02 GMT+0530 (India Standard Time)'
 title: Use DDNS to Deal With Your Dynamic Public IP
 tags:
   - Hacking
-  - DDNS
+  - DNS
   - Metasploit
 ---
 

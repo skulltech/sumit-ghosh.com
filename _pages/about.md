@@ -8,9 +8,10 @@ subtitle: Why you'd want to go on a date with me
 
 ### Profile
 
-I am a cosmopolitan currently living in _New Delhi_, India. I like to think of myself as an intellectual, but definitely not tfw to smart. I like to read books, a lot, especially non-fiction.  You can find my _Goodreads_ profile [here](https://www.goodreads.com/user/show/63000435-sumit-ghosh). Other than that, I indulge in philosophy, computers, photography, music, films and travelling. I know that list seems a little too long, what can I say, I guess I am protean.
+I am a cosmopolitan currently living in _New Delhi_, India. I like to think of myself as an intellectual, but definitely not > tfw to intelligent. I like to read books, a lot, especially non-fiction.  You can find my _Goodreads_ profile [here](https://www.goodreads.com/user/show/63000435-sumit-ghosh). Other than that, I indulge in an eclectic variety of _stuff_: philosophy, computers, photography, music, films, travelling, and [so on and so on](https://www.youtube.com/watch?v=B0c2LjKdqqw). 
 
 Psychometrics — 
+
   - MBTI: INTP.
   - Big Five: High Openness. Low Conscientiousness, Extraversion, Agreeableness and Neuroticism.
 

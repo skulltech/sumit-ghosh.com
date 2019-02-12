@@ -10,31 +10,11 @@ layout: default
   {{ content }}
 
   {%- assign showcased_posts = site.posts | where: 'showcase', true -%}
-
   {%- if showcased_posts.size > 0 -%}
     <h2>{{ page.list_title | default: "Posts" }}</h2>
     <p>{{ page.list_intro }}</p>
-      <ul class="post-list">
-        {%- for post in showcased_posts -%}
-          {%- if post.showcase -%}
-          <li>
-            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            <span class="post-meta">{{ post.date | date: date_format }}</span>
-            <h3>
-              <a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-              </a>
-            </h3>
-            {%- if site.show_excerpts -%}
-              {{ post.excerpt }}
-            {%- endif -%}
-          </li>
-          {%- endif -%}
-        {%- endfor -%}
-      </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
+    {%- include archive-list.html posts=showcased_posts -%}
   {%- endif -%}
 
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 </div>

@@ -4,9 +4,8 @@ subtitle: Algorithms Part 1 and 2 by Princeton University on Coursera
 date: 'Sat Nov 21 2017 00:10:25 GMT+0530 (India Standard Time)'
 tags:
   - Algorithms
-  - Data-structures
-  - MOOC
-  - Coursera
+  - Education
+  - Programming
 ---
 
 The title suspiciously sounds like an advertisement or paid promotion, doesn’t it? I know it does, but still, believe me or not, it’s not. I just completed the introductory algorithms and data structures course [Algorithms Part 1](https://www.coursera.org/learn/algorithms-part1), and I can say confidently that it is one of the—if not the best—course of its kind available out there on the interwebs. This course is offered by _Princeton University_ on _Coursera_, taught by Robert Sedgewick.

@@ -3,9 +3,7 @@ title: Boyhood. Through Some Quotes.
 subtitle: 'Or rather, how it touched me'
 tags:
   - Movies
-  - Review
   - Life
-  - Boyhood
 date: '2017-11-16'
 bigimg: '/img/posts/boyhood-feature.jpg'
 image: /images/posts/boyhood-quotes-teaser-poster.jpg

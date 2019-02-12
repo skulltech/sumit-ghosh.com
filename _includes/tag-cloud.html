@@ -1,0 +1,8 @@
+<div class="tag-cloud"> 
+    {% assign tags = include.tags | sort %}
+    {% for tag in tags %}
+    <a href="/archive/tag/{{ tag[0] | downcase | slugify }}" class="btn btn-default">
+      <span style="font-size: {{ tag | last | size | times: 10 | plus: 100 }}%"><nobr>{{ tag[0] }}</nobr></span>
+    </a>
+    {% endfor %}
+</div>

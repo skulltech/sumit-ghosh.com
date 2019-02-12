@@ -3,12 +3,9 @@ date: 'Mon Jan 15 2019 04:04:00 GMT+0530 (India Standard Time)'
 title: Demystifying @decorators in Python
 showcase: true
 tags:
-  - Decorators
   - Python
   - Programming
 ---
-
-
 
 ## Introduction
 

@@ -5,9 +5,7 @@ showcase: true
 tags:
   - Music
   - Guitar
-  - Electric Guitar
-  - Lists
-  - Compilation
+  - List
 ---
 
 __Update__ — I wrote a similar post about best beginner budget guitar amps, you can find it [here](/articles/best-beginner-guitar-amps).

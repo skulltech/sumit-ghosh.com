@@ -8,7 +8,6 @@ tags:
 - Python
 - Automation
 - Selenium
-- Github
 ---
 
 I've been playing around with Selenium Webdriver in Python, and one of the most annoying thing I had to do again and again is looking up how to start a specific Webdriver with a custom user-agent or with a custom profile. So I decided to make this module which will take care of all the little inner workings involved while starting up a Webdriver.

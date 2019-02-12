@@ -3,7 +3,7 @@ date: 'Mon Dec 24 2018 19:08:00 GMT+0530 (India Standard Time)'
 title: 'An Introduction to Web-scraping using Python'
 showcase: true
 tags:
-  - Web-scraping
+  - Web scraping
   - Python
   - Programming
 canonical_url: 'https://stackabuse.com/introduction-to-web-scraping-with-python/'

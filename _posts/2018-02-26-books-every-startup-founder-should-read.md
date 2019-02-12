@@ -4,8 +4,7 @@ title: Books Every Startup Founder Should Read
 tags:
   - Books
   - Startup
-  - Compilation
-  - Lists
+  - List
 ---
 
 I wanted to read some books about founding startups, but had no idea which books should they be. Naturally, Google came to help. Upon compiling books from the first page of Google search results of the query “books startup founders should read”, what I got is the list below. 

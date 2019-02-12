@@ -4,10 +4,7 @@ title: Best Beginner Budget Guitar Amps in 2019, According to the Internet
 tags:
   - Music
   - Guitar
-  - Electric Guitar
-  - Guitar Amp
-  - Lists
-  - Compilation
+  - List
 ---
 
 
