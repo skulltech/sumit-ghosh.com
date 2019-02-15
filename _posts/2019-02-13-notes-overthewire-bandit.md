@@ -4,7 +4,7 @@ title: Notes from Overthewire Bandit
 showcase: true
 tags:
   - Hacking
-  - CTF
+  - Wargames
 ---
 
 
