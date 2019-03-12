@@ -1,9 +1,19 @@
 ---
 ---
 
-$base-font-family: 'Buenard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$base-font-size: 19px !default;
+$base-font-family: 'Lora', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$monospace-font-family: 'Cousine', monospace; 
+$base-font-size: 17px !default;
+
+code {
+	font-family: $monospace-font-family;
+}
+
+.post-tag {
+	text-decoration: none !important; 
+	font-family: $monospace-font-family;
+}
 
 @import "minima";
-@import url('https://fonts.googleapis.com/css?family=Rubik|Lora|Vollkorn|Zilla+Slab|Buenard:400,700');
+@import url('https://fonts.googleapis.com/css?family=Karla|Lora|Vollkorn|Zilla+Slab|Buenard|Cousine');
 @import url("https://use.typekit.net/jgn0wbv.css");
