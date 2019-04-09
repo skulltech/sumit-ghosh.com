@@ -29,7 +29,9 @@ header_pages:
   - title: Archive
     url: '/archive/'
   - title: Résumé
-    url: '/resume.pdf'  
+    url: '/resume.pdf'
+  - title: Portfolio
+    url: '/portfolio/'
 
 exclude:
   - CNAME
