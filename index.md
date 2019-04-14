@@ -6,11 +6,6 @@ list_intro: >
     
 ---
 
-I'm actively looking for remote freelance programming jobs — [here's](/resume.pdf) my résumé. If you are interested in hiring me, contact me at sumit@sumit-ghosh.com.
-
-___
-&nbsp;
-
 _The lunatic is on the grass._
 
 ## About
