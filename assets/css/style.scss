@@ -17,3 +17,18 @@ code {
 @import "minima";
 @import url('https://fonts.googleapis.com/css?family=Karla|Lora|Vollkorn|Zilla+Slab|Buenard|Cousine');
 @import url("https://use.typekit.net/jgn0wbv.css");
+
+.footer-col-1 {
+  width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+  width:         calc(30% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+  width: -webkit-calc(25% - (#{$spacing-unit} / 2));
+  width:         calc(25% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+  width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+  width:         calc(45% - (#{$spacing-unit} / 2));
+}
