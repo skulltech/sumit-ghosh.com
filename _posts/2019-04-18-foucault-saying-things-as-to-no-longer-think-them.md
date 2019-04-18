@@ -5,11 +5,12 @@ showcase: true
 tags:
   - Philosophy
   - Foucault
+
 ---
 
 
 
-In this 1971 interview, Foucault says and he stresses upon it, 
+In [this](https://www.youtube.com/watch?v=qzoOhhh4aJg) 1971 interview, Foucault says and he stresses upon it, 
 
 > I don't say the things I say because they are what I think, I say them as a way to make sure they no longer are what I think.
 
@@ -49,7 +50,7 @@ Critical thinkers often use their audience as a sounding board for half-baked or
 
 Also I should mention that Foucault was seemingly an ENTP, and a typical characteristic of ENTP is their tendency to share abstract and not fully refined thoughts with their peers, as described in [this article](https://www.typeinmind.com/neti). 
 
->  … ideas are usually shared with the world first and then analyzed afterwards. 
+> … ideas are usually shared with the world first and then analyzed afterwards. 
 
 So, it seems this interpretation is in line with his personality as defined by MBTI.
 
@@ -59,10 +60,9 @@ We can interpret this quote drawing reference from one of the Foucault’s prima
 
 Thoughts in themselves do not have any effect upon the external world, when someone only thinks something, it’s private to him, it’s _his_ thought. But once he shares it with the world through any form of expression, the _death of the author_ occurs; the things are no longer confined within his ruminations, it becomes something else which is more active than thought. It becomes part of the general public discourse, involved with a certain form of power, which Foucault termed as _knowledge-power_. Thoughts when articulated have a far greater impact than people realize, as he eloquently said, 
 
->  “People know what they do; frequently they know why they do what they do; but what they don't know is what what they do does.”
+> “People know what they do; frequently they know why they do what they do; but what they don't know is what what they do does.”
 >
->  ― Michel Foucault, Madness and Civilization: A History of Insanity in the Age of Reason
->
+> ― Michel Foucault, Madness and Civilization: A History of Insanity in the Age of Reason
 
 Foucault is claiming he articulates certain ideas to make sure what he says is able to move beyond the realm of thought, as thought is immaterial compared to discourse and the corresponding knowledge and the power associated with it. 
 
@@ -70,7 +70,7 @@ Foucault is claiming he articulates certain ideas to make sure what he says is a
 
 To put the quote in question in context, let me share more from the interview.
 
->  I don’t believe in the virtue of using language for “self-expression”. The language that interests me is the one that can actually destroy all the circular, enclosed, narcissistic forms of the subject and of oneself… And what I mean by ‘the end of man’ is, deep down, the end of all these forms of individuality, of subjectivity, of consciousness, of the ego on which we built and from which we have tried to build and to constitute knowledge. This is one of the forms of this limitation, of these exclusions, of these rejections, that I was talking about… The West has tried to build the figure of man in this way and this image is in the process of disappearing… And so I don’t say the things I say because they are what I think, but rather I say them with the end in mind of self-destruction, precisely to make sure they are no longer what I think. To be really certain that from now on, outside of me, they are going to live or die in such a way that I will not have to recognize myself in them. 
+> I don’t believe in the virtue of using language for “self-expression”. The language that interests me is the one that can actually destroy all the circular, enclosed, narcissistic forms of the subject and of oneself… And what I mean by ‘the end of man’ is, deep down, the end of all these forms of individuality, of subjectivity, of consciousness, of the ego on which we built and from which we have tried to build and to constitute knowledge. This is one of the forms of this limitation, of these exclusions, of these rejections, that I was talking about… The West has tried to build the figure of man in this way and this image is in the process of disappearing… And so I don’t say the things I say because they are what I think, but rather I say them with the end in mind of self-destruction, precisely to make sure they are no longer what I think. To be really certain that from now on, outside of me, they are going to live or die in such a way that I will not have to recognize myself in them. 
 
 When we put his quote in context, we see that none of the above interpretations were his intent. Actually, he was talking along the lines of his philosophy of post-structuralism and post-humanism, wherein he proclaimed the upcoming _death of man_. Let me try to explain what he meant by this, although admittedly I’m very new to this, so this is more of an attempt of mine to clarify my own thoughts.
 
@@ -81,3 +81,5 @@ According to Foucault, the contemporary idea of man is an invention of the Enlig
 What modernity missed is the underlying [*episteme*](https://en.wikipedia.org/wiki/Episteme#Michel_Foucault) — a pattern of thought particular to an epoch which guides its discourses. Foucault disapproves of the excess emphasis modernity puts on the individual. He argues that the individual man who discovers ideas is insignificant to the ideas themselves, and the _episteme_ in the background. Man’s insignificance lies in the fact that he doesn’t have as much freedom and creativity as we’d like to think, rather he’s a product of the power // knowledge relations of that epoch. Foucault believes that a change is imminent, where _the death of man_ will be upon us and we’ll move beyond this modern conception of man, into understanding the underlying power structures that defines man. That’s why he says he doesn’t want to recognize himself in his ideas, because for him the ideas are not simply product of his creativity.
 
 Again, this is a very premature reading of Foucault. He discusses these ideas in his 1966 book “*The Order of Things*: An Archaeology of the Human Sciences”, and I’m yet to read the original text. Nevertheless, I think this is more or less what he meant to say in the interview in question.
+
+__Credits__ — This “article” is nothing more than my notes from [the interview](https://www.youtube.com/watch?v=qzoOhhh4aJg) in question, and this discussion [here](<https://www.reddit.com/r/askphilosophy/comments/bedk32/foucault_i_dont_say_the_things_i_say_because_they/>) at Reddit, so thanks to the participants in that thread for bettering my understanding.
