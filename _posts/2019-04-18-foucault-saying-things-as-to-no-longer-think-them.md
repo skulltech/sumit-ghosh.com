@@ -54,7 +54,7 @@ Also I should mention that Foucault was seemingly an ENTP, and a typical charact
 
 So, it seems this interpretation is in line with his personality as defined by MBTI.
 
-### The death of the author // Knowledge-power
+### Knowledge-power and the death of the author 
 
 We can interpret this quote drawing reference from one of the Foucault’s primary philosophies, the philosophy of the power inherent in knowledge and consequently speech.
 
@@ -66,7 +66,7 @@ Thoughts in themselves do not have any effect upon the external world, when some
 
 Foucault is claiming he articulates certain ideas to make sure what he says is able to move beyond the realm of thought, as thought is immaterial compared to discourse and the corresponding knowledge and the power associated with it. 
 
-### The death of man // Authorial intent
+### The death of man
 
 To put the quote in question in context, let me share more from the interview.
 
