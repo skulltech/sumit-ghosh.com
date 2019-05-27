@@ -10,16 +10,16 @@ published: true
 
 ### Evnnt
 [https://evnnt.com](https://evnnt.com)  
-_Feb 2019 — April 2019_  
+_Feb 2019 — Apr 2019_  
 Role: Backend developer and system administrator
 
-Evnnt is the fastest and easiest way to find events in your area, anything from comedy and concerts, to movies, meetups and more! I was responsible for extending and maintaining the website's backend.
+Evnnt is an event directory to find events in your area—like comedy, concerts and meetups—by location, distance, category and more. I was responsible for extending and maintaining the website's backend.
 
 #### Accomplished
 
 - As a system administrator, brought the various services back up and configured them correctly.
-- Extended scrapy spiders that feed data into the site.
-- Created an web-app for monitoring status of currently running scrapy spiders.
+- Built and extended robust scrapy pipeline for scraping events from multiple websites.
+- Created high-performance web-app utilising Redis to monitor live statistics of the scrapy spiders.
 
 Technologies used — Python, Django, Flask, Scrapy, Celery, Redis, Supervisord, Postgresql, Nginx, AWS SES.  
 
@@ -29,7 +29,7 @@ Technologies used — Python, Django, Flask, Scrapy, Celery, Redis, Supervisord,
 _Jul 2018 — Present_  
 Role: Backend developer
 
-Inboxignite is a domain reputation management platform for email marketers. I was responsible for building and maintaining most of the backend services working in conjunction.
+Inboxignite is a domain reputation management platform for email marketers. I was responsible for building and maintaining most of the backend services.
 
 #### Accomplished
 - Created web-app for monitoring DNS records, checking availability of mail servers, and sending emails from those mail servers conveniently.
@@ -38,7 +38,7 @@ Inboxignite is a domain reputation management platform for email marketers. I wa
 - Created email deliverability // folder placement checker.  
 - Created user authentication system and dashboard, integrated with database.  
 
-Technologies used — Python, Flask, Redis, Supervisord, Slimta, SMTP, IMAP, MySQL, DNS, REST API.  
+Technologies used — Python, Flask, Redis, Supervisord, Slimta, SMTP, IMAP, MySQL, DNS.
 
 
 ### Crypital
@@ -56,7 +56,7 @@ Technologies used — Python, Flask, SQLite, UIKit.
 
 ### Removeads
 [https://removeads.org](https://removeads.org)  
-_Sep 2018 — December 2018_  
+_Sep 2018 — Dec 2018_  
 Role: Software architect
 
 Removeads offers a cloud-based ad blocker backed by a DNS sinkhole, that blocks all ads in your computer across applications. [Ankit Solanki](https://ankit-solanki.com/) and I were responsible for designing and building the whole software stack from ground up. 
@@ -73,9 +73,24 @@ Technologies used — Python, Flask, Pi-Hole, DNS.
 ### Et Cetera ...
 _Jan 2016 — Present_
 
-I have been working as an independent contractor—or freelancer if you will—for more than 3 years now. Apart from the ones mentioned above, I have worked on numerous projects; but admittedly I have tended to choose projects with a relatively smaller scale, due to the intermittent nature of my availability as I am also continuing my college studies alongside this.
+I have been working as an independent contractor for more than 3 years now. Apart from the ones mentioned above, I have worked on numerous projects; but admittedly I have tended to choose projects with a relatively smaller scale, due to the intermittent nature of my availability as I am also continuing my college studies alongside this.
 
 Technologies used — Python, Selenium, Flask, Django.
+
+__________________________
+&nbsp;
+
+## Voluntary work
+
+### Department of Computer Science and Engineering @ IIT Delhi
+_Sep 2018 — Present_  
+Role: System administrator
+
+#### Accomplished
+- Implemented an Oauth authentication system to be leveraged by any app hosted within the infrastructure.
+- Maintaining the computer systems and networks, responding to support requests.  
+
+Technologies used — Linux, Apache2, Reverse Proxy, VM, DNS, DHCP.
 
 __________________________
 &nbsp;
@@ -110,22 +125,6 @@ A simple CLI client for peer-to-peer file or message sending written in Python.
 - It supports file or message of size upto about 8.85 PeB (1 PiB ~ 10^6 GiB)!.
 - Protection against transmission error using CRC32 checksum.
 - Comes with CLI (command-line argument) and Interactive mode, both!
-
-
-__________________________
-&nbsp;
-
-## Voluntary work
-
-### Department of Computer Science and Engineering @ IIT Delhi
-_Sep 2018 — Present_  
-Role: System administrator
-
-#### Accomplished
-- Implemented an Oauth authentication system to be leveraged by any app hosted within the infrastructure.
-- Maintaining the computer systems and networks, responding to support requests.  
-
-Technologies used — Linux, Apache2, Reverse Proxy, VM, DNS, DHCP.
 
 
 <!-- Place this tag in your head or just before your close body tag. -->
