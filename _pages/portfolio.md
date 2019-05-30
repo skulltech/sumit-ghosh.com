@@ -110,7 +110,7 @@ Drymail is a minimalist wrapper over Python’s existing smtplib and email libra
 <a class="github-button" href="https://github.com/SkullTech/drymail" data-size="large" data-show-count="true" aria-label="Star SkullTech/drymail on GitHub">Star</a>
 
 - Supports creating email with HTML content, plaintext content, or both!
-- Supports mentioning contacts in the “John Doe" <john@email.com> format.
+- Supports mentioning contacts in the `"John Doe" <john@email.com>` format.
 - Support standard headers like CC, BCC, Reply-To and Authors.
 - Supports injecting custom headers.
 - Supports adding attachments.
