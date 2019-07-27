@@ -6,7 +6,7 @@ published: true
 
 ---
 
-## Freelancing projects // Contract work
+## Freelancing projects · Contract work
 
 ### Evnnt
 [https://evnnt.com](https://evnnt.com)  

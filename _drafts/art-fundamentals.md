@@ -1,4 +1,4 @@
-# Why are ocataves what they are
+# Why are octaves what they are
 
 From an evolutionary point of view, many of the _finer_ qualities of human beings are rather unnecessary. One prime example of these qualities would be having a taste for the arts.
 
