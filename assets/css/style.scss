@@ -2,11 +2,10 @@
 ---
 
 
-$base-font-family: 'Merriweather';
+$base-font-family: 'europa';
 $header-font-family: 'Prata';
 $monospace-font-family: 'Cousine', monospace;
-$base-font-size: 16px !default;
-$base-font-weight: 300;
+$base-font-size: 18px !default;
 
 code {
 	font-family: $monospace-font-family;
@@ -18,23 +17,25 @@ code {
 }
 
 @import "minima";
-@import url('https://fonts.googleapis.com/css?family=Lora|Cousine|Libre+Baskerville|Prata|Domine|Merriweather:300,400');
+@import url('https://fonts.googleapis.com/css?family=Lora|Cousine|Libre+Baskerville|Prata|Domine|Merriweather');
+@import url("https://use.typekit.net/jgn0wbv.css");
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $header-font-family;
 }
 
+.post-list-item {
+  font-family: $base-font-family;
+}
+
 .footer-col-1 {
-  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width:         calc(35% - (#{$spacing-unit} / 2));
+  width: calc(35% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-  width: -webkit-calc(25% - (#{$spacing-unit} / 2));
-  width:         calc(25% - (#{$spacing-unit} / 2));
+  width: calc(25% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-  width: -webkit-calc(40% - (#{$spacing-unit} / 2));
-  width:         calc(40% - (#{$spacing-unit} / 2));
+  width: calc(40% - (#{$spacing-unit} / 2));
 }

@@ -13,7 +13,7 @@
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <!-- <li> -->
         <span class="post-meta">{{ post.date | date: date_format }}</span>{%- include post-tags.html post=post -%}
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <h3 class="post-list-item"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
           
       <!-- </li> -->
    
