@@ -13,7 +13,7 @@ Before starting my preparation, I looked around forums and subreddits for sugges
 
 ### A Cloud Guru Video Lectures
 
-The format of _A Cloud Guru_ lectures is not very captivating, it’s the usual slideshow with narration. Still, it helped me get a overall understanding of how every service works and how everything fits together. There was a few hands-on labs too which helped solidify what I learned. I did not take any notes while going through the lectures, as I thought the summary lectures at the end of each section would be enough for revision.
+The format of _A Cloud Guru_ lectures is not very captivating, it’s the usual slideshow with narration. Still, it helped me get a overall understanding of how every service works and how everything fits together. Kudos to the instructor Ryan who is a great communicator. There was a few hands-on labs too which helped solidify what I learned. I did not take any notes while going through the lectures, as I thought the summary lectures at the end of each section would be enough for revision.
 
 ### Whizlabs Practice Tests
 
