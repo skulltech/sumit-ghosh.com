@@ -8,6 +8,10 @@ list_intro: >
 
 _The lunatic is on the grass._
 
+## Notice
+
+I'm actively looking for an intership for the summer of 2020. If you are interested in hiring me as in intern, please contact me at sumit@sumit-ghosh.com.
+
 ## About
 
 Sumit Ghosh, also known as SkullTech in some parts of the interwebs, is a computer science major studying at IIT Delhi, and as a part-time gig he does freelance consulting.
