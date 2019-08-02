@@ -18,8 +18,8 @@ Evnnt is an event directory to find events in your area—like comedy, concerts 
 #### Accomplished
 
 - As a system administrator, brought the various services back up and configured them correctly.
-- Built and extended robust scrapy pipeline for scraping events from multiple websites.
-- Created high-performance web-app utilising Redis to monitor live statistics of the scrapy spiders.
+- Built and extended a robust scrapy pipeline for scraping events from multiple websites.
+- Created a high-performance web-app utilising Redis to monitor live statistics of the scrapy spiders.
 
 Technologies used — Python, Django, Flask, Scrapy, Celery, Redis, Supervisord, Postgresql, Nginx, AWS SES.  
 
@@ -32,11 +32,11 @@ Role: Backend developer
 Inboxignite is a domain reputation management platform for email marketers. I was responsible for building and maintaining most of the backend services.
 
 #### Accomplished
-- Created web-app for monitoring DNS records, checking availability of mail servers, and sending emails from those mail servers conveniently.
-- Created SMTP smart-host for routing emails.  
-- Created email queuing system that sped up bulk-email sending rate over 140 times.  
-- Created email deliverability // folder placement checker.  
-- Created user authentication system and dashboard, integrated with database.  
+- Created a web-app for monitoring DNS records, checking availability of mail servers, and sending emails from those mail servers conveniently.
+- Created an SMTP smart-host for routing emails.  
+- Created an email queuing system that sped up bulk-email sending rate over 140 times.  
+- Created an email deliverability // folder placement checker.  
+- Created an user authentication system and a dashboard, integrated with the database.  
 
 Technologies used — Python, Flask, Redis, Supervisord, Slimta, SMTP, IMAP, MySQL, DNS.
 
@@ -49,7 +49,7 @@ Role: Full stack web developer
 I was responsible for building a Flask web-app to be used for _onboarding_ users to a cryptocurrency service. 
 
 #### Accomplished
-- Created web-app facilitating user data collection and verification, complete with admin dashboard.  
+- Created a web-app facilitating user data collection and verification, complete with admin dashboard.  
 
 Technologies used — Python, Flask, SQLite, UIKit.  
 
@@ -63,17 +63,17 @@ Removeads offers a cloud-based ad blocker backed by a DNS sinkhole, that blocks 
 
 #### Accomplished
 
-- Designed a system involving a GUI client app, and a fleet of DNS server which act as DNS sinkhole.  
-- Implemented automated VPS provisioning and getting a operational Pi-Hole installation.  
-- Implemented user authentication system.  
+- Designed a system involving a GUI client app, and a fleet of DNS server which act as a DNS sinkhole.  
+- Implemented automated VPS provisioning and getting an operational Pi-Hole installation.  
+- Implemented a user authentication system.  
 
 Technologies used — Python, Flask, Pi-Hole, DNS.
 
 
 ### Et Cetera ...
-_Jan 2016 — Present_
+_Jan 2016 — July 2019_
 
-I have been working as an independent contractor for more than 3 years now. Apart from the ones mentioned above, I have worked on numerous projects; but admittedly I have tended to choose projects with a relatively smaller scale, due to the intermittent nature of my availability as I am also continuing my college studies alongside this.
+I had been working as an independent contractor for more than 3 years. Apart from the ones mentioned above, I have worked on numerous projects; but admittedly I have tended to choose projects with a relatively smaller scale, due to the intermittent nature of my availability as I was also continuing my college studies alongside this. I'm not currently looking for any freelance work.
 
 Technologies used — Python, Selenium, Flask, Django.
 
@@ -125,6 +125,8 @@ A simple CLI client for peer-to-peer file or message sending written in Python.
 - It supports file or message of size upto about 8.85 PeB (1 PiB ~ 10^6 GiB)!.
 - Protection against transmission error using CRC32 checksum.
 - Comes with CLI (command-line argument) and Interactive mode, both!
+
+### More on [Github](https://github.com/SkullTech/)
 
 
 <!-- Place this tag in your head or just before your close body tag. -->
