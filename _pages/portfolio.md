@@ -26,7 +26,7 @@ Technologies used — Python, Django, Flask, Scrapy, Celery, Redis, Supervisord,
 
 ### Inboxignite 
 [https://inboxignite.com](https://inboxignite.com) formerly [https://inboxer.io](https://inboxer.io)  
-_Jul 2018 — Present_  
+_Jul 2018 — Jul 2019_  
 Role: Backend developer
 
 Inboxignite is a domain reputation management platform for email marketers. I was responsible for building and maintaining most of the backend services.
