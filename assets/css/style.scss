@@ -1,10 +1,10 @@
 ---
 ---
 
-$base-font-family: 'europa';
+$base-font-family: 'Work Sans';
 $header-font-family: 'Prata';
 $monospace-font-family: 'Cousine', monospace;
-$base-font-size: 18px !default;
+$base-font-size: 17px !default;
 
 code {
 	font-family: $monospace-font-family;
@@ -16,7 +16,7 @@ code {
 }
 
 @import "minima";
-@import url('https://fonts.googleapis.com/css?family=Lora|Cousine|Libre+Baskerville|Prata');
+@import url('https://fonts.googleapis.com/css?family=Lora|Cousine|Libre+Baskerville|Prata|Work+Sans');
 @import url("https://use.typekit.net/jgn0wbv.css");
 
 h1, h2, h3, h4, h5, h6 {
