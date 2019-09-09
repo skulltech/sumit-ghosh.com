@@ -1,6 +1,11 @@
 ---
 ---
 
+@font-face {
+    font-family: 'Europa Regular';
+    src: url('../fonts/europa-regular-webfont.ttf') format('truetype');
+}
+
 $base-font-family: 'Work Sans';
 $header-font-family: 'Prata';
 $monospace-font-family: 'Cousine', monospace;

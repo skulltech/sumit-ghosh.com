@@ -4,7 +4,7 @@ title: 'Multiprocessing vs. Threading in Python: What Every Data Scientist Needs
 showcase: true
 tags:
   - Python
-  - Computer Science
+  - OS
 canonical_url: 'https://blog.floydhub.com/multiprocessing-vs-threading-in-python-what-every-data-scientist-needs-to-know/'
 ---
 
