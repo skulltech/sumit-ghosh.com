@@ -5,8 +5,7 @@
       {% assign current_year = post.date | date: "%Y" %}
       {% if current_year != year %}
           <!-- {% unless forloop.first %}</ul>{% endunless %} -->
-          <!-- {% assign show_year=true %} -->
-          {% if show_year %}<h2 class="post-list-heading">{{ current_year }}</h2>{% endif %}
+          {% if include.show_year %}<h2 class="post-list-heading">{{ current_year }}</h2>{% endif %}
           <!-- <ul> -->
           {% assign year = current_year %}
       {% endif %}
