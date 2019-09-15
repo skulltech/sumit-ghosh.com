@@ -50,7 +50,7 @@ plugins:
 
 jekyll-archives:
   enabled: ['tags']
-  layout: archivist
+  layout: tags
   permalinks:
     tag: '/archive/tag/:name/'
 

@@ -7,13 +7,9 @@ redirect_from: /articles/
 ---
 
 <div class="archive">
-	{%- if page.title -%}
-		<h1 class="page-heading">{{ page.title }}</h1>
-	{%- endif -%}
-
 	<!-- <h2>Tag cloud</h3> -->
 	<!-- {%- include tag-cloud.html tags=site.tags -%} -->
 
-	<!-- <h2>All Posts</h3> -->
-  {%- include archive-list.html posts=site.posts -%}
+	<h1>All Posts</h3>
+  	{%- include archive-list.html posts=site.posts show_year=true -%}
 </div>

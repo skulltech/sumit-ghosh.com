@@ -6,8 +6,10 @@
     src: url('../fonts/europa-regular-webfont.ttf') format('truetype');
 }
 
-$base-font-family: 'Work Sans';
-$header-font-family: 'Prata';
+$base-font-family: 'Lora';
+$heading-font-family: 'Prata';
+$misc-font-family: 'Work Sans';
+
 $monospace-font-family: 'Cousine', monospace;
 $base-font-size: 17px !default;
 
@@ -25,11 +27,11 @@ code {
 @import url("https://use.typekit.net/jgn0wbv.css");
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $header-font-family;
+  font-family: $heading-font-family;
 }
 
-.post-list-item {
-  font-family: $base-font-family;
+.post-list-item, .post-meta, .site-header, .site-footer {
+  font-family: $misc-font-family;
 }
 
 .footer-col-1 {

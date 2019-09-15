@@ -2,6 +2,15 @@
 layout: default
 ---
 
+<style type="text/css">
+  code {
+    all: initial;
+  }
+  code {
+    font-family: Cousine;
+  }
+</style>
+
 <div class="home">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
@@ -13,7 +22,7 @@ layout: default
   {%- if showcased_posts.size > 0 -%}
     <h2>{{ page.list_title | default: "Posts" }}</h2>
     <p>{{ page.list_intro }}</p>
-    {%- include archive-list.html posts=showcased_posts -%}
+    {%- include archive-list.html posts=showcased_posts show_year=false -%}
   {%- endif -%}
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>

@@ -10,7 +10,7 @@ _The lunatic is on the grass._
 
 ## About
 
-Sumit Ghosh, also known as SkullTech in some parts of the interwebs, is a computer science major studying at IIT Delhi.
+Sumit Ghosh, also known as `SkullTech` in some parts of the interwebs, is a computer science major studying at IIT Delhi.
 
 You can check out the portfolio of his _programmer self_ 
 [here](/portfolio/). You can read about his _human self_ and his online presence in the [_about_](/about/) page. Drop him a mail at sumit@sumit-ghosh.com if you want to talk.
