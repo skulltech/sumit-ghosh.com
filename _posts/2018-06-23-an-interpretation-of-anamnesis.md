@@ -1,7 +1,6 @@
 ---
 date: 'Sat Jun 23 2018 01:10:20 GMT+0530 (India Standard Time)'
 title: An Interpretation of Anamnesis
-showcase: true
 tags:
   - Philosophy
 ---

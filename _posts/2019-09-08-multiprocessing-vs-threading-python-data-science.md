@@ -8,7 +8,7 @@ tags:
 canonical_url: 'https://blog.floydhub.com/multiprocessing-vs-threading-in-python-what-every-data-scientist-needs-to-know/'
 ---
 
-_NOTE_ — I wrote this article for [FloydHub](https://www.floydhub.com) and it originally appeared [here](https://blog.floydhub.com/multiprocessing-vs-threading-in-python-what-every-data-scientist-needs-to-know/).
+NOTE — I wrote this article for [FloydHub](https://www.floydhub.com) and it originally appeared [here](https://blog.floydhub.com/multiprocessing-vs-threading-in-python-what-every-data-scientist-needs-to-know/).
 
 
 Sooner or later, every data science project faces an inevitable challenge: speed. Working with larger data sets leads to slower processing thereof, so you'll eventually have to think about optimizing your algorithm's run time. As most of you already know, parallelization is a necessary step of this optimization. Python offers two built-in libraries for parallelization: multiprocessing and threading. In this article, we'll explore how data scientists can go about choosing between the two and which factors should be kept in mind while doing so.

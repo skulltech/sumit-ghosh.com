@@ -1,14 +1,13 @@
 ---
 date: 'Thu Jan 03 2019 22:28:00 GMT+0530 (India Standard Time)'
 title: Demystifying Context Managers in Python
-showcase: true
 tags:
   - Python
   - Programming
 canonical_url: 'https://stackabuse.com/python-context-managers/'
 ---
 
-_NOTE_ — I wrote this article for stackabuse.com and it originally appeared [here](https://stackabuse.com/python-context-managers/).
+NOTE — I wrote this article for stackabuse.com and it originally appeared [here](https://stackabuse.com/python-context-managers/).
 
 
 ### Introduction

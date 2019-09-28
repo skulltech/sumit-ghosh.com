@@ -1,7 +1,6 @@
 ---
 date: 'Thu Aug 01 2019 17:30:00 GMT+0530 (India Standard Time)'
 title: 'My Preparation Strategy for AWS Solutions Architect Associate Exam'
-showcase: true
 tags:
   - AWS
 ---
@@ -27,7 +26,7 @@ In between the Whizlabs tests, I watched some re:Invent videos—the ones on Dyn
 
 With the above three, I started scoring consistently in the 80s in the Whizlabs practice tests. That made me confident and I started thinking about booking my exam appointment. And… then I fell sick. After a two-week hiatus I was ready to take the exam, but I was worried that I might have forgotten some stuff and my performance might not turn out to be good. So in order to brush up on my knowledge, I bought the practice tests by Jon Bonso on Udemy. 
 
- The first two tests were a hit on my confidence as I couldn’t clear any of them. The questions were much more involved; the MCQ options were vey similar and required careful interpretation of the problem statement. I was introduced to some new concepts through the questions too. As usual, I took notes after each test, from the questions I had difficulty with. From the third test onwards, I started scoring in the 80s, and that helped me reaffirm my confidence.
+ The first two tests were a hit on my confidence as I couldn’t clear any of them. The questions were much more involved; the MCQ options were very similar and required careful interpretation of the problem statement. I was introduced to some new concepts through the questions too. As usual, I took notes after each test, from the questions I had difficulty with. From the third test onwards, I started scoring in the 80s, and that helped me reaffirm my confidence.
 
 ### The Exam
 
