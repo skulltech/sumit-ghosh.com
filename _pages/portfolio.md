@@ -1,10 +1,12 @@
 ---
 permalink: /portfolio/
-layout: page
+layout: monospace
 title: Portfolio 
 published: true
 
 ---
+
+Δ [`Résumé as PDF.`](/resume.pdf)
 
 ## Freelancing projects · Contract work
 

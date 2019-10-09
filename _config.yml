@@ -28,10 +28,11 @@ header_pages:
     url: '/about/'
   - title: Archive
     url: '/archive/'
-  - title: Résumé
-    url: '/resume.pdf'
   - title: Portfolio
     url: '/portfolio/'
+  - title: Quotes
+    url: '/quotes/'
+
 
 exclude:
   - CNAME
