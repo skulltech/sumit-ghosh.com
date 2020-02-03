@@ -64,4 +64,4 @@ Seemingly Reddit has understood how its fundamental nature has changed, how its 
 [^6]: Lacan’s symbolic order, the big Other. https://plato.stanford.edu/entries/lacan/ 
 [^7]: Widespread Underprovision on Reddit. https://doi.org/10.1145/2441776.2441866
 [^8]: Pfaller, R. Interpassivity: The Aesthetics of Delegated Enjoyment,  2017.
-[^5]: https://www.redditinc.com/
+[^9]: https://www.redditinc.com/
