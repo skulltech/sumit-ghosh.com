@@ -17,7 +17,7 @@ Recently I was free for a couple of days with nothing to do, leading to an itch 
 - Trace through system calls using `strace`.
 
 
-#### Interpreting the output of `ls -l`
+#### Interpreting the output of ls -l
 The section is pretty much a rewording of [this](https://unix.stackexchange.com/a/103118/394075) stackoverflow answer.
 
 ```
