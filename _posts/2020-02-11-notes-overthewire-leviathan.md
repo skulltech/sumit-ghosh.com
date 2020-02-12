@@ -8,7 +8,7 @@ tags:
   - Ctf
 ---
 
-Recently I was free for a couple of days with nothing to do, leading to an itch to do some hacking: CTFs, wargames and the like. For beginners, the Internet heartily recommends the [Overthewire](https://overthewire.org/wargames/) wargames, so I went for that. I had already done the [_Bandit_](https://overthewire.org/wargames/bandit/) wargame—you can find my notes [here](https://sumit-ghosh.com/articles/notes-overthewire-bandit/)—so this time I started with [Leviathan](https://overthewire.org/wargames/leviathan/). In this post I'll dump my notes; these are not exactly solutions or walkthroughs, or writeup even, rather a list of things// concepts I learned by doing this wargame that I'd like to remember. Hoping this will be of some help!
+Recently I was free for a couple of days with nothing to do, leading to an itch to do some hacking: Ctfs, wargames and the like. For beginners, the Internet heartily recommends the [Overthewire](https://overthewire.org/wargames/) wargames, so I went for that. I had already done the [_Bandit_](https://overthewire.org/wargames/bandit/) wargame—you can find my notes [here](https://sumit-ghosh.com/articles/notes-overthewire-bandit/)—so this time I started with [Leviathan](https://overthewire.org/wargames/leviathan/). In this post I'll dump my notes; these are not exactly solutions or walkthroughs, or writeup even, rather a list of things// concepts I learned by doing this wargame that I'd like to remember. Hoping this will be of some help!
 
 
 #### Useful Linux commands for looking for information in executable.
@@ -34,14 +34,14 @@ From left to right, it displays;
 
 File permissions is displayed as following;   
 The first character is `-` or `l` or `d`, indicating the nature of the object.
-- `d` = directory
-- `-` = file
-- `l` = symlink.
+- `d`: directory
+- `-`: file
+- `l`: symlink.
 
 After that, there are three sets of characters, three characters each, indicating permissions for the owner, the group and everyone else, respectively.
-- `r` = readable  
-- `w` = writable  
-- `x`, `s` or `t` = executable, setuid// setgid, or sticky  
+- `r`: readable  
+- `w`: writable  
+- `x`, `s` or `t`: executable, setuid// setgid, or sticky  
 
 
 #### Effective user id, real user id and the special permission flags
