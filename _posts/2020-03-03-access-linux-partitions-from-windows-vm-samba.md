@@ -6,6 +6,7 @@ tags:
   - Linux
   - Windows
   - Samba
+  - Sysadmin
 ---
 
 You must’ve faced the problem of accessing Linux partitions—such as ext4—from Windows if you’re running a dual boot setup. There are a few solutions to this ::
