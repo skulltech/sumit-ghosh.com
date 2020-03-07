@@ -24,7 +24,7 @@ This article is going to be a pretty detailed tutorial on the third method. If y
 
 Now that you have the TLDR, below are the steps in detail.
 
-__Note__ — In this article I’ve assumed that the Linux partition is an ext4 one. But this method is not limited to that, it can work with any format as long as you can mount it on Linux. 
+__Note__ — In this article I’ve assumed that the Linux partition is an ext4 one. But this method is not limited to that, it can work with any file system as long as you can mount it on Linux. 
 
 ### Create a Linux VM on your Windows guest
 
