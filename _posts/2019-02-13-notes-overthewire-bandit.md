@@ -1,7 +1,7 @@
 ---
 date: 'Wed Feb 13 2019 00:20:00 GMT+0530 (India Standard Time)'
 title: Notes from Overthewire Bandit
-showcase: true
+showcase: false
 tags:
   - Hacking
   - Wargames

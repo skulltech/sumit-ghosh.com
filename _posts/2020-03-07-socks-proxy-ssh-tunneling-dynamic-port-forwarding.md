@@ -1,7 +1,7 @@
 ---
 date: 'Tue Mar 07 2020 06:40:00 GMT+0530 (India Standard Time)'
 title: "Creating a SOCKS Proxy via SSH Tunneling with Dynamic Port Forwarding"
-showcase: true
+showcase: false
 tags:
   - Sysadmin
   - Linux

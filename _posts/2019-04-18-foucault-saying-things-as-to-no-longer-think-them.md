@@ -1,7 +1,7 @@
 ---
 date: 'Thu Apr 18 2019 14:00:00 GMT+0530 (India Standard Time)'
 title: 'Foucault: Saying Things as to No Longer Think Them'
-showcase: true
+showcase: false
 tags:
   - Philosophy
   - Foucault

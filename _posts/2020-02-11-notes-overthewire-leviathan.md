@@ -1,7 +1,7 @@
 ---
 date: 'Wed Feb 11 2020 13:24:00 GMT+0530 (India Standard Time)'
 title: Notes from Overthewire Leviathan
-showcase: true
+showcase: false
 tags:
   - Hacking
   - Wargames

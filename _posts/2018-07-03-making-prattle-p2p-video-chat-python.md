@@ -1,7 +1,7 @@
 ---
 date: 'Tue Jul 3 2018 13:04:20 GMT+0530 (India Standard Time)'
 title: 'Making Prattle: A Fully-fledged P2P Video Chat Application Using Python'
-showcase: true
+showcase: false
 tags:
   - Python
   - Programming
