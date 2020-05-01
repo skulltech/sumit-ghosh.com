@@ -25,7 +25,7 @@ To that end, I've been looking for alternatives to ltrace, albeit unsuccessfully
 For now, we'll take an alternate route. Instead of hijacking library calls as they happen, we'll inspect the elf binary and look for external symbols it has referred to. All library functions are listed as external symbols in an elf binary, so that way we'll get an exhaustive list of all the functions it _could_ call, theoretically. We won't get the debugging capability of ltrace to its full extent, as we won't be able to see the function calls _as they happen_ in real-time, nor will we be able to see the function arguments. But, beggars can't be choosers.
 
 
-## Listing symbols in an elf file
+## Listing symbols in an elf executable
 
 This section is an expansion on [this](https://stackoverflow.com/questions/34732/how-do-i-list-the-symbols-in-a-so-file) Stack Overflow discussion.
 
