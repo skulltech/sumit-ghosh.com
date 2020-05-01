@@ -128,7 +128,7 @@ Symbol table '.dynsym' contains 5 global functions:
 
 This script uses [`pyelftools`](https://github.com/eliben/pyelftools) to parse the elf file and then pick out the symbols, it doesn't rely on any of the previously mentioned commands.
 
-Either way, you get a list of symbols, which are global// externally visible functions, which for an executable binary means dynamically linked library functions. And it does correctly list all 4 library functions we've used in our `random.c` program. It also shows an outlier, an extra `__libc_start_main` function that we haven't used in our source code explicitly. It was, however, inserted by the compiler as a starting point of the program execution.
+Either way, you get a list of symbols, which are global// externally visible functions, which for an executable binary means dynamically linked library functions. And it does correctly list all 4 library functions we've used in our `random.c` program.
 
 ## Inspecting Shared Libraries
 
@@ -176,3 +176,8 @@ Symbol table '.dynsym' contains 3 global functions:
 
 We can see from the above results that for a shared library, the _exported_ functions as well as the functions _used_ by the library are dumped.
 
+You must be wondering about some extra functions showing up in these dumps despite you not using them explicitly in the source code; names starting with `__`, for example, `__libc_start_main` and `__stack_chk_fail`. These are standard functions that are inserted by the compiler, they're usually defined in the [LSB](https://en.wikipedia.org/wiki/Linux_Standard_Base) specs. For usual use-cases, you don't need to worry about them.
+
+### Conclusions and a request
+
+We know how to list all the library functions an executable _might_ use. But we still don't know the functions actually getting called by the executable in a specific run, only ltrace could tell us that. As of now, with most distros moving to `-z now` binaries, ltrace is pretty much unusable. I still haven't found any alternative to ltrace, so if you come upon one, please send me an email or leave a comment mentioning that. Thanks!
