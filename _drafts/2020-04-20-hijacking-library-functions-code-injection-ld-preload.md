@@ -43,7 +43,7 @@ Static linking creates an executable that has everything it needs at runtime in 
 
 ### Dynamic Linking
 
-Dynamic linking does not embed the libraries in the executable; rather it just leaves a reference mentioning that it needs those library functions at runtime. When the executable is run, another program called _the dynamic linker_ makes sure that those library functions are present in memory, and if they are not, it loads them into memory. All in all, the dynamic linker makes sure that the library functions needed by the executable are present at runtime. There can be confusion of terminology here: the dynamic linker is not the same as the linker; the former is a part of the OS, the later is used as a part of the compilation process.
+Dynamic linking does not embed the libraries in the executable; rather it just leaves a reference mentioning that it needs those library functions at runtime. When the executable is run, another program called _the dynamic linker_ makes sure that those library functions are present in memory, and if they are not, it loads them into memory. All in all, the dynamic linker makes sure that the library functions needed by the executable are present at runtime. There can be confusion of terminology here: the dynamic linker is not the same as the linker; the former is a part of the OS, the latter is used as a part of the compilation process.
 
 In this way, the libraries are truly “shared” between different programs at runtime, the OS doesn't have to load multiple copies of the same core libraries. That means the available RAM is efficiently utilized. It also reduces the size of the executables and consequently space on the secondary storage. 
 
@@ -55,26 +55,24 @@ Now we're getting into the meat of the discussion. We know what the dynamic link
 Let's create a simple application which we're going to hijack.
 ```c
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 
 int main(int argc, char const *argv[]) {
-	char name[64];
-	printf("[*] Enter your name: ");
-	scanf("%s", name);
-	printf("[*] Hello %s!\n", name);
-	return 0;
+	srand(time(NULL));
+	printf("%d\n", rand());
 }
 ```
 
-It's a very simple program, kind of a slightly more involved version of the “Hello World!” program. It asks you for your name and then greets you, instead of the whole wide world.
+It's a very simple program, it generates a random integer and prints it to the screen.
 
 ```console
-sumit@HAL9000:~$ gcc hello.c -o hello
-sumit@HAL9000:~$ ./hello
-[*] Enter your name: Sumit
-[*] Hello Sumit!
+sumit@HAL9000:~$ gcc random.c -o random
+sumit@HAL9000:~$ ./random 
+80623719
 ```
 
-We know this program inside-out, including which library functions it uses because we have access to its source code. But we won’t always have that privilege in the real world. So let’s forget for a while that we know that it uses `printf` and `scanf`, and let’s try to figure it out from the executable binary.
+We know this program inside-out, including which library functions it uses because we have access to its source code. But we won’t always have that privilege in the real world. So let’s forget for a while that we have the source code, and let’s try to figure it out from the executable binary.
 
 The easiest way to do this would be running `strace`, which intercepts and records the system calls which are called by a process.
 
@@ -155,7 +153,7 @@ References ::
 
 ### The _init function
 
-Okay, but `/bin/true` does not call _any_ libc function whatsoever. How can we inject code into that? Enter the `_init` function. The `_init` and `_fini` functions are run at the start and end of the loading process, respectively. It is a remmant of the antiquity though, and not recommeneded to overwrite `_init` and `_fini`. The modern practice is writing constructors and destructors. 
+Okay, but `/bin/true` does not call _any_ libc function whatsoever. How can we inject code into that? Enter the `_init` function. The `_init` and `_fini` functions are run at the start and end of the loading process, respectively. It is a remmant of the antiquity, and it's usually not recommeneded to overwrite `_init` and `_fini`. The modern practice is writing constructors and destructors. 
 
 References ::
 - https://tldp.org/HOWTO/Program-Library-HOWTO/miscellaneous.html
@@ -206,3 +204,15 @@ Actually working version of the above
 ```console
 $ gcc -shared -fpic -nostartfiles -o payload.so payload.c -nostdlib -nolibc -nodefaultlibs -fno-asynchronous-unwind-tables -s -n
 ```
+
+More notes ::
+
+- https://stackoverflow.com/questions/46631410/how-to-write-custom-printf
+- https://stackoverflow.com/questions/37893246/how-can-i-intercept-a-function-from-glibc-and-print-the-values-of-its-parameters
+- https://stackoverflow.com/questions/49314057/how-to-find-out-what-functions-to-intercept-with-ld-preload
+- https://reverseengineering.stackexchange.com/questions/16454/struggling-between-syscall-or-sysenter-windows
+
+
+
+https://stackoverflow.com/questions/1203765/how-to-dump-the-symbols-in-a-a-file?noredirect=1&lq=1
+https://stackoverflow.com/questions/34732/how-do-i-list-the-symbols-in-a-so-file
