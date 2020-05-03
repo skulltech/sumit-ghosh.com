@@ -4,6 +4,7 @@ title: 'Listing External Functions Used// Exported by Executables and Shared Lib
 showcase: true
 tags:
   - Linux
+redirect_from: /articles/external-functions-used-exported-elf/
 ---
 
 ## ltrace and its incompetence
