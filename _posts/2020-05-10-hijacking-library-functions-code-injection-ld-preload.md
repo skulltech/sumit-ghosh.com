@@ -7,7 +7,7 @@ tags:
   - Linux
 ---
 
-Recently I learned about a neat little trick that lets you inject arbitrary code into a program, and lets you alter the behavior of the program to some extent. And all it uses is some custom C code and an innocent-looking environment variable, `LD_PRELOAD`. So yeah, in this post, we’re going to see what it is. I learned this while solving a CTF challenge, so let’s start with that in context.
+Recently I learned about a neat little trick that lets you inject arbitrary code into a program, and lets you alter the behavior of the program to some extent. And all it uses is some custom C code and an innocent-looking environment variable. So yeah, in this post, we’re going to see what it is. I learned this while solving a CTF challenge, so let’s start with that in context.
 
 ### The challenge
 
