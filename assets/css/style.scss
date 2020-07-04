@@ -5,12 +5,13 @@
 @import url('../fonts/Inter/inter.css');
 
 
-$base-font-family: 'Libre Baskerville';
+// $base-font-family: 'Libre Baskerville';
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif !default;
 $heading-font-family: 'Playfair Display';
 $misc-font-family: 'Europa';
 
-$monospace-font-family: 'Cousine', monospace;
-$base-font-size: 17px !default;
+$monospace-font-family: Cousine, monospace;
+$base-font-size: 16px !default;
 
 code {
 	font-family: $monospace-font-family;
