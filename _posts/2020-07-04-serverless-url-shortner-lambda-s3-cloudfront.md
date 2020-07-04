@@ -130,7 +130,7 @@ Adding a custom domain requires some manual steps. You have to go to AWS Certifi
 
 Here’s a simple architecture diagram I made of the whole setup. Because, a picture is worth a thousand words or something like that.
 
-![Shorty serverless URL shortener architecture diagram](/images/portfolio/shorty.serverkess.png)
+![Shorty serverless URL shortener architecture diagram](/images/portfolio/shorty.serverless.png)
 
 ### Conclusion
 
