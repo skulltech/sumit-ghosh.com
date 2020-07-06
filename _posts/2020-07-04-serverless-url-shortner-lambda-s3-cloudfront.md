@@ -10,6 +10,12 @@ tags:
 
 I’ve been tinkering with the AWS cloud for about an year now, and I went ahead and got the [AWS CSAA certificate](https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2019-07-31&ci=AWS00914626) too. But most of my AWS experience has been small edits to an already existing architecture, and that too for clients with their projects being closed source. I realized I don't have a solid end-to-end cloud project that I can showcase in my portfolio, and I need one. So that's how this project came to be. Moreover, through this project I learnt the [serverless](https://serverless.com/) framework and got more comfortable with Cloudformation templates. So let’s get into it.
 
+### The Architecture Diagram
+
+Here’s a simple architecture diagram I made of the whole setup. Because, a picture is worth a thousand words or something like that.
+
+![Shorty serverless URL shortener architecture diagram](/images/portfolio/shorty.serverless.png)
+
 I set out to accomplish a very common pattern—serverless API on the backend utilising Lambda and DynamoDB, and static website on the frontend hosted using S3. And it was easy enough, but the hard part was getting them working on the same domain, I’ll get to that later, let’s first go through the easy part first.
 
 - Note — You can find the full source code of the application on Github [here](https://github.com/SkullTech/shorty.serverless), you can refer to that as you go through the article.
@@ -126,11 +132,6 @@ In short, I declared two `Origins`, one for the API, and another for the S3 stat
 
 Adding a custom domain requires some manual steps. You have to go to AWS Certificate Manager and create a certificate for your domain. Make sure it’s in the `us-east-1` region, otherwise you wouldn’t be able to use it with Cloudfront. Once you have created and verified your certificate, add the `ViewerCertificate` and `Aliases` parameters to the Cloudfront resource. The last step would be adding a `CNAME` or `ALIAS` record in your domain registrar, binding your custom domain with your Cloudfront distribution domain. 
 
-### The Architecture Diagram
-
-Here’s a simple architecture diagram I made of the whole setup. Because, a picture is worth a thousand words or something like that.
-
-![Shorty serverless URL shortener architecture diagram](/images/portfolio/shorty.serverless.png)
 
 ### Conclusion
 
