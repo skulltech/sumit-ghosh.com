@@ -1,18 +1,51 @@
 ---
 permalink: /portfolio/
-layout: monospace
+layout: image-expand
 title: Portfolio 
 published: true
 
 ---
 
-### Links
 
-- [Résumé](/resume.pdf)  
-- [Cloud Portfolio](/portfolio/cloud)
+## Certifications
+
+- AWS Certified Solutions Architect Associate. [Verify](https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2019-07-31&ci=AWS00914626)
+
+## Employment
+
+### American Express  
+[https://www.americanexpress.com](https://www.americanexpress.com/)  
+Software Developer Intern • _May 2020_ — _July 2020_  
+
+Worked on the enterprise infrastructure monitoring platform. Developed an automation tool that aided in self-healing of systems which experience disk space related issues.
+
+Technologies used — Ansible, Elasticsearch, Kibana, Splunk, RabbitMQ.
 
 
-## Freelancing projects · Contract working
+## Projects • Freelance and Otherwise
+
+### Shorty
+[https://shorty.skghosh.me](https://shorty.skghosh.me)  
+_July 2020_
+
+Serverless URL shortener written in Python using the [serverless framework](http://serverless.com/). It uses _Lambda_ functions as the serverless backend, and _DynamoDB_ as the database. _S3_ is used for the static frontend, and finally _Cloudfront_ is used as a reverse proxy.
+
+- The Github repo is available @ [https://github.com/SkullTech/shorty.serverless](https://github.com/SkullTech/shorty.serverless)
+- The API documentation is built with [Swagger](https://swagger.io/tools/swagger-ui/) and is available @ [https://shorty.skghosh.me/swagger/](https://github.com/SkullTech/shorty.serverless)
+- Check out [this blog post](https://sumit-ghosh.com/articles/serverless-url-shortner-lambda-s3-cloudfront/) explaining the application and its architecture.
+
+![architecture diagram](/images/portfolio/shorty.serverless.png?raw=true)
+
+
+### Tuskii
+Cloud architect • _May 2020_
+
+Designed the cloud architecture for a vehicle tracking and monitoring service.
+
+Here's how different AWS services are used to build the system and make it robust: IoT devices are installed in the cars, which are sending logs to the cloud using _IoT Basic Ingest_ and _Kinesis Firehose_. The data is then being parsed with a _Lambda_ function and subsequently stored to a _DynamoDB_ table. At the same time, the raw data coming in through _Kinesis Firehose_ is stored to a _S3_ data lake. Finally, _Kinesis Data Analytics_, _IoT Analytics_ and _Amazon Quicksight_ are being used to monitor and visualize the data coming in.
+
+![architecture diagram](/images/portfolio/Tuskii.png?raw=true)
+
 
 ### Evnnt
 [https://evnnt.com](https://evnnt.com)  
