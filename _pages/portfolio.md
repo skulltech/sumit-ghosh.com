@@ -6,14 +6,15 @@ published: true
 
 ---
 
-Δ [`Résumé as PDF.`](/resume.pdf)
-
 ## Freelancing projects · Contract work
+
 
 ### Evnnt
 [https://evnnt.com](https://evnnt.com)  
-_Feb 2019 — Apr 2019_  
-Role: Backend developer and system administrator
+Backend developer and system administrator • _Feb 2019 — Apr 2019_
+
+<details markdown="1" style="margin-bottom: 20px">
+<summary>Click to see details</summary>
 
 Evnnt is an event directory to find events in your area—like comedy, concerts and meetups—by location, distance, category and more. I was responsible for extending and maintaining the website's backend.
 
@@ -25,11 +26,14 @@ Evnnt is an event directory to find events in your area—like comedy, concerts 
 
 Technologies used — Python, Django, Flask, Scrapy, Celery, Redis, Supervisord, Postgresql, Nginx, AWS SES.  
 
+</details>
 
 ### Inboxignite 
 [https://inboxignite.com](https://inboxignite.com) formerly [https://inboxer.io](https://inboxer.io)  
-_Jul 2018 — Jul 2019_  
-Role: Backend developer
+Backend developer • _Jul 2018 — Jul 2019_  
+
+<details markdown="1" style="margin-bottom: 20px">
+<summary>Click to see details</summary>
 
 Inboxignite is a domain reputation management platform for email marketers. I was responsible for building and maintaining most of the backend services.
 
@@ -42,11 +46,16 @@ Inboxignite is a domain reputation management platform for email marketers. I wa
 
 Technologies used — Python, Flask, Redis, Supervisord, Slimta, SMTP, IMAP, MySQL, DNS.
 
+</details>
+
 
 ### Crypital
 [http://www.crypital.co](http://www.crypital.co)  
-_Oct 2018 — Jan 2019_  
-Role: Full stack web developer
+Full stack web developer • _Oct 2018 — Jan 2019_
+
+
+<details markdown="1" style="margin-bottom: 20px">
+<summary>Click to see details</summary>
 
 I was responsible for building a Flask web-app to be used for _onboarding_ users to a cryptocurrency service. 
 
@@ -55,11 +64,15 @@ I was responsible for building a Flask web-app to be used for _onboarding_ users
 
 Technologies used — Python, Flask, SQLite, UIKit.  
 
+</details>
+
 
 ### Removeads
 [https://removeads.org](https://removeads.org)  
-_Sep 2018 — Dec 2018_  
-Role: Software architect
+Software architect • _Sep 2018 — Dec 2018_
+
+<details markdown="1" style="margin-bottom: 20px">
+<summary>Click to see details</summary>
 
 Removeads offers a cloud-based ad blocker backed by a DNS sinkhole, that blocks all ads in your computer across applications. [Ankit Solanki](https://ankit-solanki.com/) and I were responsible for designing and building the whole software stack from ground up. 
 
@@ -71,6 +84,7 @@ Removeads offers a cloud-based ad blocker backed by a DNS sinkhole, that blocks 
 
 Technologies used — Python, Flask, Pi-Hole, DNS.
 
+</details>
 
 ### Et Cetera ...
 _Jan 2016 — July 2019_
@@ -85,8 +99,7 @@ __________________________
 ## Voluntary work
 
 ### Department of Computer Science and Engineering @ IIT Delhi
-_Sep 2018 — Present_  
-Role: System administrator
+System administrator • _Sep 2018 — Present_
 
 #### Accomplished
 - Implemented an Oauth authentication system to be leveraged by any app hosted within the infrastructure.
