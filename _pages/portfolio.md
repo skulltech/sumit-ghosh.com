@@ -6,8 +6,13 @@ published: true
 
 ---
 
-## Freelancing projects · Contract work
+### Links
 
+- [Résumé](/resume.pdf)  
+- [Cloud Portfolio](/portfolio/cloud)
+
+
+## Freelancing projects · Contract working
 
 ### Evnnt
 [https://evnnt.com](https://evnnt.com)  

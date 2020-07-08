@@ -6,8 +6,13 @@ published: true
 
 ---
 
+## Certifications
 
-## Shorty
+- AWS Certified Solutions Architect Associate. [Verify](https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2019-07-31&ci=AWS00914626)
+
+## Projects
+
+### Shorty
 [https://shorty.skghosh.me](https://shorty.skghosh.me)
 
 Serverless URL shortener written in Python using the [serverless framework](http://serverless.com/). It uses _Lambda_ functions as the serverless backend, and _DynamoDB_ as the database. _S3_ is used for the static frontend, and finally _Cloudfront_ is used as a reverse proxy.
@@ -19,7 +24,7 @@ Serverless URL shortener written in Python using the [serverless framework](http
 ![architecture diagram](/images/portfolio/shorty.serverless.png?raw=true)
 
 
-## Tuskii
+### Tuskii
 
 Designed the cloud architecture for a vehicle tracking and monitoring service.
 
