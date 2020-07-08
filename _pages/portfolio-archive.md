@@ -1,8 +1,5 @@
 ---
-permalink: /portfolio/
-layout: monospace
-title: Portfolio 
-published: true
+published: false
 
 ---
 
