@@ -42,7 +42,7 @@ Cloud architect • _May 2020_
 
 Designed the cloud architecture for a vehicle tracking and monitoring service.
 
-IoT devices are installed in the cars, which are sending logs to the cloud using _IoT Basic Ingest_ and _Kinesis Firehose_. The data is then being parsed with a _Lambda_ function and subsequently stored to a _DynamoDB_ table. At the same time, the raw data coming in through _Kinesis Firehose_ is stored to an _S3_ data lake. Finally, _Kinesis Data Analytics_, _IoT Analytics_ and _Amazon Quicksight_ are being used to monitor and visualize the data coming in.
+The pipeline start with IoT devices installed in the cars, which are sending logs to the cloud using _IoT Basic Ingest_ and _Kinesis Firehose_. The data is then being parsed with a _Lambda_ function and subsequently stored to a _DynamoDB_ table. At the same time, the raw data coming in through _Kinesis Firehose_ is stored to an _S3_ data lake. Finally, _Kinesis Data Analytics_, _IoT Analytics_ and _Amazon Quicksight_ are being used to monitor and visualize the data coming in.
 
 ![architecture diagram](/images/portfolio/Tuskii.png?raw=true)
 
