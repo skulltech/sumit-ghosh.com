@@ -30,11 +30,11 @@ _July 2020_
 
 Serverless URL shortener written in Python using the [serverless framework](http://serverless.com/). It uses _Lambda_ functions as the serverless backend, and _DynamoDB_ as the database. _S3_ is used for the static frontend, and finally _Cloudfront_ is used as a reverse proxy.
 
-- The Github repo is available @ [https://github.com/SkullTech/shorty.serverless](https://github.com/SkullTech/shorty.serverless)
-- The API documentation is built with [Swagger](https://swagger.io/tools/swagger-ui/) and is available @ [https://shorty.skghosh.me/swagger/](https://github.com/SkullTech/shorty.serverless)
+- The Github repo is available @ [https://github.com/SkullTech/shorty.sls](https://github.com/SkullTech/shorty.sls)
+- The API documentation is built with [Swagger](https://swagger.io/tools/swagger-ui/) and is available @ [https://shorty.skghosh.me/swagger/](https://shorty.skghosh.me/swagger/)
 - Check out [this blog post](https://sumit-ghosh.com/articles/serverless-url-shortner-lambda-s3-cloudfront/) explaining the application and its architecture.
 
-![architecture diagram](/images/portfolio/shorty.serverless.png?raw=true)
+![architecture diagram](https://raw.githubusercontent.com/SkullTech/shorty.sls/master/architecture-diagram.png)
 
 
 ### Tuskii

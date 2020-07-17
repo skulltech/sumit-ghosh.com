@@ -14,7 +14,7 @@ I’ve been tinkering with the AWS cloud for about an year now, and I went ahead
 
 Here’s a simple architecture diagram I made of the whole setup. Because, a picture is worth a thousand words or something like that.
 
-![Shorty serverless URL shortener architecture diagram](/images/portfolio/shorty.serverless.png)
+![Shorty serverless URL shortener architecture diagram](https://raw.githubusercontent.com/SkullTech/shorty.sls/master/architecture-diagram.png)
 
 I set out to accomplish a very common pattern—serverless API on the backend utilising Lambda and DynamoDB, and static website on the frontend hosted using S3. And it was easy enough, but the hard part was getting them working on the same domain, I’ll get to that later, let’s first go through the easy part first.
 
@@ -137,7 +137,7 @@ Adding a custom domain requires some manual steps. You have to go to AWS Certifi
 
 - The final website is hosted @ [https://shorty.skghosh.me](https://shorty.skghosh.me)
 - The API documentation is available @ [https://shorty.skghosh.me/swagger](https://shorty.skghosh.me/swagger)
-- The source is available @ [Github](https://github.com/SkullTech/shorty.serverless). Please star it if you find it useful, and feel free to fork, make an issue, send a pull request, all of that.
+- The source is available @ [Github](https://github.com/SkullTech/shorty.sls). Please star it if you find it useful, and feel free to fork, make an issue, send a pull request, all of that.
 
 
 This was a exciting learning exercise for me, so I couldn't wait to share it with everyone. I hope the post helps you too, in whatever way it can. Make sure to leave a comment if you have any feedback or question, I'll try my best to get back to you. 
