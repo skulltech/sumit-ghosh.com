@@ -7,7 +7,7 @@ title: About
 
 ### Profile
 
-I am a cosmopolitan currently living in _New Delhi_, India. I like to think of myself as an intellectual, but definitely not "> tfw to intelligent". I like to read books, a lot, especially non-fiction.  You can find my _Goodreads_ profile [here](https://www.goodreads.com/user/show/63000435-sumit-ghosh). Other than that, I indulge in an eclectic variety of _stuff_: philosophy, computers, photography, music, films, travelling, and [so on and so on](https://www.youtube.com/watch?v=B0c2LjKdqqw). 
+I am a cosmopolitan currently living in _New Delhi_, India. I like to think of myself as an intellectual, but definitely not "> tfw to intelligent". I like to read books, a lot, especially non-fiction.  You can find my _Goodreads_ profile [here](https://www.goodreads.com/user/show/63000435-sumit-ghosh). Other than that, I indulge in an eclectic variety of _stuff_: philosophy, computers, photography, music, films, travelling, and [so on and so on](https://www.youtube.com/watch?v=B0c2LjKdqqw). I have [another blog](https://okrefusal.com) where I dump my half-baked ideas on those aforementioned _stuff_.
 
 Psychometrics — 
 
