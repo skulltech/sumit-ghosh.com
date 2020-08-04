@@ -14,3 +14,5 @@ Hello! I'm Sumit Ghosh, a computer science major studying at IIT Delhi. You migh
 
 You can check out the portfolio of my _programmer self_ 
 [here](/portfolio/). You can read about my _human self_ and my online presence in the [_about_](/about/) page. Drop me a mail at `sumit@sumit-ghosh.com` if you want to talk.
+
+Oh and I also have [another blog](https://okrefusal.com/) where I post half-baked random musings, if that's your thing, feel free to check it out. 
