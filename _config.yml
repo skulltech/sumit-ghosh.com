@@ -30,7 +30,8 @@ header_pages:
   - title: Archive
     url: '/archive/'
   - title: Portfolio
-    url: '/portfolio/'
+    url: 'https://skghosh.me/'
+    target_blank: true
   - title: Quotes
     url: '/quotes/'
 

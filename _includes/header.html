@@ -27,7 +27,7 @@
           {%- endfor -%}
            -->
           {%- for page in site.header_pages -%}
-            <a class="page-link" href="{{ page.url }}">{{ page.title | escape }}</a>
+            <a class="page-link" href="{{ page.url }}" {% if page.target_blank %}target="_blank"{% endif %}>{{ page.title | escape }}</a>
           {%- endfor -%}
 
         </div>
