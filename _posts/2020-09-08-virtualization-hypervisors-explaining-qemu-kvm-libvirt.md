@@ -50,11 +50,16 @@ Libvirt is an open-source set of software and libraries which provide a single w
 
 The following `apt` packages are essential for creating and managing virtual machines using Libvirt with QEMU-KVM in an Ubuntu system.
 
-- `libvirt-daemon-system`: The complete Libvirt distribution, i.e., the C libraries and the `libvirtd` daemon. It also installs the following helper packages
+- `libvirt-daemon-system`: The complete Libvirt distribution, i.e., the C libraries and the Libvirt daemon `libvirtd`. It also installs the following helper packages
 	- `libvirt-clients`, which is a collection of CLI utilities to interface with the Libvirt daemon.
 	- `bridge-utils` for networking.
 	- `qemu-kvm` as the default hypervisor.
 - `virtinst`: For the `virt-install` and `virt-viewer` helper utils.
+
+Running the following command would install the above
+```console
+$ sudo apt install libvirt-daemon-system virtinst
+```
 
 ## Creating a VM
 
