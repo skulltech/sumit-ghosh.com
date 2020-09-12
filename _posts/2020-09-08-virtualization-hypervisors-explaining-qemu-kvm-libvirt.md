@@ -54,7 +54,7 @@ The following `apt` packages are essential for creating and managing virtual mac
 	- `libvirt-clients`, which is a collection of CLI utilities to interface with the Libvirt daemon.
 	- `bridge-utils` for networking.
 	- `qemu-kvm` as the default hypervisor.
-- `virtinst`: For the `virt-install` and `virt-viewer` helper utils.
+- `virtinst`: For some helper utils such as `virt-install` and `virt-viewer`.
 
 Running the following command would install the above
 ```console
