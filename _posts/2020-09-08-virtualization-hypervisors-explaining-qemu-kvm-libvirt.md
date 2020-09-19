@@ -18,9 +18,10 @@ Hypervisors can be generally categorized into two types.
 
 1. __Type 1 hypervisor:__ These run on bare metal and typically leverage features of the CPU specifically built for virtualization, for example, AMD-V and Intel VT-x. Examples of type 1 hypervisor are:
    - KVM, which is a Linux kernel module and part of the official Linux kernel.
-   - VMWare ESXi. 
+   - VMWare ESXi.
+   - Microsoft Hyper-V.
 
-2. __Type 2 hypervisor:__ These run on top of a host OS, and thus it translates system calls made by the guest OS to system calls made to the host OS. Examples include:
+2. __Type 2 hypervisor:__ These run on top of a host OS, and thus it translates system calls made by the guest OS to system calls made to the host OS. Type 2 virtualization is also called _emulation_, to distinguish it from type 1 or _true_ virtualization. Examples include:
 	- QEMU.
 	- VMWare Workstation.
 	- VirtualBox.
@@ -108,3 +109,23 @@ $ virsh reboot vm1
 ## Conclusion
 
 I hope this post helped you understand the basics of virtualization and get started with it. I plan to post more tutorials exploring specific use-cases; until then, have fun tinkering around! Feel free to leave a comment below if you have any questions or feedback. You can also always drop me an e-mail or contact me on Twitter if you want to talk. Cheers!
+
+## Clarifications
+
+I got some questions and comments about this post on Reddit. I’m including the discussions here as they shed light on some nuances regarding the topics discussed above.
+
+[Comment](https://www.reddit.com/r/selfhosted/comments/iovfht/virtualization_and_hypervisors_explaining_qemu/g4iw4vr/?utm_source=share&utm_medium=web2x&context=3) by Reddit user [retnikt0](https://www.reddit.com/user/retnikt0/);
+
+> QEMU and KVM are neither really type 1 nor type 2 hypervisors; they're kind of somewhere in between. QEMU uses KVM so they certainly can't be different types.
+
+Roughly KVM can be called a type 1 hypervisor and QEMU a type 2 hypervisor, but he’s right, there's some more nuance to that if we want to be completely correct.
+
+QEMU acts as an emulator (i.e. a type 2 hypervisor) if the KVM kernel module is not available. But when the KVM module is available, it uses that to speed up system calls, so in that case, in a way it sits halfway between type 1 and type 2 hypervisor.
+
+When we consider KVM by itself, it's not strictly a type 1 hypervisor either, as it still is part of an OS; it’s not a complete standalone system like VMWare ESXi built to only host VMs.
+
+[Comment](https://www.reddit.com/r/sysadmin/comments/iovht7/i_wrote_an_blog_post_explaining_the_core_concepts/g4gtr0k?utm_source=share&utm_medium=web2x&context=3) by Reddit user [NinjaAmbush](https://www.reddit.com/user/NinjaAmbush/);
+
+> You might want to explain why we'd want to use QEMU on top of KVM. I understand why having QEMU use KVM speeds up certain system calls, but it's not clear to me why I want QEMU in this set up.
+
+KVM provides access to the virtualisation extensions available on x86 systems using an API. Using KVM without QEMU is certainly possible, but you'll need to [deal with the KVM API at extremely low-level](https://lwn.net/Articles/658511/).  QEMU provides gives a stable interface in the form of a set of binaries to interact with KVM, and set of helper components (such as the [virtio](https://www.linux-kvm.org/page/Virtio) interface) so that full-fledged virtual machines can be built easily. The two projects are developed together; in the real world it's unlikely to see KVM without QEMU, because that’s the way the developers want you to use them.
