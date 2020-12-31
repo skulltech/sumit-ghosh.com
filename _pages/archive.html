@@ -10,6 +10,9 @@ redirect_from: /articles/
 	<!-- <h2>Tag cloud</h3> -->
 	<!-- {%- include tag-cloud.html tags=site.tags -%} -->
 
-	<h1>All Posts</h3>
+	<h1>Posts on Other Blogs</h3>
+	{%- include guest-post-list.html posts=site.posts -%}
+
+	<h1>Local Posts</h3>
   	{%- include archive-list.html posts=site.posts show_year=true -%}
 </div>
