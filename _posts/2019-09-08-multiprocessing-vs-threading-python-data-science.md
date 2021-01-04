@@ -6,6 +6,7 @@ tags:
   - Python
   - OS
 canonical_url: 'https://blog.floydhub.com/multiprocessing-vs-threading-in-python-what-every-data-scientist-needs-to-know/'
+remote_blog: 'floydhub.com'
 ---
 
 NOTE — I wrote this article for [FloydHub](https://www.floydhub.com) and it originally appeared [here](https://blog.floydhub.com/multiprocessing-vs-threading-in-python-what-every-data-scientist-needs-to-know/).

@@ -5,6 +5,7 @@ tags:
   - Python
   - Programming
 canonical_url: 'https://stackabuse.com/python-context-managers/'
+remote_blog: 'stackabuse.com'
 ---
 
 NOTE — I wrote this article for stackabuse.com and it originally appeared [here](https://stackabuse.com/python-context-managers/).

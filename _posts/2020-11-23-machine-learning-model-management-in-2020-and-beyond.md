@@ -5,6 +5,7 @@ showcase: true
 tags:
   - Machine Learning
 canonical_url: 'https://neptune.ai/blog/machine-learning-model-management-in-2020-and-beyond'
+remote_blog: 'neptune.ai'
 ---
 
 NOTE — I wrote this article for [Neptune.ai](https://neptune.ai/) and it originally appeared [here](https://neptune.ai/blog/machine-learning-model-management-in-2020-and-beyond).

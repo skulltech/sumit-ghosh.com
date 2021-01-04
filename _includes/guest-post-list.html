@@ -13,7 +13,9 @@
       
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <!-- <li> -->
-        <span class="post-meta">{{ post.date | date: date_format }}</span>{%- include post-tags.html post=post -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <span class="post-list-item"> on <a href="https://{{ post.remote_blog }}" target="_blank">{{ post.remote_blog }}</a></span>
+        {%- include post-tags.html post=post -%}
         <h3 class="post-list-item">
           <a href="{{ post.canonical_url }}" target="_blank">{{ post.title }}</a>
         </h3>

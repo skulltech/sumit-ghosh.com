@@ -6,6 +6,7 @@ tags:
   - Python
   - Programming
 canonical_url: 'https://stackabuse.com/introduction-to-web-scraping-with-python/'
+remote_blog: 'stackabuse.com'
 ---
 
 NOTE — I wrote this article for stackabuse.com and it originally appeared [here](https://stackabuse.com/introduction-to-web-scraping-with-python/).
