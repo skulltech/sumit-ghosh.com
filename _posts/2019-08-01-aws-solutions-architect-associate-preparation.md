@@ -8,11 +8,11 @@ tags:
 
 I just cleared the AWS solutions architect associate exam—secured 973 marks in a scale of 100 to 1000—and I want to share my preparation strategy for anyone that might benefit from it.
 
-Before starting my preparation, I looked around forums and subreddits for suggestions, and seemingly a popular suggestion was _A Cloud Guru video lectures + Whizlabs practice tests_. So I went with the popular vote and bought both of them.
+Before starting my preparation, I looked around forums and subreddits for suggestions, and seemingly a popular suggestion was “A Cloud Guru video lectures and Whizlabs practice tests”. So I went with the popular vote and bought both of them.
 
 ### A Cloud Guru Video Lectures
 
-The format of _A Cloud Guru_ lectures is not very captivating, it’s the usual slideshow with narration. Still, it helped me get a overall understanding of how every service works and how everything fits together. Kudos to the instructor Ryan who is a great communicator. There was a few hands-on labs too which helped solidify what I learned. I did not take any notes while going through the lectures, as I thought the summary lectures at the end of each section would be enough for revision.
+The format of [_A Cloud Guru_](https://acloudguru.com/) lectures is not very captivating, it’s the usual slideshow with narration. Still, it helped me get a overall understanding of how every service works and how everything fits together. Kudos to the instructor Ryan who is a great communicator. There was a few hands-on labs too which helped solidify what I learned. I did not take any notes while going through the lectures, as I thought the summary lectures at the end of each section would be enough for revision.
 
 ### Whizlabs Practice Tests
 
