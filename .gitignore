@@ -3,3 +3,5 @@ _site
 .DS_Store
 _vendor
 Gemfile.lock
+vendor
+.bundle
