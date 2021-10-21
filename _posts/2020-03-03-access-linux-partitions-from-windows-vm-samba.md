@@ -3,10 +3,10 @@ date: 'Tue Mar 03 2020 18:20:00 GMT+0530 (India Standard Time)'
 title: "Accessing Linux Partitions from Windows through a VM and Samba"
 showcase: true
 tags:
-  - Linux
-  - Windows
-  - Samba
-  - Sysadmin
+  - linux
+  - windows
+  - samba
+  - sysadmin
 ---
 
 You must’ve faced the problem of accessing Linux partitions—such as ext4—from Windows if you’re running a dual boot setup. There are a few solutions to this ::

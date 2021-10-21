@@ -3,7 +3,7 @@ date: 'Fri May 01 2020 16:00:00 GMT+0530 (India Standard Time)'
 title: 'Listing External Functions Used// Exported by Executables and Shared Libraries'
 showcase: true
 tags:
-  - Linux
+  - linux
 redirect_from: /articles/external-functions-used-exported-elf/
 ---
 

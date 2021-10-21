@@ -3,8 +3,8 @@ date: 'Sun May 10 2020 22:00:00 GMT+0530 (India Standard Time)'
 title: 'Hijacking Library Functions and Injecting Code Using the Dynamic Linker'
 showcase: true
 tags:
-  - Hacking
-  - Linux
+  - hacking
+  - linux
 ---
 
 Recently I learned about a neat little trick that lets you inject arbitrary code into a program, and lets you alter the behavior of the program to some extent. And all it uses is some custom C code and an innocent-looking environment variable. So yeah, in this post, we’re going to see what it is. I learned this while solving a CTF challenge, so let’s start with that in context.

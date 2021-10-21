@@ -3,10 +3,10 @@ date: 'Sat Dec 19 2015 20:45:25 GMT+0530 (India Standard Time)'
 title: Embed a Metasploit Payload in an Original .apk File | Part 2 — Do it Manually
 showcase: true
 tags:
-  - Android
-  - Hacking
-  - Kali Linux
-  - Metasploit
+  - android
+  - hacking
+  - kali-linux
+  - metasploit
 ---
 
 Metasploit's flagship product, the _Meterpreter_, is very powerful and an all-purpose payload. Once installed on the victim machine, we can do whatever we want to their system by sending out commands to it. For example, we could grab sensitive data out of the compromised system.

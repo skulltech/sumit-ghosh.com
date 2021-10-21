@@ -2,9 +2,9 @@
 date: 'Sun Mar 06 2016 13:58:02 GMT+0530 (India Standard Time)'
 title: Use DDNS to Deal With Your Dynamic Public IP
 tags:
-  - Hacking
-  - DNS
-  - Metasploit
+  - hacking
+  - dns
+  - metasploit
 ---
 
 Many of us have an internet connection with a dynamic public IP. That poses some problems if you want to use that connection to host a website, or maybe for hackers like us, to hack using reverse connection payloads. I’m going to discuss in this post how you can overcome that using Dynamic DNS or DDNS. But I’m getting ahead of myself, so let me start by explaining what is public IP and what are some problems you can encounter if you have a dynamic one.

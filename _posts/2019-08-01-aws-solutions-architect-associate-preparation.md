@@ -2,7 +2,7 @@
 date: 'Thu Aug 01 2019 17:30:00 GMT+0530 (India Standard Time)'
 title: 'My Preparation Strategy for AWS Solutions Architect Associate Exam'
 tags:
-  - AWS
+  - aws
 ---
 
 

@@ -3,7 +3,7 @@ date: 'Fri May 06 2020 16:00:00 GMT+0530 (India Standard Time)'
 title: 'Using Uftrace to Trace Dynamic Library Calls'
 showcase: true
 tags:
-  - Linux
+  - linux
 ---
 
 This post is an update to my [last post](/articles/list-external-functions-used-exported-executables-shared-libraries/), where I regretted that ltrace doesn't work on binaries that lack the `PLT` section, and explored some alternative ways that tries to achieve what ltrace couldn't. Those alternatives weren't perfect, I was still looking for a perfect one, so I asked a question at Stack Overflow and the Unix and Linux Stack Exchange, and someone came to the [rescue](https://stackoverflow.com/a/61618754) and introduced me to the [uftrace](https://github.com/namhyung/uftrace) utility. And I’m glad to say, this is definitely a _perfect_ alternative to ltrace, that does everything ltrace does, and more.

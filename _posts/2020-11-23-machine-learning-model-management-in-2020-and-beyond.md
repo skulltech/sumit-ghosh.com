@@ -3,7 +3,8 @@ date: 'Mon Nov 23 2020 10:00:00 GMT+0530 (India Standard Time)'
 title: 'Machine Learning Model Management in 2020 and Beyond'
 showcase: true
 tags:
-  - Machine Learning
+  - machine-learning
+  - guest-post
 canonical_url: 'https://neptune.ai/blog/machine-learning-model-management-in-2020-and-beyond'
 remote_blog: 'neptune.ai'
 ---

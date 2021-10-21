@@ -3,10 +3,10 @@ title: Handling File Upload Through Selenium Python
 subtitle: 'A necessary rite of passage for Selenium programmers'
 showcase: false
 tags:
-  - Programming
-  - Selenium
-  - Python
-  - Automation
+  - programming
+  - selenium
+  - python
+  - automation
 date: '2017-12-04'
 ---
 

@@ -3,9 +3,9 @@ date: 'Sat July 16 2020 20:40:00 GMT+0530 (India Standard Time)'
 title: 'Building a Serverless Price Tracker for Amazon and Flipkart using AWS'
 showcase: true
 tags:
-  - AWS
-  - Cloud
-  - Serverless
+  - aws
+  - cloud
+  - serverless
 ---
 
 The prices on online shopping sites such as [Amazon](http://amazon.in/) and [Flipkart](https://www.flipkart.com/) change a lot, and that too quite frequently. This can be both positive and negative: on the upside, if you’re vigilant you can grab some lucrative deals, the downside is that if you’re not careful you might end up buying something at a rate higher than the normal. Tools like [Keepa](https://keepa.com/) can be handy in this regard, it shows you a graph of the price history of a particular product so that you can make a good decision. Keepa can even send you an alert in case the price goes down! But I’ve found Keepa can be a bit unreliable; it seems to track the prices at a much coarser granularity, as a result it can miss some short-lived deals. Also it doesn’t track all products, only the popular ones. 

@@ -3,8 +3,9 @@ date: 'Sun Sep 08 2019 03:50:00 GMT+0530 (India Standard Time)'
 title: 'Multiprocessing vs. Threading in Python: What Every Data Scientist Needs to Know'
 showcase: true
 tags:
-  - Python
-  - OS
+  - python
+  - os
+  - guest-post
 canonical_url: 'https://blog.floydhub.com/multiprocessing-vs-threading-in-python-what-every-data-scientist-needs-to-know/'
 remote_blog: 'floydhub.com'
 ---

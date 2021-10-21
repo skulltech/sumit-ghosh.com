@@ -2,10 +2,10 @@
 date: 'Sat Dec 12 2015 02:30:19 GMT+0530 (India Standard Time)'
 title: Embed a Metasploit Payload in an Original .apk File | Part 1 — The Easy Way
 tags:
-  - Android
-  - Hacking
-  - Metasploit
-  - Kali Linux
+  - android
+  - hacking
+  - metasploit
+  - kali-linux
 ---
 
 Hi Fellas! I’m sure most of you, or at least those who have set a foot in the kingdom of hacking, have heard of Metasploit. Don’t be disappointed if you haven’t, because you’re in the right track. 

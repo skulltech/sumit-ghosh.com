@@ -2,8 +2,9 @@
 date: 'Thu Jan 03 2019 22:28:00 GMT+0530 (India Standard Time)'
 title: Demystifying Context Managers in Python
 tags:
-  - Python
-  - Programming
+  - python
+  - programming
+  - guest-post
 canonical_url: 'https://stackabuse.com/python-context-managers/'
 remote_blog: 'stackabuse.com'
 ---

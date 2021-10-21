@@ -3,10 +3,10 @@ date: 'Tue Mar 07 2020 06:40:00 GMT+0530 (India Standard Time)'
 title: "Creating a SOCKS Proxy via SSH Tunneling with Dynamic Port Forwarding"
 showcase: false
 tags:
-  - Sysadmin
-  - Linux
-  - Windows
-  - SSH
+  - sysadmin
+  - linux
+  - windows
+  - ssh
 ---
 
 I recently had to access some internal websites of my college from home, these websites are usually reachable only from the intranet. The computer science department does provide a [jump server](https://en.wikipedia.org/wiki/Jump_server) as a solution, which is basically a machine that sits in the intersection between the private intranet and the public Intranet, and acts as a gateway between the two. Students usually use this as an SSH jump point, and access other lab machines or the hpc server from their home through that.

@@ -3,7 +3,7 @@ date: 'Fri Apr 17 2020 17:00:00 GMT+0530 (India Standard Time)'
 title: 'Parsing Dictionary-Like Key-Value Pairs Using Argparse in Python'
 showcase: true
 tags:
-  - Python
+  - python
 ---
 
 Python’s [`argparse`](https://docs.python.org/3/library/argparse.html) is a wonderful library. You can write a capable Unix-style command-line program using very few lines of code. The [docs](https://docs.python.org/3/library/argparse.html) mention how you can use `argparse` to server a variety of use-cases, it most likely covers everything one might need from an argument parser, it’s _batteries-included_ in the true sense of the term. But, there are some holes—the _battery_ isn’t there—so you have to code it up yourself. 

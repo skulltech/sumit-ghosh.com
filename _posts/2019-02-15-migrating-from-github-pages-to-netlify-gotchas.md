@@ -2,8 +2,8 @@
 date: 'Fri Feb 15 2019 14:40:00 GMT+0530 (India Standard Time)'
 title: 'Migrating from Github Pages to Netlify :: Some Gotchas'
 tags:
-  - Blogging
-  - Jekyll
+  - blogging
+  - jekyll
 ---
 
 

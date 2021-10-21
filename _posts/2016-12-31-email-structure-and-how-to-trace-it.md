@@ -2,7 +2,7 @@
 date: 'Sat Dec 31 2016 20:56:50 GMT+0530 (India Standard Time)'
 title: Email — Structure and How to Trace it
 tags:
-  - Email
+  - email
 ---
 
 We all have received fake spam mail telling us that we’ve won million dollars at some point in our life. Maybe one day you receive a threatening email or a simple phishing mail, and you want to find out who did it so that you can hack him in return. To do that you need to know the IP address of the mail server sending the email. In this article I’m gonna show you how to do that, after introducing you to the basics of the structure of an _Internet Message_ or simply, _Email_.

@@ -3,10 +3,10 @@ date: 'Wed Feb 26 2020 03:30:00 GMT+0530 (India Standard Time)'
 title: "Cryptanalysis Cheatsheet :: Notes from Overthewire Krypton"
 showcase: true
 tags:
-  - Hacking
-  - Wargames
-  - Ctf
-  - Cryptography
+  - hacking
+  - wargames
+  - ctf
+  - cryptography
 ---
 
 I've been on a wargame streak! After doing [Leviathan](https://sumit-ghosh.com/articles/notes-overthewire-leviathan/), I jumped into [Krypton](https://overthewire.org/wargames/krypton/) and completed it; and this post is in a way a write-up of Krypton. Krypton, Leviathan, in case these words sound alien to you: well they're wargames—or Ctfs—hosted by [Overthewire.org](https://overthewire.org/wargames/). They're very internet favorite and beginners often start with them, and that's why I did exactly that. Also, instead of following the standard writeup format, this post will be more of a collection of notes for future reference. 
