@@ -1,34 +1,20 @@
-{%- if include.posts.size > 0 -%}
-
-    {%- if include.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in include.posts -%}
-
       <li>
         <span class="post-meta">{{ post.date | date: date_format }}</span>
-                            {% if include.guest_posts %}
-
-        <span class="post-list-item"> on <a href="https://{{ post.remote_blog }}" target="_blank">{{ post.remote_blog }}</a></span>
-        {% endif %}
         {%- include post-tags.html post=post -%}
-        
-        <h3>
-                    {% if include.guest_posts %}
-        <a class="post-link" href="{{ post.canonical_url }}" target="_blank">{{ post.title | escape }}</a>
-        {% else %}
-                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        {% if post.remote_blog %}
+          <span> : guest post on <a href="{{ post.canonical_url }}" target="_blank">{{ post.remote_blog }}</a></span>
         {% endif %}
-
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
         </h3>
-        {%- if include.show_excerpts -%}
+        {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
       </li>
       {%- endfor -%}
     </ul>
-
-{%- endif -%}
