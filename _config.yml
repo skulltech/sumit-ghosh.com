@@ -1,39 +1,25 @@
-title:  Musings of Sumit Ghosh
-author: Sumit Ghosh @SkullTech
-email: sumit@sumit-ghosh.com
-description: >
-  My mind watching itself. 
+title:  Sumit's Dreams of Electric Sheeps
+author: Sumit Ghosh
+email: hi@sumit-ghosh.com
+description: Blog on computers, programming, and everything in between.
 timezone: Asia/Kolkata
 url: https://sumit-ghosh.com
 baseurl: ''
 
-twitter_username: summitkg
-github_username:  SkullTech
-linkedin_username: sumit-ghosh101
-instagram_username: summit.ghosh
-flickr_username: sumit-ghosh
-
-show_excerpts: false
 minima:
-  date_format: '%b %-d, %Y'
+  social_links:
+    twitter: summitkg
+    linkedin: summitkg
+    github: SkullTech
 
-markdown: kramdown
-theme: minima
+remote_theme: SkullTech/minima
 
 include:
   - _pages
   - _redirects
   
 header_pages:
-  - title: About
-    url: '/about/'
-  - title: Archive
-    url: '/archive/'
-  - title: Portfolio
-    url: 'https://skghosh.me'
-    target_blank: true
-  - title: Quotes
-    url: '/quotes/'
+  - about.md
 
 exclude:
   - CNAME
@@ -50,6 +36,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-archives
+  - jekyll-seo-tag
 
 jekyll-archives:
   enabled: ['tags']

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- assign showcased_posts = site.posts | where: 'showcase', true -%}
+  {%- include post-list.html posts=site.posts list_title=page.list_title show_excerpts=site.show_excerpts show_year=false -%}
+
+</div>
