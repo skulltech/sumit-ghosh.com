@@ -6,3 +6,9 @@ code {
 	text-decoration: none !important; 
 	font-family: $monospace-font-family;
 }
+
+ul.archive-list {
+	columns: 3;
+	-webkit-columns: 3;
+	-moz-columns: 3;
+}

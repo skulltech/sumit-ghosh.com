@@ -1,4 +1,4 @@
-title:  Sumit's Dreams of Electric Sheeps
+title: Sumit's Dreams of Electric Sheeps
 author: Sumit Ghosh
 email: hi@sumit-ghosh.com
 description: Blog on computers, programming, and everything in between.
@@ -15,11 +15,10 @@ minima:
 remote_theme: SkullTech/minima
 
 include:
-  - _pages
   - _redirects
   
 header_pages:
-  - about.md
+  - archive.html
 
 exclude:
   - CNAME
@@ -39,10 +38,11 @@ plugins:
   - jekyll-seo-tag
 
 jekyll-archives:
-  enabled: ['tags']
-  layout: tags
+  enabled: ['tags', 'year']
+  layout: archive
   permalinks:
     tag: '/archive/tag/:name/'
+    year: '/archive/year/:year/'
 
 disqus:
     shortname: sumit-ghosh-com

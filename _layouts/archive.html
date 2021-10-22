@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<div class="archive">
+  {%- if page.title -%}
+    <h1 class="page-heading">Archive of posts with tag: {{ page.title }}</h1>
+  {%- endif -%}
+  {%- if page.date -%}
+    <h1 class="page-heading">Archive of posts from {{ page.date | date: "%Y" }}</h1>
+  {%- endif -%}
+
+	{%- include post-list.html posts=page.posts -%}
+</div>
