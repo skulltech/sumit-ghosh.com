@@ -7,10 +7,10 @@ tags:
 
 We all have received fake spam mail telling us that we’ve won million dollars at some point in our life. Maybe one day you receive a threatening email or a simple phishing mail, and you want to find out who did it so that you can hack him in return. To do that you need to know the IP address of the mail server sending the email. In this article I’m gonna show you how to do that, after introducing you to the basics of the structure of an _Internet Message_ or simply, _Email_.
 
-Email is one of oldest mode of communication through a computer network—usually the Internet—which is still popular today. The Email which we are familiar with was standardized and came into popular usage in the early 1970s, and it has been a core foundation of the Internet since then. Nowadays we all use a fancy web interface or mobile app to send and view received emails, so we don’t have to worry about how is it working. But that isn’t enough for a hacker, is it? If we don’t know the detailed intricacies of its mechanism, how can we exploit it or do something advanced with it? So, keep reading!
+Email is one of oldest mode of communication through a computer network—usually the Internet—which is still popular today. The Email which we are familiar with was standardized and came into popular usage in the early 1970s, and it has been a core foundation of the Internet since then. Nowadays we all use a fancy web interface or mobile app to send and view received emails, so we don’t have to worry about how is it working. But that isn’t enough for a hacker, is it? If we don’t know the detailed intricacies of its mechanism, how can we exploit it or do something advanced with it? So, keep reading!
 
 
-## The Internet Message Format
+## The Internet Message Format
 
 
 The current Email format is defined in [RFC 5322](https://tools.ietf.org/html/rfc5322). Multimedia Email attachments’ format is defined in [RFC 2045](https://tools.ietf.org/html/rfc2045) through [RFC 2049](https://tools.ietf.org/html/rfc2049), and this format is called Multimedia Internet Mail Extensions or simply MIME. You can read those RFC articles to get a fully detailed formal documentation of the structure and format of email, but it’s not necessary as I will discuss it in short here. Nevertheless, if you are interested to learn more, you can check them out after reading this post of mine.
@@ -162,7 +162,7 @@ IDwvYm9keT4NCjwvaHRtbD4=
 
 The part before the first empty line is the header of this email, and after that the rest is body. Here you can see that the body part looks like some incomprehensible garbage, that’s because it is a MIME message, and the garbage part is actually HTML data encoded by Base64 encoding. You can decode it using any of the Base64 decoder found online and get the HTML data. Anyway, we are going to focus on the header part, because all other critical information resides in there, the body part contains just the message.
 
-We can see the header part consists of header fields, each header field consisting of a field name and field value separated by a colon ‘:’.  for example a header field of this email is —
+We can see the header part consists of header fields, each header field consisting of a field name and field value separated by a colon ‘:’.  for example a header field of this email is —
 
 ```
 Delivered-To: john.doe@gmail.com
@@ -176,7 +176,7 @@ The header section can contain any number of information in this format, there i
 ## Tracing an Email
 
 
-Now that we know the basics of the _[Internet Message Format](https://tools.ietf.org/html/rfc5322)_, it’s time we dive into the fun stuff, tracing the email. For that, we need to concentrate on the _Trace fields_, so to speak. They contain the information needed to trace it, obviously. The trace fields are —
+Now that we know the basics of the _[Internet Message Format](https://tools.ietf.org/html/rfc5322)_, it’s time we dive into the fun stuff, tracing the email. For that, we need to concentrate on the _Trace fields_, so to speak. They contain the information needed to trace it, obviously. The trace fields are —
 
 - _Received_
 - _Return-Path_
@@ -206,7 +206,7 @@ Received: from ECPRID2AWEB004 (ec2-52-4-196-162.compute-1.amazonaws.com [52.4.19
 
 As SMTP servers insert the Received field at the top of the email when they receive it, if we read them from top to bottom we can trace the path through the email has travelled. The field value of the Received header field generally contains the host name or IP address of itself and the host name or IP of the server from which it received the mail.
 
-Another thing to note here, I’ve also listed the _X-Received_ header field. Any field starting with _X_ is a non-standard header and it cannot be trusted. It’s used by mail servers for their own benefit, generally a servers won’t trust X headers inserted by any other server. Anyway, I’ve still included this because it may give us some additional information, keeping in mind that it is not very reliable. So from the _Received_ (and _X-Received_) fields of the example mail, we can trace the route of the mail, and it would look like this
+Another thing to note here, I’ve also listed the _X-Received_ header field. Any field starting with _X_ is a non-standard header and it cannot be trusted. It’s used by mail servers for their own benefit, generally a servers won’t trust X headers inserted by any other server. Anyway, I’ve still included this because it may give us some additional information, keeping in mind that it is not very reliable. So from the _Received_ (and _X-Received_) fields of the example mail, we can trace the route of the mail, and it would look like this
 
 
 - ec2-52-4-196-162.compute-1.amazonaws.com [52.4.196.162]
@@ -218,10 +218,10 @@ Another thing to note here, I’ve also listed the _X-Received_ header field. A
 - 10.200.55.226
 
 
-The email went through these servers in this order. So the mail server that actually sent the email is the first one, and if you were after that one for reasons, you can focus on that.
+The email went through these servers in this order. So the mail server that actually sent the email is the first one, and if you were after that one for reasons, you can focus on that.
 
 
 ## Automated Tracing
 
 
-Although it’s good or maybe essential for a hacker to know how to manually trace an email, you don’t have to do it every time. There are many tools in the Internet that automate this process. You just have to paste the email header in those tools and they will trace the route of it. Just search email header analyser in Google and you’ll get a lot of tools like this. There’s one made by Google itself, you can get it [here](https://toolbox.googleapps.com/apps/messageheader/). Happy hacking!
+Although it’s good or maybe essential for a hacker to know how to manually trace an email, you don’t have to do it every time. There are many tools in the Internet that automate this process. You just have to paste the email header in those tools and they will trace the route of it. Just search email header analyser in Google and you’ll get a lot of tools like this. There’s one made by Google itself, you can get it [here](https://toolbox.googleapps.com/apps/messageheader/). Happy hacking!

