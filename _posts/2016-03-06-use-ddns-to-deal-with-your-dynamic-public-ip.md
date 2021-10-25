@@ -13,14 +13,14 @@ Many of us have an internet connection with a dynamic public IP. That poses some
 ## Understanding Dynamic Public IP Address
 
 
-Public IP is the IP that’s visible to machines outside your local network. For example, if two or more machines are connected through a router—maybe through Wi-Fi—to the internet, then the machines are in a local network, as well as both of them are connected to the Internet. Each of them has a locally unique private IP address, not globally. For connecting to the Internet they use the router’s public IP.
+Public IP is the IP that’s visible to machines outside your local network. For example, if two or more machines are connected through a router—maybe through Wi-Fi—to the internet, then the machines are in a local network, as well as both of them are connected to the Internet. Each of them has a locally unique private IP address, not globally. For connecting to the Internet they use the router’s public IP.
 
-IP addresses can be static or dynamic. Most of the ISPs provide dynamic public IP, that means it changes from time to time, contrary to the static one, which remains fixed. You can check what’s your public IP by googling “What is my IP”, Google will tell you.
+IP addresses can be static or dynamic. Most of the ISPs provide dynamic public IP, that means it changes from time to time, contrary to the static one, which remains fixed. You can check what’s your public IP by googling “What is my IP”, Google will tell you.
 
-Having a dynamic IP address is a hindrance to hacking using reverse connection payloads. Reverse connection payloads, such as `android/meterpreter/reverse_tcp`, store the host IP address, i.e. the IP address of the attacker machine. When it gets executed, it connects back to the host machine by the reference of that host IP. But as dynamic IP keeps changing from time to time, you won’t be able to use a payload for a long time because after some time the IP stored inside it won’t point to your machine anymore. That’s a problem — a major one. This is where DDNS comes in.
+Having a dynamic IP address is a hindrance to hacking using reverse connection payloads. Reverse connection payloads, such as `android/meterpreter/reverse_tcp`, store the host IP address, i.e. the IP address of the attacker machine. When it gets executed, it connects back to the host machine by the reference of that host IP. But as dynamic IP keeps changing from time to time, you won’t be able to use a payload for a long time because after some time the IP stored inside it won’t point to your machine anymore. That’s a problem — a major one. This is where DDNS comes in.
 
 
-## Dynamic DNS aka DDNS to The Rescue
+## Dynamic DNS aka DDNS to The Rescue
 
 We all know what DNS or Domain Naming System is, it’s the system which binds an IP to a domain name. When you try to connect to a domain name, for example opening www.google.com on a browser, the request first goes to a DNS server, which resolves the domain name into an IP, and then the browser gets the Google homepage from that IP. Similarly you can get a domain name for your machine and put that domain name in the place of HOST IP address in your payload. But the problem of your IP being dynamic still remains.
 
@@ -37,7 +37,7 @@ Head to https://www.noip.com and create a free account there.
 
 ### Step 2: Adding a Hostname in No-IP
 
-When you get to the dashboard, go to Dynamic DNS → Hostnames and add a hostname of your choice from there. You can also choose a domain name from a list there. The address you will get is `hostname.domain`. For example, I chose the default domain name—ddns.com—and the hostname I entered is _skulltech_. So the address I got is “skulltech.ddns.com”. Refer to the screenshots below for reference.
+When you get to the dashboard, go to Dynamic DNS → Hostnames and add a hostname of your choice from there. You can also choose a domain name from a list there. The address you will get is `hostname.domain`. For example, I chose the default domain name—ddns.com—and the hostname I entered is _skulltech_. So the address I got is “skulltech.ddns.com”. Refer to the screenshots below for reference.
 
 ![step-1](/images/posts/ddns-dynamic-ip-step-11.png)
 ![step-2](/images/images/ddns-dynamic-ip-step-21.png)
@@ -46,7 +46,7 @@ When you get to the dashboard, go to Dynamic DNS → Hostnames and add a hostna
 ### Step 3: Install the Dynamic DNS Update Client
 
 
-Now you’ll need to install a program on your computer and set it up. So that it connects to No-IP server frequently and updates the DNS record. Download the update client from https://www.noip.com/download . It’s a tar.gz archive, extract it using the following command —
+Now you’ll need to install a program on your computer and set it up. So that it connects to No-IP server frequently and updates the DNS record. Download the update client from https://www.noip.com/download . It’s a tar.gz archive, extract it using the following command —
 ```console
 $ tar -xzvf noip-duc-linux.tar.gz
 ```
@@ -87,7 +87,7 @@ $ noip2
 ## Using DDNS Hostname in Payloads
 
 
-You can create a basic reverse shell payload for windows and get a shell on a remote computer on running it in that computer. Refer to this tutorial by Offensive Security for that, I won’t be going into details how to do that. Assuming that you already know how to create these payloads using _msfvenom_—if you don’t check out [this tutorial](/articles/embed-metasploit-payload-in-apk-easily/)—I'll show you how you can use your DDNS hostname there.
+You can create a basic reverse shell payload for windows and get a shell on a remote computer on running it in that computer. Refer to this tutorial by Offensive Security for that, I won’t be going into details how to do that. Assuming that you already know how to create these payloads using _msfvenom_—if you don’t check out [this tutorial](/articles/embed-metasploit-payload-in-apk-easily/)—I'll show you how you can use your DDNS hostname there.
 
 Generally we run a command like this to generate the payload. Here LHOST is the address of the our local machine, in the following example it’s _192.168.1.101_.
 
