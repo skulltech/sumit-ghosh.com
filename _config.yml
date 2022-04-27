@@ -11,8 +11,10 @@ minima:
     twitter: summitkg
     linkedin: summitkg
     github: SkullTech
+  showcase_posts: true
+  skin: dark
 
-remote_theme: SkullTech/minima
+remote_theme: SkullTech/minima-improved
 
 include:
   - _redirects
@@ -38,11 +40,10 @@ plugins:
   - jekyll-seo-tag
 
 jekyll-archives:
-  enabled: ['tags', 'year']
+  enabled: ['tags']
   layout: archive
   permalinks:
     tag: '/archive/tag/:name/'
-    year: '/archive/year/:year/'
 
 disqus:
     shortname: sumit-ghosh-com

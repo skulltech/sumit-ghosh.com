@@ -1,8 +1,0 @@
-&nbsp;
-{% assign tags = include.post.tags | sort %}
-<span class="post-meta"><nobr>[
-  {% for tag in tags %}
-    <a href="/archive/tag/{{ tag | downcase | slugify }}" class="post-tag">{{ tag }}</a>
-  {% unless forloop.last %}&nbsp;{% endunless %}
-  {% endfor %}
-]</nobr></span>
