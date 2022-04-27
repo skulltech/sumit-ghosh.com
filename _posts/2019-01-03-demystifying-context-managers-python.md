@@ -9,9 +9,6 @@ canonical_url: 'https://stackabuse.com/python-context-managers/'
 remote_blog: 'stackabuse.com'
 ---
 
-NOTE — I wrote this article for stackabuse.com and it originally appeared [here](https://stackabuse.com/python-context-managers/).
-
-
 ### Introduction
 
 One of the "obscure" features of Python that almost all Python programmers use—even the beginner ones—but don't really understand, is _context managers_. You've probably seen them in the form of `with` statements, usually first encountered when you learn opening files in Python. Although context managers seem a little strange at first, when we really dive into them, understand the motivation and techniques behind it, we get access to a new weapon in our programming arsenal. So without further ado, let's dive into it!

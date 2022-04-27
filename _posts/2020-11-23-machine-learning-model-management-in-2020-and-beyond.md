@@ -9,9 +9,6 @@ canonical_url: 'https://neptune.ai/blog/machine-learning-model-management-in-202
 remote_blog: 'neptune.ai'
 ---
 
-NOTE — I wrote this article for [Neptune.ai](https://neptune.ai/) and it originally appeared [here](https://neptune.ai/blog/machine-learning-model-management-in-2020-and-beyond).
-
-
 [Model management](https://analyticsindiamag.com/machine-learning-model-management-2020/) is a relatively new issue when it comes to Machine Learning. Since the technique is widely used in business, the need to manage multiple experiments and optimize dozens of parameters has become bread-and-butter of data scientists around the world. And thus, the tools supporting the Model management have emerged on the market. The rise of open-source and relatively intuitive ML frameworks such as Pytorch and Tensorflow has lowered the entry barrier for ML development.
 
 In the coming years, machine learning will only extend its influence and keep penetrating new market segments. Organizations that don’t necessarily have the expertise to build models themselves will be forced to use  models made by others.

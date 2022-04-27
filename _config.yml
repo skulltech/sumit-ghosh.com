@@ -1,6 +1,7 @@
 title: Sumit's Dreams of Electric Sheeps
-author: Sumit Ghosh
-email: hi@sumit-ghosh.com
+author:
+  name: Sumit Ghosh
+  email: hi@sumit-ghosh.com
 description: Blog on computers, programming, and everything in between.
 timezone: Asia/Kolkata
 url: https://sumit-ghosh.com

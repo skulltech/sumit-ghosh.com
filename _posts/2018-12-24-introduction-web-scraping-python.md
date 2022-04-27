@@ -10,8 +10,6 @@ canonical_url: 'https://stackabuse.com/introduction-to-web-scraping-with-python/
 remote_blog: 'stackabuse.com'
 ---
 
-NOTE — I wrote this article for stackabuse.com and it originally appeared [here](https://stackabuse.com/introduction-to-web-scraping-with-python/).
-
 Web-scraping is an important technique, frequently employed in a lot of different contexts, especially data science and data mining. It can also contribute as a part of an automation pipeline. Python is considered the go-to language for web-scraping, the reason being the batteries-included nature of Python; you can create a simple scraping script in about 15 minutes and under 100 lines of code. So regardless of usage, web-scraping is a skill that every Python programmer must have under his belt.
 
 Before we start getting hands-on, we should step back and consider what is web-scraping, when should we use it and when to avoid using it. As you already know, web-scraping is a technique employed to automatically extract data from websites. What’s important to understand is, web-scraping is a somewhat crude technique to extract data. If the developers of a website are generous enough to provide an API to extract data, that would be a lot more stable and robust way to do it. So, rule of thumb, if a website provides an API to programmatically retrieve their data, use that. If an API is not available, only then use web-scraping. With that being clear, let’s jump right into the tutorial.
