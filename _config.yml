@@ -35,10 +35,10 @@ permalink: /articles/:title/
 
 plugins:
   - jekyll-feed
-  - jekyll-redirect-from
   - jekyll-sitemap
-  - jekyll-archives
   - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-redirect-from
 
 jekyll-archives:
   enabled: ['tags']
