@@ -1,6 +1,6 @@
 ---
-date: 'Fri May 01 2020 16:00:00 GMT+0530 (India Standard Time)'
-title: 'Listing External Functions Used// Exported by Executables and Shared Libraries'
+date: "Fri May 01 2020 16:00:00 GMT+0530 (India Standard Time)"
+title: "Listing External Functions Used// Exported by Executables and Shared Libraries"
 showcase: true
 tags:
   - linux
@@ -25,12 +25,12 @@ To that end, I've been looking for alternatives to ltrace, albeit unsuccessfully
 
 For now, we'll take an alternate route. Instead of hijacking library calls as they happen, we'll inspect the elf binary and look for external symbols it has referred to. All library functions are listed as external symbols in an elf binary, so that way we'll get an exhaustive list of all the functions it _could_ call, theoretically. We won't get the debugging capability of ltrace to its full extent, as we won't be able to see the function calls _as they happen_ in real-time, nor will we be able to see the function arguments. But, beggars can't be choosers.
 
-
 ## Listing symbols in an elf executable
 
 This section is an expansion on [this](https://stackoverflow.com/questions/34732/how-do-i-list-the-symbols-in-a-so-file) Stack Overflow discussion.
 
 We'll be using the following C program for testing.
+
 ```c
 #include <stdio.h>
 #include <time.h>
@@ -41,11 +41,12 @@ int main(int argc, char const *argv[]) {
     printf("%d\n", rand());
 }
 ```
+
 Pretty simple program, just prints out a random integer.
 
 ```console
 sumit@HAL9000:~$ gcc random.c -o random
-sumit@HAL9000:~$ ./random 
+sumit@HAL9000:~$ ./random
 701758836
 ```
 
@@ -86,6 +87,7 @@ DYNAMIC SYMBOL TABLE:
 0000000000000000      DF *UND*    0000000000000000  GLIBC_2.2.5 rand
 0000000000000000  w   DF *UND*    0000000000000000  GLIBC_2.2.5 __cxa_finalize
 ```
+
 - Flags :: `T` for dynamic symbols, and `C` for demangling C++ symbols.
 
 ### Using readelf
@@ -95,7 +97,7 @@ sumit@HAL9000:~$ readelf --dyn-syms random
 
 Symbol table '.dynsym' contains 10 entries:
    Num:    Value          Size Type    Bind   Vis      Ndx Name
-     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND
      1: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_deregisterTMCloneTab
      2: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND printf@GLIBC_2.2.5 (2)
      3: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __libc_start_main@GLIBC_2.2.5 (2)
@@ -109,11 +111,11 @@ Symbol table '.dynsym' contains 10 entries:
 
 - Flags :: `--dym-syms` for dynamic symbols.
 
-All of the above do the same task, more or less: they dump the externally visible dynamic symbols located in the `.dynsym` section of the symbol table in the elf file. As you can see, they have varying levels of verbosity; `readelf` is the most verbose of them all, it displays all the attributes of the symbols in a tabular manner. 
+All of the above do the same task, more or less: they dump the externally visible dynamic symbols located in the `.dynsym` section of the symbol table in the elf file. As you can see, they have varying levels of verbosity; `readelf` is the most verbose of them all, it displays all the attributes of the symbols in a tabular manner.
 
 ### Picking out the global function symbols
 
-Looking at the symbol names in the `readelf` output, you could suspect that not all of them are library functions, and you'd be right. Only the symbols with type `FUNC` and bind `GLOBAL`, i.e. global functions, are external library functions. You can pick them out manually, or you can use a python script I've written, [`dynfuncs.py`](https://github.com/SkullTech/dynfuncs.py) that does it for you. 
+Looking at the symbol names in the `readelf` output, you could suspect that not all of them are library functions, and you'd be right. Only the symbols with type `FUNC` and bind `GLOBAL`, i.e. global functions, are external library functions. You can pick them out manually, or you can use a python script I've written, [`dynfuncs.py`](https://github.com/SkullTech/dynfuncs.py) that does it for you.
 
 ```console
 sumit@HAL9000:~$ python3 dynfuncs.py random
@@ -135,7 +137,6 @@ Either way, you get a list of symbols, which are global// externally visible fun
 
 Note that we can use the above commands and script not only for elf executables but for elf shared libraries, i.e. `.so` files too. In that case, it'll also list functions and symbols _exported_ by the shared library, along with the external library functions _used_ by the shared library. The following example illustrates this.
 
-
 ```c
 #include <unistd.h>
 
@@ -144,6 +145,7 @@ void shell() {
 	execve(argv[0], &argv[0], NULL);
 }
 ```
+
 Above is the source code of a small shared library which exports a single function `shell` which, evidently, spawns a shell. Let's compile this.
 
 ```console
@@ -151,12 +153,13 @@ sumit@HAL9000:~$ gcc -shared -fpic shlib.c -o shlib.so
 ```
 
 Now let's list the dynamic symbols in `shlib.so`.
+
 ```console
 sumit@HAL9000:~$ readelf --dyn-syms shlib.so
 
 Symbol table '.dynsym' contains 8 entries:
    Num:    Value          Size Type    Bind   Vis      Ndx Name
-     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND
      1: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_deregisterTMCloneTab
      2: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND __stack_chk_fail@GLIBC_2.4 (2)
      3: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND execve@GLIBC_2.2.5 (3)
@@ -165,7 +168,7 @@ Symbol table '.dynsym' contains 8 entries:
      6: 0000000000000000     0 FUNC    WEAK   DEFAULT  UND __cxa_finalize@GLIBC_2.2.5 (3)
      7: 0000000000001139    93 FUNC    GLOBAL DEFAULT   14 shell
 
-sumit@HAL9000:~$ python3 dynfuncs.py shlib.so 
+sumit@HAL9000:~$ python3 dynfuncs.py shlib.so
 Symbol table '.dynsym' contains 3 global functions:
    Num: Name
      0: __stack_chk_fail

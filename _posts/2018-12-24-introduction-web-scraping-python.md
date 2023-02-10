@@ -1,13 +1,13 @@
 ---
-date: 'Mon Dec 24 2018 19:08:00 GMT+0530 (India Standard Time)'
-title: 'An Introduction to Web-scraping using Python'
+date: "Mon Dec 24 2018 19:08:00 GMT+0530 (India Standard Time)"
+title: "An Introduction to Web-scraping using Python"
 tags:
   - web-scraping
   - python
   - programming
   - guest-post
-canonical_url: 'https://stackabuse.com/introduction-to-web-scraping-with-python/'
-remote_blog: 'stackabuse.com'
+canonical_url: "https://stackabuse.com/introduction-to-web-scraping-with-python/"
+remote_blog: "stackabuse.com"
 ---
 
 Web-scraping is an important technique, frequently employed in a lot of different contexts, especially data science and data mining. It can also contribute as a part of an automation pipeline. Python is considered the go-to language for web-scraping, the reason being the batteries-included nature of Python; you can create a simple scraping script in about 15 minutes and under 100 lines of code. So regardless of usage, web-scraping is a skill that every Python programmer must have under his belt.
@@ -29,10 +29,10 @@ We can understand web-scraping as a pipeline containing 3 components
 It only seems logical that to extract any data from a web-page, we first have to download it. There are two ways we can go about doing this:
 
 1. _Using browser automation libraries like Selenium._  
-    Selenium lets you open a browser, let's say Chrome, and control it however you want. You can open the web-page in a browser and then get the HTML code of that page, all automated using Selenium. However, this method has a huge drawback — it is significantly slower. The reason being the overhead of running the browser and rendering the HTML in the browser. This is why we should always prefer the 2nd method, resorting to this method in exceptional cases — cases where the content we want to scrape gets loaded by some JS code in the browser.
+   Selenium lets you open a browser, let's say Chrome, and control it however you want. You can open the web-page in a browser and then get the HTML code of that page, all automated using Selenium. However, this method has a huge drawback — it is significantly slower. The reason being the overhead of running the browser and rendering the HTML in the browser. This is why we should always prefer the 2nd method, resorting to this method in exceptional cases — cases where the content we want to scrape gets loaded by some JS code in the browser.
 
 2. _Using HTTP libraries, such as Requests or Urllib._  
-    HTTP libraries let you send the exact HTTP request you want to make and get the response, bypassing the need to open any browser at all, unlike the first method. This method should always be preferred, as it is way faster than Selenium. As I already said, we should only employ Selenium when it is absolutely necessary, i.e. when the required data is not there in the initial HTML at all, it gets loaded by some JS code in the browser.
+   HTTP libraries let you send the exact HTTP request you want to make and get the response, bypassing the need to open any browser at all, unlike the first method. This method should always be preferred, as it is way faster than Selenium. As I already said, we should only employ Selenium when it is absolutely necessary, i.e. when the required data is not there in the initial HTML at all, it gets loaded by some JS code in the browser.
 
 Now let me show you how can we achieve this component of the pipeline using Selenium and Requests.
 
@@ -44,8 +44,8 @@ import requests
 result = requests.get('http://quotes.toscrape.com/')
 page = result.text
 ```
-Here, a GET request is made to the URL, which is almost synonymous to downloading the webpage. Then, we can get the HTML source of the page by accessing the result object returned by the requests.get() method. 
 
+Here, a GET request is made to the URL, which is almost synonymous to downloading the webpage. Then, we can get the HTML source of the page by accessing the result object returned by the requests.get() method.
 
 _Using Selenium_
 
@@ -56,16 +56,16 @@ driver = webdriver.Chrome()
 driver.get('http://quotes.toscrape.com/')
 page = driver.page_source
 ```
+
 Here, we first start by creating a `webdriver` object, which represents the browser. Doing this will start the browser on the computer running the code. Then, by calling the `get` method of the `webdriver` object, we can open an URL. And finally, get the source code by accessing the `page_source` property of the `webdriver` object.
 
 In both the cases, the HTML source of the URL is stored in the page variable as a string.
-
 
 ### Parsing HTML and extracting data
 
 Without getting into theoretical computer science, we can define parsing as the process of analyzing a string so that we can understand its contents and thus access data within it easily. In Python, there are two libraries that help us with Parsing HTML, BeautifulSoup and Lxml. Lxml is a more lower-level framework than BeautifulSoup, and we can use Lxml as a backend in BeautifulSoup, so for simple HTML parsing purposes, BeautifulSoup would be the preferred library.
 
-But before we dive into parsing, we have to analyze the web-page's HTML and see how the data we want to scrape is structured and located. Only when we're armed with that information, we can get the information we want from the parsed HTML. But thankfully, we won't have to open the source code in an editor and manually understand and correlate each HTML element with the corresponding element in the rendered page. Most browsers offer a _Inspector_, which enables us to quickly look at the HTML code of any element just by clicking on them. 
+But before we dive into parsing, we have to analyze the web-page's HTML and see how the data we want to scrape is structured and located. Only when we're armed with that information, we can get the information we want from the parsed HTML. But thankfully, we won't have to open the source code in an editor and manually understand and correlate each HTML element with the corresponding element in the rendered page. Most browsers offer a _Inspector_, which enables us to quickly look at the HTML code of any element just by clicking on them.
 
 To do this in Chrome, open the web page in Chrome, then right-click on the data you want to scrape and select _Inspect_. In Firefox, this option is called _Inspect Element_. Same thing, different name.
 
@@ -152,7 +152,6 @@ with open('quotes.csv', 'w') as csv_file:
 ```
 
 As we can see, the code is pretty self-explanatory. We are creating a CSV `writer` object from the opened _quotes.csv_ file, and then writing the quotes one by one using the `writerow` function. As it's evident, the `writerow` function accepts a list as input and then writes that to the CSV as a row, pretty straightforward.
-
 
 ### Conclusion and next steps
 

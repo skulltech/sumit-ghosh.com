@@ -2,10 +2,10 @@
 date: 2016-03-06 15:55:52+00:00
 title: Starting Up Selenium Webdriver with Custom User-Agent and Profile in Python
 tags:
-- programming
-- python
-- automation
-- selenium
+  - programming
+  - python
+  - automation
+  - selenium
 ---
 
 I've been playing around with Selenium Webdriver in Python, and one of the most annoying thing I had to do again and again is looking up how to start a specific Webdriver with a custom user-agent or with a custom profile. So I decided to make this module which will take care of all the little inner workings involved while starting up a Webdriver.
@@ -13,7 +13,6 @@ I've been playing around with Selenium Webdriver in Python, and one of the most 
 The code is [here](https://github.com/SkullTech/webdriver-start).
 
 You'll just have to use the `start_webdriver` function, and it will do all the magic and return the required Webdriver.
-
 
 ### Example Usage
 

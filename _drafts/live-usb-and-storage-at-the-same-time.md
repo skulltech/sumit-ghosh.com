@@ -21,5 +21,5 @@ We're going to use _Gparted_ for partioning and formatting, if you don't already
 
 2 partitions.
 
-1. Storage partition. Also working as persistence for Live OS. // 
+1. Storage partition. Also working as persistence for Live OS. //
 2. Live OS partition.

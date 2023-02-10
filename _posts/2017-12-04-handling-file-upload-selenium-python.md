@@ -1,13 +1,13 @@
 ---
 title: Handling File Upload Through Selenium Python
-subtitle: 'A necessary rite of passage for Selenium programmers'
+subtitle: "A necessary rite of passage for Selenium programmers"
 showcase: false
 tags:
   - programming
   - selenium
   - python
   - automation
-date: '2017-12-04'
+date: "2017-12-04"
 ---
 
 Once you start playing around with Selenium, sooner or later you're gonna face the problem of handling file uploads. It's like a rite of passage every Selenium programmers must go through. The problem with file upload is, once you click the upload button, the select file dialog box which opens up is a owned by the OS, not the browser, so you cannot control it using Selenium, meaning we have to find our way around it. There are different ways this can be accomplished.
@@ -24,10 +24,17 @@ fileinput.send_keys('/path/to/file')
 As you can see, we are selecting the `input` element, and then passing the path of the file to it using the `send_keys` method. An example page on which this approach would work is the [image upload page of _Imgur_](https://imgur.com/upload). It contains a `input` tag like the below mentioned HTML snippet —
 
 ```html
-<input type="file" id="global-files-button" class="nodisplay" name="files[]" multiple-accept=".jpg,.jpeg,.png,.gif,.apng,.tiff,.tif,.bmp,.pdf,.xcf,.webp,.mp4,.mov">
+<input
+  type="file"
+  id="global-files-button"
+  class="nodisplay"
+  name="files[]"
+  multiple-accept=".jpg,.jpeg,.png,.gif,.apng,.tiff,.tif,.bmp,.pdf,.xcf,.webp,.mp4,.mov"
+/>
 ```
 
 Which can be handled by —
+
 ```python
 driver.find_element_by_id('global-files-button').send_keys('/path/to/image/file')
 ```

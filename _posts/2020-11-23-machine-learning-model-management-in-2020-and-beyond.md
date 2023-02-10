@@ -1,17 +1,17 @@
 ---
-date: 'Mon Nov 23 2020 10:00:00 GMT+0530 (India Standard Time)'
-title: 'Machine Learning Model Management in 2020 and Beyond'
+date: "Mon Nov 23 2020 10:00:00 GMT+0530 (India Standard Time)"
+title: "Machine Learning Model Management in 2020 and Beyond"
 showcase: true
 tags:
   - machine-learning
   - guest-post
-canonical_url: 'https://neptune.ai/blog/machine-learning-model-management-in-2020-and-beyond'
-remote_blog: 'neptune.ai'
+canonical_url: "https://neptune.ai/blog/machine-learning-model-management-in-2020-and-beyond"
+remote_blog: "neptune.ai"
 ---
 
 [Model management](https://analyticsindiamag.com/machine-learning-model-management-2020/) is a relatively new issue when it comes to Machine Learning. Since the technique is widely used in business, the need to manage multiple experiments and optimize dozens of parameters has become bread-and-butter of data scientists around the world. And thus, the tools supporting the Model management have emerged on the market. The rise of open-source and relatively intuitive ML frameworks such as Pytorch and Tensorflow has lowered the entry barrier for ML development.
 
-In the coming years, machine learning will only extend its influence and keep penetrating new market segments. Organizations that don’t necessarily have the expertise to build models themselves will be forced to use  models made by others.
+In the coming years, machine learning will only extend its influence and keep penetrating new market segments. Organizations that don’t necessarily have the expertise to build models themselves will be forced to use models made by others.
 
 Deploying and using ML models in such a large, enterprise scope involves a lot of moving parts. Doing it ad-hoc without any solid framework and pipeline in place can make ML development unwieldy and counter-effective. This is where machine learning model management comes into the picture.
 
@@ -27,8 +27,6 @@ Doing ML model development without a management framework gets very complicated.
 
 ## Managing the lifecycle of a Machine Learning model with MLops
 
-
-
 Machine learning model management can be thought of as a part of a broader framework called MLOps. So before we go into the details of model management, let’s look into details of MLOps.
 
 > _MLOps can be thought of as a collection of principles, practices, and technologies that help to increase the efficiency of machine learning workflows._
@@ -38,10 +36,10 @@ It was inspired by DevOps, as DevOps tries to make the software lifecycle from d
 The **MLOps pipeline can be broadly divided into the following three parts,** each optimizing a particular aspect of ML model development.
 
 - **Model development and management:** This deals with methodologies for faster experimentation and development of models.
-- **Model deployment**: This includes a few subtasks. 
+- **Model deployment**: This includes a few subtasks.
   - Validation and quality assurance of models that are about to be deployed. After validation, automated, and fast deployment of models into production.
   - Deployment of new versions of models, i.e., upgrading, over-the-air seamlessly. This step can be thought of as analogous to continuous integration and continuous deployment of DevOps.
-- **Model monitoring**: Monitoring the usage and performance of models that are running in production. Systems that alert when [concept drift](https://neptune.ai/blog/concept-drift-best-practices) occurs are common. 
+- **Model monitoring**: Monitoring the usage and performance of models that are running in production. Systems that alert when [concept drift](https://neptune.ai/blog/concept-drift-best-practices) occurs are common.
 
 Although these principles are similar to their software engineering or data management counterparts, **ML models are fundamentally different from code or data**, so they should be treated differently. Software management or data management tooling don’t work as effectively on models. So we have to [rethink MLOps on its own.](https://medium.com/@ODSC/what-are-mlops-and-why-does-it-matter-8cff060d4067)
 
@@ -51,11 +49,11 @@ In this article, we’re going to focus mostly on the first part of the MLOps pi
 
 Now that we have a birds-eye view of what ML model management is, we can look into the specific practices that go into it.
 
-While developing models, researchers carry out lots of experiments rapidly. By experiments I mean trying out different model architectures, tuning their hyperparameters, and then seeing their performance by training and validating. Even if a single researcher is doing these experiments independently, **keeping track of all the experiments and their results can become hard.** 
+While developing models, researchers carry out lots of experiments rapidly. By experiments I mean trying out different model architectures, tuning their hyperparameters, and then seeing their performance by training and validating. Even if a single researcher is doing these experiments independently, **keeping track of all the experiments and their results can become hard.**
 
 This **challenge grows when multiple researchers are working on the same problem** simultaneously. As these experiments tend to be very rapid and somewhat chaotic, traditional software management tools such as git and Kanban boards fall short when it comes to synchronization between researchers and the experimentation phase.
 
-Solving this challenge is the core premise of ML model management. And the **solution turns out to be something quite simple but tremendously powerful: logging everything.** 
+Solving this challenge is the core premise of ML model management. And the **solution turns out to be something quite simple but tremendously powerful: logging everything.**
 
 By logging the parameters pertaining to every experiment, dashboards can be generated at a central place where everyone can keep track of the different models. In addition, there should also be a way to keep track of all the versions of the models that are developed, so that they can be reproduced later easily.
 
@@ -83,13 +81,13 @@ For each experiment, the following parameters might be logged:
 - Model binary
 - Code and environment configs
 
-![Logging](/images/posts/model-management-logging.jpg)*
+![Logging](/images/posts/model-management-logging.jpg)\*
 
 ## Version Control
 
-Just like software, machine learning models get built incrementally. After **each incremental change, the model might perform differently than before.** 
+Just like software, machine learning models get built incrementally. After **each incremental change, the model might perform differently than before.**
 
-So it is of utmost importance to track the version of models that are being used, and make sure that the metadata and performance metrics that are logged are tagged with the name and version of the model that’s being used. This is where version control comes in. 
+So it is of utmost importance to track the version of models that are being used, and make sure that the metadata and performance metrics that are logged are tagged with the name and version of the model that’s being used. This is where version control comes in.
 
 Version control also helps us reproduce a model later easily, as all the information pertaining to the model is stored in the VCS.
 
@@ -139,9 +137,9 @@ MLflow is another big, comprehensive ML model management framework. It’s creat
 
 As you can see, MLflow also provides features for deploying ML models, making this more of a full-fledged MLOps framework. MLflow consists of the following components.
 
-- **MLflow Tracking**: An API to log parameters, code, and results in machine learning experiments and compare them using an interactive UI. Essentially, this component covers the most fundamental *logging* part of the ML model management workflow.
+- **MLflow Tracking**: An API to log parameters, code, and results in machine learning experiments and compare them using an interactive UI. Essentially, this component covers the most fundamental _logging_ part of the ML model management workflow.
 
-- **MLflow Projects:** A code packaging format for reproducible runs using Conda and Docker, so you can share your ML code with others. This incorporates the *version control* part of the model management workflow.
+- **MLflow Projects:** A code packaging format for reproducible runs using Conda and Docker, so you can share your ML code with others. This incorporates the _version control_ part of the model management workflow.
 
 - **MLflow Models:** A model packaging format and tools that let you easily deploy the same model (from any ML library) to batch and real-time scoring on platforms such as Docker, Apache Spark, Azure ML, and AWS SageMaker.
 
@@ -156,7 +154,7 @@ Neptune is a machine learning experiment management tool which focuses on being 
 - The server, which you can use as a service or install on your own hardware.
 - The client libraries.
 
-Like I said, the strength of Neptune is in its ease of integration with all kinds of workflows. Using Neptune, team members can use vastly different ML libraries and platforms, and yet share their results and collaborate on a single dashboard. 
+Like I said, the strength of Neptune is in its ease of integration with all kinds of workflows. Using Neptune, team members can use vastly different ML libraries and platforms, and yet share their results and collaborate on a single dashboard.
 
 Moreover, you can use their software-as-a-service offering, skipping the need to deploy it on your own hardware; and that way integrating Neptune into your workflow becomes even easier.
 
@@ -164,7 +162,7 @@ Neptune offers the following features
 
 - **Experiment management**: Keep track of all the experiments your team carries out; tag, filter, group, sort and compare your experiments.
 - **Notebook versioning and diffing**: Compare two notebooks or two different checkpoints of the same notebook. You can even compare their output side-by-side just like source code.
-- **Team collaboration**: Adding comments, mentioning teammates, comparing results and discovering insights through discussions, it’s all possible. 
+- **Team collaboration**: Adding comments, mentioning teammates, comparing results and discovering insights through discussions, it’s all possible.
 
 As you can see, it’s a fully fledged machine learning model management framework; the ease of use doesn’t come at the cost of functionality and power. If you’re looking for an easy entry into the world of machine learning model management, Neptune could be perfect.
 

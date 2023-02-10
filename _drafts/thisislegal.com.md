@@ -1,6 +1,6 @@
 Basic Challenges
-________________
 
+---
 
 Challenge 1 :: Find the password in the page
 Look at source code in inspector, look for password, it's an HTML comment.

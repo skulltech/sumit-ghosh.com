@@ -1,5 +1,5 @@
 ---
-date: 'Sat Dec 31 2016 20:56:50 GMT+0530 (India Standard Time)'
+date: "Sat Dec 31 2016 20:56:50 GMT+0530 (India Standard Time)"
 title: Email — Structure and How to Trace it
 tags:
   - email
@@ -9,25 +9,22 @@ We all have received fake spam mail telling us that we’ve won million dollars 
 
 Email is one of oldest mode of communication through a computer network—usually the Internet—which is still popular today. The Email which we are familiar with was standardized and came into popular usage in the early 1970s, and it has been a core foundation of the Internet since then. Nowadays we all use a fancy web interface or mobile app to send and view received emails, so we don’t have to worry about how is it working. But that isn’t enough for a hacker, is it? If we don’t know the detailed intricacies of its mechanism, how can we exploit it or do something advanced with it? So, keep reading!
 
-
 ## The Internet Message Format
-
 
 The current Email format is defined in [RFC 5322](https://tools.ietf.org/html/rfc5322). Multimedia Email attachments’ format is defined in [RFC 2045](https://tools.ietf.org/html/rfc2045) through [RFC 2049](https://tools.ietf.org/html/rfc2049), and this format is called Multimedia Internet Mail Extensions or simply MIME. You can read those RFC articles to get a fully detailed formal documentation of the structure and format of email, but it’s not necessary as I will discuss it in short here. Nevertheless, if you are interested to learn more, you can check them out after reading this post of mine.
 
 At the most basic level, an email is a series of ASCII characters. It consists of line of characters, lines ending with ASCII ‘CRLF’ (carriage return and line feed). The entire email can be divided into two parts, the Header section and the Body. Let’s see an example email to get an idea of what we are talking about.
 
-
-``` 
+```
 Delivered-To: john.doe@gmail.com
 Received: by 10.200.55.226 with SMTP id e31csp1128773qtc;
 Tue, 18 Oct 2016 09:50:19 -0700 (PDT)
 X-Received: by 10.107.131.213 with SMTP id n82mr2118112ioi.125.1476809419401;
 Tue, 18 Oct 2016 09:50:19 -0700 (PDT)
-Return-Path: 
+Return-Path:
 Received: from o6.em.email.accounts.autodesk.com (o6.em.email.accounts.autodesk.com. [167.89.4.107])
 by mx.google.com with ESMTPS id g126si21395826ioa.252.2016.10.18.09.50.19
-for 
+for
 (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
 Tue, 18 Oct 2016 09:50:19 -0700 (PDT)
 Received-SPF: pass (google.com: domain of bounces+1621835-f4d2-john.doe=gmail.com@em.email.accounts.autodesk.com designates 167.89.4.107 as permitted sender) client-ip=167.89.4.107;
@@ -41,17 +38,17 @@ Received: by filter0958p1mdw1.sendgrid.net with SMTP id filter0958p1mdw1.2775.58
 2016-10-18 16:50:15.915852162 +0000 UTC
 Received: from ECPRID2AWEB004 (ec2-52-4-196-162.compute-1.amazonaws.com [52.4.196.162]) by ismtpd0006p1iad1.sendgrid.net (SG) with ESMTP id aIawJW2DTFi0CgbichcKJg for ; Tue, 18 Oct 2016 16:50:15.917 +0000 (UTC)
 MIME-Version: 1.0
-From: Autodesk 
+From: Autodesk
 To: john.doe@gmail.com
 Reply-To: noreply@mail.accounts.autodesk.com
 Date: 18 Oct 2016 16:50:15 +0000
 Subject: Verify your Autodesk account
 Content-Type: text/html; charset=utf-8
 Content-Transfer-Encoding: base64
-Message-ID: 
+Message-ID:
 X-SG-EID: iimKsBOu00eJI3OJPONMulw6aZ/yjiemm1SqdEDLcTZBP1eHyN3Qr32i1Vdhd5J7BwflVrWhRCLr0j woo/OKUHaIA1bGmnv8Qd2DfN0OSocqGDQ8DK7afms0hcjbrNUG/S3Bsv7fJWCR15UEaoJ/qfJtpdgG gZSAdl3d07GxUEWB0KHMNBmsfHLUEhfyzWPfn5IBYcQ334wRxcWBQ/eu31XQd8fIXETIiBgrd19ic6 SiLuZKRyxs7mVzCv46+9G/
 X-Feedback-ID: 1621835:SZNY+iwS6efjfOV9JjNuzvzTddPNBc3FolKu4zujGFA=:SZNY+iwS6efjfOV9JjNuzvzTddPNBc3FolKu4zujGFA=:SG
-    
+
 PGh0bWw+DQo8aGVhZD4NCjxsaW5rIGhyZWY9Imh0dHA6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9j
 c3M/ZmFtaWx5PU9wZW4rU2Fuczo0MDAsMzAwLDcwMCIgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0
 ZXh0L2NzcyIgLz4NCjxzdHlsZT4NCiAgICAgICBAaW1wb3J0IHVybChodHRwOi8vZm9udHMuZ29v
@@ -159,10 +156,9 @@ Lg0KPC9wPgkgICA8L3A+DQogICAgICAgIDwvdGQ+DQogICAgICA8L3RyPg0KCTwvdGFibGU+DQog
 IDwvYm9keT4NCjwvaHRtbD4=
 ```
 
-
 The part before the first empty line is the header of this email, and after that the rest is body. Here you can see that the body part looks like some incomprehensible garbage, that’s because it is a MIME message, and the garbage part is actually HTML data encoded by Base64 encoding. You can decode it using any of the Base64 decoder found online and get the HTML data. Anyway, we are going to focus on the header part, because all other critical information resides in there, the body part contains just the message.
 
-We can see the header part consists of header fields, each header field consisting of a field name and field value separated by a colon ‘:’.  for example a header field of this email is —
+We can see the header part consists of header fields, each header field consisting of a field name and field value separated by a colon ‘:’. for example a header field of this email is —
 
 ```
 Delivered-To: john.doe@gmail.com
@@ -172,9 +168,7 @@ Where ‘Delivered-To’ is the field name and ‘john.doe@gmail.com’ is the f
 
 The header section can contain any number of information in this format, there is no restriction. So there can be different header fields in various emails. But there are certain fields that are mandatory, and those contain the information we need to trace the mail. You can read about various email header fields [here](https://en.wikipedia.org/wiki/Email#Header_fields) on Wikipedia.
 
-
 ## Tracing an Email
-
 
 Now that we know the basics of the _[Internet Message Format](https://tools.ietf.org/html/rfc5322)_, it’s time we dive into the fun stuff, tracing the email. For that, we need to concentrate on the _Trace fields_, so to speak. They contain the information needed to trace it, obviously. The trace fields are —
 
@@ -185,7 +179,6 @@ Now that we know the basics of the _[Internet Message Format](https://tools.ietf
 - _Auto-Submitted_
 - _VBR-Info_
 
-
 Among these, the _Received_ field is the most important and most reliable. When an SMTP server receives a message it inserts this header at the top of the message. And as most emails go through several SMTP servers in the journey from the sender to receiver, it contains several Received fields, each one inserted by different SMTP servers. In the example email the Received fields are:
 
 ```
@@ -195,19 +188,17 @@ X-Received: by 10.107.131.213 with SMTP id n82mr2118112ioi.125.1476809419401;
         Tue, 18 Oct 2016 09:50:19 -0700 (PDT)
 Received: from o6.em.email.accounts.autodesk.com (o6.em.email.accounts.autodesk.com. [167.89.4.107])
         by mx.google.com with ESMTPS id g126si21395826ioa.252.2016.10.18.09.50.19
-        for 
+        for
         (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
         Tue, 18 Oct 2016 09:50:19 -0700 (PDT)
 Received: by filter0958p1mdw1.sendgrid.net with SMTP id filter0958p1mdw1.2775.580652C7AF
-        2016-10-18 16:50:15.915852162 +0000 UTC    
+        2016-10-18 16:50:15.915852162 +0000 UTC
 Received: from ECPRID2AWEB004 (ec2-52-4-196-162.compute-1.amazonaws.com [52.4.196.162]) by ismtpd0006p1iad1.sendgrid.net (SG) with ESMTP id aIawJW2DTFi0CgbichcKJg for ; Tue, 18 Oct 2016 16:50:15.917 +0000 (UTC)
 ```
-
 
 As SMTP servers insert the Received field at the top of the email when they receive it, if we read them from top to bottom we can trace the path through the email has travelled. The field value of the Received header field generally contains the host name or IP address of itself and the host name or IP of the server from which it received the mail.
 
 Another thing to note here, I’ve also listed the _X-Received_ header field. Any field starting with _X_ is a non-standard header and it cannot be trusted. It’s used by mail servers for their own benefit, generally a servers won’t trust X headers inserted by any other server. Anyway, I’ve still included this because it may give us some additional information, keeping in mind that it is not very reliable. So from the _Received_ (and _X-Received_) fields of the example mail, we can trace the route of the mail, and it would look like this
-
 
 - ec2-52-4-196-162.compute-1.amazonaws.com [52.4.196.162]
 - ismtpd0006p1iad1.sendgrid.net
@@ -217,11 +208,8 @@ Another thing to note here, I’ve also listed the _X-Received_ header field. An
 - 10.107.131.213
 - 10.200.55.226
 
-
 The email went through these servers in this order. So the mail server that actually sent the email is the first one, and if you were after that one for reasons, you can focus on that.
 
-
 ## Automated Tracing
-
 
 Although it’s good or maybe essential for a hacker to know how to manually trace an email, you don’t have to do it every time. There are many tools in the Internet that automate this process. You just have to paste the email header in those tools and they will trace the route of it. Just search email header analyser in Google and you’ll get a lot of tools like this. There’s one made by Google itself, you can get it [here](https://toolbox.googleapps.com/apps/messageheader/). Happy hacking!

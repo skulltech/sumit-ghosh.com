@@ -1,12 +1,12 @@
 ---
-date: 'Thu Jan 03 2019 22:28:00 GMT+0530 (India Standard Time)'
+date: "Thu Jan 03 2019 22:28:00 GMT+0530 (India Standard Time)"
 title: Demystifying Context Managers in Python
 tags:
   - python
   - programming
   - guest-post
-canonical_url: 'https://stackabuse.com/python-context-managers/'
-remote_blog: 'stackabuse.com'
+canonical_url: "https://stackabuse.com/python-context-managers/"
+remote_blog: "stackabuse.com"
 ---
 
 ### Introduction
@@ -15,7 +15,7 @@ One of the "obscure" features of Python that almost all Python programmers use�
 
 ### Motivation: Resource management
 
-As someone much wiser than me said someday, "Necessity is the mother of invention”. To really understand what a context manager is and how can we use it, we must first investigate the motivations behind it — the necessities that gave rise to this "invention". 
+As someone much wiser than me said someday, "Necessity is the mother of invention”. To really understand what a context manager is and how can we use it, we must first investigate the motivations behind it — the necessities that gave rise to this "invention".
 
 The primary motivation behind context managers is resource management. When a program wants to get access to a resource on the computer, it asks the OS for it, and the OS, in turn, provides it with a handle for that resource. Some common examples of such resources are files and network ports. What's important to understand is that these resources have limited availability, for example, a network port can be used by a single process at a time, and there are a limited number of ports available. So whenever we _open_ a resource, we have to remember to _close_ it, so that the resource is freed. But unfortunately, it's easier said than done.
 
@@ -28,9 +28,9 @@ text = opened_file.read()
 opened_file.close()
 ```
 
-Here we are opening a file named `readme.txt`, reading the file and saving its contents in a string `text`, and then when we're done with it, closing the file by calling the `.close()` method of the file object. Now at first glance this might seem okay, but actually, it's not robust at all. If _anything_ unexpected happens between opening the file and closing the file and the program fails to execute the line containing the `close` statement, there would be a resource leak. These _unexpected events_ are what we call `exceptions`, a common one would be when someone forcefully closes the program while it's executing. 
+Here we are opening a file named `readme.txt`, reading the file and saving its contents in a string `text`, and then when we're done with it, closing the file by calling the `.close()` method of the file object. Now at first glance this might seem okay, but actually, it's not robust at all. If _anything_ unexpected happens between opening the file and closing the file and the program fails to execute the line containing the `close` statement, there would be a resource leak. These _unexpected events_ are what we call `exceptions`, a common one would be when someone forcefully closes the program while it's executing.
 
-Now, the proper way to handle this would be using _Exception handling_, using  `try...finally` blocks. Look at the following example, 
+Now, the proper way to handle this would be using _Exception handling_, using `try...finally` blocks. Look at the following example,
 
 ```python
 try:
@@ -47,15 +47,15 @@ Python always makes sure the code in the `finally` block is executed, regardless
 
 Now that we are done with the most crucial part about understanding context managers, we can jump into implementing them. For this tutorial, we will implement a custom `File` class. It’s totally redundant as Python already provides this, but nevertheless, it’ll be a good learning exercise as we’ll always be able to relate back to the `File` class that’s already there in the standard library.
 
-The standard and “lower-level” way of implementing a context manager is defining two “magic” methods in the class you want to implement resource management for, `__enter__` and `__exit__`.  If you’re getting lost—thinking, “what’s this magic method thingy? I’ve never heard of this before”—well, if you’ve started doing object-oriented programming in Python, you surely have encountered a magic method already, the method `__init__`. For lack of better words, they're special methods that you can define to make your classes smarter or add "magic" to them. You can find a nice reference list of all the magic methods available in Python [here](https://rszalski.github.io/magicmethods/).
+The standard and “lower-level” way of implementing a context manager is defining two “magic” methods in the class you want to implement resource management for, `__enter__` and `__exit__`. If you’re getting lost—thinking, “what’s this magic method thingy? I’ve never heard of this before”—well, if you’ve started doing object-oriented programming in Python, you surely have encountered a magic method already, the method `__init__`. For lack of better words, they're special methods that you can define to make your classes smarter or add "magic" to them. You can find a nice reference list of all the magic methods available in Python [here](https://rszalski.github.io/magicmethods/).
 
-Anyway, getting back to the topic, before we start implementing these two magic methods, we’ll have to understand their purpose. `__enter__` is the method that gets called when we open the resource, or to put it in a slightly more technical way — when we “enter” the _runtime context_.  The `with`statement will bind this method’s return value to the target specified in the `as` clause of the statement. Let’s look at an example,
+Anyway, getting back to the topic, before we start implementing these two magic methods, we’ll have to understand their purpose. `__enter__` is the method that gets called when we open the resource, or to put it in a slightly more technical way — when we “enter” the _runtime context_. The `with`statement will bind this method’s return value to the target specified in the `as` clause of the statement. Let’s look at an example,
 
 ```python
 class FileManager:
     def __init__(self, filename):
         self.filename = filename
-        
+
     def __enter__(self):
         self.opened_file = open(self.filename)
         return self.opened_file
@@ -84,11 +84,11 @@ Now, whenever the instances of this class will be used in a `with` statement, th
 class FileManager:
     def __init__(self, filename):
         self.filename = filename
-        
+
     def __enter__(self):
         self.opened_file = open(self.filename)
         return self.opened_file
-    
+
     def __exit__(self, *exc):
         self.opened_file.close()
 ```
@@ -125,11 +125,11 @@ with open_file('readme.txt') as managed_file:
 You can see that the key thing to remember is,
 
 1.  The object passed to the `with` statement must have `__enter__` and `__exit__` methods.
-2. The `__enter__` method must return the resource that’s to be used in the `with` block.
+2.  The `__enter__` method must return the resource that’s to be used in the `with` block.
 
-__Important__ — There are some subtleties I left out, to make the discussion to-the-point. For the exact specifications of these magic methods, refer to the Python documentation [here](https://docs.python.org/3/library/stdtypes.html#context-manager-types).
+**Important** — There are some subtleties I left out, to make the discussion to-the-point. For the exact specifications of these magic methods, refer to the Python documentation [here](https://docs.python.org/3/library/stdtypes.html#context-manager-types).
 
-### Using contextlib 
+### Using contextlib
 
 The [Zen of Python](https://www.python.org/dev/peps/pep-0020/)—Python’s guiding principle as a list of aphorisms—states that,
 

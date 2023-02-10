@@ -6,19 +6,21 @@ title: Archive
 
 {%- assign tags = "" | split: "" -%}
 {%- for post in site.posts -%}
-	{%- for tag in post.tags -%}
-		{%- unless tags contains tag -%}
-			{%- assign tags = tags | push: tag -%}
-		{%- endunless -%}
-	{%- endfor -%}
+  {%- for tag in post.tags -%}
+    {%- unless tags contains tag -%}
+      {%- assign tags = tags | push: tag -%}
+    {%- endunless -%}
+  {%- endfor -%}
 {%- endfor -%}
 {%- assign tags = tags | sort -%}
 
 <h2>All tags</h2>
 <ul class="archive-list">
-{%- for tag in tags -%}
-	<li><a href="/archive/tag/{{ tag }}">{{ tag }}</a></li>
-{%- endfor -%}
+  {%- for tag in tags -%}
+    <li>
+      <a href="/archive/tag/{{ tag }}">{{ tag }}</a>
+    </li>
+  {%- endfor -%}
 </ul>
 
 <h2>All posts</h2>

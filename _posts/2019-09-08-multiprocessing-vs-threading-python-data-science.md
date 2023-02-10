@@ -1,13 +1,13 @@
 ---
-date: 'Sun Sep 08 2019 03:50:00 GMT+0530 (India Standard Time)'
-title: 'Multiprocessing vs. Threading in Python: What Every Data Scientist Needs to Know'
+date: "Sun Sep 08 2019 03:50:00 GMT+0530 (India Standard Time)"
+title: "Multiprocessing vs. Threading in Python: What Every Data Scientist Needs to Know"
 showcase: true
 tags:
   - python
   - os
   - guest-post
-canonical_url: 'https://blog.floydhub.com/multiprocessing-vs-threading-in-python-what-every-data-scientist-needs-to-know/'
-remote_blog: 'floydhub.com'
+canonical_url: "https://blog.floydhub.com/multiprocessing-vs-threading-in-python-what-every-data-scientist-needs-to-know/"
+remote_blog: "floydhub.com"
 ---
 
 Sooner or later, every data science project faces an inevitable challenge: speed. Working with larger data sets leads to slower processing thereof, so you'll eventually have to think about optimizing your algorithm's run time. As most of you already know, parallelization is a necessary step of this optimization. Python offers two built-in libraries for parallelization: multiprocessing and threading. In this article, we'll explore how data scientists can go about choosing between the two and which factors should be kept in mind while doing so.
@@ -32,12 +32,11 @@ A process is an instance of a computer program being executed. Each process has 
 
 Threads are components of a process, which can run parallely. There can be multiple threads in a process, and they share the same memory space, i.e. the memory space of the parent process. This would mean the code to be executed as well as all the variables declared in the program would be shared by all threads.
 
-
-![Process and Threads](<https://upload.wikimedia.org/wikipedia/commons/a/a5/Multithreaded_process.svg>)
+![Process and Threads](https://upload.wikimedia.org/wikipedia/commons/a/a5/Multithreaded_process.svg)
 
 Process and Threads, By I, <a href="//commons.wikimedia.org/wiki/User:Cburnett" title="User:Cburnett">Cburnett</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=2233446">Link</a>
 
-For example, let us consider the programs being run on your computer right now. You’re  probably reading this article in a browser, which probably has multiple tabs open. You might also be listening to music through the Spotify desktop app at the same time. The browser and the Spotify application are different processes; each of them can use multiple processes or threads to achieve parallelism. Different tabs in your browser might be run in different threads. Spotify can play music in one thread, download music from the internet in another, and use a third to display the GUI. This would be called multithreading. The same can be done with multiprocessing—multiple processes—too. In fact, most modern browsers like Chrome and Firefox use multiprocessing, not multithreading, to handle multiple tabs.
+For example, let us consider the programs being run on your computer right now. You’re probably reading this article in a browser, which probably has multiple tabs open. You might also be listening to music through the Spotify desktop app at the same time. The browser and the Spotify application are different processes; each of them can use multiple processes or threads to achieve parallelism. Different tabs in your browser might be run in different threads. Spotify can play music in one thread, download music from the internet in another, and use a third to display the GUI. This would be called multithreading. The same can be done with multiprocessing—multiple processes—too. In fact, most modern browsers like Chrome and Firefox use multiprocessing, not multithreading, to handle multiple tabs.
 
 ### Technical details
 
@@ -49,30 +48,28 @@ For example, let us consider the programs being run on your computer right now. 
 
 ### Pitfalls of Parallel Computing
 
-Introducing parallelism to a program is not always a positive-sum game; there are some pitfalls to  be aware of. The most important ones are as follows.
+Introducing parallelism to a program is not always a positive-sum game; there are some pitfalls to be aware of. The most important ones are as follows.
 
-- __Race Condition__: As we already discussed, threads have a shared memory space, and therefore they can have access to shared variables. A race condition occurs when multiple threads try to change the same variable simultaneously. The thread scheduler can arbitrarily swap between threads, so we have no way of knowing the order in which the threads will try to change the data. This can result in incorrect behavior in either of the threads, particularly if the threads decide to do something based on the value of the variable. To prevent this from happening, a mutual exclusion (or mutex) _lock_ can be placed around the piece of the code that modifies the variable so that only one thread can write to the variable at a time.
-- __Starvation__: Starvation occurs when a thread is denied access to a particular resource for longer periods of time, and as a result, the overall program slows down. This can happen as an unintended side effect of a poorly designed thread-scheduling algorithm.
-- __Deadlock__: Overusing mutex locks also has a downside - it can introduce deadlocks in the program. A deadlock is a state when a thread is waiting for another thread to release a lock, but that other thread needs a resource to finish that the first thread is holding onto. This way, both of the threads come to a standstill and the program halts. Deadlock can be thought of as an extreme case of starvation. To avoid this, we have to be careful not to introduce too many locks that are interdependent.
-- __Livelock__ : Livelock is when threads keep running in a loop but don’t make any progress. This also arises out of poor design and improper use of mutex locks. 
-
+- **Race Condition**: As we already discussed, threads have a shared memory space, and therefore they can have access to shared variables. A race condition occurs when multiple threads try to change the same variable simultaneously. The thread scheduler can arbitrarily swap between threads, so we have no way of knowing the order in which the threads will try to change the data. This can result in incorrect behavior in either of the threads, particularly if the threads decide to do something based on the value of the variable. To prevent this from happening, a mutual exclusion (or mutex) _lock_ can be placed around the piece of the code that modifies the variable so that only one thread can write to the variable at a time.
+- **Starvation**: Starvation occurs when a thread is denied access to a particular resource for longer periods of time, and as a result, the overall program slows down. This can happen as an unintended side effect of a poorly designed thread-scheduling algorithm.
+- **Deadlock**: Overusing mutex locks also has a downside - it can introduce deadlocks in the program. A deadlock is a state when a thread is waiting for another thread to release a lock, but that other thread needs a resource to finish that the first thread is holding onto. This way, both of the threads come to a standstill and the program halts. Deadlock can be thought of as an extreme case of starvation. To avoid this, we have to be careful not to introduce too many locks that are interdependent.
+- **Livelock** : Livelock is when threads keep running in a loop but don’t make any progress. This also arises out of poor design and improper use of mutex locks.
 
 ## Multiprocessing and Threading in Python
 
 ### The Global Interpreter Lock
 
-When it comes to Python, there are some oddities to keep in mind. We know that threads share the same memory space, so special precautions must be taken so that two threads don’t write to the same memory location. The CPython interpreter handles this using a mechanism called `GIL`, or the Global Interpreter Lock. 
+When it comes to Python, there are some oddities to keep in mind. We know that threads share the same memory space, so special precautions must be taken so that two threads don’t write to the same memory location. The CPython interpreter handles this using a mechanism called `GIL`, or the Global Interpreter Lock.
 
-From the Python [wiki](https://wiki.python.org/moin/GlobalInterpreterLock): 
+From the Python [wiki](https://wiki.python.org/moin/GlobalInterpreterLock):
 
-> In CPython, the **global interpreter lock**, or **GIL**, is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once. This lock is necessary mainly because CPython's memory management is not thread-safe. 
+> In CPython, the **global interpreter lock**, or **GIL**, is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once. This lock is necessary mainly because CPython's memory management is not thread-safe.
 
 Check the slides [here](https://www.dabeaz.com/python/UnderstandingGIL.pdf) for a more detailed look at the Python `GIL`.
 
-The `GIL` gets its job done, but at a cost. It effectively serializes the instructions at the interpreter level. How this works is as follows: for any thread to perform any function, it must acquire a global lock. Only a single thread can acquire that lock at a time, which means __the interpreter ultimately runs the instructions serially__. This design makes memory management thread-safe, but as a consequence, it can’t utilize multiple CPU cores at all. In single-core CPUs, which is what the designers had in mind while developing CPython, it’s not much of a problem. But this global lock ends up being a bottleneck if you’re using multi-core CPUs. 
+The `GIL` gets its job done, but at a cost. It effectively serializes the instructions at the interpreter level. How this works is as follows: for any thread to perform any function, it must acquire a global lock. Only a single thread can acquire that lock at a time, which means **the interpreter ultimately runs the instructions serially**. This design makes memory management thread-safe, but as a consequence, it can’t utilize multiple CPU cores at all. In single-core CPUs, which is what the designers had in mind while developing CPython, it’s not much of a problem. But this global lock ends up being a bottleneck if you’re using multi-core CPUs.
 
 This bottleneck, however, becomes irrelevant if your program has a more severe bottleneck elsewhere, for example in network, IO, or user interaction. In those cases, threading is an entirely effective method of parallelization. But for programs that are CPU bound, threading ends up making the program slower. Let's explore this with some example use cases.
-
 
 ### Use Cases for Threading
 
@@ -82,7 +79,7 @@ Another use case for threading is programs that are IO bound or network bound, s
 
 ### Use Cases for Multiprocessing
 
-Multiprocessing outshines threading in cases where the program is CPU intensive and doesn’t have to do any IO or user interaction. For example, any program that just crunches numbers will see a massive speedup from multiprocessing; in fact, threading will probably slow it down. An interesting real world example is [Pytorch Dataloader](https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader), which uses multiple subprocesses to load the data into GPU. 
+Multiprocessing outshines threading in cases where the program is CPU intensive and doesn’t have to do any IO or user interaction. For example, any program that just crunches numbers will see a massive speedup from multiprocessing; in fact, threading will probably slow it down. An interesting real world example is [Pytorch Dataloader](https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader), which uses multiple subprocesses to load the data into GPU.
 
 ### Parallelization in Python, in Action
 
@@ -98,7 +95,7 @@ def func(number):
     random_list = random.sample(range(1000000), number)
     return reduce(lambda x, y: x*y, random_list)
 
-    
+
 number = 50000
 thread1 = threading.Thread(target=func, args=(number,))
 thread2 = threading.Thread(target=func, args=(number,))
@@ -110,7 +107,7 @@ thread1.join()
 thread2.join()
 ```
 
-You can see that I've created a function `func` that creates a list of random numbers and then multiplies all the elements of it sequentially. This can be a fairly heavy process if the number of items is large enough, say 50k or 100k. 
+You can see that I've created a function `func` that creates a list of random numbers and then multiplies all the elements of it sequentially. This can be a fairly heavy process if the number of items is large enough, say 50k or 100k.
 
 Then, I’ve created two threads that will execute the same function. The thread objects have a `start` method that starts the thread asynchronously. If we want to wait for them to terminate and return, we have to call the `join` method, and that’s what we have done above.
 
@@ -126,7 +123,7 @@ def func(number):
     random_list = random.sample(range(1000000), number)
     return reduce(lambda x, y: x*y, random_list)
 
-    
+
 number = 50000
 process1 = multiprocessing.Process(target=func, args=(number,))
 process2 = multiprocessing.Process(target=func, args=(number,))
@@ -177,7 +174,7 @@ Now there are a few things to note from these two charts:
 
 # Differences, Merits and Drawbacks
 
-- Threads run in the same memory space; processes have separate memory. 
+- Threads run in the same memory space; processes have separate memory.
 
 - Following from the previous point: sharing objects between threads is easier, but the flip side of the coin is that you have to take extra measure for object synchronization to make sure that two threads don’t write to the same object at the same time and that a race condition does not occur.
 
@@ -187,7 +184,7 @@ Now there are a few things to note from these two charts:
 
 - Due to limitations put in place by the GIL in Python, threads can’t achieve _true_ parallelism utilizing multiple CPU cores. Multiprocessing does not have any such restrictions.
 
-- Process [scheduling](https://en.wikipedia.org/wiki/Scheduling_(computing)) is handled by the OS, whereas thread scheduling is done by the Python interpreter.
+- Process [scheduling](<https://en.wikipedia.org/wiki/Scheduling_(computing)>) is handled by the OS, whereas thread scheduling is done by the Python interpreter.
 
 - Child processes are interruptible and killable, whereas child threads are not. You have to wait for the threads to terminate or `join`.
 
@@ -205,13 +202,13 @@ A typical data processing pipeline can be divided into the following steps:
 2. Doing computation, using either CPU or GPU
 3. Storing the mined information in a database or disk.
 
-Let’s explore how we could introduce parallelism in these tasks so that they can be sped up. 
+Let’s explore how we could introduce parallelism in these tasks so that they can be sped up.
 
 Step 1 involves reading data from disk, so clearly disk IO is going to be the bottleneck for this step. As we’ve discussed, threads are the best option for parallelizing this kind of operation. Similarly, step 3 is also an ideal candidate for the introduction of threading.
 
 However, step 2 consists of computations that involve the CPU or a GPU. If it’s a CPU based task, using threading will be of no use; instead, we have to go for multiprocessing. Only then we’ll be able to exploit the multiple cores of the CPU and achieve parallelism. If it’s a GPU based task, since GPU already implements a massively parallelized architecture at the hardware level, using the correct interface (libraries and drivers) to interact with the GPU should take care of the rest.
 
-Now you may be thinking, “My data pipeline looks a bit different to this; I have some tasks that don’t really fit into this general framework.” Still, you should be able to observe the methodology used here  to decide between threading and multiprocessing. The factors you should consider are:
+Now you may be thinking, “My data pipeline looks a bit different to this; I have some tasks that don’t really fit into this general framework.” Still, you should be able to observe the methodology used here to decide between threading and multiprocessing. The factors you should consider are:
 
 - Whether your task has any form of IO
 - Whether IO is the bottleneck of your program
@@ -225,7 +222,7 @@ Now we’ll look at two example scenarios a data scientist might face and how yo
 
 Let’s say you want to analyze all the emails in the inbox of your own home-grown startup and understand the trends: who are the most frequent senders, what are the most common keywords appearing in the emails, which day of the week or which hour of the day do you receive most emails, and so on. The first step of this project would be, of course, downloading the emails to your computer.
 
-At first, let’s do it sequentially without using any parallelization. The code to use is  below and it should be pretty self-explanatory. There is a function `download_emails` which takes a list of email ids as input and downloads them sequentially. This calls this function with a list of ids of 100 email at once.
+At first, let’s do it sequentially without using any parallelization. The code to use is below and it should be pretty self-explanatory. There is a function `download_emails` which takes a list of email ids as input and downloads them sequentially. This calls this function with a list of ids of 100 email at once.
 
 ```python
 import imaplib
@@ -246,7 +243,7 @@ def download_emails(ids):
             f.write(data[0][1])
     client.close()
     print(f'Downloaded {len(ids)} mails!')
-    
+
 start = time.time()
 
 client = imaplib.IMAP4_SSL(IMAP_SERVER)
@@ -287,7 +284,7 @@ def download_emails(ids):
             f.write(data[0][1])
     client.close()
     print(f'Downloaded {len(ids)} mails!')
-    
+
 start = time.time()
 
 client = imaplib.IMAP4_SSL(IMAP_SERVER)
@@ -337,7 +334,7 @@ print('Time:', time.time()-start)
 
 Time taken :: `34.17733192443848` seconds.
 
-Now we’ll look into how we can reduce the running time of this algorithm. We know that this algorithm can be parallelized to some extent, but what kind of parallelization would be suitable? It does not have any IO bottleneck; on the contrary, it’s a very CPU intensive task. So multiprocessing would be the logical choice. 
+Now we’ll look into how we can reduce the running time of this algorithm. We know that this algorithm can be parallelized to some extent, but what kind of parallelization would be suitable? It does not have any IO bottleneck; on the contrary, it’s a very CPU intensive task. So multiprocessing would be the logical choice.
 
 Fortunately, `sklearn` has already implemented multiprocessing into this algorithm and we won’t have to write it from scratch. As you can see in the code below, we just have to provide a parameter `n_jobs`—the number of processes it should use—to enable multiprocessing.
 
@@ -358,11 +355,9 @@ Time taken :: `14.576200723648071` seconds.
 
 As expected, multiprocessing made it quite a bit faster.
 
-
 # Conclusion
 
-Most if not all data science projects will see a massive increase in speed with parallel computing. In fact, many of the popular data science libraries already have parallelism built into them, _you just have to enable it_. So before trying to implement it on your own, look through the documentation of the library you’re using and check if it supports parallelism. In case it doesn’t, this article should assist you in implementing it on your own. 
-
+Most if not all data science projects will see a massive increase in speed with parallel computing. In fact, many of the popular data science libraries already have parallelism built into them, _you just have to enable it_. So before trying to implement it on your own, look through the documentation of the library you’re using and check if it supports parallelism. In case it doesn’t, this article should assist you in implementing it on your own.
 
 # About the Author
 

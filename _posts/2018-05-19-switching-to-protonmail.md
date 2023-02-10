@@ -1,5 +1,5 @@
 ---
-date: 'Sat May 19 2018 17:10:00 GMT+0530 (India Standard Time)'
+date: "Sat May 19 2018 17:10:00 GMT+0530 (India Standard Time)"
 title: Switching to ProtonMail
 tags:
   - hacking
@@ -12,7 +12,7 @@ By now, it is well-known that for many of the _free_ products we use on the inte
 
 By the way, do watch that video. In a funny and casual way, it shows the real price we pay when we use these supposedly _free_ websites.
 
-Fortunately, we can get out of this system. in this post [_Global surveillance disclosures_](https://en.wikipedia.org/wiki/Global_surveillance_disclosures_(2013%E2%80%93present)) age, it’s high-time that we do so, starting with the products we use everyday. Free Internet activists around the world are working hard to help us in this aspect.
+Fortunately, we can get out of this system. in this post [_Global surveillance disclosures_](<https://en.wikipedia.org/wiki/Global_surveillance_disclosures_(2013%E2%80%93present)>) age, it’s high-time that we do so, starting with the products we use everyday. Free Internet activists around the world are working hard to help us in this aspect.
 
 ## Switching to ProtonMail
 
@@ -23,7 +23,7 @@ I had heard about ProtonMail a few times before, it sounded interesting, but I n
 - The ProtonMail clients do the encryption and decryption of the emails in the client app itself, all the servers receive are encrypted mails. This end-to-end encryption ensures total privacy of the conversations.
 
 - All datacenters are located in Switzerland, outside US and EU jurisdictions. From Wikipedia —
-    > Under Swiss law all surveillance requests from foreign countries must go through a Swiss court and are subject to international treaties. Prospective surveillance targets are notified and can appeal the request in court. 
+  > Under Swiss law all surveillance requests from foreign countries must go through a Swiss court and are subject to international treaties. Prospective surveillance targets are notified and can appeal the request in court.
 
 ### A Point about Resetting Password
 

@@ -1,6 +1,6 @@
 ---
-date: 'Fri May 06 2020 16:00:00 GMT+0530 (India Standard Time)'
-title: 'Using Uftrace to Trace Dynamic Library Calls'
+date: "Fri May 06 2020 16:00:00 GMT+0530 (India Standard Time)"
+title: "Using Uftrace to Trace Dynamic Library Calls"
 showcase: true
 tags:
   - linux
@@ -26,7 +26,7 @@ We’re gonna compile it with the `-z now` flag, which generates a binary withou
 
 ```console
 sumit@HAL9000:~$ gcc hello.c -o hello -Wl,-z,now
-sumit@HAL9000:~$ ltrace ./hello 
+sumit@HAL9000:~$ ltrace ./hello
 Hello world!
 +++ exited (status 0) +++
 ```
@@ -35,7 +35,7 @@ As expected, ltrace couldn’t trace any library call.
 
 ### Enter uftrace
 
-Installing uftrace is easy enough. Ubuntu has uftrace in the standard repositories, so a simple `apt install uftrace` worked for me. You can also build it from source by following the instructions in [the official repo](https://github.com/namhyung/uftrace). 
+Installing uftrace is easy enough. Ubuntu has uftrace in the standard repositories, so a simple `apt install uftrace` worked for me. You can also build it from source by following the instructions in [the official repo](https://github.com/namhyung/uftrace).
 
 Once you have it installed, use it the following way.
 
@@ -46,6 +46,6 @@ Hello world!
  187.291 us [ 40352] | puts("Hello world!") = 13;
 ```
 
-How amazing is that!! By the way, the `--force` flag is required for it to work on standard binaries that doesn’t have any debugging information embedded within, and the `-a` argument makes it detect arguments to the function calls it intercepts. 
+How amazing is that!! By the way, the `--force` flag is required for it to work on standard binaries that doesn’t have any debugging information embedded within, and the `-a` argument makes it detect arguments to the function calls it intercepts.
 
 Hope this short post was useful to you. I'll be back with a post on code injection using dynamic libraries soon, so keep posted.

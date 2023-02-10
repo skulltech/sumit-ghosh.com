@@ -5,7 +5,7 @@ author:
 description: Blog on computers, programming, and everything in between.
 timezone: Asia/Kolkata
 url: https://sumit-ghosh.com
-baseurl: ''
+baseurl: ""
 
 minima:
   social_links:
@@ -19,7 +19,7 @@ remote_theme: SkullTech/minima-improved
 
 include:
   - _redirects
-  
+
 header_pages:
   - archive.html
 
@@ -41,11 +41,11 @@ plugins:
   - jekyll-redirect-from
 
 jekyll-archives:
-  enabled: ['tags']
+  enabled: ["tags"]
   layout: archive
   permalinks:
-    tag: '/archive/tag/:name/'
+    tag: "/archive/tag/:name/"
 
 disqus:
-    shortname: sumit-ghosh-com
+  shortname: sumit-ghosh-com
 google_analytics: UA-107859389-1

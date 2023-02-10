@@ -1,5 +1,5 @@
 ---
-date: 'Tue Mar 03 2020 18:20:00 GMT+0530 (India Standard Time)'
+date: "Tue Mar 03 2020 18:20:00 GMT+0530 (India Standard Time)"
 title: "Accessing Linux Partitions from Windows through a VM and Samba"
 showcase: true
 tags:
@@ -11,9 +11,9 @@ tags:
 
 You must’ve faced the problem of accessing Linux partitions—such as ext4—from Windows if you’re running a dual boot setup. There are a few solutions to this ::
 
-- Using free third-party tools such as [ext2fsd](http://www.ext2fsd.com/). The drawback with this approach is that these tools are rarely updated, and potentially unstable. 
+- Using free third-party tools such as [ext2fsd](http://www.ext2fsd.com/). The drawback with this approach is that these tools are rarely updated, and potentially unstable.
 - Using [Linux File Systems for Windows](https://www.paragon-drivers.com/en/lfswin/#). I’ve read some very good reviews of this solution on Reddit and Stack overflow, and apparently it’s very stable… but it’s not free, so there’s that.
-- Running a Linux VM on Windows and using that as a bridge. This approach takes some effort to set-up, but once you’ve set it up, it’s very stable and painless. 
+- Running a Linux VM on Windows and using that as a bridge. This approach takes some effort to set-up, but once you’ve set it up, it’s very stable and painless.
 
 This article is going to be a pretty detailed tutorial on the third method. If you want a TLDR of the steps ::
 
@@ -24,7 +24,7 @@ This article is going to be a pretty detailed tutorial on the third method. If y
 
 Now that you have the TLDR, below are the steps in detail.
 
-__Note__ — In this article I’ve assumed that the Linux partition is an ext4 one. But this method is not limited to that, it can work with any file system as long as you can mount it on Linux. 
+**Note** — In this article I’ve assumed that the Linux partition is an ext4 one. But this method is not limited to that, it can work with any file system as long as you can mount it on Linux.
 
 ### Create a Linux VM on your Windows guest
 
@@ -37,7 +37,7 @@ As I said, I'll be using VMware Player as the hypervisor. While setting hardware
 - Select the ext4 partition you wanna share and click next.
 - Finish the wizard by entering a name for the virtual disk file—you can just go with the default—and clicking “Finish”.
 
-If you did these steps properly, you’d see a second hard disk added to your VM, other than your primary one. You can confirm that by running `lsblk`, like the following :: 
+If you did these steps properly, you’d see a second hard disk added to your VM, other than your primary one. You can confirm that by running `lsblk`, like the following ::
 
 ```console
 sumit@hal9001:~$ lsblk
@@ -63,7 +63,7 @@ For me, the ext4 partition to be shared is labelled as `sdb6`; note this down as
 
 ### Set up mountpoint
 
-Now we have to mount the partition on our Ubuntu Guest. We’re gonna add an entry to `/etc/fstab` so that it gets mounted automatically at the time of boot. 
+Now we have to mount the partition on our Ubuntu Guest. We’re gonna add an entry to `/etc/fstab` so that it gets mounted automatically at the time of boot.
 
 For that, you’ll have to create a mountpoint—which is nothing but a directory—where the ext4 partition will be mounted. I’ll be creating mine at `/media/mntsdb6`.
 
@@ -71,7 +71,7 @@ For that, you’ll have to create a mountpoint—which is nothing but a director
 sumit@hal9001:~$ sudo mkdir /media/mntsdb6
 ```
 
- Then add the following line to `/etc/fstab` using your favorite text editor ::
+Then add the following line to `/etc/fstab` using your favorite text editor ::
 
 ```
 /dev/sdb6 /media/mntsdb6 ext4 rw,nosuid,nodev,relatime 0 0
@@ -180,8 +180,6 @@ Now, once you have the IP of your Linux VM, go to your Windows host and do the f
 Once it’s added, it’ll ask you for credentials; enter the username and password you set up in the previous step using `smbpasswd`. And voila, you’ll get your samba drive mounted as a network location!!
 
 ![network-location-added](/images/posts/linux-vm-samba-network-location-added.png)
-
-
 
 ### Potential Drawbacks
 

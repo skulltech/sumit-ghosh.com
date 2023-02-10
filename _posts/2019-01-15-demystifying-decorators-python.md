@@ -1,5 +1,5 @@
 ---
-date: 'Mon Jan 15 2019 04:04:00 GMT+0530 (India Standard Time)'
+date: "Mon Jan 15 2019 04:04:00 GMT+0530 (India Standard Time)"
 title: Demystifying @decorators in Python
 showcase: true
 tags:
@@ -23,7 +23,7 @@ We all know what functions are, right? Don’t be so sure. There are some aspect
 
 ### Functions as procedures
 
-This is the facet of functions we are most familiar with. A procedure is defined as a  series of computational steps to be carried out. Any given procedure might be called at any point during a program's execution, including by other procedures or itself. There isn’t much else to it, so I’ll move on to the next aspect of functions in Python.
+This is the facet of functions we are most familiar with. A procedure is defined as a series of computational steps to be carried out. Any given procedure might be called at any point during a program's execution, including by other procedures or itself. There isn’t much else to it, so I’ll move on to the next aspect of functions in Python.
 
 ### Functions as first-class objects
 
@@ -51,7 +51,7 @@ There are some other properties of functional programming, such as its functions
 
 > Higher-order functions are functions that can take other functions as arguments or return them as results.
 
-If you know basic calculus, you know some higher-order _mathematical_ functions already, such as the differential operator $$ d/dx $$. It takes a function as input and returns another function, it’s derivative as output. Higher-order functions in a programming context work the same way, it either takes a function(s) as input or returns them as output, or both! 
+If you know basic calculus, you know some higher-order _mathematical_ functions already, such as the differential operator $$ d/dx $$. It takes a function as input and returns another function, it’s derivative as output. Higher-order functions in a programming context work the same way, it either takes a function(s) as input or returns them as output, or both!
 
 ### Some examples
 
@@ -62,7 +62,7 @@ def hello_world():
     print('Hello world!')
 ```
 
-Here’s an example function, the quintessential introductory function. You can see from the following snippet that this function, along with classes and integers—everything are objects, instances of _classes_, in Python. 
+Here’s an example function, the quintessential introductory function. You can see from the following snippet that this function, along with classes and integers—everything are objects, instances of _classes_, in Python.
 
 ```
 >>> def hello_world():
@@ -123,7 +123,7 @@ The examples above combined with what we discussed before should clear how funct
 
 Let’s reiterate the definition of a decorator
 
-> A decorator is a function that allows us to wrap another function in order to extend the behavior of the wrapped function, without permanently modifying it. 
+> A decorator is a function that allows us to wrap another function in order to extend the behavior of the wrapped function, without permanently modifying it.
 
 Now that we know how higher-order functions work, we can understand how decorators work. Let’s look at an example decorator first —
 
@@ -166,7 +166,7 @@ While this example may have been a “whoa” moment, the decorator wasn’t rea
 ```python
 def benchmark(func):
     import time
-    
+
     def wrapper():
         start = time.time()
         func()
@@ -182,7 +182,7 @@ def fetch_webpage():
 fetch_webpage()
 ```
 
-Here I’ve taken created a decorator that would measure the time taken by a function to execute. It’s a fairly useful decorator, I’ve used it on a function that `GET`s the homepage of Google. As you can see, I’ve saved the time before calling the wrapped function, and after calling the wrapped function, and by subtracting those two I got the time of execution. 
+Here I’ve taken created a decorator that would measure the time taken by a function to execute. It’s a fairly useful decorator, I’ve used it on a function that `GET`s the homepage of Google. As you can see, I’ve saved the time before calling the wrapped function, and after calling the wrapped function, and by subtracting those two I got the time of execution.
 
 On running the above I got the following output
 
@@ -199,7 +199,7 @@ In the examples we’ve looked at so far, the decorated functions were neither t
 ```python
 def benchmark(func):
     import time
-    
+
     def wrapper(*args, **kwargs):
         start = time.time()
         return_value = func(*args, **kwargs)
@@ -218,7 +218,7 @@ webpage = fetch_webpage('https://google.com')
 print(webpage)
 ```
 
- Of which the output is
+Of which the output is
 
 ```plaintext
 [*] Execution time: 1.4475083351135254 seconds.
@@ -235,7 +235,7 @@ We can also define decorators which take arguments. It’d be best to look at th
 def benchmark(iters):
     def actual_decorator(func):
         import time
-        
+
         def wrapper(*args, **kwargs):
             total = 0
             for i in range(iters):
@@ -317,14 +317,15 @@ This example is mostly for demonstration purposes though, in a real application 
 
 ## Conclusion
 
-I hope this post helped you understand the power of decorators, and also the “magic” behind it. If you have any questions, post it in the comments down below and I’ll try my best to get back to you.  
+I hope this post helped you understand the power of decorators, and also the “magic” behind it. If you have any questions, post it in the comments down below and I’ll try my best to get back to you.
 
 ## P.S.
 
 Some things I want to say here that are important but I left out in the article or didn’t make it clear enough. These may seem to go against what I said in the entire article, but actually they don't. I just didn't mention them at the start so that the reader doesn't get overwhelmed.
 
-- Decorators need not be functions, it can be any _callable_.  
-- Decorators need not return functions, they can return anything. But usually we want decorators to return the objects of the same type as of the decorated object. Thanks to /u/zardeh and /u/mafrasi2 at Reddit for pointing this out.        
+- Decorators need not be functions, it can be any _callable_.
+- Decorators need not return functions, they can return anything. But usually we want decorators to return the objects of the same type as of the decorated object. Thanks to /u/zardeh and /u/mafrasi2 at Reddit for pointing this out.
+
 ```python
 >>> def decorator(func):
 ...     return 'sumit'
@@ -336,10 +337,10 @@ Some things I want to say here that are important but I left out in the article 
 >>> hello_world
 'sumit'
 ```
-- Decorators also need not take only functions as input. Thanks to /u/hchasestevens at Reddit for pointing this out, check [this article](https://github.com/hchasestevens/hchasestevens.github.io/blob/master/notebooks/the-decorators-they-wont-tell-you-about.ipynb) out to learn more about it. 
+
+- Decorators also need not take only functions as input. Thanks to /u/hchasestevens at Reddit for pointing this out, check [this article](https://github.com/hchasestevens/hchasestevens.github.io/blob/master/notebooks/the-decorators-they-wont-tell-you-about.ipynb) out to learn more about it.
 - I've found that the need for decorators only becomes clear when you write a library. So if decorators still seem kind of useless to you, think of it from the POV of a library developer. A good example would be the view decorator in Flask.
 - When I said that decorators don't modify functions permanently, what I meant is that it can be easily removed and added with just one line.
 - You should look into [`functools.wraps`](https://docs.python.org/3.7/library/functools.html#functools.wraps) — it’s a helper function that helps you make a decorated function _look_ like the original function, doing things such as keeping the docstring of the original function. Thanks to /u/primordial_pouch and /u/Overload175 over at Reddit for pointing this out.
-
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>

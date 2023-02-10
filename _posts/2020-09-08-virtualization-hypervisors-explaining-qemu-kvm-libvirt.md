@@ -1,6 +1,6 @@
 ---
-date: 'Tue Sep 08 2020 15:00:00 GMT+0530 (India Standard Time)'
-title: 'Virtualization and Hypervisors :: Explaining QEMU, KVM, and Libvirt'
+date: "Tue Sep 08 2020 15:00:00 GMT+0530 (India Standard Time)"
+title: "Virtualization and Hypervisors :: Explaining QEMU, KVM, and Libvirt"
 showcase: true
 tags:
   - sysadmin
@@ -12,25 +12,25 @@ In this post, I will explore some core concepts and terminologies regarding virt
 
 ## Hypervisors
 
-Virtualization, i.e., creating and running virtual machines, is handled by something called a hypervisor, which can either be software, firmware or hardware. The system on which the hypervisor runs virtual machines is called the _host_ system, and the virtual machines themselves are called _guest_ systems.  The hypervisor manages and provides resources to the guest OS, and it translates system calls of the guest OS to suitable system calls or hardware interrupts in the host system.
+Virtualization, i.e., creating and running virtual machines, is handled by something called a hypervisor, which can either be software, firmware or hardware. The system on which the hypervisor runs virtual machines is called the _host_ system, and the virtual machines themselves are called _guest_ systems. The hypervisor manages and provides resources to the guest OS, and it translates system calls of the guest OS to suitable system calls or hardware interrupts in the host system.
 
 Hypervisors can be generally categorized into two types.
 
-1. __Type 1 hypervisor:__ These run on bare metal and typically leverage features of the CPU specifically built for virtualization, for example, AMD-V and Intel VT-x. Examples of type 1 hypervisor are:
+1. **Type 1 hypervisor:** These run on bare metal and typically leverage features of the CPU specifically built for virtualization, for example, AMD-V and Intel VT-x. Examples of type 1 hypervisor are:
+
    - KVM, which is a Linux kernel module and part of the official Linux kernel.
    - VMWare ESXi.
    - Microsoft Hyper-V.
 
-2. __Type 2 hypervisor:__ These run on top of a host OS, and thus it translates system calls made by the guest OS to system calls made to the host OS. Type 2 virtualization is also called _emulation_, to distinguish it from type 1 or _true_ virtualization. Examples include:
-	- QEMU.
-	- VMWare Workstation.
-	- VirtualBox.
+2. **Type 2 hypervisor:** These run on top of a host OS, and thus it translates system calls made by the guest OS to system calls made to the host OS. Type 2 virtualization is also called _emulation_, to distinguish it from type 1 or _true_ virtualization. Examples include:
+   - QEMU.
+   - VMWare Workstation.
+   - VirtualBox.
 
 ### Differences: Advantages and Drawbacks
 
 - In general, type 1 hypervisors are a lot faster than type 2 hypervisor.
 - Type 1 hypervisors can only emulate the same architecture as of the host CPU. For example, it can only create VMs with x86 architecture if the machine has an x86 CPU. Type 2 hypervisors, on the other hand, emulate any and all architectures regardless of the host CPU, at least in theory.
-
 
 ## QEMU and KVM
 
@@ -46,18 +46,18 @@ QEMU can use KVM to translate the calls made to the CPU and the memory, thus tur
 
 Libvirt is an open-source set of software and libraries which provide a single way to manage multiple different hypervisors, such as the QEMU, KVM, Xen, LXC, OpenVZ, VMWare ESXi, etc. It consists of a stable C API, a daemon, and command-line utilities to work with the Libvirt API. The [Arch wiki page on Libvirt](https://wiki.archlinux.org/index.php/libvirt) has much useful information, keep in mind that the packages and commands may not correspond well with other Linux distributions.
 
-
 ### Installing Libvirt with QEMU-KVM
 
 The following `apt` packages are essential for creating and managing virtual machines using Libvirt with QEMU-KVM in an Ubuntu system.
 
 - `libvirt-daemon-system`: The complete Libvirt distribution, i.e., the C libraries and the Libvirt daemon `libvirtd`. It also installs the following helper packages
-	- `libvirt-clients`, which is a collection of CLI utilities to interface with the Libvirt daemon.
-	- `bridge-utils` for networking.
-	- `qemu-kvm` as the default hypervisor.
+  - `libvirt-clients`, which is a collection of CLI utilities to interface with the Libvirt daemon.
+  - `bridge-utils` for networking.
+  - `qemu-kvm` as the default hypervisor.
 - `virtinst`: For some helper utils such as `virt-install` and `virt-viewer`.
 
 Running the following command would install the above
+
 ```console
 $ sudo apt install libvirt-daemon-system virtinst
 ```
@@ -79,15 +79,15 @@ Now that we have installed Libvirt with QEMU and KVM, I will show how we can cre
 
    ```console
    sumit@HAL9000:~/Coding$ virt-install --name=vm1 --ram=2048 --vcpus=1 --disk path=vol.raw --cdrom=/home/sumit/Downloads/ubuntu-budgie-18.04.3-desktop-i386.iso --os-variant ubuntu18.04 --network bridge=virbr0,model=virtio
-   
+
    Starting install...
-   
+
    ```
 
    The CLI parameters are mostly self-explanatory.
 
    - The VM name is set to be _vm1_ using the `name` parameter.
-   -  The VM is allocated 2 GB of RAM using the `ram` parameter and a single-core virtual CPU using the `vcpus` parameter.
+   - The VM is allocated 2 GB of RAM using the `ram` parameter and a single-core virtual CPU using the `vcpus` parameter.
    - The disk image and installation image is supplied using the `disk` and `cdrom` parameters.
    - Mentioning the `os-variant` helps it make some OS-specific optimizations.
    - Finally, we have to mention a network interface using the `network` parameter so that the VM has network connectivity. Using a bridge network interface is the simplest networking model we can have, and that’s what we went with.
@@ -98,7 +98,7 @@ Once you run the `virt-install` command like above, a `virt-viewer` window shoul
 $ virt-viewer vm1
 ```
 
-  Shutting down, starting, and rebooting is very easy too!
+Shutting down, starting, and rebooting is very easy too!
 
 ```console
 $ virsh shutdown vm1
@@ -128,4 +128,4 @@ When we consider KVM by itself, it's not strictly a type 1 hypervisor either, as
 
 > You might want to explain why we'd want to use QEMU on top of KVM. I understand why having QEMU use KVM speeds up certain system calls, but it's not clear to me why I want QEMU in this set up.
 
-KVM provides access to the virtualisation extensions available on x86 systems using an API. Using KVM without QEMU is certainly possible, but you'll need to [deal with the KVM API at extremely low-level](https://lwn.net/Articles/658511/).  QEMU provides gives a stable interface in the form of a set of binaries to interact with KVM, and set of helper components (such as the [virtio](https://www.linux-kvm.org/page/Virtio) interface) so that full-fledged virtual machines can be built easily. The two projects are developed together; in the real world it's unlikely to see KVM without QEMU, because that’s the way the developers want you to use them.
+KVM provides access to the virtualisation extensions available on x86 systems using an API. Using KVM without QEMU is certainly possible, but you'll need to [deal with the KVM API at extremely low-level](https://lwn.net/Articles/658511/). QEMU provides gives a stable interface in the form of a set of binaries to interact with KVM, and set of helper components (such as the [virtio](https://www.linux-kvm.org/page/Virtio) interface) so that full-fledged virtual machines can be built easily. The two projects are developed together; in the real world it's unlikely to see KVM without QEMU, because that’s the way the developers want you to use them.

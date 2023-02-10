@@ -1,5 +1,5 @@
 ---
-date: 'Sat Dec 31 2016 21:03:12 GMT+0530 (India Standard Time)'
+date: "Sat Dec 31 2016 21:03:12 GMT+0530 (India Standard Time)"
 title: Ethical Hacking and The Hacker Culture
 tags:
   - hacking
@@ -10,7 +10,6 @@ Nowadays most of us have heard the term Ethical Hacker due to _hacktivist_ group
 ## Definition
 
 Formally Ethical Hacking may be defined as the practice of systematically attempting to break into or penetrate for the purpose of locating weaknesses and vulnerabilities of the computer system by duplicating the actions of malicious black-hat hackers. Actually, what I just said defines _Penetration Testing_, to be precise _Ethical Hacking_ is a term coined by IBM meant to imply a broader category than just penetration testing. Ethical hackers do this _penetration testing_ on the request of or by being employed by the owner of the computer system so that he can fix these weaknesses and make the system more secure.
-
 
 ## Philosophy
 

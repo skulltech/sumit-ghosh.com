@@ -1,5 +1,5 @@
 ---
-date: 'Wed Feb 07 2018 22:25:00 GMT+0530 (India Standard Time)'
+date: "Wed Feb 07 2018 22:25:00 GMT+0530 (India Standard Time)"
 title: Downloading File With Progress Bar in Python
 tags:
   - python
@@ -30,7 +30,7 @@ def download(url, filename):
                 sys.stdout.write('\r[{}{}]'.format('█' * done, '.' * (50-done)))
                 sys.stdout.flush()
     sys.stdout.write('\n')
-    
+
 ```
 
 Here's a little demo of it in action —
@@ -53,4 +53,3 @@ print('[*] Done!')
 ```
 
 Pretty neat right? Hope this comes in useful for you. Till next time.
-
