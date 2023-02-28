@@ -1,11 +1,6 @@
 ---
-date: "Tue Sep 08 2020 15:00:00 GMT+0530 (India Standard Time)"
 title: "Virtualization and Hypervisors :: Explaining QEMU, KVM, and Libvirt"
-showcase: true
-tags:
-  - sysadmin
-  - linux
-  - virtualization
+date: Sep 08 2020
 ---
 
 In this post, I will explore some core concepts and terminologies regarding virtualization in Linux systems. I intend it to serve as a reference, especially for beginners who are just getting started with virtualization and system administration in general.

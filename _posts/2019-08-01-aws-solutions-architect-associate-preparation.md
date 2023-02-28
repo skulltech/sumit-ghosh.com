@@ -1,8 +1,6 @@
 ---
-date: "Thu Aug 01 2019 17:30:00 GMT+0530 (India Standard Time)"
-title: "My Preparation Strategy for AWS Solutions Architect Associate Exam"
-tags:
-  - aws
+title: My Preparation Strategy for AWS Solutions Architect Associate Exam
+date: Aug 01 2019
 ---
 
 I just cleared the AWS solutions architect associate exam—secured 973 marks in a scale of 100 to 1000—and I want to share my preparation strategy for anyone that might benefit from it.

@@ -1,11 +1,6 @@
 ---
-date: "Fri Mar 29 2020 15:00:00 GMT+0530 (India Standard Time)"
 title: "Selfhosted Knowledge Base :: Dokuwiki Setup on an Ubuntu Server"
-showcase: false
-tags:
-  - sysadmin
-  - linux
-  - selfhosted
+date: Mar 29 2020
 ---
 
 ### Install requirements

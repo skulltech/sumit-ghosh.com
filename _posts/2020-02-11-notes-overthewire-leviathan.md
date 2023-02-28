@@ -1,11 +1,6 @@
 ---
-date: "Wed Feb 11 2020 13:24:00 GMT+0530 (India Standard Time)"
 title: Notes from Overthewire Leviathan
-showcase: false
-tags:
-  - hacking
-  - wargames
-  - ctf
+date: Feb 11 2020
 ---
 
 Recently I was free for a couple of days with nothing to do, leading to an itch to do some hacking: Ctfs, wargames and the like. For beginners, the Internet heartily recommends the [Overthewire](https://overthewire.org/wargames/) wargames, so I went for that. I had already done the [_Bandit_](https://overthewire.org/wargames/bandit/) wargame—you can find my notes [here](https://sumit-ghosh.com/articles/notes-overthewire-bandit/)—so this time I started with [Leviathan](https://overthewire.org/wargames/leviathan/). In this post I'll dump my notes; these are not exactly solutions or walkthroughs, or writeup even, rather a list of things// concepts I learned by doing this wargame that I'd like to remember. Hoping this will be of some help!

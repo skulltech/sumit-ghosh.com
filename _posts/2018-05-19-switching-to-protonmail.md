@@ -1,9 +1,6 @@
 ---
-date: "Sat May 19 2018 17:10:00 GMT+0530 (India Standard Time)"
 title: Switching to ProtonMail
-tags:
-  - hacking
-  - email
+date: May 19 2018
 ---
 
 By now, it is well-known that for many of the _free_ products we use on the internet, such as Facebook and Google, we are paying with our identity. Hoping to get a free product, we are becoming the product. As Adam Conover puts it in [this video](https://www.youtube.com/watch?v=5pFX2P7JLwA) —

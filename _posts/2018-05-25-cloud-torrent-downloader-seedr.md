@@ -1,9 +1,6 @@
 ---
-date: "Fri May 25 2018 00:48:20 GMT+0530 (India Standard Time)"
 title: Seedr. The Cloud Torrent Downloader.
-tags:
-  - cloud
-  - bittorrent
+date: May 25 2018
 ---
 
 If you are a netizen like me and obsessed with torrenting stuff, then you may have already come across _cloud torrent downloaders_. These are sites which help you download torrents through your browser over HTTP. The way it works is, the website downloads the torrent to their server (or the _cloud_, as some would like to call it), and then lets you download it from their server to your computer. That way, you don't have to torrent it directly yourself. Basically, the website acts as middleman.

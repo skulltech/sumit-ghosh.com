@@ -1,11 +1,6 @@
 ---
-date: "Wed Feb 13 2019 00:20:00 GMT+0530 (India Standard Time)"
 title: Notes from Overthewire Bandit
-showcase: false
-tags:
-  - hacking
-  - wargames
-  - ctf
+date: Feb 13 2019
 ---
 
 I solved the [Bandit](http://overthewire.org/wargames/bandit/) wargame by Overthewire over the last few days, and noted down anything new // interesting I learned. This is not a writeup in any way, you’re not likely to find solutions to specific questions here. This is more like study notes, mostly for me to come back to it later. That being said, I’m hoping it’ll help you in some way too.

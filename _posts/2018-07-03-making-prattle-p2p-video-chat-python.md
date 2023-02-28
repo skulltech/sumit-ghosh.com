@@ -1,12 +1,6 @@
 ---
-date: "Tue Jul 3 2018 13:04:20 GMT+0530 (India Standard Time)"
 title: "Making Prattle: A Fully-fledged P2P Video Chat Application Using Python"
-showcase: false
-tags:
-  - python
-  - programming
-  - networking
-  - multimedia
+date: Jul 3 2018
 ---
 
 I've been into _OpenCV_ and multimedia processing recently. Some months ago I tried diving into _sockets_ too—made [this](https://github.com/SkullTech/PearSend) P2P file sender. So I've been thinking, why not make a full-fledged P2P video chat software, combining sockets, _OpenCV_ and sound processing using _sounddevice_? Could be fun learning experience, and I could write about it as I learn. So that’s how I came up with the idea for this series, of which this is the first post.

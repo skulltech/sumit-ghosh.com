@@ -1,11 +1,6 @@
 ---
-date: "Fri Sep 11 2020 10:00:00 GMT+0530 (India Standard Time)"
-title: "Creating a VM using Libvirt, Cloud Image and Cloud-Init"
-showcase: true
-tags:
-  - sysadmin
-  - linux
-  - virtualization
+title: Creating a VM using Libvirt, Cloud Image and Cloud-Init
+date: Sep 11 2020
 ---
 
 In this post, we’re going to see how we can create virtual machines in seconds, the way it’s done in modern cloud infrastructures such as EC2 and Digital Ocean. This is kind of a continuation of [my previous post](/articles/virtualization-hypervisors-explaining-qemu-kvm-libvirt/), where I explain the basics of virtualization and create a virtual machine in the old-school way. So let’s dive right into it!

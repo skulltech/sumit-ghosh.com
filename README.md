@@ -1,5 +1,5 @@
-# skulltech.github.io
+# sumit-ghosh.com
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/41379bfd-1abd-46f0-9378-066114f290c0/deploy-status)](https://app.netlify.com/sites/sumit-ghosh/deploys)
 
-My tech blog. Live at — https://sumit-ghosh.com.
+My personal website// blog. Live at — https://sumit-ghosh.com.

@@ -1,13 +1,7 @@
 ---
-date: "Mon Dec 24 2018 19:08:00 GMT+0530 (India Standard Time)"
-title: "An Introduction to Web-scraping using Python"
-tags:
-  - web-scraping
-  - python
-  - programming
-  - guest-post
+title: An Introduction to Web-scraping using Python
+date: Dec 24 2018
 canonical_url: "https://stackabuse.com/introduction-to-web-scraping-with-python/"
-remote_blog: "stackabuse.com"
 ---
 
 Web-scraping is an important technique, frequently employed in a lot of different contexts, especially data science and data mining. It can also contribute as a part of an automation pipeline. Python is considered the go-to language for web-scraping, the reason being the batteries-included nature of Python; you can create a simple scraping script in about 15 minutes and under 100 lines of code. So regardless of usage, web-scraping is a skill that every Python programmer must have under his belt.

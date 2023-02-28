@@ -1,1 +1,0 @@
-Recently I've been reading 12 Rules for Life by Jordan Peterson. As you can probably guess, it lists 12 "Rules" as 12 chapters, all of which are mostly independent from each other. That's why after reading the preface, I decided to go with the chapter which interested me first, the chapter on being truthful. The actual title being "Always tell the truth, at least, don't lie".

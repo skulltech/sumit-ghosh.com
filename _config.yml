@@ -1,50 +1,41 @@
-title: Sumit's Dreams of Electric Sheeps
+title: Sumit's Space
 author:
   name: Sumit Ghosh
-  email: hi@sumit-ghosh.com
-description: Blog on computers, programming, and everything in between.
+  email: sumit@sumit-ghosh.com
+description: Brain dump of things I find interesting.
 timezone: Asia/Kolkata
 url: https://sumit-ghosh.com
 baseurl: ""
 
 minima:
   social_links:
-    twitter: summitkg
-    linkedin: summitkg
-    github: SkullTech
-  showcase_posts: true
+    - platform: twitter
+      user_url: "https://twitter.com/summitkg"
+    - platform: linkedin
+      user_url: "https://www.linkedin.com/in/summitkg/"
+    - platform: github
+      user_url: "https://github.com/skulltech"
   skin: dark
 
-remote_theme: SkullTech/minima-improved
+remote_theme: jekyll/minima
 
 include:
   - _redirects
 
-header_pages:
-  - archive.html
-
 exclude:
   - CNAME
   - Gemfile
-  - Gemfile.lock
   - LICENSE
   - README.md
   - vendor
 
-permalink: /articles/:title/
+permalink: /posts/:title/
 
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-archives
-  - jekyll-redirect-from
-
-jekyll-archives:
-  enabled: ["tags"]
-  layout: archive
-  permalinks:
-    tag: "/archive/tag/:name/"
+  - jekyll-remote-theme
 
 disqus:
   shortname: sumit-ghosh-com

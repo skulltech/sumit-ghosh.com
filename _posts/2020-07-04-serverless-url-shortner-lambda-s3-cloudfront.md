@@ -1,11 +1,6 @@
 ---
-date: "Sat July 04 2020 22:40:00 GMT+0530 (India Standard Time)"
-title: "Building a Serverless URL Shortener using Lambda, S3 and Cloudfront"
-showcase: true
-tags:
-  - aws
-  - cloud
-  - serverless
+title: Building a Serverless URL Shortener using Lambda, S3 and Cloudfront
+date: July 04 2020
 ---
 
 I’ve been tinkering with the AWS cloud for about an year now, and I went ahead and got the [AWS CSAA certificate](https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2019-07-31&ci=AWS00914626) too. But most of my AWS experience has been small edits to an already existing architecture, and that too for clients with their projects being closed source. I realized I don't have a solid end-to-end cloud project that I can showcase in my portfolio, and I need one. So that's how this project came to be. Moreover, through this project I learnt the [serverless](https://serverless.com/) framework and got more comfortable with Cloudformation templates. So let’s get into it.

@@ -1,9 +1,6 @@
 ---
-date: "Fri Feb 15 2019 14:40:00 GMT+0530 (India Standard Time)"
 title: "Migrating from Github Pages to Netlify :: Some Gotchas"
-tags:
-  - blogging
-  - jekyll
+date: Feb 15 2019
 ---
 
 I have been hearing lots of good things about [Netlify](https://www.netlify.com/) for quite some time, but I didn’t consider migrating to it because, “If it ain't broke, don't fix it”. Github pages was serving me quite well until recently, when I wanted to add archive pages for tags. I found [jekyll-archives](https://jekyll.github.io/jekyll-archives/), a Jekyll plugin unsupported by Github pages that does the job perfectly, and that’s what made me migrate to Netlify. As of now this site is published on Netlify, and I must tell you, it’s far better than what I expected. It has more than enough configurability, while making the process as seamless as possible.

@@ -1,9 +1,6 @@
 ---
-date: "Wed Feb 07 2018 22:25:00 GMT+0530 (India Standard Time)"
 title: Downloading File With Progress Bar in Python
-tags:
-  - python
-  - programming
+date: Feb 07 2018
 ---
 
 Below is a Python function I recently wrote which downloads a file from a remote URL, and shows a progress bar while doing it. Here's the [code](https://gist.github.com/SkullTech/4510a5613c9aae89105fd1b6c424d0a0) —

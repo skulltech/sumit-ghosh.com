@@ -1,13 +1,6 @@
 ---
 title: Handling File Upload Through Selenium Python
-subtitle: "A necessary rite of passage for Selenium programmers"
-showcase: false
-tags:
-  - programming
-  - selenium
-  - python
-  - automation
-date: "2017-12-04"
+date: Dec 04 2017
 ---
 
 Once you start playing around with Selenium, sooner or later you're gonna face the problem of handling file uploads. It's like a rite of passage every Selenium programmers must go through. The problem with file upload is, once you click the upload button, the select file dialog box which opens up is a owned by the OS, not the browser, so you cannot control it using Selenium, meaning we have to find our way around it. There are different ways this can be accomplished.
