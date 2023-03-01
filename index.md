@@ -1,6 +1,6 @@
-Hello! I'm Sumit. This is my personal site// blog where I post about things I find interesting.
+Hello! I'm Sumit. I'm a software engineer by profession and a lifelong learner at heart. Other than computers, I'm interested in philosophy, political theory, self improvement, etc.
 
-- [Posts](/posts)
-- [Resume](/files/resume.pdf)
+- [All of my posts](/posts)
+- [My resume](/files/resume.pdf)
 
 I'm currently looking for backend engineering roles, preferably Golang. Please reach out to me if you're interested in hiring me.
