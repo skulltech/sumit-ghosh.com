@@ -15,7 +15,7 @@ minima:
       user_url: "https://www.linkedin.com/in/summitkg/"
     - platform: github
       user_url: "https://github.com/skulltech"
-  skin: dark
+  skin: auto
 
 remote_theme: jekyll/minima
 
@@ -37,6 +37,4 @@ plugins:
   - jekyll-seo-tag
   - jekyll-remote-theme
 
-disqus:
-  shortname: sumit-ghosh-com
 google_analytics: UA-107859389-1
