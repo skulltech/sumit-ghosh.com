@@ -1,13 +1,11 @@
 # sumit-ghosh.com
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/41379bfd-1abd-46f0-9378-066114f290c0/deploy-status)](https://app.netlify.com/sites/sumit-ghosh/deploys)
-
 Personal website and blog, built with Astro and Markdown. Live at
 https://sumit-ghosh.com.
 
 ## Development
 
-Requires Node 22.12+ (Node 22 LTS is configured for Netlify).
+Requires Node 22.12+.
 
 ```sh
 npm ci
@@ -17,7 +15,30 @@ npm run preview
 ```
 
 `npm run build` runs Astro's type/content checks and generates static output in
-`dist/`. Netlify uses the command and publish directory in `netlify.toml`.
+`dist/`.
+
+## Cloudflare hosting
+
+The site is served by the `sumit-ghosh-com` Worker in the personal Cloudflare
+account. `cloudflare.config.ts` declares the account, custom domains, and static
+asset routing. `wrangler.config.ts` points the asset packager at `dist/`.
+The site is static; no server adapter or application services are required.
+
+Cloudflare Workers Builds should watch `skulltech/sumit-ghosh.com` on `master`:
+
+- Root directory: repository root.
+- Build command: `npm run build:cloudflare`.
+- Deploy command: `npx cf deploy --prebuilt`.
+- Build variable: `NODE_VERSION=22`.
+
+Cloudflare's GitHub app needs access to this repository. Once that connection is
+authorized and these build settings are saved, a push to `master` publishes the
+site without a GitHub Actions workflow or a local deployment step.
+
+`npm run build:cloudflare` checks and builds Astro, then packages Cloudflare's
+Build Output. The packaging flags are required by the pinned cf beta tooling.
+`npm run deploy` is an optional local fallback, not the routine publishing flow.
+It requires `cf auth login` or a Cloudflare API token.
 
 ### Content and routes
 
@@ -31,7 +52,7 @@ npm run preview
   filename but is not part of the public URL.
 - Static assets: `public/images/` and `public/files/`, retaining the existing
   public paths. Fonts are bundled locally.
-- Old `/articles/slug/` links redirect to `/posts/slug/` via Netlify's
+- Old `/articles/slug/` links redirect to `/posts/slug/` via Cloudflare's
   `public/_redirects`, with generated redirect pages for other static hosts.
 - Sitemap: `/sitemap-index.xml`; `/sitemap.xml` remains a compatibility entry.
 

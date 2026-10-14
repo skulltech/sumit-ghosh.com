@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "deploy": "npm run build:cloudflare && cf deploy --prebuilt",
+    "build:cloudflare": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\" && npm run build && wrangler build --experimental-new-config --experimental-cf-build-output"
   },
   "engines": {
     "node": ">=22.12.0"
@@ -19,6 +21,8 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
-    "typescript": "^5.9.3"
+    "cf": "^1.0.0-beta.17",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.151.0"
   }
 }
