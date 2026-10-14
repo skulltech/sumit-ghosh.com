@@ -144,7 +144,7 @@ The first page of Google Search results of the query _Books Startup Founders Sho
 
 - https://medium.com/swlh/the-18-best-startup-business-books-i-have-read-this-year-cbbab1b6c53e
 - https://www.wisestamp.com/corporate/resources/wisestamp-knowledge-base/startups/the-9-best-books-every-startup-founder-should-read/
-- https://www.startups.co/posts/19-startup-books-every-founder-should-have
+- https://www.startups.co/articles/19-startup-books-every-founder-should-have
 - https://www.forbes.com/sites/amyguttman/2015/07/09/i-read-this-20-times-five-founders-pick-the-best-books-for-startups/
 - https://www.forbes.com/sites/mnewlands/2017/02/24/13-must-read-entrepreneurial-books-for-tech-founders/
 - https://www.quora.com/What-are-the-most-important-books-for-startup-founders-to-read
