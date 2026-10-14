@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import { getPosts, formatDate } from '../lib/posts';
+const posts = (await getPosts()).filter((post) => post.data.featured);
+---
+<Base>
+  <section class="intro">
+    <h1>Sumit Ghosh</h1>
+    <p class="role">Engineer &amp; technical founder</p>
+    <p>I'm the CTO and cofounder of <a href="https://www.jurisphere.ai/">Jurisphere</a>, where we build AI for legal research, document review, and drafting. I lead engineering and still write a lot of the code, across product, backend, and infrastructure.</p>
+    <p class="muted">This is where I write about building software, and occasionally about philosophy, film, and whatever else I'm learning.</p>
+  </section>
+
+  <section class="section" aria-labelledby="writing-title">
+    <div class="section-head"><h2 class="section-title" id="writing-title">Recent writing</h2><a href="/writing/">All posts →</a></div>
+    <ul class="entries">
+      {posts.map((post) => (
+        <li><a class="entry" href={`/posts/${post.id}/`}>
+          <div class="entry-top"><span class="entry-title">{post.data.title}</span><span>{formatDate(post.data.date)}</span></div>
+          {post.data.description && <p>{post.data.description}</p>}
+        </a></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section" aria-labelledby="work-title">
+    <div class="section-head"><h2 class="section-title" id="work-title">Work</h2><a href="/work/jurisphere/">More →</a></div>
+    <ul class="entries">
+      <li><a class="entry" href="/work/jurisphere/">
+        <div class="entry-top"><span class="entry-title">Jurisphere</span><span>CTO &amp; Cofounder</span></div>
+        <p>Document pipelines, retrieval, AI assistants, and the infrastructure that runs them.</p>
+      </a></li>
+      <li><a class="entry" href="/consulting/">
+        <div class="entry-top"><span class="entry-title">Consulting</span><span>Selectively</span></div>
+        <p>Hands-on help for teams shipping AI features into real products.</p>
+      </a></li>
+    </ul>
+  </section>
+
+  <section class="section" aria-labelledby="contact-title">
+    <div class="section-head"><h2 class="section-title" id="contact-title">Say hello</h2></div>
+    <p class="muted">The best way to reach me is email: <a href="mailto:sumit@sumit-ghosh.com">sumit@sumit-ghosh.com</a>. I'm also on <a href="https://github.com/skulltech">GitHub</a>, <a href="https://www.linkedin.com/in/summitkg/">LinkedIn</a>, and <a href="https://x.com/summitkg">X</a>.</p>
+  </section>
+</Base>

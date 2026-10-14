@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import PostList from '../components/PostList.astro';
+import { getPosts, postYear } from '../lib/posts';
+const posts = await getPosts();
+const years = [...new Set(posts.map((post) => postYear(post.data.date)))];
+---
+<Base title="Writing" description="Notes on AI product engineering, Python, infrastructure, and building things.">
+  <header class="page-header">
+    <h1>Writing</h1>
+    <p>{posts.length} posts since {years.at(-1)} on software, the decisions behind it, and other things I find interesting. Older posts reflect what I was working on at the time. <a href="/feed.xml">RSS</a></p>
+  </header>
+  <input id="post-search" class="search" type="search" placeholder="Search" aria-label="Search posts" autocomplete="off" />
+  <p class="status" id="search-status" role="status" hidden></p>
+  {years.map((year) => (
+    <section class="archive-year" data-year>
+      <h2>{year}</h2>
+      <PostList posts={posts.filter((post) => postYear(post.data.date) === year)} dateStyle="short" />
+    </section>
+  ))}
+  <script>
+    const input = document.querySelector<HTMLInputElement>('#post-search');
+    const status = document.querySelector<HTMLElement>('#search-status');
+    const rows = [...document.querySelectorAll<HTMLElement>('[data-post]')];
+    input?.addEventListener('input', () => {
+      const query = input.value.trim().toLocaleLowerCase();
+      let found = 0;
+      for (const row of rows) {
+        row.hidden = !row.dataset.search!.toLocaleLowerCase().includes(query);
+        if (!row.hidden) found++;
+      }
+      for (const year of document.querySelectorAll<HTMLElement>('[data-year]')) year.hidden = !year.querySelector('[data-post]:not([hidden])');
+      if (status) {
+        status.hidden = !query || found > 0;
+        status.textContent = 'Nothing found.';
+      }
+    });
+  </script>
+</Base>

@@ -2,7 +2,46 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/41379bfd-1abd-46f0-9378-066114f290c0/deploy-status)](https://app.netlify.com/sites/sumit-ghosh/deploys)
 
-My personal website// blog. Live at — https://sumit-ghosh.com.
+Personal website and blog, built with Astro and Markdown. Live at
+https://sumit-ghosh.com.
+
+## Development
+
+Requires Node 22.12+ (Node 22 LTS is configured for Netlify).
+
+```sh
+npm ci
+npm run dev
+npm run build
+npm run preview
+```
+
+`npm run build` runs Astro's type/content checks and generates static output in
+`dist/`. Netlify uses the command and publish directory in `netlify.toml`.
+
+### Content and routes
+
+- Posts: `src/content/posts/YYYY-MM-DD-slug.md`. Required frontmatter: `title`
+  and an ISO `date`. Optional: `description`, `featured`, and `tags`.
+- `featured: true` adds an article to the homepage. All articles appear in the
+  searchable writing archive and the full-content feed at `/feed.xml`.
+- Work and consulting prose: `src/content/pages/`. Page layouts and the
+  homepage live in `src/pages/`.
+- Original post URLs are `/posts/slug/`; the date prefix stays in the source
+  filename but is not part of the public URL.
+- Static assets: `public/images/` and `public/files/`, retaining the existing
+  public paths. Fonts are bundled locally.
+- Old `/articles/slug/` links redirect to `/posts/slug/` via Netlify's
+  `public/_redirects`, with generated redirect pages for other static hosts.
+- Sitemap: `/sitemap-index.xml`; `/sitemap.xml` remains a compatibility entry.
+
+The design is a single 640px column in the spirit of Jekyll's Minima: custom
+CSS, a locally hosted Inter font, and a small script for the color-theme switch. The writing archive's title/topic search
+runs in the browser; all links and articles work without JavaScript.
+
+The Jekyll content refresh is preserved in commit `08878fd`. Migration preserves
+all 53 article slugs and the publication dates from the Jekyll output. The feed
+URL is unchanged and serves RSS 2.0 with full content rather than Atom.
 
 ## Consulting refresh
 
@@ -72,15 +111,8 @@ search evaluation section describes proposed checks, not completed benchmarks.
 The public product site corroborates the research/review/drafting context:
 https://www.jurisphere.ai/.
 
-This README is excluded from Jekyll output. Do not put internal evidence or
+This README is outside Astro's public output. Do not put internal evidence or
 customer-specific details in public posts.
-
-## Local preview
-
-```sh
-bundle install
-bundle exec jekyll serve
-```
 
 Check the homepage, navigation, work and consulting pages, featured article
 links, writing archive, RSS, and an existing post before deployment.

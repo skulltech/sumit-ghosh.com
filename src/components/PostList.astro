@@ -1,0 +1,14 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formatDate } from '../lib/posts';
+interface Props { posts: CollectionEntry<'posts'>[]; dateStyle?: 'full' | 'short'; }
+const { posts, dateStyle = 'full' } = Astro.props;
+---
+<ul class="post-list">
+  {posts.map((post) => (
+    <li data-post data-search={`${post.data.title} ${post.data.description ?? ''} ${post.data.tags.join(' ')}`}>
+      <a href={`/posts/${post.id}/`}>{post.data.title}</a>
+      <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date, dateStyle)}</time>
+    </li>
+  ))}
+</ul>

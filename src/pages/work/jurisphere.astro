@@ -1,0 +1,8 @@
+---
+import { getEntry, render } from 'astro:content';
+import ContentPage from '../../layouts/ContentPage.astro';
+const page = await getEntry('pages', 'work');
+if (!page) throw new Error('Work content is missing');
+const { Content } = await render(page);
+---
+<ContentPage title="Work" description={page.data.description} intro="Building Jurisphere: document workflows, AI assistants, and the infrastructure that connects them."><Content /></ContentPage>

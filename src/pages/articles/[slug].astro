@@ -1,0 +1,7 @@
+---
+import { getPosts } from '../../lib/posts';
+export async function getStaticPaths() {
+  return (await getPosts()).map((post) => ({ params: { slug: post.id } }));
+}
+return Astro.redirect(`/posts/${Astro.params.slug}/`, 301);
+---

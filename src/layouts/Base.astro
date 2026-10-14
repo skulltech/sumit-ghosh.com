@@ -1,0 +1,81 @@
+---
+import '@fontsource-variable/inter';
+import '../styles/global.css';
+
+interface Props { title?: string; description?: string; articleDate?: Date; }
+const { title, description = 'Sumit Ghosh — AI product engineering, document workflows, and production systems. CTO and technical cofounder of Jurisphere.', articleDate } = Astro.props;
+const pageTitle = title ? `${title} · Sumit Ghosh` : 'Sumit Ghosh · Engineer & technical founder';
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const path = Astro.url.pathname;
+const navigation = [
+  { label: 'Writing', href: '/writing/' },
+  { label: 'Work', href: '/work/jurisphere/' },
+  { label: 'Consulting', href: '/consulting/' },
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="alternate" type="application/rss+xml" title="Sumit Ghosh's writing" href="/feed.xml" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content={articleDate ? 'article' : 'website'} />
+    <meta property="og:site_name" content="Sumit Ghosh" />
+    {articleDate && <meta property="article:published_time" content={articleDate.toISOString()} />}
+    <meta name="twitter:card" content="summary" />
+    <script is:inline>
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header shell">
+      <a class="wordmark" href="/">Sumit Ghosh</a>
+      <nav aria-label="Main navigation">
+        {navigation.map(({ label, href }) => <a href={href} aria-current={path === href || (label === 'Writing' && path.startsWith('/posts/')) ? 'page' : undefined}>{label}</a>)}
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" stroke="none" /></svg>
+        </button>
+      </nav>
+    </header>
+    <main id="main" class="shell"><slot /></main>
+    <footer class="site-footer shell">
+      <span>© {new Date().getFullYear()} Sumit Ghosh</span>
+      <nav aria-label="Contact and social links">
+        <a href="mailto:sumit@sumit-ghosh.com">Email</a>
+        <a href="https://github.com/skulltech" rel="me">GitHub</a>
+        <a href="https://www.linkedin.com/in/summitkg/" rel="me">LinkedIn</a>
+        <a href="https://x.com/summitkg" rel="me">X</a>
+        <a href="/feed.xml">RSS</a>
+      </nav>
+    </footer>
+    <script>
+      const button = document.querySelector<HTMLButtonElement>('#theme-toggle');
+      function currentTheme() {
+        return document.documentElement.dataset.theme ?? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      }
+      function updateLabel() {
+        button?.setAttribute('aria-label', `Switch to ${currentTheme() === 'dark' ? 'light' : 'dark'} theme`);
+      }
+      updateLabel();
+      button?.addEventListener('click', () => {
+        const theme = currentTheme() === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = theme;
+        try { localStorage.setItem('theme', theme); } catch {}
+        updateLabel();
+      });
+      matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateLabel);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+---
+import { getEntry, render } from 'astro:content';
+import ContentPage from '../layouts/ContentPage.astro';
+const page = await getEntry('pages', 'consulting');
+if (!page) throw new Error('Consulting content is missing');
+const { Content } = await render(page);
+---
+<ContentPage title={page.data.title} description={page.data.description} intro="Hands-on engineering, from the AI feature to the systems behind it."><Content /></ContentPage>
